@@ -1,0 +1,39 @@
+.primario {
+
+  padding: var(--spacing-sm);
+
+  color: var(--text-color);
+  background-color: var(--color-primario);
+
+  border-radius: var(--border-radius-sm);
+  border: none;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  &:disabled {
+    background-color: var(--color-primario-disabled);
+
+    color: gray;
+  }
+
+}
+
+.secundario {
+  padding: var(--spacing-sm);
+
+  color: var(--text-color);
+  background-color: var(--color-secundario);
+
+  border-radius: var(--border-radius-sm);
+  border: none;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  &:disabled {
+    background-color: var(--color-secundario-disabled);
+
+    color: gray;
+  }
+}
