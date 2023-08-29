@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import "./styles/index.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
+import Boton from "./components/Botón/Boton";
 function App() {
   return (
     <div className="App">
@@ -37,6 +38,13 @@ function App() {
             disabled={true}
             onClick={() => console.log("click en el boton disabled")}
             texto={"Boton secundario"}
+          />
+        </div>
+        <div>
+          <Boton
+          esPrimario={true}
+          onClick = {() => console.log("click en el boton secundario")}
+          texto = {"Comprar ahora"}
           />
         </div>
       </header>
