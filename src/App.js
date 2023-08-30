@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import "./styles/index.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
+import Boton from "./components/Boton/Boton";
 function App() {
   return (
     <div className="App">
@@ -38,6 +39,25 @@ function App() {
             onClick={() => console.log("click en el boton disabled")}
             texto={"Boton secundario"}
           />
+          <Boton
+            esPrimario={true}
+            isDark={false}
+            onClick={() => console.log("click en el boton dorado")}
+            texto={"Comprar ahora"}
+            />
+            <Boton
+            esPrimario={false}
+            isDark={false}
+            onClick={() => console.log("click en el boton blanco")}
+            texto={"Últimos juegos"}
+            />
+            <Boton
+            esPrimario={false}
+            isDark={true}
+            onClick={() => console.log("click en el boton dorado")}
+            texto={"Únete ya"}
+            />
+           
         </div>
       </header>
     </div>
