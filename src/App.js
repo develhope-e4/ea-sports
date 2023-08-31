@@ -41,20 +41,20 @@ function App() {
           />
           <Boton
             esPrimario={true}
-            isDark={false}
+            isLight={false}
             onClick={() => console.log("click en el boton dorado")}
             texto={"Comprar ahora"}
             />
             <Boton
             esPrimario={false}
-            isDark={false}
-            onClick={() => console.log("click en el boton blanco")}
+            isLight={false}
+            onClick={() => console.log("click en el boton negro")}
             texto={"Últimos juegos"}
             />
             <Boton
             esPrimario={false}
-            isDark={true}
-            onClick={() => console.log("click en el boton dorado")}
+            isLight={true}
+            onClick={() => console.log("click en el boton blanco")}
             texto={"Únete ya"}
             />
            
