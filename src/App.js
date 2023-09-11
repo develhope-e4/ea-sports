@@ -5,6 +5,7 @@ import EjemploComponente from "./components/EjemploComponente/EjemploComponente"
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
 import TextoLinks from "./components/Footer/Footer";
+import Card from "./components/Cards/Cards";
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,13 @@ function App() {
           {/**
            * Manera de invocar a mi componente reutilizable
            */}
+          <Card
+            imagenSrc="Card-ea-positive.png"
+            nombre="Electronic Arts Inc."
+            fecha="10-ago-2023"
+            titulo="Ya están abiertas las votaciones para el primer Premio al juego positivo de..."
+            texto="El Premio al juego positivo de EA reconoce a finalistas de eSports que han elevado la cultura del juego y celebra su contribución con positividad, habilidad e impacto en la comunidad de la ALGS."
+          />
           <EjemploComponente
             esPrimario={true}
             texto={"Boton primario"}
@@ -46,14 +54,14 @@ function App() {
             isLight={false}
             onClick={() => console.log("click en el boton dorado")}
             texto={"Comprar ahora"}
-            />
-            <Boton
+          />
+          <Boton
             esPrimario={false}
             isLight={false}
             onClick={() => console.log("click en el boton negro")}
             texto={"Últimos juegos"}
-            />
-            <Boton
+          />
+          <Boton
             esPrimario={false}
             isLight={true}
             onClick={() => console.log("click en el boton blanco")}
