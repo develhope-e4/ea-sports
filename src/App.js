@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import "./styles/index.scss";
-import Boton from "./components/Boton/Boton";
-import CardDestacada from "./components/CardDestacada/CardDestacada";
-import Cards from "./components/Cards/Cards";
-import Tabs from "./components/Tabs/Tabs";
-import cardData from "./data/CardData.mock";
-import Icono from "./components/Icono/Icono";
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { AiOutlineMenu } from "react-icons/ai";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Development from "./pages/development/Development";
+import Home from "./pages/home/Home";
+
 function App() {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -28,59 +23,14 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="flex-col-center">
-        <div className="ultimas-actualizaciones">
-          <h1>Últimas actualizaciones</h1>
-          <div className="flex-col-center">
-            <Boton
-              esPrimario={true}
-              isLight={false}
-              onClick={() => console.log("click en el boton dorado")}
-              texto={"Comprar ahora"}
-            />
-            <Boton
-              esPrimario={false}
-              isLight={false}
-              onClick={() => console.log("click en el boton negro")}
-              texto={"Últimos juegos"}
-            />
-            <Boton
-              esPrimario={false}
-              isLight={true}
-              onClick={() => console.log("click en el boton blanco")}
-              texto={"Únete ya"}
-            />
-          </div>
-          <div className="tabs-cards">
-            <Tabs
-              tabNames={tabNames}
-              activeTab={activeTab}
-              handleTabClick={handleTabClick}
-            />
-            <div className="card-container">
-              {cardData[activeTab] ? (
-                cardData[activeTab].map((card, index) => (
-                  <Cards
-                    key={`${index}-${card.nombre}`}
-                    imagenSrc={card.imagenSrc}
-                    nombre={card.nombre}
-                    fecha={card.fecha}
-                    titulo={card.titulo}
-                    texto={card.texto}
-                  />
-                ))
-              ) : (
-                <p></p>
-              )}
-            </div>
-          </div>
-          <Icono icono={<BsThreeDotsVertical style={{ fill: "black" }} />} />
-          <Icono icono={<AiOutlineMenu style={{ fill: "black" }} />} />
-        </div>
-        <Footer />
-      </div>
-    </div>
+    <BrowserRouter>
+      {/* Aca va el elemento NAVBAR */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route exact path="/dev" element={<Development />} />
+      </Routes>
+      {/* Aca va el elemento FOOTER */}
+    </BrowserRouter>
   );
 }
 
