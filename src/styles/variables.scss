@@ -6,14 +6,18 @@
   --spacing-sm: 20px;
   --spacing-xs: 5px;
 
+  --spacing-sm-boton: 16px 24px;
+
   --color-primario: rgb(59, 120, 85);
   --color-primario-disabled: rgb(59, 120, 85, 0.5);
   --color-secundario: rgb(59, 120, 85);
   --color-secundario-disabled: rgb(59, 120, 85, 0.5);
 
   --text-color: white;
+  --text-color-boton:#161616;
 
   --border-radius-sm: 5px;
+  --border-radius-xs: 3px;
   --border-grosor: 2px;
   --gap:29px;
 
@@ -25,6 +29,15 @@
   --color-sextary: #000000;
   --color-septenary: #16161680;
   --color-octave: #eaeaea;
+
+
+  --color-botondorado:#A38D5E;
+  --color-botonprimario: white;
+  --color-botonsecundario: rgb(0, 152, 237);
+  --color-botonsecundariodark:rgba(255, 255, 255, 0);
+  --color-botonsecundariolight:rgb(255, 255, 255, 0);
+  ;
+
 
   --font-size-xl:20px;
   --font-size-l:18px;
@@ -41,5 +54,7 @@
   --font-style-sans:sans-serif;
   --font-style-verdana: verdana;
 
+  --ea-boton-expansion: 0.1s;
+  --ea-transition-duration: 0.3s;
 }
 
