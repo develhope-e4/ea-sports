@@ -5,9 +5,10 @@ import EjemploComponente from "./components/EjemploComponente/EjemploComponente"
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
 import Card from "./components/Cards/Cards";
+import LoopVideo from "./components/Loop/Loop";
 function App() {
   return (
-    <div className="App">
+<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -22,6 +23,22 @@ function App() {
           Learn React
         </a>
         <div className="flex-col-center">
+          <svg></svg>
+          <div className="container">
+          <LoopVideo />
+          <div className="compraAhora">
+            <Boton 
+              esPrimario={true}
+              isLight={false}
+              onClick={() => console.log("click en el boton dorado")}
+              texto={"Comprar ahora"}
+            />
+          </div> 
+          {/**
+           * He metido el componenete dentro de un dic con una clase para poder editarlo en scss
+           * no sé si hay un metodo mejor de hacerlo
+           */}
+          </div>
           {/**
            * Manera de invocar a mi componente reutilizable
            */}

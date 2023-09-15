@@ -7,3 +7,16 @@
 
   gap: var(--spacing-xs);
 }
+
+.container {
+  position: relative;
+  
+  display: inline-block;
+}
+
+.compraAhora {
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
+  bottom: 25%;
+}
