@@ -1,12 +1,25 @@
-/* @import "../../styles/variables.scss"; */
+
 svg {
     fill-rule: nonzero;
       stroke: none;
       fill-opacity:1;
       fill:rgb(0%,0%,0%);
-    &:hover {
+    &.otro:hover {
       transform: scale(1.2,1.2);
-      fill: crimson;
+      fill: var(--color-secundary);
+      transition: fill 0.3s linear 0.2s;
+    }
+  
+  }
+
+  svg {
+    fill-rule: nonzero;
+      stroke: none;
+      fill-opacity:1;
+      fill:rgb(0%,0%,0%);
+    &.redSocial:hover {
+      transform: scale(1.2,1.2);
+      transition: transform 0.3s;
     }
   
   }

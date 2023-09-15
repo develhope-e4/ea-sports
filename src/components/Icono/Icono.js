@@ -19,7 +19,9 @@ const Icono = ({
   id = " ",
   style = " ",
   d = " ",
+  esRedSocial,
 }) => {
+  const className = esRedSocial ? "redSocial" : "otro";
   return (
     <svg
       xmlns={xmlns}
@@ -27,6 +29,7 @@ const Icono = ({
       height={height}
       viewBox={viewBox}
       version={version}
+      className={className}
     >
       <g id={id}>
         <path style={style} d={d} />
