@@ -1,0 +1,11 @@
+svg {
+    fill-rule: nonzero;
+      stroke: none;
+      fill-opacity:1;
+      fill:rgb(0%,0%,0%);
+    &:hover {
+      transform: scale(1.2,1.2);
+      fill: var(----color-prymary);
+    }
+  
+  }
