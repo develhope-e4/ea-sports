@@ -29,7 +29,7 @@ const Icono = ({
       version={version}
     >
       <g id={id}>
-        <path d={d} />
+        <path style={style} d={d} />
       </g>
     </svg>
   );
