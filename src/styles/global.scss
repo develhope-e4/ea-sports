@@ -6,37 +6,16 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
-
 }
 
 .container {
   position: relative;
-
   display: inline-block;
 }
 
 .compraAhora {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform:translateX(-50%);
   bottom: 25%;
-  gap: var(--spacing-md);
-}
-
-.navbar-container {
-  height: 100px;
-}
-
-.h1 {
-  font-family: var(--font-family-ea);
-  font-size: var(--font-size-xl);
-  color: var(--color-sextary);
-  margin-bottom: -25px;
-}
-
-
-/* ClassName de Original Page Background Video */
-
-.originalPageTopVideo {
-  background-image: "../";
 }
