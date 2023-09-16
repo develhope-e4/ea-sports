@@ -1,6 +1,8 @@
 .linkCardDestacada {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
+  font-size: var(--font-size-xl);
+  font-style: var(--font-style-ea);
 }
 
 .backgroundImage {
@@ -30,7 +32,7 @@
   width: 250px;
   height: 50px;
   transform: translateY(0px);
-  transition: transform 0.5s ease;
+  transition: var(--ea-transition-duration);
 }
 
 .cardDestacada:hover .logoCardDestacada {
