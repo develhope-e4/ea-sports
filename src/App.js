@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import "./styles/index.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
+import Boton from "./components/Boton/Boton";
+import CardDestacada from "./components/CardDestacada/CardDestacada";
 function App() {
   return (
     <div className="App">
@@ -38,6 +40,29 @@ function App() {
             onClick={() => console.log("click en el boton disabled")}
             texto={"Boton secundario"}
           />
+          <Boton
+            esPrimario={true}
+            isLight={false}
+            onClick={() => console.log("click en el boton dorado")}
+            texto={"Comprar ahora"}
+            />
+            <Boton
+            esPrimario={false}
+            isLight={false}
+            onClick={() => console.log("click en el boton negro")}
+            texto={"Últimos juegos"}
+            />
+            <Boton
+            esPrimario={false}
+            isLight={true}
+            onClick={() => console.log("click en el boton blanco")}
+            texto={"Únete ya"}
+            />
+            <CardDestacada
+            backgroundImage="eafc24.png"
+            gameLogo="EAlogo.svg"
+            />
+           
         </div>
       </header>
     </div>
