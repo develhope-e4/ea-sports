@@ -4,6 +4,7 @@ import "./styles/index.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
