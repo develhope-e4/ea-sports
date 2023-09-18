@@ -58,12 +58,23 @@ function App() {
             onClick={() => console.log("click en el boton blanco")}
             texto={"Únete ya"}
             />
+
+
+            
+
             <CardDestacada
+            url="http://google.com"
             backgroundImage="eafc24.png"
             gameLogo="EAlogo.svg"
             />
+        
+
+         
            
         </div>
+
+      
+
       </header>
     </div>
   );
