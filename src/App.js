@@ -4,6 +4,7 @@ import "./styles/index.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
+import HighlightGroup from "./components/Highlight-Group/Highlight-Group";
 function App() {
   return (
     <div className="App">
@@ -64,9 +65,11 @@ function App() {
 
             <CardDestacada
             url="http://google.com"
-            backgroundImage="eafc24.png"
-            gameLogo="EAlogo.svg"
+            backgroundImage="./highlight/1/bg.png"
+            gameLogo="./highlight/1/logo.svg"
             />
+
+            <HighlightGroup/>
         
 
          
