@@ -63,7 +63,9 @@ function App() {
             backgroundImage="eafc24.png"
             gameLogo="EAlogo.svg"
             />
-          <TextoLinks /> 
+          <TextoLinks
+           
+          /> 
         </div>
       </header>
     </div>
