@@ -18,7 +18,9 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  transition: var(--ea-transition-duration);
 }
+
 
 .cardDestacada:hover {
   background: linear-gradient(
@@ -41,6 +43,7 @@
 
 .textCardDestacada {
   display: none;
+  transition: var(--ea-transition-duration);
 }
 
 .cardDestacada:hover .textCardDestacada {
