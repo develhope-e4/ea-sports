@@ -4,7 +4,7 @@ import "./styles/index.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
-import Footer from "./components/Footer/Footer";
+import TextoLinks from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
@@ -63,7 +63,7 @@ function App() {
             backgroundImage="eafc24.png"
             gameLogo="EAlogo.svg"
             />
-           
+          <TextoLinks /> 
         </div>
       </header>
     </div>
@@ -71,3 +71,6 @@ function App() {
 }
 
 export default App;
+
+
+
