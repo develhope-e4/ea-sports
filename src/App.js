@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "./styles/index.scss";
-import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
-import LoopVideo from "./components/Loop/Loop";
+import LoopVideo from "./components/LoopVideo/LoopVideo";
 function App() {
   return (
     <div className="App">
