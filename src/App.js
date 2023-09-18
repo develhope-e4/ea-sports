@@ -59,6 +59,9 @@ function App() {
             texto={"Únete ya"}
             />
 
+
+            
+
             <CardDestacada
             url="http://google.com"
             backgroundImage="eafc24.png"

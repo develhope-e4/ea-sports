@@ -11,6 +11,7 @@
 }
 
 .cardDestacada {
+  background: var( --color-background-card-destacada);
   width: 355px;
   height: 355px;
   display: flex;
@@ -21,13 +22,13 @@
   transition: var(--ea-transition-duration);
 }
 
-
 .cardDestacada:hover {
   background: linear-gradient(
     to right,
-    rgba(0, 0, 255, 0.496),
-    rgba(255, 0, 0, 0.496)
-  );
+    var(--color-gradient1),
+    var(--color-gradient2)
+  )
+  ;
 }
 
 .logoCardDestacada {
