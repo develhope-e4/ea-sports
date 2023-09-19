@@ -10,6 +10,7 @@ import "./Icono.scss";
 
 const Icono = ({ esRedSocial, icono }) => {
   const className = esRedSocial ? "redSocial" : "otro";
+  
   return <div className={className}>{icono}</div>;
 };
 
