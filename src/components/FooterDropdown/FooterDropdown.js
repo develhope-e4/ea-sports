@@ -1,14 +1,7 @@
-import "./dropdownRegionFooterBlanco.css"; 
 import React, { useState, useEffect, useRef } from "react";
-import {
-  dropdown_wrapper,
-  dropdown_activator,
-  dropdown_item_list,
-  active,
-  item_list
-} from "./dropdownRegionFooterBlanco.css";
+import "./FooterDropdown.scss";
 
-function Dropdown({ items = [], dropdownTitle }) {
+const FooterDropdown = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -47,15 +40,15 @@ function Dropdown({ items = [], dropdownTitle }) {
   }, [isOpen]);
 
   return (
-    <div className={dropdown_wrapper} onKeyUp={keyHandler}>
+    <div className={"dropdown_wrapper"} onKeyUp={keyHandler}>
       <button
-        className={dropdown_activator}
+        className={"dropdown_activator"}
         aria-haspopup="true"
         aria-controls={dropdownTitle}
         onClick={clickHandler}
         ref={activatorRef}
       >
-        {dropdownTitle}{" "}
+        {dropdownTitle} {/* @TODO Cambiar svg por componente  */}
         {isOpen ? (
           <svg
             height="24"
@@ -82,18 +75,18 @@ function Dropdown({ items = [], dropdownTitle }) {
       </button>
       <ul
         ref={dropdownListRef}
-        className={`${dropdown_item_list} ${isOpen ? active : ""} `}
+        className={`${"dropdown_item_list"} ${isOpen ? "active" : ""} `}
       >
         {items.map((item, index) => {
           return (
-            <li className={item_list} key={index}>
-              <a href={item.slug}>{item.anchor}</a>
+            <li className={"item_list"} key={index}>
+              <a>{item.anchor}</a>
             </li>
           );
         })}
       </ul>
     </div>
   );
-}
+};
 
-export default Dropdown;
+export default FooterDropdown;
