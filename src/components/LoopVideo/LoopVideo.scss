@@ -1,18 +1,14 @@
 .video-container {
     position: relative;
-    width: 99vw;
-    height: 100vh;
-    // max-width: 800px; /* Ajusta el ancho según tus preferencias */
-    margin: 0 auto;
-    
-
-    
-  }
-  
-  video {
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  video {
+    width: auto;
     height: 100%;
-    object-fit: cover;
+    display: block;
   }
 
   .immortalsLogo {
