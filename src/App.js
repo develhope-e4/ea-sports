@@ -8,8 +8,7 @@ import cardData from "./data/CardData.mock";
 import Icono from "./components/Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
-import Subscription from "./Subscription/Subscription";
-
+import Subscription from "./components/Subscription/Subscription";
 function App() {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -77,7 +76,6 @@ function App() {
           />
           <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
           <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
-
           <Subscription />
         </div>
       </div>
