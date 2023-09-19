@@ -1,10 +1,30 @@
 import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
 import "./styles/index.scss";
+import "./components/Cards/Cards.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
-import Card from "./components/Cards/Cards";
+import Cards from "./components/Cards/Cards";
+import cardData from "./components/Cards/cardData";
+
+const tabNames = {
+  NoticiasEA: "Noticias De EA",
+  EASPORTSFC: "EA SPORTS FC",
+  StarWars: "Star Wars",
+  ApexLegends: "Apex Legends",
+  LosSims4: "Los Sims 4",
+  F1: "F1",
+  Battlefield: "Battlefield",
+};
+
 function App() {
+  const [activeTab, setActiveTab] = useState("NoticiasEA");
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -21,16 +41,43 @@ function App() {
           Learn React
         </a>
         <div className="flex-col-center">
-          {/**
-           * Manera de invocar a mi componente reutilizable
-           */}
-          <Card
-            imagenSrc="Card-ea-positive.png"
-            nombre="Electronic Arts Inc."
-            fecha="10-ago-2023"
-            titulo="Ya están abiertas las votaciones para el primer Premio al juego positivo de..."
-            texto="El Premio al juego positivo de EA reconoce a finalistas de eSports que han elevado la cultura del juego y celebra su contribución con positividad, habilidad e impacto en la comunidad de la ALGS."
-          />
+          <div className="ultimas-actualizaciones">
+            <h1>
+            Últimas actualizaciones
+            </h1>
+          </div>
+          <div className="tabs-cards">
+          <div className="tabs">
+            {Object.keys(cardData).map((tab, index) => (
+              <div
+                key={index}
+                className={`tab ${activeTab === tab ? "active" : ""}`}
+                onClick={() => handleTabClick(tab)}
+              >
+                {tabNames[tab]} {/* Utilizamos el nombre personalizado aquí */}
+              </div>
+              
+            ))}
+             </div>
+          
+          <div className="card-container">
+            {cardData[activeTab] ? (
+              cardData[activeTab].map((card, index) => (
+                <Cards
+                  key={`${index}-${card.nombre}`}
+                  imagenSrc={card.imagenSrc}
+                  nombre={card.nombre}
+                  fecha={card.fecha}
+                  titulo={card.titulo}
+                  texto={card.texto}
+                 
+                />
+              ))
+            ) : (
+              <p></p>
+            )}
+          </div>
+          </div>
           <EjemploComponente
             esPrimario={true}
             texto={"Boton primario"}
