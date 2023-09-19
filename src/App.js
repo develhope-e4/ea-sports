@@ -5,7 +5,8 @@ import EjemploComponente from "./components/EjemploComponente/EjemploComponente"
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
 import Card from "./components/Cards/Cards";
-import LoopVideo from "./components/Loop/Loop";
+import LoopVideo from "./components/LoopVideo/LoopVideo";
+
 function App() {
   return (
 <div className="App">
@@ -25,7 +26,10 @@ function App() {
         <div className="flex-col-center">
           <svg></svg>
           <div className="container">
-          <LoopVideo />
+          <LoopVideo 
+            imagenSrc="./Immorlas-Logo.svg"
+            videoSrc="./immortals.mp4"
+          />
           <div className="compraAhora">
             <Boton 
               esPrimario={true}
