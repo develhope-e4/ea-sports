@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import "./styles/index.scss";
-import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
 import Cards from "./components/Cards/Cards";
 import Tabs from "./components/Tabs/Tabs";
@@ -55,6 +54,7 @@ function App() {
               <p></p>
             )}
           </div>
+        </div>
         <div className="flex-col-center">
           <Boton
             esPrimario={true}
@@ -76,7 +76,6 @@ function App() {
           />
           <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
           <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
-          <Icono icono={<IconoEjemplo />} />
         </div>
       </div>
     </div>
