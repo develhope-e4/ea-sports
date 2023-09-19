@@ -63,22 +63,6 @@ function App() {
             )}
           </div>
         </div>
-        <EjemploComponente
-          esPrimario={true}
-          texto={"Boton primario"}
-          onClick={() => console.log("click en el boton primario")}
-        />
-        <EjemploComponente
-          esPrimario={false}
-          texto={"Boton secundario"}
-          onClick={() => console.log("click en el boton secundario")}
-        />
-        <EjemploComponente
-          esPrimario={false}
-          disabled={true}
-          onClick={() => console.log("click en el boton disabled")}
-          texto={"Boton secundario"}
-        />
         <Boton
           esPrimario={true}
           isLight={false}
