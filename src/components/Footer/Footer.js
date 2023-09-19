@@ -136,14 +136,12 @@ const TextoLinks = () => {
         </div>
         <div className="supDer">
           <p className="dropdownRegionFooterBlanco">
-            <p>Región (precios)</p>
             <FooterDropdown
               dropdownTitle="Región (precios)"
               items={itemsRegion}
             />
           </p>
           <p className="dropdownIdiomaFooterBlanco">
-            <p>Idioma</p>
             <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
           </p>
         </div>
