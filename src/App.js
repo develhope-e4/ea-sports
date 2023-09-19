@@ -3,6 +3,10 @@ import "./App.css";
 import "./styles/index.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
+import Icono from "./components/Icono/Icono";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { AiOutlineMenu } from "react-icons/ai";
+import IconoEjemplo from "./assets/iconos/IconoEjemplo";
 function App() {
   return (
     <div className="App">
@@ -19,6 +23,7 @@ function App() {
         >
           Learn React
         </a>
+
         <div className="flex-col-center">
           {/**
            * Manera de invocar a mi componente reutilizable
@@ -44,20 +49,22 @@ function App() {
             isLight={false}
             onClick={() => console.log("click en el boton dorado")}
             texto={"Comprar ahora"}
-            />
-            <Boton
+          />
+          <Boton
             esPrimario={false}
             isLight={false}
             onClick={() => console.log("click en el boton negro")}
             texto={"Últimos juegos"}
-            />
-            <Boton
+          />
+          <Boton
             esPrimario={false}
             isLight={true}
             onClick={() => console.log("click en el boton blanco")}
             texto={"Únete ya"}
-            />
-           
+          />
+          <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
+          <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
+          <Icono icono={<IconoEjemplo />} />
         </div>
       </header>
     </div>
