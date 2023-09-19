@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import "./styles/index.scss";
-import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
 import TextoLinks from "./components/Footer/Footer";
@@ -157,7 +156,6 @@ function App() {
           />
           <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
           <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
-          <Icono icono={<IconoEjemplo />} />
         </div>
         <Boton
           esPrimario={true}
