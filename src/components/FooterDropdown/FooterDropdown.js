@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./FooterDropdown.scss";
-
+import Icono from "../Icono/Icono";
+import { HiOutlineChevronUp, HiOutlineChevronDown } from "react-icons/hi";
 const FooterDropdown = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
@@ -50,27 +51,9 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
       >
         {dropdownTitle} {/* @TODO Cambiar svg por componente  */}
         {isOpen ? (
-          <svg
-            height="24"
-            fill="rgb(70,70,70)"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="m0 0h24v24h-24z" fill="none" />
-            <path d="m7.41 15.41 4.59-4.58 4.59 4.58 1.41-1.41-6-6-6 6z" />
-          </svg>
+          <Icono icono={<HiOutlineChevronUp />} />
         ) : (
-          <svg
-            height="24"
-            fill="rgb(70,70,70)"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="m0 0h24v24h-24z" fill="none" />
-            <path d="m7.41 8.59 4.59 4.58 4.59-4.58 1.41 1.41-6 6-6-6z" />
-          </svg>
+          <Icono icono={<HiOutlineChevronDown />} />
         )}
       </button>
       <ul

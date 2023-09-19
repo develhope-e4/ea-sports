@@ -3,7 +3,7 @@ import FooterDropdown from "../FooterDropdown/FooterDropdown.js";
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 
-const TextoLinks = () => {
+const Footer = () => {
   const itemsRegion = [
     {
       slug: "/link1/",
@@ -188,4 +188,4 @@ const TextoLinks = () => {
   );
 };
 
-export default TextoLinks;
+export default Footer;
