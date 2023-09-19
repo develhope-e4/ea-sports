@@ -9,7 +9,8 @@ import CardDestacada from "./components/CardDestacada/CardDestacada";
 import TextoLinks from "./components/Footer/Footer";
 import Card from "./components/Cards/Cards";
 import Cards from "./components/Cards/Cards";
-import cardData from "./components/Cards/cardData";
+import cardData from "./data/CardData.mock";
+import Tabs from "./components/Tabs/Tabs";
 
 const tabNames = {
   NoticiasEA: "Noticias De EA",
@@ -30,37 +31,86 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div className="flex-col-center">
+        <div className="ultimas-actualizaciones">
+          <h1>Últimas actualizaciones</h1>
+        </div>
+        <div className="tabs-cards">
+          <div className="tabs">
+            {Object.keys(cardData).map((tab, index) => (
+              <div
+                key={index}
+                className={`tab ${activeTab === tab ? "active" : ""}`}
+                onClick={() => handleTabClick(tab)}
+              >
+                {tabNames[tab]} {/* Utilizamos el nombre personalizado aquí */}
+              </div>
+            ))}
+          </div>
+
+          <div className="card-container">
+            {cardData[activeTab] ? (
+              cardData[activeTab].map((card, index) => (
+                <Cards
+                  key={`${index}-${card.nombre}`}
+                  imagenSrc={card.imagenSrc}
+                  nombre={card.nombre}
+                  fecha={card.fecha}
+                  titulo={card.titulo}
+                  texto={card.texto}
+                />
+              ))
+            ) : (
+              <p></p>
+            )}
+          </div>
+        </div>
+        <EjemploComponente
+          esPrimario={true}
+          texto={"Boton primario"}
+          onClick={() => console.log("click en el boton primario")}
+        />
+        <EjemploComponente
+          esPrimario={false}
+          texto={"Boton secundario"}
+          onClick={() => console.log("click en el boton secundario")}
+        />
+        <EjemploComponente
+          esPrimario={false}
+          disabled={true}
+          onClick={() => console.log("click en el boton disabled")}
+          texto={"Boton secundario"}
+        />
+        <Boton
+          esPrimario={true}
+          isLight={false}
+          onClick={() => console.log("click en el boton dorado")}
+          texto={"Comprar ahora"}
+        />
+        <Boton
+          esPrimario={false}
+          isLight={false}
+          onClick={() => console.log("click en el boton negro")}
+          texto={"Últimos juegos"}
+        />
+        <Boton
+          esPrimario={false}
+          isLight={true}
+          onClick={() => console.log("click en el boton blanco")}
+          texto={"Únete ya"}
+        />
+        <CardDestacada backgroundImage="eafc24.png" gameLogo="EAlogo.svg" />
+        <TextoLinks />
         <div className="flex-col-center">
           <div className="ultimas-actualizaciones">
             <h1>Últimas actualizaciones</h1>
           </div>
           <div className="tabs-cards">
-            <div className="tabs">
-              {Object.keys(cardData).map((tab, index) => (
-                <div
-                  key={index}
-                  className={`tab ${activeTab === tab ? "active" : ""}`}
-                  onClick={() => handleTabClick(tab)}
-                >
-                  {tabNames[tab]}{" "}
-                  {/* Utilizamos el nombre personalizado aquí */}
-                </div>
-              ))}
-            </div>
-
+            <Tabs
+              tabNames={tabNames}
+              handleTabClick={handleTabClick}
+              activeTab={activeTab}
+            />
             <div className="card-container">
               {cardData[activeTab] ? (
                 cardData[activeTab].map((card, index) => (
@@ -78,44 +128,42 @@ function App() {
               )}
             </div>
           </div>
-          <EjemploComponente
-            esPrimario={true}
-            texto={"Boton primario"}
-            onClick={() => console.log("click en el boton primario")}
-          />
-          <EjemploComponente
-            esPrimario={false}
-            texto={"Boton secundario"}
-            onClick={() => console.log("click en el boton secundario")}
-          />
-          <EjemploComponente
-            esPrimario={false}
-            disabled={true}
-            onClick={() => console.log("click en el boton disabled")}
-            texto={"Boton secundario"}
-          />
-          <Boton
-            esPrimario={true}
-            isLight={false}
-            onClick={() => console.log("click en el boton dorado")}
-            texto={"Comprar ahora"}
-          />
-          <Boton
-            esPrimario={false}
-            isLight={false}
-            onClick={() => console.log("click en el boton negro")}
-            texto={"Últimos juegos"}
-          />
-          <Boton
-            esPrimario={false}
-            isLight={true}
-            onClick={() => console.log("click en el boton blanco")}
-            texto={"Únete ya"}
-          />
-          <CardDestacada backgroundImage="eafc24.png" gameLogo="EAlogo.svg" />
-          <TextoLinks />
         </div>
-      </header>
+        <EjemploComponente
+          esPrimario={true}
+          texto={"Boton primario"}
+          onClick={() => console.log("click en el boton primario")}
+        />
+        <EjemploComponente
+          esPrimario={false}
+          texto={"Boton secundario"}
+          onClick={() => console.log("click en el boton secundario")}
+        />
+        <EjemploComponente
+          esPrimario={false}
+          disabled={true}
+          onClick={() => console.log("click en el boton disabled")}
+          texto={"Boton secundario"}
+        />
+        <Boton
+          esPrimario={true}
+          isLight={false}
+          onClick={() => console.log("click en el boton dorado")}
+          texto={"Comprar ahora"}
+        />
+        <Boton
+          esPrimario={false}
+          isLight={false}
+          onClick={() => console.log("click en el boton negro")}
+          texto={"Últimos juegos"}
+        />
+        <Boton
+          esPrimario={false}
+          isLight={true}
+          onClick={() => console.log("click en el boton blanco")}
+          texto={"Únete ya"}
+        />
+      </div>
     </div>
   );
 }
