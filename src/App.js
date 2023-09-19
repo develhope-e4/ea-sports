@@ -6,6 +6,9 @@ import Boton from "./components/Boton/Boton";
 import Cards from "./components/Cards/Cards";
 import Tabs from "./components/Tabs/Tabs";
 import cardData from "./data/CardData.mock";
+import Icono from "./components/Icono/Icono";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { AiOutlineMenu } from "react-icons/ai";
 
 function App() {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -52,25 +55,29 @@ function App() {
               <p></p>
             )}
           </div>
+        <div className="flex-col-center">
+          <Boton
+            esPrimario={true}
+            isLight={false}
+            onClick={() => console.log("click en el boton dorado")}
+            texto={"Comprar ahora"}
+          />
+          <Boton
+            esPrimario={false}
+            isLight={false}
+            onClick={() => console.log("click en el boton negro")}
+            texto={"Últimos juegos"}
+          />
+          <Boton
+            esPrimario={false}
+            isLight={true}
+            onClick={() => console.log("click en el boton blanco")}
+            texto={"Únete ya"}
+          />
+          <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
+          <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
+          <Icono icono={<IconoEjemplo />} />
         </div>
-        <Boton
-          esPrimario={true}
-          isLight={false}
-          onClick={() => console.log("click en el boton dorado")}
-          texto={"Comprar ahora"}
-        />
-        <Boton
-          esPrimario={false}
-          isLight={false}
-          onClick={() => console.log("click en el boton negro")}
-          texto={"Últimos juegos"}
-        />
-        <Boton
-          esPrimario={false}
-          isLight={true}
-          onClick={() => console.log("click en el boton blanco")}
-          texto={"Únete ya"}
-        />
       </div>
     </div>
   );
