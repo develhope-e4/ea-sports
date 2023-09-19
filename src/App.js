@@ -1,29 +1,27 @@
-import logo from "./logo.svg";
 import React, { useState } from "react";
 import "./App.css";
 import "./styles/index.scss";
-import "./components/Cards/Cards.scss";
 import EjemploComponente from "./components/EjemploComponente/EjemploComponente";
 import Boton from "./components/Boton/Boton";
 import Cards from "./components/Cards/Cards";
-import cardData from "./data/CardData.mock";
 import Tabs from "./components/Tabs/Tabs";
-
-const tabNames = {
-  NoticiasEA: "Noticias De EA",
-  EASPORTSFC: "EA SPORTS FC",
-  StarWars: "Star Wars",
-  ApexLegends: "Apex Legends",
-  LosSims4: "Los Sims 4",
-  F1: "F1",
-  Battlefield: "Battlefield",
-};
+import cardData from "./data/CardData.mock";
 
 function App() {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+
+  const tabNames = {
+    NoticiasEA: "Noticias De EA",
+    EASPORTSFC: "EA SPORTS FC",
+    StarWars: "Star Wars",
+    ApexLegends: "Apex Legends",
+    LosSims4: "Los Sims 4",
+    F1: "F1",
+    Battlefield: "Battlefield",
   };
 
   return (
