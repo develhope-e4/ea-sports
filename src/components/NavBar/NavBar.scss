@@ -1,0 +1,78 @@
+.navbar {
+    display: flex;
+    color: white;
+    width: 1200px;
+    background-color: #edc4c4;
+  }
+  
+  .nav {
+    display: flex;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .easvg {
+    padding: 0px 50px;
+    width: 260px;
+    height: 31px;
+  }
+  
+  /* Resto de los estilos... */
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1000;
+    display: none;
+  }
+  
+  .menu-overlay-visible {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .menu {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: right 0.3s ease;
+  }
+  
+  .menu.open {
+    left: 0;
+  }
+  
+  .close-menu {
+    left: -400px; 
+  }
+  
+  .menu-link {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .menu-link:hover {
+    color: red;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .menu-image {
+    width: 100px;
+    height: auto;
+  }
+  

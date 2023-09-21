@@ -8,6 +8,7 @@ import cardData from "./data/CardData.mock";
 import Icono from "./components/Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -29,6 +30,7 @@ function App() {
   return (
     <div className="App">
       <div className="flex-col-center">
+        <NavBar />
         <div className="ultimas-actualizaciones">
           <h1>Últimas actualizaciones</h1>
         </div>
@@ -74,8 +76,8 @@ function App() {
             onClick={() => console.log("click en el boton blanco")}
             texto={"Únete ya"}
           />
-          <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
-          <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
+          <Icono icono={<BsThreeDotsVertical style={{ fill: "black" }} />} />
+          <Icono icono={<AiOutlineMenu style={{ fill: "black" }} />} />
         </div>
       </div>
     </div>
