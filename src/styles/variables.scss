@@ -3,8 +3,8 @@
   --spacing-xl: 150px;
   --spacing-lg: 100px;
   --spacing-md: 50px;
-  --spacing-sm: 20px;
-  --spacing-xs: 5px;
+  --spacing-sm: 25px;
+  --spacing-xs: 10px;
 
   --spacing-sm-boton: 16px 24px;
 
@@ -19,7 +19,7 @@
   --border-radius-sm: 5px;
   --border-radius-xs: 3px;
   --border-grosor: 2px;
-  --gap:29px;
+  --gap:15px;
 
   --color-prymary: #ff1e3c;
   --color-secundary: #ff4747;
@@ -43,16 +43,19 @@
 
 
 
-  --font-size-xl:20px;
+  --font-size-xl:24px;
   --font-size-l:18px;
   --font-size-m:16px;
-  --font-size-s:15px;
+  --font-size-s:14px;
   --font-size-xs:13px;
 
-  --font-weith-m:700;
+  --font-weith-l:900;
+  --font-weith-m:600;
   --font-weith-s:400;
 
-  --font-style-ea: "Electronic Arts Text";
+  --font-family-ea: "ElectronicArtsText", "DM Sans", "Verdana", "Helvetica", "Arial",
+    sans-serif;
+  --font-style-eaaa: "Electronic Arts Text";
   --font-style-arial: Arial;
   --font-style-helvetica: Helvetica;
   --font-style-sans:sans-serif;
