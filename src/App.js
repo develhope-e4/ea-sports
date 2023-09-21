@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import "./styles/index.scss";
 import Boton from "./components/Boton/Boton";
+import CardDestacada from "./components/CardDestacada/CardDestacada";
 import Cards from "./components/Cards/Cards";
 import Tabs from "./components/Tabs/Tabs";
 import cardData from "./data/CardData.mock";
@@ -73,7 +74,12 @@ function App() {
             isLight={true}
             onClick={() => console.log("click en el boton blanco")}
             texto={"Únete ya"}
-          />
+            />
+            <CardDestacada
+            url="http://google.com"
+            backgroundImage="eafc24.png"
+            gameLogo="EAlogo.svg"
+            />
           <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
           <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
         </div>
