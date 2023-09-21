@@ -3,7 +3,7 @@ import "./App.css";
 import "./styles/index.scss";
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
-import HighlightGroup from "./components/Highlight-Group/Highlight-Group";
+import HighlightGroup from "./components/HighlightGroup/HighlightGroup";
 import Cards from "./components/Cards/Cards";
 import Tabs from "./components/Tabs/Tabs";
 import cardData from "./data/CardData.mock";

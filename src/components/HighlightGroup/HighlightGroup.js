@@ -1,4 +1,4 @@
-import "./Highlight-Group.scss";
+import "./HighlightGroup.scss";
 import CardDestacada from "../CardDestacada/CardDestacada";
 
 
