@@ -1,22 +1,22 @@
 @import url(https://db.onlinewebfonts.com/c/48656eabd3fef6464367d956315c749a?family=Electronic+Arts+Text);
+
 .flex-col-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  gap: var(--spacing-xs);
+  gap: var(--spacing-md);
 }
 
-.container {
-  position: relative;
-  
-  display: inline-block;
-}
+.section {
+  width: 1456px;
 
-.compraAhora {
-  position: absolute;
-  left: 50%;
-  transform:translateX(-50%);
-  bottom: 25%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
 }
