@@ -1,7 +1,83 @@
-a{
+footer {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-row: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.gridFooter {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+a {
     text-decoration: none;
     margin: 10px;
-    .linkTextoFooterGris{
+}
 
-    };
+a.hover {
+    color: var(--color-secundary);
+}
+
+.footerGris {
+    background-color: var(--color-octave);
+    height: 200px;
+}
+
+.linkTextoFooterGris {
+    background-color: rgb(255, 205, 245);
+    margin-left: 5px;
+    color: var(--color-sextary);
+}
+
+.linkTextoNegritaFooter {
+    background-color: orange;
+    color: var(--color-sextary);
+    position: right;
+    font-weight: bold;
+    font-size: normal;
+}
+
+.footerBlanco {
+    background-color: var(--color-quinary);
+    height: 350px;
+    width: 300vh;
+}
+
+.linkTextoFooterBlanco {
+    color: var(--color-sextary);
+    background-color: green;
+}
+
+.linkTextoFooterBlanco2 {
+    color: var(--color-sextary);
+    background-color: rgb(159, 152, 75);
+}
+
+.latIzq {
+    background-color: yellow;
+    height: 65px;
+    width: auto;
+}
+
+.supDer {
+    background-color: blue;
+}
+
+.infDer {
+    background-color: purple;
+    height: 70px;
+    width: auto;
+}
+
+.iconosRS {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
