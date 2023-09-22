@@ -3,11 +3,9 @@ import "./App.css";
 import "./styles/index.scss";
 import Boton from "./components/Boton/Boton";
 import CardDestacada from "./components/CardDestacada/CardDestacada";
-import TextoLinks from "./components/Footer/Footer";
 import Cards from "./components/Cards/Cards";
 import Tabs from "./components/Tabs/Tabs";
 import cardData from "./data/CardData.mock";
-
 import Icono from "./components/Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";

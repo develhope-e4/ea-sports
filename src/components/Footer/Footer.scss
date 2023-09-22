@@ -1,83 +1,100 @@
-footer {
-    width: 100px;
-    height: 100px;
+/* Estilos para el primer grid (footerGris y footerBlanco) */
+.footer {
     display: grid;
-    grid-template-columns: 50px 50px;
-    grid-row: auto auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-}
-
-.gridFooter {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-a {
-    text-decoration: none;
-    margin: 10px;
-}
-
-a.hover {
-    color: var(--color-secundary);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
 .footerGris {
     background-color: var(--color-octave);
-    height: 200px;
-}
-
-.linkTextoFooterGris {
-    background-color: rgb(255, 205, 245);
-    margin-left: 5px;
-    color: var(--color-sextary);
-}
-
-.linkTextoNegritaFooter {
-    background-color: orange;
-    color: var(--color-sextary);
-    position: right;
-    font-weight: bold;
-    font-size: normal;
+    height: 220px;
+    display: grid;
+    grid-template-columns: 2, 1fr;
+    grid-template-rows: 1, 1fr;
 }
 
 .footerBlanco {
     background-color: var(--color-quinary);
     height: 350px;
-    width: 300vh;
+    width: 45vh;
+    display: grid;
+    grid-template-columns: 11% 51% 38%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas:
+        "primero segundo tercero"
+        ". cuarto quinto";
 }
 
-.linkTextoFooterBlanco {
-    color: var(--color-sextary);
-    background-color: green;
+.linkTextoFooterGris {
+    margin-top: 45px;
+    height: 20px;
+    font-size: var(--font-size-l);
+    font-style: var(--font-style-ea);
 }
 
-.linkTextoFooterBlanco2 {
+a {
+    text-decoration: none;
+    margin-right: 65px;
+    font-style: var(--font-family-ea);
     color: var(--color-sextary);
-    background-color: rgb(159, 152, 75);
+
 }
+
+.linkTextoNegritaFooter {
+    font-weight: var(--font-weith-l);
+    font-size: var(--font-size-l);
+    margin-top: 45px;
+    text-decoration: none;
+    height: 40px;
+    width: 250px;
+    grid-column: 2 / 2;
+}
+
+.linkTextoNegritaFooterTexto {
+    margin-right: -40px;
+}
+
+/* Estilos para el tercer grid (dentro de footerBlanco) */
 
 .latIzq {
-    background-color: yellow;
     height: 65px;
     width: auto;
+    margin-left: 25px;
+    margin-top: 25px;
+    grid-area: primero;
+}
+
+.supIzq {
+    justify-content: first baseline;
+    margin-top: 25px;
+    grid-area: segundo;
+    font-size: var(--font-size-xl);
+    font-style: var(--font-style-ea);
+}
+
+.infIzq {
+    margin-right: 10px;
+    height: 100px;
+    width: 70%;
+    grid-area: cuarto;
 }
 
 .supDer {
-    background-color: blue;
+    height: 50px;
+    width: 60%;
+    grid-area: tercero;
 }
 
 .infDer {
-    background-color: purple;
-    height: 70px;
-    width: auto;
+    height: 50px;
+    width: 25%;
+    margin: 10px;
+    grid-area: quinto;
 }
 
 .iconosRS {
     display: flex;
+    justify-content: center;
     justify-content: space-between;
-    align-items: center;
+    margin-top: 15px;
 }
