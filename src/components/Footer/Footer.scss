@@ -34,10 +34,9 @@
 
 a {
     text-decoration: none;
-    margin-right: 65px;
+    margin-right: 70px;
     font-style: var(--font-family-ea);
     color: var(--color-sextary);
-
 }
 
 .linkTextoNegritaFooter {
@@ -54,8 +53,6 @@ a {
     margin-right: -40px;
 }
 
-/* Estilos para el tercer grid (dentro de footerBlanco) */
-
 .latIzq {
     height: 65px;
     width: auto;
@@ -65,24 +62,28 @@ a {
 }
 
 .supIzq {
-    justify-content: first baseline;
     margin-top: 25px;
     grid-area: segundo;
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-l);
     font-style: var(--font-style-ea);
+    text-align: left;
+    line-height: 3;
 }
 
 .infIzq {
-    margin-right: 10px;
     height: 100px;
-    width: 70%;
+    width: 100%;
     grid-area: cuarto;
+    text-align: left;
+    line-height: 2;
 }
 
 .supDer {
     height: 50px;
     width: 60%;
     grid-area: tercero;
+    margin-top: 25px;
+    margin-left: 190px;
 }
 
 .infDer {
@@ -90,6 +91,12 @@ a {
     width: 25%;
     margin: 10px;
     grid-area: quinto;
+    margin-top: 90px;
+    margin-left: 255px;
+}
+
+.infIzq a{
+    margin-right: 45px;
 }
 
 .iconosRS {
@@ -98,3 +105,4 @@ a {
     justify-content: space-between;
     margin-top: 15px;
 }
+

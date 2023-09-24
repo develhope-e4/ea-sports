@@ -142,7 +142,7 @@ const Footer = () => {
   const itemsIdioma = [
     {
       slug: "/link1/",
-      anchor: "United States", src: ""
+      anchor: "United States",
     },
     {
       slug: "/link2/",
@@ -174,66 +174,82 @@ const Footer = () => {
     },
     {
       slug: "/link9/",
+      icono:"",
       anchor: "Brasil",
     },
     {
       slug: "/link10/",
+      icono:"",
       anchor: "Россия",
     },
     {
       slug: "/link11/",
+      icono:"",
       anchor: "España",
     },
     {
       slug: "/link12/",
+      icono:"",
       anchor: "Česká republika",
     },
     {
       slug: "/link13/",
+      icono:"",
       anchor: "Canada (En)",
     },
     {
       slug: "/link14/",
+      icono:"",
       anchor: "Canada (Fr)",
     },
     {
       slug: "/link15/",
+      icono:"",
       anchor: "Danmark",
     },
     {
       slug: "/link16/",
+      icono:"",
       anchor: "Suomi",
     },
     {
       slug: "/link17/",
+      icono:"",
       anchor: "México",
     },
     {
       slug: "/link18/",
+      icono:"",
       anchor: "Nederland",
     },
     {
       slug: "/link19/",
+      icono:"",
       anchor: "Norge",
     },
     {
       slug: "/link20/",
+      icono:"",
       anchor: "Sverige",
     },
     {
       slug: "/link21/",
+      icono:"",
       anchor: "中国",
     },
     {
       slug: "/link22/",
+      icono:"",
       anchor: "대한민국",
     },
     {
       slug: "/link23/",
+      icono:"",
       anchor: "繁體中文",
     },
     {
       slug: "/link24/",
+      icono:"",
       anchor: "Türkiye",
     },
 
@@ -266,19 +282,22 @@ const Footer = () => {
             <a href="https://www.ea.com/es-es/games/library">Biblioteca de juegos</a>
             <a href="https://www.ea.com/es-es/subscribe">Suscribirse</a>
             <a href="https://www.ea.com/es-es/redeem">Canjear Código</a>
+            <br/>
             <a href="https://www.ea.com/es-es/ea-app">EA app</a>
             <a href="https://www.ea.com/es-es/ea-app">Acerca de</a>
             <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
             <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
           </div>
           <div className="supDer">
-            <FooterDropdown dropdownTitle="Región (precios)" items={itemsRegion} />
-            <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
+            <FooterDropdown className="dropdownEspacio" dropdownTitle="Región (precios)" items={itemsRegion} />
+            <FooterDropdown className="dropdownEspacio" dropdownTitle="Idioma" items={itemsIdioma} />
           </div>
           <div className="infIzq">
             <a href="http://www.ea.com/es-es/legal">Información legal y privacidad</a>
             <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Acuerdo de usuario</a>
+            <br/>
             <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Política de privacidad y directiva de cookies (tus derechos de privacidad)</a>
+            <br/>
             <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Actualizaciones del servicio online</a>
             <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Seguridad</a>
             <a href="https://www.ea.com/es-es">Sus preferencias de cookies</a>
