@@ -1,46 +1,55 @@
 .SubscriptionSection {
     text-align: left;
-    height: 433px;
     width: 100%;
-    background-image: url(../../assets/Imagenes/Subscription/hero-medium-console-grande.jpg);
+    background-image: url(../../assets/Imagenes/Subscription/hero-medium-console-medio.jpg);
     background-size: 100%;
 
     .SubscriptionSection-contenido {
-        
-        padding: 36px 555.429px 32px 80.368px;
+        padding: 40px 976px 32px 335px;
+        height: 433px;
+        display:flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
 
         h6 {
-            width: 50%;
+            width: 100%;
             color: var(--color-quinary);
             font-size: var(--font-size-l);
             font-family: var(--font-family-eaaa);
             font-weight: var(--font-weith-m);
+            margin: 0;
         }
-    }
-}
-
-.SubscriptionSection-MoreInfo {
-    display: flex;
-    height: 96px;
-    padding: 0 84.750px 0 84.750px;
-    height: 118px;
-    background-color: #6fb0d6;
-
-    .SubscriptionSection-MoreInfo-contenido {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-
-        h2 {
-            text-align: left;
-            margin-right: 28px;
-            font-family: var(--font-family-ea);
-            width: 25%;
-        }
-
         button {
-            justify-content: flex-end;
+            margin-top:var(--spacing-sm);
+        }
+    };
+
+    .SubscriptionSection-MoreInfo {
+        display: flex;
+        height: 96px;
+        padding: 0 350px 0 350px;
+        height: 118px;
+        background-color: #6fb0d6;
+
+        .SubscriptionSection-MoreInfo-contenido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            h2 {
+                text-align: left;
+                margin-right: 28px;
+                font-family: var(--font-family-ea);
+                font-size: var(--font-size-xxl);
+                font-weight: var(--font-weith-m);
+                width: 60%;
+            }
+
+            button {
+                justify-content: flex-end;
+            }
         }
     }
 }

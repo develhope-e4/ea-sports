@@ -90,9 +90,11 @@ const Development = () => {
               texto={"Únete ya"}
             />
             <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
-            <Icono icono={ <AiOutlineMenu style={ { fill: "white" } } /> } />
-            <Subscription></Subscription>
+            <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
           </div>
+        </div>
+        <div>
+          <Subscription />
         </div>
       </div>
     </div>
