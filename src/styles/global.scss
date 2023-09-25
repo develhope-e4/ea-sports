@@ -1,10 +1,10 @@
 @import url(https://db.onlinewebfonts.com/c/48656eabd3fef6464367d956315c749a?family=Electronic+Arts+Text);
+
 .flex-col-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   gap: var(--spacing-xs);
 }
 
@@ -19,4 +19,17 @@
   left: 50%;
   transform:translateX(-50%);
   bottom: 25%;
+  gap: var(--spacing-md);
+}
+
+.section {
+  width: 1456px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
 }
