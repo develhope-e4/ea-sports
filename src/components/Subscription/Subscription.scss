@@ -1,25 +1,46 @@
-.SubscriptionSection{
+.SubscriptionSection {
     text-align: left;
     height: 433px;
     width: 100%;
-    background-image:url(../../assets/Imagenes/Subscription/hero-medium-console-7x2-xl.jpg.adapt.crop7x2.1920w.jpg);
+    background-image: url(../../assets/Imagenes/Subscription/hero-medium-console-grande.jpg);
     background-size: 100%;
 
-    .SubscriptionSection-contenido{
+    .SubscriptionSection-contenido {
+        
         padding: 36px 555.429px 32px 80.368px;
+
+        h6 {
+            width: 50%;
+            color: var(--color-quinary);
+            font-size: var(--font-size-l);
+            font-family: var(--font-family-eaaa);
+            font-weight: var(--font-weith-m);
+        }
     }
 }
 
 .SubscriptionSection-MoreInfo {
-    
+    display: flex;
     height: 96px;
     padding: 0 84.750px 0 84.750px;
     height: 118px;
-    width: 100%;
     background-color: #6fb0d6;
 
     .SubscriptionSection-MoreInfo-contenido {
         display: flex;
-    align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        h2 {
+            text-align: left;
+            margin-right: 28px;
+            font-family: var(--font-family-ea);
+            width: 25%;
+        }
+
+        button {
+            justify-content: flex-end;
+        }
     }
 }

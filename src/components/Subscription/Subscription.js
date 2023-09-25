@@ -1,5 +1,4 @@
 import Boton from "../Boton/Boton";
-import Icono from "../Icono/Icono";
 import IconoEaPlay from "../../assets/iconos/IconoEaPlay";
 import "./Subscription.scss";
 
@@ -9,11 +8,11 @@ const Subscription = () => {
       <div class="SubscriptionSection">
         <div class="SubscriptionSection-contenido">
           <IconoEaPlay />
-          <h3>
+          <h6>
             No te limites a jugar. Saca más partido a tus juegos. Desbloquea
             recompensas exclusivas, contenido para los miembros y una biblioteca
             de los mejores títulos.
-          </h3>
+          </h6>
           <Boton
             esPrimario={false}
             isLight={true}
@@ -23,8 +22,8 @@ const Subscription = () => {
         </div>
 
         <div class="SubscriptionSection-MoreInfo">
-          <div className="SubscriptionSection-MoreInfo-contenido">
-            <h2>Herramientas parentales y de juego el control en tus manos</h2>
+          <div class="SubscriptionSection-MoreInfo-contenido">
+            <h2>Herramientas parentales y de juego: el control en tus manos</h2>
             <Boton
               esPrimario={false}
               isLight={false}
