@@ -8,7 +8,7 @@ const Subscription = () => {
     <div>
       <div class="SubscriptionSection">
         <div class="SubscriptionSection-contenido">
-          <IconoEaPlay/>
+          <IconoEaPlay />
           <h3>
             No te limites a jugar. Saca más partido a tus juegos. Desbloquea
             recompensas exclusivas, contenido para los miembros y una biblioteca
@@ -21,15 +21,18 @@ const Subscription = () => {
             texto={"Únete ya"}
           />
         </div>
-      </div>
-      <div class="SubscriptionSection-MoreInfo">
-        <h1>Herramientas parentales y de juego el control en tus manos</h1>
-        <Boton
-          esPrimario={false}
-          isLight={false}
-          onClick={() => console.log("click en el boton negro")}
-          texto={"Más información"}
-        />
+
+        <div class="SubscriptionSection-MoreInfo">
+          <div className="SubscriptionSection-MoreInfo-contenido">
+            <h2>Herramientas parentales y de juego el control en tus manos</h2>
+            <Boton
+              esPrimario={false}
+              isLight={false}
+              onClick={() => console.log("click en el boton negro")}
+              texto={"Más información"}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

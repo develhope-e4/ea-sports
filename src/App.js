@@ -94,6 +94,9 @@ function App() {
           </div>
         </div>
       </div>
+      <div>
+        <Subscription></Subscription>
+      </div>
     </div>
   );
 }
