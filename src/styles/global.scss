@@ -5,7 +5,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--spacing-xs);
+}
 
+.container {
+  position: relative;
+  
+  display: inline-block;
+}
+
+.compraAhora {
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
+  bottom: 25%;
   gap: var(--spacing-md);
 }
 

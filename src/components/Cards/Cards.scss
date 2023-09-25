@@ -42,10 +42,11 @@
 }
 
 .card-content {
-  padding: 24px;
+  padding: var(--padding-m);
   display: flex;
   flex-direction: column;
   max-height: fit-content;
+
 }
 
 .card-image {
