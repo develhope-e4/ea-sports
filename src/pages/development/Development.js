@@ -10,6 +10,7 @@ import Icono from "../../components/Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 import { cardDescatadaData } from "../../data/CardDestacadasData.mock";
+import Subscription from "../../components/Subscription/Subscription";
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -89,7 +90,8 @@ const Development = () => {
               texto={"Únete ya"}
             />
             <Icono icono={<BsThreeDotsVertical style={{ fill: "white" }} />} />
-            <Icono icono={<AiOutlineMenu style={{ fill: "white" }} />} />
+            <Icono icono={ <AiOutlineMenu style={ { fill: "white" } } /> } />
+            <Subscription></Subscription>
           </div>
         </div>
       </div>
