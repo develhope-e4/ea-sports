@@ -7,6 +7,31 @@ import { ImYoutube } from "react-icons/im";
 import { BsInstagram } from "react-icons/bs";
 import { IoLogoTwitch } from "react-icons/io";
 import Icono from "../Icono/Icono";
+import banderaAlemania from "../../assets/Footer/banderaAlemania.png";
+import banderaAustralia from "../../assets/Footer/banderaAustralia.png";
+import banderaBrasil from "../../assets/Footer/banderaBrasil.png";
+import banderaCanada from "../../assets/Footer/banderaCanada.png";
+import banderaChekia from "../../assets/Footer/banderaChekia.png";
+import banderaChina from "../../assets/Footer/banderaChina.jpeg";
+import banderaCorea from "../../assets/Footer/banderaCorea.jpeg"; 
+import banderaDinamarca from "../../assets/Footer/banderaDinamarca.png";
+import banderaEspaña from "../../assets/Footer/banderaEspaña.png";
+import banderaEstadosUnidos from "../../assets/Footer/banderaEstadosUnidos.png";
+import banderaFinlandia from "../../assets/Footer/banderaFinlandia.png";
+import banderaFrancia from "../../assets/Footer/banderaFrancia.png";
+import banderaItalia from "../../assets/Footer/banderaItalia.png";
+import banderaJapon from "../../assets/Footer/banderaJapon.png";
+import banderaMexico from "../../assets/Footer/banderaMexico.png";
+import banderaNederland from "../../assets/Footer/banderaNederland.png";
+import banderaNorge from "../../assets/Footer/banderaNorge.png";
+import banderaPolonia from "../../assets/Footer/banderaPolonia.png";
+import banderaReinoUnido from "../../assets/Footer/banderaReinoUnido.png";
+import banderaRusia from "../../assets/Footer/banderaRusia.png";
+import banderaSeverige from "../../assets/Footer/banderaSeverige.png";
+import banderaTurkia from "../../assets/Footer/banderaTurkia.png";
+import eaPurple from "../../assets/Footer/eaPurple.png";
+import TRUSTe from "../../assets/Footer/TRUSTe.svg";
+
 
 const Footer = () => {
   const itemsRegion = [
@@ -142,114 +167,122 @@ const Footer = () => {
   const itemsIdioma = [
     {
       slug: "/link1/",
+      flag: banderaEstadosUnidos,
       anchor: "United States",
     },
     {
       slug: "/link2/",
+      flag: banderaReinoUnido,
       anchor: "United kimdoms",
     },
     {
       slug: "/link3/",
+      flag: banderaAustralia,
       anchor: "Australia",
     },
     {
       slug: "/link4/",
+      flag: banderaFrancia,
       anchor: "France",
     },
     {
       slug: "/link5/",
+      flag: banderaAlemania,
       anchor: "Deutschland",
     },
     {
       slug: "/link6/",
+      flag: banderaItalia,
       anchor: "Italia",
     },
     {
       slug: "/link7/",
+      flag: banderaJapon,
       anchor: "日本",
     },
     {
       slug: "/link8/",
+      flag: banderaPolonia,
       anchor: "Poslka",
     },
     {
       slug: "/link9/",
-      icono:"",
+      flag: banderaBrasil,
       anchor: "Brasil",
     },
     {
       slug: "/link10/",
-      icono:"",
+      flag: banderaRusia,
       anchor: "Россия",
     },
     {
       slug: "/link11/",
-      icono:"",
+      flag: banderaEspaña,
       anchor: "España",
     },
     {
       slug: "/link12/",
-      icono:"",
+      flag: banderaChekia,
       anchor: "Česká republika",
     },
     {
       slug: "/link13/",
-      icono:"",
+      flag: banderaCanada,
       anchor: "Canada (En)",
     },
     {
       slug: "/link14/",
-      icono:"",
+      flag: banderaCanada,
       anchor: "Canada (Fr)",
     },
     {
       slug: "/link15/",
-      icono:"",
+      flag: banderaDinamarca,
       anchor: "Danmark",
     },
     {
       slug: "/link16/",
-      icono:"",
+      flag: banderaFinlandia,
       anchor: "Suomi",
     },
     {
       slug: "/link17/",
-      icono:"",
+      flag: banderaMexico,
       anchor: "México",
     },
     {
       slug: "/link18/",
-      icono:"",
+      flag: banderaNederland,
       anchor: "Nederland",
     },
     {
       slug: "/link19/",
-      icono:"",
+      flag: banderaNorge,
       anchor: "Norge",
     },
     {
       slug: "/link20/",
-      icono:"",
+      flag: banderaSeverige,
       anchor: "Sverige",
     },
     {
       slug: "/link21/",
-      icono:"",
+      flag: banderaChina,
       anchor: "中国",
     },
     {
       slug: "/link22/",
-      icono:"",
+      flag: banderaCorea,
       anchor: "대한민국",
     },
     {
       slug: "/link23/",
-      icono:"",
+      flag: banderaChina,
       anchor: "繁體中文",
     },
     {
       slug: "/link24/",
-      icono:"",
+      flag: banderaTurkia,
       anchor: "Türkiye",
     },
 
@@ -263,7 +296,7 @@ const Footer = () => {
           <a href="https://www.ea.com/es-es/executives">Ejecutivos</a>
           <a href="https://www.ea.com/es-es/news/sharing-our-2021-impact-report">Informe de impacto</a>
           <a href="https://www.ea.com/es-es/commitments">Nuestros compromisos</a>
-          <a href="https://www.ea.com/es-es/about/reporting-concerns">Comunicar inquietudes</a>
+          <a className="comunicarInquietudes" href="https://www.ea.com/es-es/about/reporting-concerns">Comunicar inquietudes</a>
         </div>
         <div className="linkTextoNegritaFooter">
           <a className="linkTextoNegritaFooterTexto" href="https://www.ea.com/es-es/about/reporting-concerns">Únete a la conversación</a>
@@ -277,7 +310,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footerBlanco">
-          <img className="latIzq" src="Footer/ea-purple.png" alt="EA Logo" />
+      <img className="latIzq" src={eaPurple} />
           <div className="supIzq">
             <a href="https://www.ea.com/es-es/games/library">Biblioteca de juegos</a>
             <a href="https://www.ea.com/es-es/subscribe">Suscribirse</a>
@@ -289,8 +322,8 @@ const Footer = () => {
             <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
           </div>
           <div className="supDer">
-            <FooterDropdown className="dropdownEspacio" dropdownTitle="Región (precios)" items={itemsRegion} />
-            <FooterDropdown className="dropdownEspacio" dropdownTitle="Idioma" items={itemsIdioma} />
+            <FooterDropdown dropdownTitle="Región (precios)" items={itemsRegion} />
+            <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
           </div>
           <div className="infIzq">
             <a href="http://www.ea.com/es-es/legal">Información legal y privacidad</a>
@@ -304,7 +337,7 @@ const Footer = () => {
             <p>© 2023 Electronic Arts Inc.</p>
           </div>
           <div className="infDer">
-            <img src="Footer/TRUSTe.svg" alt="Truste Logo" />
+            <img src={TRUSTe} alt="Truste Logo" />
         </div>
       </div>
     </div>

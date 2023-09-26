@@ -62,11 +62,13 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
             <div className="selected_item">{selectedItem.anchor}</div>
           </>
         )}
+        <div className="flechaFooter">
         {isOpen ? (
           <Icono icono={<HiOutlineChevronUp />} />
         ) : (
-          <Icono icono={<HiOutlineChevronDown />} />
+          <Icono  icono={<HiOutlineChevronDown />} />
         )}
+        </div>
       </button>
       <ul
         ref={dropdownListRef}
@@ -75,6 +77,7 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
         {items.map((item, index) => {
           return (
             <li className={"item_list"} key={index}>
+              <image src={item.imagen} />
               <a onClick={() => handleItemClick(item)}>{item.anchor}</a>
             </li>
           );

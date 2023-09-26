@@ -1,53 +1,57 @@
 .dropdown_wrapper {
+  width: 100%;
   margin-left: 50px;
-  width: 210px;
 }
 
 .dropdown_activator {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
   background-color: inherit;
   border: gray solid;
   border-width: 0.5px;
-  border-radius: 4px;
-  height: 80px;
+  border-radius: 2px;
+  height: 70px;
   color: gray;
   font-weight: var(--font-weith-s);
-  letter-spacing: 1.1px;
   font-size: inherit;
-  padding: 1rem 0.6rem;
   cursor: pointer;
+  padding-top: 10px;
+  padding-left: 20px;
   width: 100%;
+  text-align: left;
 }
 
 .selected_item {
-  display: flex;
   align-items: center;
-  flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 20px;
+  color: var(--color-sextary);
+  justify-content: left;
+  margin-top: 10px;
+  text-align: left;
+
 }
 
 .dropdown_item_list {
-  background: white;
+  background-color: var(--color-quaternary);
   display: none;
-  margin: 0;
-  z-index: 1000;
+  bottom: -1110px;
+  right: 220px;
   position: absolute;
-  box-shadow: 0 0 2px 0 gray;
-  border-radius: 5px;
-  padding: 0;
+  border-radius: 1px;
 }
 
 .dropdown_item_list.active {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
 }
 
 .item_list {
-  list-style: none;
+  list-style: none;  
+  width: 150px;
+  height: 70px;
 }
 
 .item_list:last-child a {
@@ -57,10 +61,18 @@
 .item_list a,
 .item_list a:link {
   display: flex;
-  color: #666666;
-  font-weight: 600;
+  color: var(--color-sextary);
+  font-weight: var(--font-weith-m);
   text-decoration: none;
   padding: 0.8rem;
   transition: all 0.1s linear;
-  width: 50px;
+  width: 140px;
+}
+
+.item_list a:hover{
+  transform: translateX(5px);
+}
+
+.flechaFooter{
+  margin-left: 130px;
 }

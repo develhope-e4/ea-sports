@@ -1,6 +1,7 @@
 /* Estilos para el primer grid (footerGris y footerBlanco) */
 .footer {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
@@ -9,16 +10,15 @@
     background-color: var(--color-octave);
     height: 220px;
     display: grid;
-    grid-template-columns: 2, 1fr;
-    grid-template-rows: 1, 1fr;
+    grid-template-columns: 75% 25%;
 }
 
 .footerBlanco {
     background-color: var(--color-quinary);
     height: 350px;
-    width: 45vh;
+    width: 100%;
     display: grid;
-    grid-template-columns: 11% 51% 38%;
+    grid-template-columns: 8% 54% 38%;
     grid-template-rows: 40% 60%;
     grid-template-areas:
         "primero segundo tercero"
@@ -26,17 +26,22 @@
 }
 
 .linkTextoFooterGris {
+    width: 100%;
     margin-top: 45px;
     height: 20px;
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
     font-style: var(--font-style-ea);
 }
 
 a {
     text-decoration: none;
-    margin-right: 70px;
+    margin-right: 50px;
     font-style: var(--font-family-ea);
     color: var(--color-sextary);
+}
+
+.comunicarInquietudes{
+    margin-right: none;
 }
 
 .linkTextoNegritaFooter {
@@ -47,10 +52,11 @@ a {
     height: 40px;
     width: 250px;
     grid-column: 2 / 2;
+    margin-left: 30px;
 }
 
 .linkTextoNegritaFooterTexto {
-    margin-right: -40px;
+    margin-right: -20px;
 }
 
 .latIzq {
@@ -72,18 +78,19 @@ a {
 
 .infIzq {
     height: 100px;
-    width: 100%;
+    width: min-content 700px;
     grid-area: cuarto;
     text-align: left;
     line-height: 2;
 }
 
 .supDer {
-    height: 50px;
-    width: 60%;
+    display: flex;
+    height: 85px;
+    width: 100%;
     grid-area: tercero;
     margin-top: 25px;
-    margin-left: 190px;
+    margin-left: -10px;
 }
 
 .infDer {
@@ -92,7 +99,7 @@ a {
     margin: 10px;
     grid-area: quinto;
     margin-top: 90px;
-    margin-left: 255px;
+    margin-left: 240px;
 }
 
 .infIzq a{
@@ -105,4 +112,3 @@ a {
     justify-content: space-between;
     margin-top: 15px;
 }
-
