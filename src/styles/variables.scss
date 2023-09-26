@@ -1,9 +1,11 @@
+@import url(https://db.onlinewebfonts.com/c/48656eabd3fef6464367d956315c749a?family=Electronic+Arts+Text);
 :root {
 
   --spacing-xl: 150px;
   --spacing-lg: 100px;
   --spacing-md: 50px;
   --spacing-sm: 25px;
+  --spacing-s: 16px;
   --spacing-xs: 10px;
 
   --padding-m: 24px;
@@ -57,7 +59,11 @@
   --font-weith-m:600;
   --font-weith-s:400;
 
-  --font-family-ea: "ElectronicArtsText", "DM Sans", "Verdana", "Helvetica", "Arial",
+  --font-family-ea: "Electronic Arts Text", "DM Sans", "Verdana", "Helvetica", "Arial",
+    sans-serif;
+    --font-family-primary-ea: "Electronic Arts Text", "Verdana", "Helvetica", "Arial",
+    sans-serif;
+    --font-family-secundary-ea: "Electronic Arts Display", "Verdana", "Helvetica", "Arial",
     sans-serif;
   --font-style-eaaa: "Electronic Arts Text";
   --font-style-arial: Arial;

@@ -24,12 +24,14 @@ const Subscription = () => {
         <div class="SubscriptionSection-MoreInfo">
           <div class="SubscriptionSection-MoreInfo-contenido">
             <h2>Herramientas parentales y de juego: el control en tus manos</h2>
-            <Boton
-              esPrimario={false}
-              isLight={false}
-              onClick={() => console.log("click en el boton negro")}
-              texto={"Más información"}
-            />
+            <div className="SubscriptionSection-MoreInfo-contenido-boton">
+              <Boton
+                esPrimario={false}
+                isLight={false}
+                onClick={() => console.log("click en el boton negro")}
+                texto={"Más información"}
+              />
+            </div>
           </div>
         </div>
       </div>

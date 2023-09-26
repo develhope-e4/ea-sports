@@ -5,9 +5,9 @@
     background-size: 100%;
 
     .SubscriptionSection-contenido {
-        padding: 40px 976px 32px 335px;
+        padding: 40px 976px 32px 333px;
         height: 433px;
-        display:flex;
+        display: flex;
         align-items: flex-start;
         flex-direction: column;
         justify-content: center;
@@ -16,39 +16,53 @@
             width: 100%;
             color: var(--color-quinary);
             font-size: var(--font-size-l);
-            font-family: var(--font-family-eaaa);
-            font-weight: var(--font-weith-m);
+            font-family: var(--font-family-primary-ea);
+            font-weight: var(--font-weith-s);
+            line-height: 1.5;
             margin: 0;
         }
+
+        ;
+
         button {
-            margin-top:var(--spacing-sm);
+            margin-top: var(--spacing-sm);
+            width: 160px;
         }
-    };
+    }
+
+    ;
 
     .SubscriptionSection-MoreInfo {
         display: flex;
-        height: 96px;
-        padding: 0 350px 0 350px;
-        height: 118px;
+        padding: 0px 334px;
+        height: 112px;
         background-color: #6fb0d6;
 
         .SubscriptionSection-MoreInfo-contenido {
             display: flex;
-            justify-content: space-between;
+            /* justify-content: space-between; */
             align-items: center;
             width: 100%;
 
             h2 {
                 text-align: left;
-                margin-right: 28px;
-                font-family: var(--font-family-ea);
+                margin-right: 32px;
+                font-family: var(--font-family-secundary-ea);
                 font-size: var(--font-size-xxl);
                 font-weight: var(--font-weith-m);
-                width: 60%;
+                line-height: 1.35;
             }
 
-            button {
+            .SubscriptionSection-MoreInfo-contenido-boton {
+                display: flex;
+                width: 50%;
                 justify-content: flex-end;
+
+                button {
+                    font-family: var(--font-family-secundary-ea);
+                    font-size: var(--font-size-xxl);
+                    font-weight: var(--font-weith-s);
+                }
             }
         }
     }
