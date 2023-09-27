@@ -4,7 +4,7 @@ import Icono from "../Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
 import CardDestacada from "../CardDestacada/CardDestacada";
-import { cardDescatadaData } from "../../data/CardDestacadasData.mock";
+import { menuCardDestacadaData } from "../../data/MenuCardDestacada.mock";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,16 +37,18 @@ const NavBar = () => {
         </div>
 
         <div className="section-menu">
-          {cardDescatadaData &&
-            cardDescatadaData.map((card, index) => (
+          {menuCardDestacadaData &&
+            menuCardDestacadaData.map((card, index) => (
               <CardDestacada
                 key={index}
                 url="http://google.com"
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
+                className={index === 0 ? 'first-image' : 'other-images'}
               />
             ))}
         </div>
+      
       </nav>
 
       <ul className="nav">

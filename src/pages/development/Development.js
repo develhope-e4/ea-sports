@@ -9,7 +9,7 @@ import cardData from "../../data/CardData.mock";
 import Icono from "../../components/Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
-import { cardDescatadaData } from "../../data/CardDestacadasData.mock";
+import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -31,8 +31,8 @@ const Development = () => {
     <div className="App">
       <div className="flex-col-center">
         <div className="section">
-          {cardDescatadaData &&
-            cardDescatadaData.map((card) => (
+          {cardDestacadaData &&
+            cardDestacadaData.map((card) => (
               <CardDestacada
                 url="http://google.com"
                 backgroundImage={card.bg}
