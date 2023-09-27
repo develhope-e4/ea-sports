@@ -44,11 +44,11 @@ const NavBar = () => {
                 url="http://google.com"
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
-                className={index === 0 ? 'first-image' : 'other-images'}
+                className={index === 0 ? "first-image" : "other-images"}
+                showText={false} 
               />
             ))}
         </div>
-      
       </nav>
 
       <ul className="nav">
