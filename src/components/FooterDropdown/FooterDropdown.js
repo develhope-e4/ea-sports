@@ -3,6 +3,7 @@ import "./FooterDropdown.scss";
 import Icono from "../Icono/Icono";
 import { HiOutlineChevronUp, HiOutlineChevronDown } from "react-icons/hi";
 
+
 const FooterDropdown = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
