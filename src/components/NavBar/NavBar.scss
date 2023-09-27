@@ -1,8 +1,8 @@
 .navbar {
     display: flex;
     color: white;
-    width: 1200px;
-    background-color: #edc4c4;
+    width: 100%;
+    background-color: white;
   }
   
   .nav {
@@ -48,22 +48,40 @@
     overflow: hidden;
     transition: right 0.3s ease;
   }
+  .menu-header{
+    display: flex;
+    width: 100%;
+    padding: 20px 0px;
+  }
   
   .menu.open {
+    z-index: 0;
     left: 0;
+    padding: 40px;
+    
   }
   
   .close-menu {
     left: -400px; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+    
   }
   
   .menu-link {
-    color: blue;
+    color: rgb(166, 165, 165);
     text-decoration: none;
+    font-family: var(--font-family-ea);
+    font-weight: bold;
+    font-size: var(--font-size-l);
   }
   
   .menu-link:hover {
-    color: red;
+    color: --var(--color-secundary);
   }
   
   .main-image {

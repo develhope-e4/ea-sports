@@ -34,13 +34,13 @@ const NavBar = () => {
         <li onClick={handleMenuToggle}>
           <Icono esRedSocial={false} icono={<BsThreeDotsVertical />} />
         </li>
-        <li>
+        
           <img
             src="/NavBar/ea-electronicsarts.svg"
             alt="Mi SVG"
             className="easvg"
           />
-        </li>
+       
       </ul>
 
       <div
@@ -52,12 +52,12 @@ const NavBar = () => {
         <div className="menu-header">
           <div className="close-menu" onClick={handleMenuClose}>
             <MdClose />
-          </div>
           <p onClick={handleMenuItemClick}>
             <a href="#" className="menu-link">
               Todos los juegos
             </a>
           </p>
+          </div>
         </div>
 
         <div className="menu-main-image">
