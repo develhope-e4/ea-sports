@@ -14,7 +14,7 @@ const CardDestacada = ({ backgroundImage, url, gameLogo, className }) => {
             alt="Imagen de la tarjeta"
             className={`logoCardDestacada ${className}`}
           />
-          <p className="textCardDestacada">Sitio oficial</p>
+          <p className={`textCardDestacada ${className}`}>Sitio oficial</p>
         </div>
       </div>
     </a>

@@ -89,13 +89,13 @@
   .section-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px; 
+    grid-gap: 25px; 
 
 
   }
   .first-image {
     grid-column: span 2;
-    width: 355px;
+    width: 380px;
     height: 355px;
     
   }
@@ -110,7 +110,7 @@
 
   
   .backgroundImage.first-image {
-    width: 355px;
+    width: 380px;
     height: 355px;
     background-repeat: no-repeat; 
     background-size: cover;
@@ -130,19 +130,20 @@
 
  
   .logoCardDestacada.first-image {
-    width: 355px;
-    height: 355px;
+    width: 88.75px;
+    height: 88.75px;
+   
     
   }
 
   .logoCardDestacada.other-images {
-    width: 177.5px;
-    height: 177.5px;
+    width: 88.75px;
+    height: 88.75px;
   }
 
   .cardDestacada.first-image {
     background: var( --color-background-card-destacada);
-    width: 355px;
+    width: 380px;
     height: 355px;
     display: flex;
     flex-direction: column;
@@ -150,7 +151,7 @@
     align-content: center;
     justify-content: center;
     transition: var(--ea-transition-duration);
-    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-repeat: no-repeat; 
     background-size: cover; 
     
     
