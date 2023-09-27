@@ -1,96 +1,91 @@
 .navbar {
-    display: flex;
-    color: white;
-    width: 100%;
-    background-color: white;
+  display: flex;
+  color: white;
+  width: 100%;
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.easvg {
+  padding: 0px 50px;
+  width: 260px;
+  height: 31px;
+}
+
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: none;
+}
+
+.menu-overlay-visible {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  transition: left 0.3s ease;
+  &::-webkit-scrollbar {
+    width: 0;
   }
-  
-  .nav {
-    display: flex;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .easvg {
-    padding: 0px 50px;
-    width: 260px;
-    height: 31px;
-  }
-  
-  /* Resto de los estilos... */
-  
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 1000;
-    display: none;
-  }
-  
-  .menu-overlay-visible {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .menu {
-    position: absolute;
-    top: 0;
-    left: -400px;
-    width: 400px;
-    height: 100%;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: right 0.3s ease;
-  }
-  .menu-header{
-    display: flex;
-    width: 100%;
-    padding: 20px 0px;
-  }
-  
-  .menu.open {
-    z-index: 0;
-    left: 0;
-    padding: 40px;
-    
-  }
-  
-  .close-menu {
-    left: -400px; 
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-    
-    
-  }
-  
-  .menu-link {
-    color: rgb(166, 165, 165);
-    text-decoration: none;
-    font-family: var(--font-family-ea);
-    font-weight: bold;
-    font-size: var(--font-size-l);
-  }
-  
-  .menu-link:hover {
-    color: --var(--color-secundary);
-  }
-  
-  .main-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .menu-image {
-    width: 100px;
-    height: auto;
-  }
-  
+}
+
+.menu.open {
+  left: 0;
+}
+
+.close-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0px 0px 30px 0px;
+}
+
+.menu-link {
+  color: rgb(166, 165, 165);
+  text-decoration: none;
+  font-family: var(--font-family-ea);
+  font-weight: bold;
+  font-size: var(--font-size-l);
+}
+
+.menu-link:hover {
+  color: #ff4747;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.menu-image {
+  width: 100px;
+  height: auto;
+}
+
+.section-menu {
+  display: flex;
+  flex-direction: column;
+}
