@@ -1,6 +1,8 @@
 .dropdown_wrapper {
+  position: relative;
   width: 100%;
   margin-left: 50px;
+  left: -150px;
 }
 
 .dropdown_activator {
@@ -35,8 +37,8 @@
 .dropdown_item_list {
   background-color: var(--color-quaternary);
   display: none;
-  bottom: -1095px;
-  right: 270px;
+  bottom: 70px;
+  right: 0px;
   position: absolute;
   border-radius: 1px;
 }
