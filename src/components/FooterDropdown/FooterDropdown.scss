@@ -46,14 +46,12 @@
 .dropdown_item_list.active {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
 }
 
 .item_list {
   list-style: none;
-  width: 150px;
+  width: auto;
   height: 70px;
-
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -69,11 +67,12 @@
 .item_list a:link {
   display: flex;
   color: var(--color-sextary);
-  font-weight: var(--font-weith-m);
+  font-weight: var(--font-weith-s);
   text-decoration: none;
   padding: 0.8rem;
   transition: all 0.1s linear;
   width: 140px;
+  margin-right: 0px;
 }
 
 .item_list:hover {
