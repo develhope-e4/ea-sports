@@ -37,6 +37,7 @@ const Development = () => {
                 url="http://google.com"
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
+                showText={true}
               />
             ))}
         </div>
