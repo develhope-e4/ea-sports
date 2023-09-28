@@ -13,9 +13,9 @@ const NavBar = () => {
     setMenuOpen(!menuOpen);
     document.body.classList.toggle(menuOpen);
   };
-
   const handleMenuClose = () => {
     setMenuOpen(false);
+    document.body.classList.remove("menu-open"); 
   };
 
   const handleMenuItemClick = () => {
@@ -45,7 +45,7 @@ const NavBar = () => {
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
                 className={index === 0 ? "first-image" : "other-images"}
-                showText={false} 
+                showText={false}
               />
             ))}
         </div>
@@ -60,6 +60,7 @@ const NavBar = () => {
           src="/NavBar/ea-electronicsarts.svg"
           alt="Mi SVG"
           className="easvg"
+          onClick={handleMenuClose}
         />
       </ul>
 
