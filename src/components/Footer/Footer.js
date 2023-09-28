@@ -33,6 +33,7 @@ import eaPurple from "../../assets/Footer/eaPurple.png";
 import TRUSTe from "../../assets/Footer/TRUSTe.svg";
 
 
+
 const Footer = () => {
   const itemsRegion = [
     {

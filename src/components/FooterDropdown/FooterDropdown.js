@@ -3,7 +3,6 @@ import "./FooterDropdown.scss";
 import Icono from "../Icono/Icono";
 import { HiOutlineChevronUp, HiOutlineChevronDown } from "react-icons/hi";
 
-
 const FooterDropdown = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
@@ -48,6 +47,7 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
     }
   }, [isOpen]);
 
+  console.log(items);
   return (
     <div className={"dropdown_wrapper"} onKeyUp={keyHandler}>
       <button
@@ -64,11 +64,11 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
           </>
         )}
         <div className="flechaFooter">
-        {isOpen ? (
-          <Icono icono={<HiOutlineChevronUp />} />
-        ) : (
-          <Icono  icono={<HiOutlineChevronDown />} />
-        )}
+          {isOpen ? (
+            <Icono icono={<HiOutlineChevronUp />} />
+          ) : (
+            <Icono icono={<HiOutlineChevronDown />} />
+          )}
         </div>
       </button>
       <ul
@@ -78,7 +78,7 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
         {items.map((item, index) => {
           return (
             <li className={"item_list"} key={index}>
-              <image src={item.imagen} />
+              {item.flag && <img src={item.flag} className="flag" />}
               <a onClick={() => handleItemClick(item)}>{item.anchor}</a>
             </li>
           );

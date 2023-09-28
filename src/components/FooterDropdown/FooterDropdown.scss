@@ -50,9 +50,19 @@
 }
 
 .item_list {
-  list-style: none;  
+  list-style: none;
   width: 150px;
   height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .flag {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
 }
 
 .item_list a,
@@ -66,10 +76,11 @@
   width: 140px;
 }
 
-.item_list a:hover{
+.item_list:hover {
   transform: translateX(5px);
+  transition: 0.2s ease-in-out;
 }
 
-.flechaFooter{
+.flechaFooter {
   margin-left: 130px;
 }
