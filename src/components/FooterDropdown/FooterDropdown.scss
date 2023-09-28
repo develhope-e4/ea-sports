@@ -10,9 +10,7 @@
   grid-template-rows: repeat(4, 1fr);
   justify-content: left;
   background-color: inherit;
-  border: gray solid;
-  border-width: 0.5px;
-  border-radius: 2px;
+  border: 3px rgb(198, 198, 198) solid;
   height: 70px;
   color: gray;
   font-weight: var(--font-weith-s);
@@ -37,15 +35,15 @@
 .dropdown_item_list {
   background-color: var(--color-quaternary);
   display: none;
-  bottom: 70px;
+  bottom: 65px;
   right: 0px;
   position: absolute;
-  border-radius: 1px;
 }
 
 .dropdown_item_list.active {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border: 3px solid rgb(198, 198, 198);
 }
 
 .item_list {
