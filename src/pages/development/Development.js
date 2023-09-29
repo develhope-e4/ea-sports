@@ -32,12 +32,13 @@ const Development = () => {
     <div className="App">
       <div className="flex-col-center">
         <div className="section">
-          {cardDescatadaData &&
-            cardDescatadaData.map((card) => (
+          {cardDestacadaData &&
+            cardDestacadaData.map((card) => (
               <CardDestacada
                 url="http://google.com"
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
+                showText={true}
               />
             ))}
         </div>

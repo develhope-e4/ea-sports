@@ -1,4 +1,4 @@
-export const cardDescatadaData = [
+export const cardDestacadaData = [
   {
     bg: "/highlight/1/bg.png",
     logo: "/highlight/1/logo.svg",
