@@ -9,8 +9,9 @@ import cardData from "../../data/CardData.mock";
 import Icono from "../../components/Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
-import { cardDescatadaData } from "../../data/CardDestacadasData.mock";
+import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Subscription from "../../components/Subscription/Subscription";
+import DropDown from "../../components/DropDown/DropDown";
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -31,6 +32,9 @@ const Development = () => {
   return (
     <div className="App">
       <div className="flex-col-center">
+
+      <div>
+          <DropDown />        </div>
         <div className="section">
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
@@ -97,6 +101,10 @@ const Development = () => {
         <div>
           <Subscription />
         </div>
+
+        <div>
+          <DropDown />        </div>
+        
       </div>
     </div>
   );
