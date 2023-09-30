@@ -2,11 +2,11 @@ import React, { useState, useRef } from "react";
 import { GoChevronDown } from "react-icons/go";
 import './DropDown.scss';
 
-const DropDown = () => {
+const DropDown = ({primario, secundario}) => {
   const options = [
     {
       text: "Ultimos juegos",
-      url: "https://www.google.com/",
+      url: "https://www.marca.com/",
     },
     {
       text: "Proximamente",
@@ -14,9 +14,10 @@ const DropDown = () => {
     },
     {
       text: "Juegos gratuitos",
-      url: "https://www.google.com/",
+      url: "https://www.as.com/",
     },
   ];
+
 
   const [dropdown, setDropdown] = useState({
     open: false,
@@ -30,7 +31,6 @@ const DropDown = () => {
   };
 
   const handleMouseLeave = () => {
-    // Check if the mouse is over the dropdown or the button
     if (!dropdownRef.current.contains(document.activeElement)) {
       setDropdown({ ...dropdown, open: false });
     }
@@ -44,20 +44,35 @@ const DropDown = () => {
     <div className="container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className='dropdown' ref={dropdownRef}>
         <div className={dropdown.open ? "first-option-open" : "first-option-close"}>
-          <span>{dropdown.optionSelected}</span>
+          <span className="dropDownTittle">Juegos</span>
           <GoChevronDown />
         </div>
         {dropdown.open && (
           <div className='options'>
-            {options.map((option, index) => (
-              <div
-                key={index}
-                onClick={() => handleOptionClick(option)}
-                className={option.text === dropdown.optionSelected ? "orderSelected" : "order"}
-              >
-                {option.text}
-              </div>
-            ))}
+            <div className="explore">
+              <h3>Explorar juegos</h3>
+              {options.map((option, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleOptionClick(option)}
+                  className={"option"}
+                >
+                  {option.text}
+                </div>
+              ))}
+            </div>
+            <div className="explore">
+              <h3>Explorar juegos</h3>
+              {options.map((option, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleOptionClick(option)}
+                  className={"option"}
+                >
+                  {option.text}
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

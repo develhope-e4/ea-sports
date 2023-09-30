@@ -1,88 +1,51 @@
-
-
-
-
-  
-
 .container {
+  position: relative;
+}
+
+.dropdown {
   display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropDownTittle{
+  max-width: 100px;
+}
+
+.first-option-open {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  
+  padding: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
 
-  p {
-    color: #333;
-    font-weight: 600;
-    line-height: 1.7;
-    margin-right: 6px;
-  }
+.first-option-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
 
-  .dropdown {
-    padding-left: 10px;
-    position: relative;
-  
+.options {
+  display: flex;
+  flex-direction: row;
+}
 
-    .first-option-close {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      transition-duration: 0.3s;
+.options div {
+  padding: 10px;
+  cursor: pointer;
+}
 
-      span:hover {
-        transition-duration: 0.3s;
-        color: red;
-      }
+.option div:hover {
+  background-color: #f0f0f0;
+}
 
-      svg {
-        transition-duration: 0.3s;
-      }
-    }
-
-    .first-option-open {
-      @extend .first-option-close;
-
-      svg {
-        transition-duration: 0.3s;
-        transform: rotate(180deg);
-      }
-    }
-
-    .options {
-      display: block;
-      width: 140px;
-      margin-top: 8px;
-      right: 0;
-      position: absolute;
-      background-color: white;
-      border-radius: 6px;
-    
-    
-
-
-
-      .orderExtend {
-        cursor: pointer;
-        border-bottom: 1px solid #d8d8d8;
-        font-size: 14px;
-        padding: 13px 10px 13px 16px;
-        position: relative;
-      }
-
-      .order {
-        @extend .orderExtend;
-        font-weight: 300;
-        color: rgba(0, 0, 0, 0.9);
-      }
-
-
-      .orderSelected {
-        @extend .orderExtend;
-        font-weight: bold;
-        color: red;
-      }
-
-    
-    }
-  }
+.explore{
+  display: flex;
+  flex-direction: column;
 }
