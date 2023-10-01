@@ -1,51 +1,35 @@
-.container {
-  position: relative;
-}
-
-.dropdown {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.dropDownTittle{
-  max-width: 100px;
-}
-
-.first-option-open {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-
-.first-option-close {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.options {
+.DropDownSection {
   display: flex;
   flex-direction: row;
-}
+  align-content: center;
+  justify-content: center;
+  height: 25px;
+  
 
-.options div {
-  padding: 10px;
-  cursor: pointer;
-}
+  svg {
+    height: 20px;
+    width: 15px;
+    padding: auto;
+    margin: auto;
+  }
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+      fill: var(--color-prymary);
+    }
+  }
 
-.option div:hover {
-  background-color: #f0f0f0;
-}
+  .DropDownButton {
+    color: black;
+    border: none;
+    background-color: var(--color-quaternary);
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    font-family: var(--font-family-ea);
 
-.explore{
-  display: flex;
-  flex-direction: column;
+    &:hover {
+      color: var(--color-prymary);
+    }
+  }
 }

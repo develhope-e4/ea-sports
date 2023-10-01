@@ -1,83 +1,40 @@
-import React, { useState, useRef } from "react";
+import { useState } from "react";
+import "./DropDown.scss";
+import DropDownMenu from "../DropDownMenu/DropDownMenu";
 import { GoChevronDown } from "react-icons/go";
-import './DropDown.scss';
 
-const DropDown = ({primario, secundario}) => {
-  const options = [
-    {
-      text: "Ultimos juegos",
-      url: "https://www.marca.com/",
-    },
-    {
-      text: "Proximamente",
-      url: "https://www.google.com/",
-    },
-    {
-      text: "Juegos gratuitos",
-      url: "https://www.as.com/",
-    },
-  ];
-
-
-  const [dropdown, setDropdown] = useState({
-    open: false,
-    optionSelected: options[0].text,
-  });
-
-  const dropdownRef = useRef(null);
+function DropDown({ title, data, doble, h3, data2, h32 }) {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const handleMouseEnter = () => {
-    setDropdown({ ...dropdown, open: true });
+    setDropdownVisible(true);
   };
 
   const handleMouseLeave = () => {
-    if (!dropdownRef.current.contains(document.activeElement)) {
-      setDropdown({ ...dropdown, open: false });
-    }
-  };
-
-  const handleOptionClick = (option) => {
-    window.location.href = option.url;
+    setDropdownVisible(false);
   };
 
   return (
-    <div className="container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <div className='dropdown' ref={dropdownRef}>
-        <div className={dropdown.open ? "first-option-open" : "first-option-close"}>
-          <span className="dropDownTittle">Juegos</span>
-          <GoChevronDown />
-        </div>
-        {dropdown.open && (
-          <div className='options'>
-            <div className="explore">
-              <h3>Explorar juegos</h3>
-              {options.map((option, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleOptionClick(option)}
-                  className={"option"}
-                >
-                  {option.text}
-                </div>
-              ))}
-            </div>
-            <div className="explore">
-              <h3>Explorar juegos</h3>
-              {options.map((option, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleOptionClick(option)}
-                  className={"option"}
-                >
-                  {option.text}
-                </div>
-              ))}
-            </div>
-          </div>
+    <div className="DropDownSection">
+      <div
+        className="DropDown"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <button className="DropDownButton">{title}</button>
+        {isDropdownVisible && (
+          <DropDownMenu
+            data={data}
+            doble={doble}
+            h3={h3}
+            data2={data2}
+            h32={h32}
+          />
         )}
       </div>
+      <GoChevronDown />
     </div>
   );
-};
+}
 
 export default DropDown;
