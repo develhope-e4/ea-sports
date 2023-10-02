@@ -11,6 +11,21 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Subscription from "../../components/Subscription/Subscription";
+import Dropdown from "../../components/DropDown/DropDown";
+import { ExplorarJuegosDropDown } from '../../data/ExplorarJuegosDropDown.mock';
+import { PlataformasDropDown } from '../../data/PlataformasDropDown.mock';
+import { MasExperiencias } from '../../data/MasExperiencias.mock';
+import { AcercaDeDropDown } from '../../data/AcercaDeDropDown.mock';
+import { CompromisosDropDown } from '../../data/CompromisosDropDown.mock';
+import { RecursosDropDown } from '../../data/RecursosDropDown.mock';
+
+
+
+
+
+
+
+
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -31,6 +46,69 @@ const Development = () => {
   return (
     <div className="App">
       <div className="flex-col-center">
+
+        <div className="DropDownSectionDemo">
+        <div className="juegosDropDown">
+         <Dropdown
+         doble = {true}
+         data = {ExplorarJuegosDropDown}
+         title={ExplorarJuegosDropDown[0].tittle}
+         h3 = "Explorar juegos"
+         data2 = {PlataformasDropDown}
+         h32 = "Plataformas"
+        />
+        </div>
+
+        <div className="MasExperiencias">
+        <Dropdown
+         doble = {false}
+         data = {MasExperiencias}
+         title={MasExperiencias[0].tittle}
+         h3 = ""
+         data2 = {MasExperiencias}
+         h32 = ""
+        />
+        </div>
+
+        <div className="AcercaDeDropDown">
+         <Dropdown
+
+          doble = {false}
+          data = {AcercaDeDropDown}
+          title={AcercaDeDropDown[0].tittle}
+          h3 = ""
+          data2 = {AcercaDeDropDown}
+          h32 = ""
+         />
+        </div>
+
+        <div className="CompromisosDropDown">
+         <Dropdown
+        doble = {false}
+        data = {CompromisosDropDown}
+        title={CompromisosDropDown[0].tittle}
+        h3 = ""
+        data2 = {CompromisosDropDown}
+        h32 = ""
+         />
+        </div>
+
+        <div className="RecursosDropDown">
+         <Dropdown
+           doble = {false}
+           data = {RecursosDropDown}
+           title={RecursosDropDown[0].tittle}
+           h3 = ""
+           data2 = {RecursosDropDown}
+           h32 = ""
+         />
+        </div>
+        </div>
+
+
+
+
+
         <div className="section">
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
@@ -96,6 +174,10 @@ const Development = () => {
         </div>
         <div>
           <Subscription />
+        </div>
+
+        <div>
+          <Dropdown />
         </div>
       </div>
     </div>
