@@ -4,25 +4,28 @@
   align-items: center;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  margin: 20px; 
+  margin: 20px;
 
   &:hover {
     transform: translateY(
       -5px
-    ); 
+    );
   }
 
   img {
-    width: 36px; 
-    height: 36px; 
+    width: 36px;
+    height: 36px;
   }
 
   p {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 }
 
-
+a {
+  color: white;
+  text-decoration: none;
+}
 
 .svgcontroll {
   display: flex;
@@ -31,15 +34,4 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-
-  
-}
-
-.svgcontroll2{
-
-  a {
-    color: rgb(255, 255, 255); 
-    text-decoration: none; 
-  }
-
 }
