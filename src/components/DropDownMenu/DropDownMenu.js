@@ -1,6 +1,6 @@
 import React from "react";
 import "./DropDownMenu.scss";
-const DropDownMenu = ({ data, doble, h3, data2, h32 }) => {
+const DropDownMenu = ({ data, doble, data2 }) => {
   const className = doble ? "doble" : "simple";
   return (
     <div>
@@ -8,7 +8,7 @@ const DropDownMenu = ({ data, doble, h3, data2, h32 }) => {
       <div className="DropDownPadre">
         <div className="DropDownMenu">
           <div className={className}>
-            <h3>{h3}</h3>
+            <h3>Explorar juegos</h3>
           </div>
           <ul>
             {data.map((data, index) => (
@@ -21,7 +21,7 @@ const DropDownMenu = ({ data, doble, h3, data2, h32 }) => {
 
         <div className={className}>
           <div className={className}>
-            <h3>{h32}</h3>
+            <h3>Plataformas</h3>
           </div>
           <ul>
             {data2.map((data, index) => (
