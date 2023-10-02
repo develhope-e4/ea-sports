@@ -4,33 +4,19 @@
     width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-
-    // overflow: hidden;
-}
-
-.fondoGris{
-    width: 100%;
-    background-color: var(--color-octave);
 }
 
 .footerGris {
     background-color: var(--color-octave);
-    width: 90%;
     height: 220px;
     display: grid;
     grid-template-columns: 75% 25%;
-}
-
-.fondoBlanco{
-    width: 100%;
-    background-color: var(--color-quinary);
 }
 
 .footerBlanco {
     background-color: var(--color-quinary);
     height: 350px;
     width: 100%;
-
     display: grid;
     grid-template-columns: 8% 54% 38%;
     grid-template-rows: 40% 60%;
@@ -63,6 +49,8 @@ a {
     font-size: var(--font-size-l);
     margin-top: 45px;
     text-decoration: none;
+    height: 40px;
+    width: 250px;
     grid-column: 2 / 2;
 }
 
@@ -89,6 +77,7 @@ a {
 
 .infIzq {
     height: 100px;
+    width: min-content 700px;
     grid-area: cuarto;
     text-align: left;
     line-height: 2;
@@ -100,7 +89,6 @@ a {
     width: 100%;
     grid-area: tercero;
     margin-top: 25px;
-    margin-left: -90px;
 }
 
 .infDer {
@@ -109,7 +97,7 @@ a {
     margin: 10px;
     grid-area: quinto;
     margin-top: 90px;
-    margin-left: 140px;
+    margin-left: 200px;
 }
 
 .infIzq a{
@@ -121,6 +109,4 @@ a {
     justify-content: center;
     justify-content: space-between;
     margin-top: 15px;
-    margin-right: 130px;
-    margin-left: -30px;
 }
