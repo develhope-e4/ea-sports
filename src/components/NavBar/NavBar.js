@@ -5,6 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
 import CardDestacada from "../CardDestacada/CardDestacada";
 import { menuCardDestacadaData } from "../../data/MenuCardDestacada.mock";
+import BlackNavBar from "../BlackNavBar/BlackNavBar";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar-container">
+    <BlackNavBar />
       <nav className={`menu ${menuOpen ? "open" : ""}`}>
         <div className="menu-header">
           <div className="close-menu" onClick={handleMenuClose}>
@@ -63,7 +65,7 @@ const NavBar = () => {
           onClick={handleMenuClose}
         />
       </ul>
-
+    
       <div
         className={`menu-overlay ${menuOpen ? "menu-overlay-visible" : ""}`}
         onClick={handleMenuClose}
