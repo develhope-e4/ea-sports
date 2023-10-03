@@ -13,19 +13,6 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Subscription from "../../components/Subscription/Subscription";
 import Dropdown from "../../components/Dropdown/Dropdown";
-import { ExplorarJuegosDropDown } from '../../data/ExplorarJuegosDropDown.mock';
-import { PlataformasDropDown } from '../../data/PlataformasDropDown.mock';
-import { MasExperiencias } from '../../data/MasExperiencias.mock';
-import { AcercaDeDropDown } from '../../data/AcercaDeDropDown.mock';
-import { CompromisosDropDown } from '../../data/CompromisosDropDown.mock';
-import { RecursosDropDown } from '../../data/RecursosDropDown.mock';
-
-
-
-
-
-
-
 
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -47,7 +34,6 @@ const Development = () => {
   return (
     <div className="App">
       <div className="flex-col-center">
-
         <div className="section">
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
@@ -114,13 +100,8 @@ const Development = () => {
         <div>
           <Subscription />
         </div>
-
         <div>
           <Dropdown />
-        </div>
-
-        <div>
-          <Footer />
         </div>
       </div>
     </div>
