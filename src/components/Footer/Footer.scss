@@ -7,22 +7,21 @@
 }
 
 .fondoGris{
-    width: 2000px;
+    width: 100%;
     background-color: var(--color-octave);
 }
 
 .footerGris {
     background-color: var(--color-octave);
-    max-width: 1200px;
-    margin-left: 200px;
+    width: 90%;
     height: 220px;
-    padding: 0 334px;
+    padding: 0 150px;
     display: grid;
     grid-template-columns: 75% 25%;
 }
 
 .fondoBlanco{
-    width: 2000px;
+    width: 100%;
     background-color: var(--color-quinary);
 }
 
@@ -30,8 +29,7 @@
     background-color: var(--color-quinary);
     height: 350px;
     width: 100%;
-    max-width: 1200px;
-    margin-left: 200px;
+    margin-left: 120px;
     display: grid;
     grid-template-columns: 8% 54% 38%;
     grid-template-rows: 40% 60%;
@@ -90,7 +88,6 @@ a {
 
 .infIzq {
     height: 100px;
-    width: min-content 700px;
     grid-area: cuarto;
     text-align: left;
     line-height: 2;
@@ -102,6 +99,7 @@ a {
     width: 100%;
     grid-area: tercero;
     margin-top: 25px;
+    margin-left: -90px;
 }
 
 .infDer {
@@ -110,7 +108,7 @@ a {
     margin: 10px;
     grid-area: quinto;
     margin-top: 90px;
-    margin-left: 200px;
+    margin-left: 140px;
 }
 
 .infIzq a{
@@ -122,4 +120,6 @@ a {
     justify-content: center;
     justify-content: space-between;
     margin-top: 15px;
+    margin-right: 130px;
+    margin-left: -30px;
 }
