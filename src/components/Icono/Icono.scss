@@ -3,9 +3,13 @@ svg {
   stroke: none;
   fill-opacity: 1;
   fill: rgb(0%, 0%, 0%);
+}
+
+.otro svg{
   width: 30px;
   height: 30px;
 }
+
 .otro:hover {
   transform: scale(1.2, 1.2);
   fill: var(--color-secundary);
