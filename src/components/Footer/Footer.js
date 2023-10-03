@@ -13,7 +13,7 @@ import banderaBrasil from "../../assets/Footer/banderaBrasil.png";
 import banderaCanada from "../../assets/Footer/banderaCanada.png";
 import banderaChekia from "../../assets/Footer/banderaChekia.png";
 import banderaChina from "../../assets/Footer/banderaChina.jpeg";
-import banderaCorea from "../../assets/Footer/banderaCorea.jpeg"; 
+import banderaCorea from "../../assets/Footer/banderaCorea.jpeg";
 import banderaDinamarca from "../../assets/Footer/banderaDinamarca.png";
 import banderaEspaña from "../../assets/Footer/banderaEspaña.png";
 import banderaEstadosUnidos from "../../assets/Footer/banderaEstadosUnidos.png";
@@ -291,32 +291,34 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <div className="footerGris">
-        <div className="linkTextoFooterGris">
-          <a href="https://www.ea.com/es-es/careers">Empleo</a>
-          <a href="https://www.ea.com/es-es/executives">Ejecutivos</a>
-          <a href="https://www.ea.com/es-es/news/sharing-our-2021-impact-report">Informe de impacto</a>
-          <a href="https://www.ea.com/es-es/commitments">Nuestros compromisos</a>
-          <a className="comunicarInquietudes" href="https://www.ea.com/es-es/about/reporting-concerns">Comunicar inquietudes</a>
-        </div>
-        <div className="linkTextoNegritaFooter">
-          <a className="linkTextoNegritaFooterTexto" href="https://www.ea.com/es-es/about/reporting-concerns">Únete a la conversación</a>
-          <div className="iconosRS">
-            <Icono className="iconosRedesSociales" href="https://www.facebook.com/ea.es/" icono={<TfiFacebook />} />
-            <Icono className="iconosRedesSociales" href="https://twitter.com/EA_Espana" icono={<GrTwitter />} />
-            <Icono className="iconosRedesSociales" href="https://www.youtube.com/EAvideos" icono={<ImYoutube />} />
-            <Icono className="iconosRedesSociales" href="https://www.instagram.com/ea/" icono={<BsInstagram />} />
-            <Icono className="iconosRedesSociales" href="https://www.twitch.tv/ea" icono={<IoLogoTwitch />} />
+      <div className="fondoGris"></div>
+        <div className="footerGris">
+          <div className="linkTextoFooterGris">
+            <a href="https://www.ea.com/es-es/careers">Empleo</a>
+            <a href="https://www.ea.com/es-es/executives">Ejecutivos</a>
+            <a href="https://www.ea.com/es-es/news/sharing-our-2021-impact-report">Informe de impacto</a>
+            <a href="https://www.ea.com/es-es/commitments">Nuestros compromisos</a>
+            <a className="comunicarInquietudes" href="https://www.ea.com/es-es/about/reporting-concerns">Comunicar inquietudes</a>
+          </div>
+          <div className="linkTextoNegritaFooter">
+            <a className="linkTextoNegritaFooterTexto" href="https://www.ea.com/es-es/about/reporting-concerns">Únete a la conversación</a>
+            <div className="iconosRS">
+              <Icono className="iconosRedesSociales" href="https://www.facebook.com/ea.es/" icono={<TfiFacebook />} />
+              <Icono className="iconosRedesSociales" href="https://twitter.com/EA_Espana" icono={<GrTwitter />} />
+              <Icono className="iconosRedesSociales" href="https://www.youtube.com/EAvideos" icono={<ImYoutube />} />
+              <Icono className="iconosRedesSociales" href="https://www.instagram.com/ea/" icono={<BsInstagram />} />
+              <Icono className="iconosRedesSociales" href="https://www.twitch.tv/ea" icono={<IoLogoTwitch />} />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="footerBlanco">
-      <img className="latIzq" src={eaPurple} />
+      <div className="fondoBanco"></div>
+        <div className="footerBlanco">
+          <img className="latIzq" src={eaPurple} />
           <div className="supIzq">
             <a href="https://www.ea.com/es-es/games/library">Biblioteca de juegos</a>
             <a href="https://www.ea.com/es-es/subscribe">Suscribirse</a>
             <a href="https://www.ea.com/es-es/redeem">Canjear Código</a>
-            <br/>
+            <br />
             <a href="https://www.ea.com/es-es/ea-app">EA app</a>
             <a href="https://www.ea.com/es-es/ea-app">Acerca de</a>
             <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
@@ -329,9 +331,9 @@ const Footer = () => {
           <div className="infIzq">
             <a href="http://www.ea.com/es-es/legal">Información legal y privacidad</a>
             <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Acuerdo de usuario</a>
-            <br/>
+            <br />
             <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Política de privacidad y directiva de cookies (tus derechos de privacidad)</a>
-            <br/>
+            <br />
             <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Actualizaciones del servicio online</a>
             <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Seguridad</a>
             <a href="https://www.ea.com/es-es">Sus preferencias de cookies</a>
@@ -339,8 +341,8 @@ const Footer = () => {
           </div>
           <div className="infDer">
             <img src={TRUSTe} alt="Truste Logo" />
+          </div>
         </div>
-      </div>
     </div>
   );
 };

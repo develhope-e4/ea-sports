@@ -5,7 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
 import CardDestacada from "../CardDestacada/CardDestacada";
 import { menuCardDestacadaData } from "../../data/MenuCardDestacada.mock";
-import Dropdown from "../../components/DropDown/DropDown";
+import Dropdown from "../../components/Dropdown/Dropdown";
 import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
 import { PlataformasDropDown } from "../../data/PlataformasDropDown.mock";
 import { MasExperiencias } from "../../data/MasExperiencias.mock";
