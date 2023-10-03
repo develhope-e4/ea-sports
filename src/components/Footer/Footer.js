@@ -14,7 +14,6 @@ import TRUSTe from "../../assets/Footer/TRUSTe.svg";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="fondoGris"></div>
       <div className="footerGris">
         <div className="linkTextoFooterGris">
           <a href="https://www.ea.com/es-es/careers">Empleo</a>
@@ -68,9 +67,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="fondoBanco"></div>
       <div className="footerBlanco">
-        <img className="latIzq" src={eaPurple} />
+        <img className="latIzq" src={eaPurple} alt="asd" />
         <div className="supIzq">
           <a href="https://www.ea.com/es-es/games/library">
             Biblioteca de juegos
