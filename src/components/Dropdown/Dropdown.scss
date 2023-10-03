@@ -1,0 +1,35 @@
+.DropDownSection {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: 25px;
+  
+
+  svg {
+    height: 20px;
+    width: 15px;
+    padding: auto;
+    margin: auto;
+  }
+  &:hover {
+    svg {
+      transform: rotate(180deg);
+      fill: var(--color-prymary);
+    }
+  }
+
+  .DropDownButton {
+    color: black;
+    border: none;
+    background-color: var(--color-quaternary);
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+    font-family: var(--font-family-ea);
+
+    &:hover {
+      color: var(--color-prymary);
+    }
+  }
+}

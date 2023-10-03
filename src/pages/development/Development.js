@@ -4,6 +4,7 @@ import "../../styles/index.scss";
 import Boton from "../../components/Boton/Boton";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import Cards from "../../components/Cards/Cards";
+import Footer from "../../components/Footer/Footer";
 import Tabs from "../../components/Tabs/Tabs";
 import cardData from "../../data/CardData.mock";
 import Icono from "../../components/Icono/Icono";
@@ -11,6 +12,8 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Subscription from "../../components/Subscription/Subscription";
+import Dropdown from "../../components/Dropdown/Dropdown";
+
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -98,6 +101,9 @@ const Development = () => {
         </div>
         <div>
           <Subscription />
+        </div>
+        <div>
+          <Dropdown />
         </div>
       </div>
     </div>
