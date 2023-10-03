@@ -6,17 +6,31 @@
     grid-template-rows: auto;
 }
 
+.fondoGris{
+    width: 2000px;
+    background-color: var(--color-octave);
+}
+
 .footerGris {
     background-color: var(--color-octave);
+    max-width: 1200px;
+    margin-left: 200px;
     height: 220px;
     display: grid;
     grid-template-columns: 75% 25%;
+}
+
+.fondoBlanco{
+    width: 2000px;
+    background-color: var(--color-quinary);
 }
 
 .footerBlanco {
     background-color: var(--color-quinary);
     height: 350px;
     width: 100%;
+    max-width: 1200px;
+    margin-left: 200px;
     display: grid;
     grid-template-columns: 8% 54% 38%;
     grid-template-rows: 40% 60%;
