@@ -5,16 +5,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Development from "./pages/development/Development";
 import Home from "./pages/home/Home";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar/>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path="/dev" element={<Development />} />
       </Routes>
-      {/* Aca va el elemento FOOTER */}
+      <Footer />
     </BrowserRouter>
   );
 }

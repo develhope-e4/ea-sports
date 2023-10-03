@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./DropDown.scss";
+import "./Dropdown.scss";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
 import { GoChevronDown } from "react-icons/go";
 
