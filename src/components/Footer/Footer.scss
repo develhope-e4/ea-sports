@@ -16,6 +16,7 @@
     max-width: 1200px;
     margin-left: 200px;
     height: 220px;
+    padding: 0 334px;
     display: grid;
     grid-template-columns: 75% 25%;
 }
@@ -63,8 +64,6 @@ a {
     font-size: var(--font-size-l);
     margin-top: 45px;
     text-decoration: none;
-    height: 40px;
-    width: 250px;
     grid-column: 2 / 2;
 }
 
