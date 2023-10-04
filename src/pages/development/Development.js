@@ -34,7 +34,11 @@ const Development = () => {
   return (
     <div className="App">
       <div className="flex-col-center">
+   
+     
         <div className="section">
+
+          
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
               <CardDestacada
