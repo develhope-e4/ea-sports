@@ -15,17 +15,15 @@ function DropDown({ title, data, doble, data2 }) {
   };
 
   return (
-    <div className="DropDownSection">
-      <div
-        className="DropDown"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <button className="DropDownButton">{title}</button>
-        {isDropdownVisible && (
-          <DropDownMenu data={data} doble={doble} data2={data2} />
-        )}
-      </div>
+    <div
+      className="dropdown"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <button className="DropDownButton">{title}</button>
+      {isDropdownVisible && (
+        <DropDownMenu data={data} doble={doble} data2={data2} />
+      )}
       <GoChevronDown />
     </div>
   );

@@ -11,6 +11,7 @@
   color: white;
   cursor: pointer;
   align-items: center;
+  height: 60px;
   padding-left: 0px;
 }
 
@@ -46,9 +47,11 @@
   flex-direction: column;
   padding: 40px;
   transition: left 0.3s ease;
+
   &::-webkit-scrollbar {
     width: 0;
   }
+
   z-index: 1;
 }
 
@@ -64,6 +67,7 @@
   align-items: center;
   flex-direction: row-reverse;
   padding: 0px 0px 30px 0px;
+
   &:hover {
     color: red;
     cursor: pointer;
@@ -76,6 +80,7 @@
   font-family: var(--font-family-ea);
   font-weight: bold;
   font-size: var(--font-size-l);
+
   &:hover {
     color: red;
     cursor: pointer;
@@ -99,6 +104,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 25px;
 }
+
 .first-image {
   grid-column: span 2;
   width: 345px;
@@ -151,6 +157,7 @@ img.logoCardDestacada.other-images {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .cardDestacada.other-images {
   background: var(--color-background-card-destacada);
   width: 160px;
@@ -161,16 +168,19 @@ img.logoCardDestacada.other-images {
   align-content: center;
   justify-content: center;
 
-  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-repeat: no-repeat;
+  /* Evita que la imagen de fondo se repita */
   background-size: cover;
 }
+
 .cardDestacada.first-images:hover {
   background: none;
 }
+
 .cardDestacada.other-images:hover {
   background: none;
 }
+
 .textCardDestacada .backgroundImage.first-image {
   display: none;
 }
-
