@@ -107,6 +107,9 @@ const Development = () => {
         <div>
           <Dropdown />
         </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     </div>
   );
