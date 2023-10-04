@@ -1,5 +1,5 @@
 .DropDownMenuHole {
-  height: 15px;
+  height: 20px;
   width: 100%;
 }
 
@@ -49,6 +49,7 @@
   li {
     padding: var(--spacing-s);;
     transition: var(--ea-transition-duration);
+
   }
 
 
@@ -56,6 +57,7 @@
     text-decoration: none;
     color: var(--color-sextary);
 
+    
     &:hover {
       color: red;
     }

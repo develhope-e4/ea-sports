@@ -4,7 +4,7 @@
   align-content: center;
   justify-content: center;
   height: 25px;
-  
+
 
   svg {
     height: 20px;
@@ -12,10 +12,13 @@
     padding: auto;
     margin: auto;
   }
+
   &:hover {
     svg {
-      transform: rotate(180deg);
+      transform: rotateX(180deg);
       fill: var(--color-prymary);
+
+      transition: 0.5s ease-in-out;
     }
   }
 
