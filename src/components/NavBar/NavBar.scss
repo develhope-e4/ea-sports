@@ -9,13 +9,14 @@
 .nav {
   display: flex;
   color: white;
-  padding: 10px;
   cursor: pointer;
+  align-items: center;
+  padding-left: 0px;
 }
 
 .easvg {
   padding: 0px 50px;
-  width: 260px;
+  width: 200px;
   height: 31px;
 }
 
@@ -171,3 +172,4 @@ img.logoCardDestacada.other-images {
 .textCardDestacada .backgroundImage.first-image {
   display: none;
 }
+

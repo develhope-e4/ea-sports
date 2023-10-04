@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
+
 }
 
 .container {
@@ -32,4 +33,18 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
+  
 }
+
+.navbar-container{
+  height: 100px;
+}
+
+.h1 {
+  font-family: var(--font-family-ea);
+  font-size: var(--font-size-xl);
+  color: var(--color-sextary);
+  margin-bottom: -25px;
+}
+
+
