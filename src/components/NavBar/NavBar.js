@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import "./NavBar.scss";
 import Icono from "../Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { MdClose } from "react-icons/md";
-import CardDestacada from "../CardDestacada/CardDestacada";
-import { menuCardDestacadaData } from "../../data/MenuCardDestacada.mock";
+
 import BlackNavBar from "../BlackNavBar/BlackNavBar";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
@@ -13,6 +11,7 @@ import { MasExperiencias } from "../../data/MasExperiencias.mock";
 import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
 import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
 import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
+import Menu from "../Menu/Menu";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,39 +31,18 @@ const NavBar = () => {
 
   return (
     <div className="navbar-container">
-    <BlackNavBar />
-      <nav className={`menu ${menuOpen ? "open" : ""}`}>
-        <div className="menu-header">
-          <div className="close-menu" onClick={handleMenuClose}>
-            <MdClose />
-            <p onClick={handleMenuItemClick}>
-              <a href="google.com" className="menu-link">
-                Todos los juegos
-              </a>
-            </p>
-          </div>
-        </div>
-
-        <div className="section-menu">
-          {menuCardDestacadaData &&
-            menuCardDestacadaData.map((card, index) => (
-              <CardDestacada
-                key={index}
-                url="http://google.com"
-                backgroundImage={card.bg}
-                gameLogo={card.logo}
-                className={index === 0 ? "first-image" : "other-images"}
-                showText={false}
-              />
-            ))}
-        </div>
-      </nav>
-
+      <BlackNavBar />
+      <Menu
+        menuOpen={menuOpen}
+        handleMenuClose={handleMenuClose}
+        handleMenuItemClick={handleMenuItemClick}
+      />
       <ul className="nav">
-        <li onClick={handleMenuToggle}>
-          <Icono esRedSocial={false} icono={<BsThreeDotsVertical />} />
-        </li>
-
+        <Icono
+          onClick={handleMenuToggle}
+          esRedSocial={false}
+          icono={<BsThreeDotsVertical />}
+        />
         <img
           src="/NavBar/ea-electronicsarts.svg"
           alt="Mi SVG"
@@ -119,11 +97,8 @@ const NavBar = () => {
           </div>
         </div>
       </ul>
-    
-      <div
-        className={`menu-overlay ${menuOpen ? "menu-overlay-visible" : ""}`}
-        onClick={handleMenuClose}
-      />
+
+      
     </div>
   );
 };
