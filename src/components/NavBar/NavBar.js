@@ -37,17 +37,12 @@ const NavBar = () => {
         handleMenuClose={handleMenuClose}
         handleMenuItemClick={handleMenuItemClick}
       />
-      <ul className="nav">
+      <div className="nav">
         <Icono
           onClick={handleMenuToggle}
           esRedSocial={false}
           icono={<BsThreeDotsVertical />}
         />
-
-      <div className="nav">
-        <li onClick={handleMenuToggle}>
-          <Icono esRedSocial={false} icono={<BsThreeDotsVertical />} />
-        </li>
         <img
           src="/NavBar/ea-electronicsarts.svg"
           alt="Mi SVG"
