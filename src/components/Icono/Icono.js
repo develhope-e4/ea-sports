@@ -8,10 +8,14 @@ import "./Icono.scss";
  * @returns Estructura HTML
  */
 
-const Icono = ({ esRedSocial, icono }) => {
+const Icono = ({ esRedSocial, icono, onClick }) => {
   const className = esRedSocial ? "redSocial" : "otro";
-  
-  return <div className={className}>{icono}</div>;
+
+  return (
+    <div onClick={onClick} className={className}>
+      {icono}
+    </div>
+  );
 };
 
 export default Icono;

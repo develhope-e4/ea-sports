@@ -5,15 +5,21 @@ svg {
   fill: rgb(0%, 0%, 0%);
 }
 
-.otro svg{
+.otro svg {
+  margin-left: var(--spacing-xs);
   width: 25px;
   height: 25px;
-}
 
-.otro:hover {
-  transform: scale(1.2, 1.2);
-  fill: var(--color-secundary);
-  transition: fill 0.3s linear 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: scale(1.2, 1.2);
+    fill: var(--color-secundary);
+    transition: fill 0.3s linear 0.2s;
+    fill: var(--color-secundary);
+  }
 }
 
 .redSocial:hover {
