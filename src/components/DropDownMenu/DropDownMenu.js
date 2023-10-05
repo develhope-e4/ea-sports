@@ -4,7 +4,6 @@ const DropDownMenu = ({ data, data2 }) => {
   return (
     <div className="DropDownPadre">
       <div className="DropDownMenu">
-        {/* <div className={className}></div> */}
         <ul>
           {data2 && <h3>Explorar juegos</h3>}
           {data.map((data, index) => (
