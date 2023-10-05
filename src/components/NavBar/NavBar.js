@@ -43,6 +43,11 @@ const NavBar = () => {
           esRedSocial={false}
           icono={<BsThreeDotsVertical />}
         />
+
+      <div className="nav">
+        <li onClick={handleMenuToggle}>
+          <Icono esRedSocial={false} icono={<BsThreeDotsVertical />} />
+        </li>
         <img
           src="/NavBar/ea-electronicsarts.svg"
           alt="Mi SVG"
@@ -51,54 +56,31 @@ const NavBar = () => {
         />
 
         <div className="DropDownSectionDemo">
-          <div className="juegosDropDown">
-            <Dropdown
-              doble={true}
-              data={ExplorarJuegosDropDown}
-              title={ExplorarJuegosDropDown[0].tittle}
-              data2={PlataformasDropDown}
-            />
-          </div>
+          <Dropdown
+            data={ExplorarJuegosDropDown}
+            title={ExplorarJuegosDropDown[0].tittle}
+            data2={PlataformasDropDown}
+          />
 
-          <div className="MasExperiencias">
-            <Dropdown
-              doble={false}
-              data={MasExperiencias}
-              title={MasExperiencias[0].tittle}
-              data2={MasExperiencias}
-            />
-          </div>
+          <Dropdown data={MasExperiencias} title={MasExperiencias[0].tittle} />
 
-          <div className="AcercaDeDropDown">
-            <Dropdown
-              doble={false}
-              data={AcercaDeDropDown}
-              title={AcercaDeDropDown[0].tittle}
-              data2={AcercaDeDropDown}
-            />
-          </div>
+          <Dropdown
+            data={AcercaDeDropDown}
+            title={AcercaDeDropDown[0].tittle}
+          />
 
-          <div className="CompromisosDropDown">
-            <Dropdown
-              doble={false}
-              data={CompromisosDropDown}
-              title={CompromisosDropDown[0].tittle}
-              data2={CompromisosDropDown}
-            />
-          </div>
+          <Dropdown
+            data={CompromisosDropDown}
+            title={CompromisosDropDown[0].tittle}
+          />
 
-          <div className="RecursosDropDown">
-            <Dropdown
-              doble={false}
-              data={RecursosDropDown}
-              title={RecursosDropDown[0].tittle}
-              data2={RecursosDropDown}
-            />
-          </div>
+          <Dropdown
+            doble={false}
+            data={RecursosDropDown}
+            title={RecursosDropDown[0].tittle}
+          />
         </div>
-      </ul>
-
-      
+      </div>
     </div>
   );
 };
