@@ -1,0 +1,25 @@
+.base-container {
+
+  margin: auto;
+  padding: var(--padding-vert-container) 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  max-width: 1224px;
+  width: 100%;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.start {
+  align-items: start;
+}
+
+.withImage {
+  background-size: 100%;
+
+}

@@ -1,16 +1,17 @@
-
-import LoopVideo from '../../components/LoopVideo/LoopVideo'
-import CardDestacada from '../../components/CardDestacada/CardDestacada'
+import LoopVideo from "../../components/LoopVideo/LoopVideo";
+import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Tabs from "../../components/Tabs/Tabs";
 import cardData from "../../data/CardData.mock";
 import React, { useState } from "react";
 import Cards from "../../components/Cards/Cards";
-import Boton from '../../components/Boton/Boton';
-import Subscription from '../../components/Subscription/Subscription';
+import Boton from "../../components/Boton/Boton";
+import Subscription from "../../components/Subscription/Subscription";
+import BasePage from "../../components/BasePage/BasePage";
+import Section from "../../components/Section/Section";
+import Container from "../../components/Container/Container";
 
 const Home = () => {
-
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
   const handleTabClick = (tab) => {
@@ -28,16 +29,13 @@ const Home = () => {
   };
 
   return (
-    <div className='flex-col-center'>
+    <BasePage>
       <div className="container">
-      <LoopVideo/>
-        </div>`
-
-        <div className="section">
-        <div className="h1">
-            <h1>Juegos destacados</h1>
-          </div>
-        <div className='section'>
+        <LoopVideo />
+      </div>
+      <Section>
+        <h1>Juegos destacados</h1>
+        <Container>
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
               <CardDestacada
@@ -47,23 +45,17 @@ const Home = () => {
                 showText={true}
               />
             ))}
-            </div>
-            <Boton
-              esPrimario={false}
-              isLight={false}
-              onClick={() => console.log("click en el boton negro")}
-              texto={"Últimos juegos"}
-            />
-
-
-        
-        </div>
-
-        <div className='section'>
-        <div className="section">
-          <div className="h1">
-            <h1>Últimas actualizaciones</h1>
-          </div>
+        </Container>
+        <Boton
+          esPrimario={false}
+          isLight={false}
+          onClick={() => console.log("click en el boton negro")}
+          texto={"Últimos juegos"}
+        />
+      </Section>
+      <Section>
+        <h1>Últimas actualizaciones</h1>
+        <Container>
           <div className="tabs-cards">
             <Tabs
               tabNames={tabNames}
@@ -87,23 +79,21 @@ const Home = () => {
               )}
             </div>
           </div>
-          
-        </div>
+        </Container>
         <Boton
-              esPrimario={false}
-              isLight={false}
-              onClick={() => console.log("click en el boton negro")}
-              texto={"Leer mas"}
-            />
-        </div>
+          esPrimario={false}
+          isLight={false}
+          onClick={() => console.log("click en el boton negro")}
+          texto={"Leer mas"}
+        />
+      </Section>
+      <Section>
+        <Container>primer parte</Container>
+        <Container>Segunda</Container>
+      </Section>
+      <Subscription />
+    </BasePage>
+  );
+};
 
-        <div className='container'>
-          <Subscription />
-        </div>
-
-
-    </div>
-  )
-}
-
-export default Home
+export default Home;

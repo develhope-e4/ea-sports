@@ -1,4 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/48656eabd3fef6464367d956315c749a?family=Electronic+Arts+Text);
+
 :root {
 
   --spacing-xl: 150px;
@@ -10,6 +11,9 @@
   --spacing-xxs: 10px;
 
   --padding-m: 24px;
+  --padding-side-container: 20vw;
+  --padding-vert-container: var(--spacing-sm);
+
 
   --spacing-sm-boton: 16px 24px;
 
@@ -19,13 +23,13 @@
   --color-secundario-disabled: rgb(59, 120, 85, 0.5);
 
   --text-color: white;
-  --text-color-boton:#161616;
+  --text-color-boton: #161616;
 
   --border: 1px solid var(--color-sextary);
   --border-radius-sm: 5px;
   --border-radius-xs: 3px;
   --border-grosor: 2px;
-  --gap:15px;
+  --gap: 15px;
 
   --color-prymary: #ff1e3c;
   --color-secundary: #ff4747;
@@ -37,43 +41,42 @@
   --color-octave: #eaeaea;
 
 
-  --color-botondorado:#A38D5E;
+  --color-botondorado: #A38D5E;
   --color-botonprimario: white;
   --color-botonsecundario: rgb(0, 152, 237);
-  --color-botonsecundariodark:rgba(255, 255, 255, 0);
-  --color-botonsecundariolight:rgb(255, 255, 255, 0);
-  
-  --color-gradient1:rgba(0, 0, 255, 0.496);
-  --color-gradient2:rgba(255, 0, 0, 0.496);
+  --color-botonsecundariodark: rgba(255, 255, 255, 0);
+  --color-botonsecundariolight: rgb(255, 255, 255, 0);
+
+  --color-gradient1: rgba(0, 0, 255, 0.496);
+  --color-gradient2: rgba(255, 0, 0, 0.496);
   --color-background-card-destacada: rgba(37, 37, 37, 0.375);
 
 
-  --h3-tittle-font-size-xxl:40px; 
-  --font-size-xxl:26px;
-  --font-size-xl:24px;
-  --font-size-l:18px;
-  --font-size-m:16px;
-  --font-size-s:14px;
-  --font-size-xs:13px;
+  --h3-tittle-font-size-xxl: 40px;
+  --font-size-xxl: 26px;
+  --font-size-xl: 24px;
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xs: 13px;
 
-  --font-weith-l:900;
-  --font-weith-xm-h3:700;
-  --font-weith-m:600;
-  --font-weith-s:400;
+  --font-weith-l: 900;
+  --font-weith-xm-h3: 700;
+  --font-weith-m: 600;
+  --font-weith-s: 400;
 
   --font-family-ea: "Electronic Arts Text", "DM Sans", "Verdana", "Helvetica", "Arial",
     sans-serif;
-    --font-family-primary-ea: "Electronic Arts Text", "Verdana", "Helvetica", "Arial",
+  --font-family-primary-ea: "Electronic Arts Text", "Verdana", "Helvetica", "Arial",
     sans-serif;
-    --font-family-secundary-ea: "Electronic Arts Display", "Verdana", "Helvetica", "Arial",
+  --font-family-secundary-ea: "Electronic Arts Display", "Verdana", "Helvetica", "Arial",
     sans-serif;
   --font-style-eaaa: "Electronic Arts Text";
   --font-style-arial: Arial;
   --font-style-helvetica: Helvetica;
-  --font-style-sans:sans-serif;
+  --font-style-sans: sans-serif;
   --font-style-verdana: verdana;
 
   --ea-boton-expansion: 0.1s;
   --ea-transition-duration: 0.3s;
 }
-
