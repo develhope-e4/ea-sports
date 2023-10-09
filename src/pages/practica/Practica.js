@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { validateEmail, validatePassword } from "./utils";
 const Practica = () => {
   const [user, setUser] = useState({
@@ -20,14 +20,8 @@ const Practica = () => {
       [e.target.id]: e.target.value,
     });
 
-    validateEmail(user.username, setUsernameError);
-    validatePassword(user.password, setPasswordError);
-
-    if (!passwordError && !usernameError) {
-      setDisabled(false);
-    } else if (passwordError || usernameError) {
-      setDisabled(true);
-    }
+    validateEmail(user.username, setUsernameError, setDisabled);
+    validatePassword(user.password, setPasswordError, setDisabled);
   }
 
   function handleClick() {
@@ -36,6 +30,8 @@ const Practica = () => {
     // });
     console.log("Fetch api");
   }
+
+  useEffect(() => {}, [user]);
   return (
     <div>
       <input
