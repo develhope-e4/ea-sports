@@ -34,9 +34,7 @@ const Home = () => {
         <LoopVideo />
       </div>
       <Section>
-        <Container isCentered>
-          <h1>Juegos destacados</h1>
-        </Container>
+        <h1>Juegos destacados</h1>
         <Container>
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
@@ -48,19 +46,15 @@ const Home = () => {
               />
             ))}
         </Container>
-        <Container isCentered>
-          <Boton
-            esPrimario={false}
-            isLight={false}
-            onClick={() => console.log("click en el boton negro")}
-            texto={"Últimos juegos"}
-          />
-        </Container>
+        <Boton
+          esPrimario={false}
+          isLight={false}
+          onClick={() => console.log("click en el boton negro")}
+          texto={"Últimos juegos"}
+        />
       </Section>
       <Section>
-        <Container isCentered>
-          <h1>Últimas actualizaciones</h1>
-        </Container>
+        <h1>Últimas actualizaciones</h1>
         <Container>
           <div className="tabs-cards">
             <Tabs
@@ -86,14 +80,16 @@ const Home = () => {
             </div>
           </div>
         </Container>
-        <Container isCentered>
-          <Boton
-            esPrimario={false}
-            isLight={false}
-            onClick={() => console.log("click en el boton negro")}
-            texto={"Leer mas"}
-          />
-        </Container>
+        <Boton
+          esPrimario={false}
+          isLight={false}
+          onClick={() => console.log("click en el boton negro")}
+          texto={"Leer mas"}
+        />
+      </Section>
+      <Section>
+        <Container>primer parte</Container>
+        <Container>Segunda</Container>
       </Section>
       <Subscription />
     </BasePage>
