@@ -1,9 +1,12 @@
 .base-container {
-  padding: var(--padding-vert-container) var(--padding-side-container);
 
+  margin: auto;
+  padding: var(--padding-vert-container) 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  max-width: 1224px;
 }
 
 .centered {

@@ -38,17 +38,15 @@ const Home = () => {
           <h1>Juegos destacados</h1>
         </Container>
         <Container>
-          <div className="section">
-            {cardDestacadaData &&
-              cardDestacadaData.map((card) => (
-                <CardDestacada
-                  url="http://google.com"
-                  backgroundImage={card.bg}
-                  gameLogo={card.logo}
-                  showText={true}
-                />
-              ))}
-          </div>
+          {cardDestacadaData &&
+            cardDestacadaData.map((card) => (
+              <CardDestacada
+                url="http://google.com"
+                backgroundImage={card.bg}
+                gameLogo={card.logo}
+                showText={true}
+              />
+            ))}
         </Container>
         <Container isCentered>
           <Boton

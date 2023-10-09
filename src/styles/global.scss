@@ -11,32 +11,19 @@
 
 .container {
   position: relative;
-  
+
   display: inline-block;
 }
 
 .compraAhora {
   position: absolute;
   left: 50%;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
   bottom: 25%;
   gap: var(--spacing-md);
 }
 
-.section {
-  width: 1456px;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  
-}
-
-.navbar-container{
+.navbar-container {
   height: 100px;
 }
 

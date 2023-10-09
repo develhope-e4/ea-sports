@@ -4,7 +4,13 @@ import "./Cards.scss";
 const Cards = ({ imagenSrc, nombre, fecha, titulo, texto }) => {
   return (
     <div className="card">
-      <img src={imagenSrc} alt="Imagen de la tarjeta" className="card-image" />
+      <div className="image-container">
+        <img
+          src={imagenSrc}
+          alt="Imagen de la tarjeta"
+          className="card-image"
+        />
+      </div>
       <div className="card-content">
         <div className="card-header">
           <h2 className="card-title">{nombre}</h2>
