@@ -1,7 +1,7 @@
 import React from "react";
 import "./Container.scss";
 import classNames from "classnames";
-const Container = ({ children, isCentered, imageUrl }) => {
+const Container = ({ children, isCentered }) => {
   const className = classNames({
     "base-container": true,
     centered: isCentered,

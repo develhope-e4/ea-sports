@@ -1,58 +1,33 @@
-.SubscriptionSection {
+.text-container {
+    width: 30%;
     text-align: left;
-    width: 100%;
-    background-image: url(../../assets/Imagenes/Subscription/hero-medium-console-medio.jpg);
-    background-size: 100%;
-
-
-    .text-container {
-        width: 30%;
-        text-align: left;
-    }
-
-    .texto {
-        width: 100%;
-        color: var(--color-quinary);
-        font-size: var(--font-size-l);
-        font-family: var(--font-family-primary-ea);
-        font-weight: var(--font-weith-s);
-        line-height: 1.5;
-        margin: 0;
-    }
-
-    button {
-        margin-top: var(--spacing-sm);
-        width: 160px;
-    }
 }
 
-.SubscriptionSection-MoreInfo {
-    display: flex;
-    background-color: #6fb0d6;
+.texto {
+    width: 100%;
+    color: var(--color-quinary);
+    font-size: var(--font-size-l);
+    font-family: var(--font-family-primary-ea);
+    font-weight: var(--font-weith-s);
+    line-height: 1.5;
+    margin: 0;
+}
 
-    .SubscriptionSection-MoreInfo-contenido {
-        display: flex;
-        align-items: center;
-        width: 100%;
+button {
+    margin-top: var(--spacing-sm);
+    width: 160px;
+}
 
-        h2 {
-            text-align: left;
-            margin-right: 32px;
-            font-family: var(--font-family-secundary-ea);
-            font-size: var(--font-size-xxl);
-            font-weight: var(--font-weith-m);
-            line-height: 1.35;
-        }
+h2 {
+    text-align: left;
+    margin-right: 32px;
+    font-family: var(--font-family-secundary-ea);
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weith-m);
+    line-height: 1.35;
+}
 
-        .SubscriptionSection-MoreInfo-contenido-boton {
-            display: flex;
-            width: 50%;
-            justify-content: flex-end;
-
-            button {
-                font-family: var(--font-family-primary-ea);
-                font-size: var(--font-size-l);
-            }
-        }
-    }
+button {
+    font-family: var(--font-family-primary-ea);
+    font-size: var(--font-size-l);
 }

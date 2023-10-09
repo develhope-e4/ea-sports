@@ -26,20 +26,18 @@ const Subscription = () => {
           </div>
         </Container>
       </Section>
-      <Section>
-        <div class="SubscriptionSection-MoreInfo">
-          <Container>
-            <h2>Herramientas parentales y de juego: el control en tus manos</h2>
-            <div className="SubscriptionSection-MoreInfo-contenido-boton">
-              <Boton
-                esPrimario={false}
-                isLight={false}
-                onClick={() => console.log("click en el boton negro")}
-                texto={"Más información"}
-              />
-            </div>
-          </Container>
-        </div>
+      <Section backgroundColor={"#6fb0d6"}>
+        <Container>
+          <h2>Herramientas parentales y de juego: el control en tus manos</h2>
+          <div className="SubscriptionSection-MoreInfo-contenido-boton">
+            <Boton
+              esPrimario={false}
+              isLight={false}
+              onClick={() => console.log("click en el boton negro")}
+              texto={"Más información"}
+            />
+          </div>
+        </Container>
       </Section>
     </>
   );
