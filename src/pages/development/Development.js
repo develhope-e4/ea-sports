@@ -17,6 +17,7 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
+  
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
