@@ -3,7 +3,7 @@ import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Tabs from "../../components/Tabs/Tabs";
 import cardData from "../../data/CardData.mock";
-import React, { useState } from "react";
+import { useState } from "react";
 import Cards from "../../components/Cards/Cards";
 import Boton from "../../components/Boton/Boton";
 import Subscription from "../../components/Subscription/Subscription";

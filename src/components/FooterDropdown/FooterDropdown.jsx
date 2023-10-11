@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./FooterDropdown.scss";
 import Icono from "../Icono/Icono";
 import { HiOutlineChevronUp, HiOutlineChevronDown } from "react-icons/hi";
@@ -7,7 +7,7 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(items[0] || null); // Elemento seleccionado inicialmente
+  const [selectedItem, setSelectedItem] = useState(items[0] || null); 
 
   const clickHandler = () => {
     setIsOpen(!isOpen);
@@ -32,7 +32,6 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
     }
   };
 
-  // Función para manejar la selección de un elemento
   const handleItemClick = (item) => {
     setSelectedItem(item);
     setIsOpen(false);
