@@ -7,6 +7,9 @@ import { useState } from "react";
 import Cards from "../../components/Cards/Cards";
 import Boton from "../../components/Boton/Boton";
 import Subscription from "../../components/Subscription/Subscription";
+import BasePage from "../../components/BasePage/BasePage";
+import Section from "../../components/Section/Section";
+import Container from "../../components/Container/Container";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -26,16 +29,13 @@ const Home = () => {
   };
 
   return (
-    <div className="flex-col-center">
+    <BasePage>
       <div className="container">
         <LoopVideo />
       </div>
-      `
-      <div className="section">
-        <div className="h1">
-          <h1>Juegos destacados</h1>
-        </div>
-        <div className="section">
+      <Section>
+        <h1>Juegos destacados</h1>
+        <Container>
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
               <CardDestacada
@@ -45,19 +45,17 @@ const Home = () => {
                 showText={true}
               />
             ))}
-        </div>
+        </Container>
         <Boton
           esPrimario={false}
           isLight={false}
           onClick={() => console.log("click en el boton negro")}
           texto={"Últimos juegos"}
         />
-      </div>
-      <div className="section">
-        <div className="section">
-          <div className="h1">
-            <h1>Últimas actualizaciones</h1>
-          </div>
+      </Section>
+      <Section>
+        <h1>Últimas actualizaciones</h1>
+        <Container>
           <div className="tabs-cards">
             <Tabs
               tabNames={tabNames}
@@ -81,18 +79,20 @@ const Home = () => {
               )}
             </div>
           </div>
-        </div>
+        </Container>
         <Boton
           esPrimario={false}
           isLight={false}
           onClick={() => console.log("click en el boton negro")}
           texto={"Leer mas"}
         />
-      </div>
-      <div className="container">
-        <Subscription />
-      </div>
-    </div>
+      </Section>
+      <Section>
+        <Container>primer parte</Container>
+        <Container>Segunda</Container>
+      </Section>
+      <Subscription />
+    </BasePage>
   );
 };
 
