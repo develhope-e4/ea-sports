@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./BlackNavBar.scss";
 import SvgText from "../SvgText/SvgText";
 
@@ -11,12 +11,12 @@ const BlackNavBar = () => {
   const handleCloseClick = () => {
     setShowSvgControll(false);
   };
-  const svgControllClass = showSvgControll ? 'visible' : 'hidden';
-    useEffect(() => {
+  const svgControllClass = showSvgControll ? "visible" : "hidden";
+  useEffect(() => {
     if (showSvgControll) {
-      document.body.classList.add('overflow-hidden');
+      document.body.classList.add("overflow-hidden");
     } else {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove("overflow-hidden");
     }
   }, [showSvgControll]);
 
@@ -76,7 +76,7 @@ const BlackNavBar = () => {
         </svg>
       </div>
       {showSvgControll && (
-            <div className={`svgcontroll2 ${svgControllClass}`}>
+        <div className={`svgcontroll2 ${svgControllClass}`}>
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconsignin.svg"
             text={"Iniciar sesión"}
@@ -87,7 +87,7 @@ const BlackNavBar = () => {
             text={"Crear cuenta"}
             url="https://google.com"
           />
-            <button className="close-button" onClick={handleCloseClick}>
+          <button className="close-button" onClick={handleCloseClick}>
             <svg
               viewBox="0 0 16 16"
               preserveAspectRatio="xMidYMid meet"
@@ -96,8 +96,7 @@ const BlackNavBar = () => {
                 display: "block",
                 width: "100%",
                 height: "15px",
-                fill: "white"
-                
+                fill: "white",
               }}
             >
               <g>

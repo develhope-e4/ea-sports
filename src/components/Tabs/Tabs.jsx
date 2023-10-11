@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import "./Tabs.scss";
 import cardData from "../../data/CardData.mock";
 const Tabs = ({ tabNames, handleTabClick, activeTab }) => {

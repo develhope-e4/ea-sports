@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import "./DropDownMenu.scss";
 const DropDownMenu = ({ data, data2 }) => {
   return (

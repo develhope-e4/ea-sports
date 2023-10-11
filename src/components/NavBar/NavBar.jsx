@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./NavBar.scss";
 import Icono from "../Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";

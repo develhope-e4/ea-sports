@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../App.css";
 import "../../styles/index.scss";
 import Boton from "../../components/Boton/Boton";
@@ -17,7 +17,6 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
-  
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -35,11 +34,7 @@ const Development = () => {
   return (
     <div className="App">
       <div className="flex-col-center">
-   
-     
         <div className="section">
-
-          
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
               <CardDestacada
