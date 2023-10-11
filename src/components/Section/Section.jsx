@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Section.scss";
 import classNames from "classnames";
 
