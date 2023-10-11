@@ -1,5 +1,5 @@
 import "./Footer.scss";
-import FooterDropdown from "../FooterDropdown/FooterDropdown.js";
+import FooterDropdown from "../FooterDropdown/FooterDropdown.jsx";
 import React from "react";
 import { TfiFacebook } from "react-icons/tfi";
 import { GrTwitter } from "react-icons/gr";

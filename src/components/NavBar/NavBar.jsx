@@ -4,7 +4,7 @@ import Icono from "../Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 import BlackNavBar from "../BlackNavBar/BlackNavBar";
-import Dropdown from "../../components/Dropdown/Dropdown";
+import Dropdown from "../Dropdown/Dropdown";
 import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
 import { PlataformasDropDown } from "../../data/PlataformasDropDown.mock";
 import { MasExperiencias } from "../../data/MasExperiencias.mock";
