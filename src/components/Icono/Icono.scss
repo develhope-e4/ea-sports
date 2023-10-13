@@ -1,11 +1,28 @@
 svg {
-    fill-rule: nonzero;
-      stroke: none;
-      fill-opacity:1;
-      fill:rgb(0%,0%,0%);
-    &:hover {
-      transform: scale(1.2,1.2);
-      fill: var(----color-prymary);
-    }
-  
+  fill-rule: nonzero;
+  stroke: none;
+  fill-opacity: 1;
+  fill: rgb(0%, 0%, 0%);
+}
+
+.otro svg {
+  margin-left: var(--spacing-xs);
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: scale(1.2, 1.2);
+    fill: var(--color-secundary);
+    transition: fill 0.3s linear 0.2s;
+    fill: var(--color-secundary);
   }
+}
+
+.redSocial:hover {
+  transform: scale(1.2, 1.2);
+  transition: transform 0.3s;
+}

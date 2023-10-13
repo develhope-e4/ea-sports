@@ -1,0 +1,32 @@
+.tabs {
+  display: flex;
+  background-color: white;
+  overflow-x: auto;
+  width: fit-content;
+
+  margin-bottom: var(--spacing-md);
+}
+
+.tab {
+  font-family: var(--font-family-ea);
+  font-size: var(--font-size-l);
+  color: var(--color-sextary);
+  padding: 10px 20px;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.tab:hover {
+  background-color: #dedede;
+}
+
+.tab.active {
+  border-bottom: 3px solid red;
+  background-color: #dedede;
+  color: var(--color-sextary);
+}
+
+.tab:last-child {
+  margin-right: 0;
+}
