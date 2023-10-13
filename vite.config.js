@@ -18,4 +18,5 @@ export default defineConfig({
     jsxInject: `import React from 'react';`,
     jsxFactory: "React.createElement",
   },
+  base: "./",
 });
