@@ -18,4 +18,9 @@ export default defineConfig({
       },
     }),
   ],
-})
+  esbuild: {
+    jsxInject: `import React from 'react';`,
+    jsxFactory: "React.createElement",
+  },
+  base: "./",
+});
