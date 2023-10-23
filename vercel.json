@@ -8,8 +8,12 @@
     ],
     "routes": [
       {
+        "src": "/dev",
+        "dest": "/dist/index.html"
+      },
+      {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "dest": "/dist/index.html"
       }
     ]
   }
