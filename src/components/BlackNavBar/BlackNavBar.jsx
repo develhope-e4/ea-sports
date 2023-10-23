@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./BlackNavBar.scss";
+import classes from  "./BlackNavBar.module.scss";
 import SvgText from "../SvgText/SvgText";
 
 const BlackNavBar = () => {
@@ -21,10 +21,10 @@ const BlackNavBar = () => {
   }, [showSvgControll]);
 
   return (
-    <div className="black-navbar">
-      <div className="svg-container">
+    <div className={classes.blackNavbar}>
+      <div className={classes.svgContainer}>
         <svg
-          className="svg1"
+          className={classes.svg1}
           viewBox="0 0 18 18"
           onClick={handleSvg1Click}
           preserveAspectRatio="xMidYMid meet"
@@ -42,7 +42,7 @@ const BlackNavBar = () => {
           </g>
         </svg>
         <svg
-          className="svg2"
+          className={classes.svg2}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 10 17"
           onClick={handleSvg1Click}
@@ -59,7 +59,7 @@ const BlackNavBar = () => {
           <path d="M5.366,14.943H3.982a1.029,1.029,0,0,0,0,2.057H5.366A1.029,1.029,0,1,0,5.366,14.943Z"></path>
         </svg>
         <svg
-          className="svg3"
+          className={classes.svg3}
           viewBox="0 0 32 32"
           preserveAspectRatio="xMidYMid meet"
           focusable="false"
@@ -76,7 +76,7 @@ const BlackNavBar = () => {
         </svg>
       </div>
       {showSvgControll && (
-        <div className={`svgcontroll2 ${svgControllClass}`}>
+        <div className={classes.svgcontroll2 + {svgControllClass}}>
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconsignin.svg"
             text={"Iniciar sesión"}
@@ -87,7 +87,7 @@ const BlackNavBar = () => {
             text={"Crear cuenta"}
             url="https://google.com"
           />
-          <button className="close-button" onClick={handleCloseClick}>
+          <button className={classes.closeButton} onClick={handleCloseClick}>
             <svg
               viewBox="0 0 16 16"
               preserveAspectRatio="xMidYMid meet"

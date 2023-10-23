@@ -1,4 +1,4 @@
-.black-navbar {
+.blackNavbar {
   background-color: #161616;
   display: flex;
   justify-content: flex-end;
@@ -8,7 +8,7 @@
   position: relative; 
   z-index: 1;
 
-  .svg-container {
+  .svgContainer {
     display: flex;
     align-items: center;
     width: initial;
@@ -61,7 +61,7 @@
     top: 100%; 
   }
 }
-.close-button {
+.closeButton {
   background-color: transparent;
   border: none;
   cursor: pointer;

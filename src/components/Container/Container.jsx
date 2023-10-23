@@ -1,5 +1,5 @@
 
-import "./Container.scss";
+import classes from "./Container.module.scss";
 import classNames from "classnames";
 const Container = ({ children, isCentered }) => {
   const className = classNames({

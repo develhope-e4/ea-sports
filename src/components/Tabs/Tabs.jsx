@@ -3,11 +3,11 @@ import classes from "./Tabs.module.scss";
 import cardData from "../../data/CardData.mock";
 const Tabs = ({ tabNames, handleTabClick, activeTab }) => {
   return (
-    <div className="tabs">
+    <div className={classes.tabs}>
       {Object.keys(cardData).map((tab, index) => (
         <div
           key={index}
-          className={`tab ${activeTab === tab ? "active" : ""}`}
+          className={classes.tab + activeTab === tab ? classes.active : ""}
           onClick={() => handleTabClick(tab)}
         >
           {tabNames[tab]} {/* Utilizamos el nombre personalizado aquí */}

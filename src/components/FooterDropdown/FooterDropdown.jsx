@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "./FooterDropdown.scss";
+import classes from "./FooterDropdown.module.scss";
 import Icono from "../Icono/Icono";
 import { HiOutlineChevronUp, HiOutlineChevronDown } from "react-icons/hi";
 
@@ -48,9 +48,9 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
 
   console.log(items);
   return (
-    <div className={"dropdown_wrapper"} onKeyUp={keyHandler}>
+    <div className={classes.dropdown_wrapper} onKeyUp={keyHandler}>
       <button
-        className={"dropdown_activator"}
+        className={classes.dropdown_activator}
         aria-haspopup="true"
         aria-controls={dropdownTitle}
         onClick={clickHandler}
@@ -59,10 +59,10 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
         {dropdownTitle}
         {selectedItem && (
           <>
-            <div className="selected_item">{selectedItem.anchor}</div>
+            <div className={classes.selected_item}>{selectedItem.anchor}</div>
           </>
         )}
-        <div className="flechaFooter">
+        <div className={classes.flechaFooter}>
           {isOpen ? (
             <Icono icono={<HiOutlineChevronUp />} />
           ) : (
@@ -72,12 +72,12 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
       </button>
       <ul
         ref={dropdownListRef}
-        className={`${"dropdown_item_list"} ${isOpen ? "active" : ""} `}
+        className={`${classes.dropdown_item_list} ${isOpen ? classes.active : ""} `}
       >
         {items.map((item, index) => {
           return (
-            <li className={"item_list"} key={index}>
-              {item.flag && <img src={item.flag} className="flag" />}
+            <li className={classes.item_list} key={index}>
+              {item.flag && <img src={item.flag} className={classes.flag} />}
               <a onClick={() => handleItemClick(item)}>{item.anchor}</a>
             </li>
           );
