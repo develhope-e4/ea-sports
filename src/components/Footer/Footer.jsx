@@ -1,6 +1,6 @@
 import "./Footer.scss";
 import FooterDropdown from "../FooterDropdown/FooterDropdown.jsx";
- 
+
 import { TfiFacebook } from "react-icons/tfi";
 import { GrTwitter } from "react-icons/gr";
 import { ImYoutube } from "react-icons/im";
@@ -10,12 +10,14 @@ import Icono from "../Icono/Icono";
 import { itemsIdioma, itemsRegion } from "./FooterData";
 import eaPurple from "../../assets/Footer/eaPurple.png";
 import TRUSTe from "../../assets/Footer/TRUSTe.svg";
+import Container from "../Container/Container";
+import Section from "../Section/Section";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="fondoGris">
-        <div className="footerGris">
+      <Section backgroundColor={"--color-octave"}>
+        <Container paddingMD={true}>
           <div className="linkTextoFooterGris">
             <a href="https://www.ea.com/es-es/careers">Empleo</a>
             <a href="https://www.ea.com/es-es/executives">Ejecutivos</a>
@@ -41,81 +43,86 @@ const Footer = () => {
             </a>
             <div className="iconosRS">
               <Icono
-                className="iconosRedesSociales"
                 href="https://www.facebook.com/ea.es/"
                 icono={<TfiFacebook />}
               />
               <Icono
-                className="iconosRedesSociales"
                 href="https://twitter.com/EA_Espana"
                 icono={<GrTwitter />}
               />
               <Icono
-                className="iconosRedesSociales"
                 href="https://www.youtube.com/EAvideos"
                 icono={<ImYoutube />}
               />
               <Icono
-                className="iconosRedesSociales"
                 href="https://www.instagram.com/ea/"
                 icono={<BsInstagram />}
               />
               <Icono
-                className="iconosRedesSociales"
+                className="iconosRedesSocialesNM"
                 href="https://www.twitch.tv/ea"
                 icono={<IoLogoTwitch />}
               />
             </div>
           </div>
-        </div>
-      </div>
-      <div className="fondoBlanco">
-        <div className="footerBlanco">
-          <img className="latIzq" src={eaPurple} />
-          <div className="supIzq">
-            <a href="https://www.ea.com/es-es/games/library">
-              Biblioteca de juegos
-            </a>
-            <a href="https://www.ea.com/es-es/subscribe">Suscribirse</a>
-            <a href="https://www.ea.com/es-es/redeem">Canjear Código</a>
-            <br />
-            <a href="https://www.ea.com/es-es/ea-app">EA app</a>
-            <a href="https://www.ea.com/es-es/ea-app">Acerca de</a>
-            <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
-            <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <div className="izquierda">
+            <img className="latIzq" src={eaPurple} />
           </div>
-          <div className="supDer">
-            <FooterDropdown
-              dropdownTitle="Región (precios)"
-              items={itemsRegion}
-            />
-            <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
+          <div className="centro">
+            <div className="arribaCentro">
+              <a href="https://www.ea.com/es-es/games/library">
+                Biblioteca de juegos
+              </a>
+              <a href="https://www.ea.com/es-es/subscribe">Suscribirse</a>
+              <a href="https://www.ea.com/es-es/redeem">Canjear Código</a>
+              <br />
+              <a href="https://www.ea.com/es-es/ea-app">EA app</a>
+              <a href="https://www.ea.com/es-es/ea-app">Acerca de</a>
+              <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
+              <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
+            </div>
+            <div className="abajoCentro">
+              <a href="http://www.ea.com/es-es/legal">
+                Información legal y privacidad
+              </a>
+              <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
+                Acuerdo de usuario
+              </a>
+              <br />
+              <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
+                Política de privacidad y directiva de cookies (tus derechos de
+                privacidad)
+              </a>
+              <br />
+              <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
+                Actualizaciones del servicio online
+              </a>
+              <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
+                Seguridad
+              </a>
+              <a href="https://www.ea.com/es-es">Sus preferencias de cookies</a>
+              <p>© 2023 Electronic Arts Inc.</p>
+            </div>
           </div>
-          <div className="infIzq">
-            <a href="http://www.ea.com/es-es/legal">
-              Información legal y privacidad
-            </a>
-            <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-              Acuerdo de usuario
-            </a>
-            <br />
-            <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-              Política de privacidad y directiva de cookies (tus derechos de
-              privacidad)
-            </a>
-            <br />
-            <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-              Actualizaciones del servicio online
-            </a>
-            <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Seguridad</a>
-            <a href="https://www.ea.com/es-es">Sus preferencias de cookies</a>
-            <p>© 2023 Electronic Arts Inc.</p>
+          <div className="derecha">
+            <div className="arribaDer">
+              <FooterDropdown
+                dropdownTitle="Región (precios)"
+                items={itemsRegion}
+              />
+              <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
+            </div>
+            <div className="abajoDer">
+              <img src={TRUSTe} alt="Truste Logo" />
+            </div>
           </div>
-          <div className="infDer">
-            <img src={TRUSTe} alt="Truste Logo" />
-          </div>
-        </div>
-      </div>
+        </Container>
+      </Section>
     </div>
   );
 };
