@@ -3,6 +3,7 @@
   text-decoration: none;
   font-size: var(--font-size-xl);
   font-style: var(--font-style-ea);
+  margin-right: 0px;
 }
 
 .backgroundImage {
@@ -20,6 +21,9 @@
   align-content: center;
   justify-content: center;
   transition: var(--ea-transition-duration);
+  flex-grow: 1; 
+  min-width: 255px;
+  min-height: 255px;
 }
 
 .cardDestacada:hover {
@@ -51,3 +55,4 @@ img.logoCardDestacada {
 .cardDestacada:hover .textCardDestacada {
   display: block;
 }
+
