@@ -1,6 +1,6 @@
 import classes from "./Footer.module.scss";
 import FooterDropdown from "../FooterDropdown/FooterDropdown.jsx";
- 
+
 import { TfiFacebook } from "react-icons/tfi";
 import { GrTwitter } from "react-icons/gr";
 import { ImYoutube } from "react-icons/im";
@@ -41,27 +41,23 @@ const Footer = () => {
             </a>
             <div className={classes.iconosRS}>
               <Icono
-                className={classes.iconosRedesSociales}
                 href="https://www.facebook.com/ea.es/"
                 icono={<TfiFacebook />}
               />
               <Icono
-                className={classes.iconosRedesSociales}
                 href="https://twitter.com/EA_Espana"
                 icono={<GrTwitter />}
               />
               <Icono
-                className={classes.iconosRedesSociales}
                 href="https://www.youtube.com/EAvideos"
                 icono={<ImYoutube />}
               />
               <Icono
-                className={classes.iconosRedesSociales}
                 href="https://www.instagram.com/ea/"
                 icono={<BsInstagram />}
               />
               <Icono
-                className={classes.iconosRedesSociales}
+                className="iconosRedesSocialesNM"
                 href="https://www.twitch.tv/ea"
                 icono={<IoLogoTwitch />}
               />
@@ -69,50 +65,58 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={classes.fondoBlanco}>
-        <div className={classes.footerBlanco}>
-          <img className={classes.latIzq} src={eaPurple} />
-          <div className={classes.supIzq}>
-            <a href="https://www.ea.com/es-es/games/library">
-              Biblioteca de juegos
-            </a>
-            <a href="https://www.ea.com/es-es/subscribe">Suscribirse</a>
-            <a href="https://www.ea.com/es-es/redeem">Canjear Código</a>
-            <br />
-            <a href="https://www.ea.com/es-es/ea-app">EA app</a>
-            <a href="https://www.ea.com/es-es/ea-app">Acerca de</a>
-            <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
-            <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
+      <div className="fondoBlanco">
+        <div className="footerBlanco">
+          <div className="izquierda">
+            <img className="latIzq" src={eaPurple} />
           </div>
-          <div className={classes.supDer}>
-            <FooterDropdown
-              dropdownTitle="Región (precios)"
-              items={itemsRegion}
-            />
-            <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
+          <div className="centro">
+            <div className="arribaCentro">
+              <a href="https://www.ea.com/es-es/games/library">
+                Biblioteca de juegos
+              </a>
+              <a href="https://www.ea.com/es-es/subscribe">Suscribirse</a>
+              <a href="https://www.ea.com/es-es/redeem">Canjear Código</a>
+              <br />
+              <a href="https://www.ea.com/es-es/ea-app">EA app</a>
+              <a href="https://www.ea.com/es-es/ea-app">Acerca de</a>
+              <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
+              <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
+            </div>
+            <div className="abajoCentro">
+              <a href="http://www.ea.com/es-es/legal">
+                Información legal y privacidad
+              </a>
+              <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
+                Acuerdo de usuario
+              </a>
+              <br />
+              <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
+                Política de privacidad y directiva de cookies (tus derechos de
+                privacidad)
+              </a>
+              <br />
+              <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
+                Actualizaciones del servicio online
+              </a>
+              <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
+                Seguridad
+              </a>
+              <a href="https://www.ea.com/es-es">Sus preferencias de cookies</a>
+              <p>© 2023 Electronic Arts Inc.</p>
+            </div>
           </div>
-          <div className={classes.infIzq}>
-            <a href="http://www.ea.com/es-es/legal">
-              Información legal y privacidad
-            </a>
-            <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-              Acuerdo de usuario
-            </a>
-            <br />
-            <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-              Política de privacidad y directiva de cookies (tus derechos de
-              privacidad)
-            </a>
-            <br />
-            <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-              Actualizaciones del servicio online
-            </a>
-            <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">Seguridad</a>
-            <a href="https://www.ea.com/es-es">Sus preferencias de cookies</a>
-            <p>© 2023 Electronic Arts Inc.</p>
-          </div>
-          <div className={classes.infDer}>
-            <img src={TRUSTe} alt="Truste Logo" />
+          <div className="derecha">
+            <div className="arribaDer">
+              <FooterDropdown
+                dropdownTitle="Región (precios)"
+                items={itemsRegion}
+              />
+              <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
+            </div>
+            <div className="abajoDer">
+              <img src={TRUSTe} alt="Truste Logo" />
+            </div>
           </div>
         </div>
       </div>
