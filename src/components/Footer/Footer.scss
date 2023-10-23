@@ -1,127 +1,131 @@
 /* Estilos para el primer grid (footerGris y footerBlanco) */
 .footer {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-
-    // overflow: hidden;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.fondoGris{
-    width: 100%;
-    background-color: var(--color-octave);
+.fondoGris {
+  width: 100%;
+  height: 220px;
+  background-color: var(--color-octave);
 }
 
 .footerGris {
-    background-color: var(--color-octave);
-    width: 90%;
-    height: 220px;
-    padding: 0 150px;
-    display: grid;
-    grid-template-columns: 75% 25%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
 }
 
-.fondoBlanco{
-    width: 100%;
-    background-color: var(--color-quinary);
+.fondoBlanco {
+  background-color: var(--color-quaternary);
+  height: 300px;
 }
 
 .footerBlanco {
-    background-color: var(--color-quinary);
-    height: 350px;
-    width: 100%;
-    margin-left: 120px;
-    display: grid;
-    grid-template-columns: 8% 54% 38%;
-    grid-template-rows: 40% 60%;
-    grid-template-areas:
-        "primero segundo tercero"
-        ". cuarto quinto";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
 }
 
 .linkTextoFooterGris {
-    width: 100%;
-    margin-top: 45px;
-    height: 20px;
-    font-size: var(--font-size-m);
-    font-style: var(--font-style-ea);
+  margin-top: 45px;
+  font-size: var(--font-size-m);
+  font-style: var(--font-style-ea);
+}
+
+.linkTextoFooterGris a {
+  margin-right: 50px;
 }
 
 a {
-    text-decoration: none;
-    margin-right: 50px;
-    font-style: var(--font-family-ea);
-    color: var(--color-sextary);
+  text-decoration: none;
+  font-style: var(--font-family-ea);
+  color: var(--color-sextary);
 }
 
-.comunicarInquietudes{
-    margin-right: none;
+.comunicarInquietudes {
+  margin-right: none;
 }
 
 .linkTextoNegritaFooter {
-    font-weight: var(--font-weith-l);
-    font-size: var(--font-size-l);
-    margin-top: 45px;
-    text-decoration: none;
-    grid-column: 2 / 2;
+  display: flex;
+  flex-direction: column;
+  font-weight: var(--font-weith-l);
+  font-size: var(--font-size-l);
+  margin-top: 45px;
 }
 
 .linkTextoNegritaFooterTexto {
-    margin-right: -20px;
+  width: 100%;
+  text-align: end;
+  font-size: var(--font-size-s);
+  font-family: var(--font-family-ea);
+}
+
+.izquierda{
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
 }
 
 .latIzq {
-    height: 65px;
-    width: auto;
-    margin-left: 25px;
-    margin-top: 25px;
-    grid-area: primero;
+  height: 65px;
+  width: auto;
+  margin-left: 25px;
+  margin-top: 25px;
 }
 
-.supIzq {
-    margin-top: 25px;
-    grid-area: segundo;
-    font-size: var(--font-size-l);
-    font-style: var(--font-style-ea);
-    text-align: left;
-    line-height: 3;
+.centro{
+  display: flex;
+  flex-direction: column;
 }
 
-.infIzq {
-    height: 100px;
-    grid-area: cuarto;
-    text-align: left;
-    line-height: 2;
+.arribaCentro {
+  margin-top: 25px;
+  font-size: var(--font-size-l);
+  font-style: var(--font-style-ea);
+  line-height: 3;
 }
 
-.supDer {
-    display: flex;
-    height: 85px;
-    width: 100%;
-    grid-area: tercero;
-    margin-top: 25px;
-    margin-left: -90px;
+.arribaCentro a{
+  margin-right: 40px;
+}
+.abajoCentro {
+  height: 100px;
+  text-align: left;
+  line-height: 2;
 }
 
-.infDer {
-    height: 50px;
-    width: 25%;
-    margin: 10px;
-    grid-area: quinto;
-    margin-top: 90px;
-    margin-left: 140px;
+.abajoCentro a{
+  margin-right: 25px;
 }
 
-.infIzq a{
-    margin-right: 45px;
+.derecha{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arribaDer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.abajoDer img {
+  width: 200px;
+  margin-left: 290px;
 }
 
 .iconosRS {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    margin-top: 15px;
-    margin-right: 130px;
-    margin-left: -30px;
+  display: flex;
+  margin-top: 15px;
+}
+
+.iconosRS svg {
+  margin-right: 10px;
 }
