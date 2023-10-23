@@ -46,7 +46,7 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
     }
   }, [isOpen]);
 
-  console.log(items);
+  
   return (
     <div className={"dropdown_wrapper"} onKeyUp={keyHandler}>
       <button
