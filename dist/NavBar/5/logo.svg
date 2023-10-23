@@ -7,7 +7,7 @@
         <polygon id="path-1" points="0.8172 0.207 122.5152 0.207 122.5152 264.0537 0.8172 264.0537"></polygon>
         <polygon id="path-3" points="0 363.793 563.859 363.793 563.859 1 0 1"></polygon>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
         <g id="Artboard">
             <g id="APEX_Gin_Asset_Logo" transform="translate(0.000000, -1.000000)">
                 <path d="M83.3062,98.2848 C83.5412,98.4268 83.3232,98.3508 83.6782,98.3688 C83.4432,98.2268 83.6612,98.3028 83.3062,98.2848" id="Fill-1" fill="#FFFFFF"></path>
