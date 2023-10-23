@@ -85,10 +85,6 @@ const Home = () => {
           texto={"Leer mas"}
         />
       </Section>
-      <Section>
-        <Container>primer parte</Container>
-        <Container>Segunda</Container>
-      </Section>
       <Subscription />
       <Footer/>
     </BasePage>
