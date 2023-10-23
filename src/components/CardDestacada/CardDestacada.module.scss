@@ -8,6 +8,7 @@
   height: 355px;
   max-width: 355px;
   max-height: 355px;
+  margin-right: 0px;
 }
 
 .backgroundImage {
@@ -25,8 +26,9 @@
   align-content: center;
   justify-content: center;
   transition: var(--ea-transition-duration);
-
-
+  flex-grow: 1;
+  min-width: 255px;
+  min-height: 255px;
 }
 
 .cardDestacada:hover {
