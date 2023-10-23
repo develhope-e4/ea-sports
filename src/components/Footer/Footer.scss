@@ -26,22 +26,23 @@
 }
 
 .linkTextoFooterGris {
-    width: 100%;
-    margin-top: 45px;
-    height: 20px;
-    font-size: var(--font-size-m);
-    font-style: var(--font-style-ea);
+  margin-top: 45px;
+  font-size: var(--font-size-m);
+  font-style: var(--font-style-ea);
+}
+
+.linkTextoFooterGris a {
+  margin-right: 50px;
 }
 
 a {
-    text-decoration: none;
-    margin-right: 50px;
-    font-style: var(--font-family-ea);
-    color: var(--color-sextary);
+  text-decoration: none;
+  font-style: var(--font-family-ea);
+  color: var(--color-sextary);
 }
 
-.comunicarInquietudes{
-    margin-right: none;
+.comunicarInquietudes {
+  margin-right: none;
 }
 
 .linkTextoNegritaFooter {
@@ -55,24 +56,28 @@ a {
 }
 
 .linkTextoNegritaFooterTexto {
-    margin-right: -20px;
+  width: 100%;
+  text-align: end;
+  font-size: var(--font-size-s);
+  font-family: var(--font-family-ea);
+}
+
+.izquierda{
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
 }
 
 .latIzq {
-    height: 65px;
-    width: auto;
-    margin-left: 25px;
-    margin-top: 25px;
-    grid-area: primero;
+  height: 65px;
+  width: auto;
+  margin-left: 25px;
+  margin-top: 25px;
 }
 
-.supIzq {
-    margin-top: 25px;
-    grid-area: segundo;
-    font-size: var(--font-size-l);
-    font-style: var(--font-style-ea);
-    text-align: left;
-    line-height: 3;
+.centro{
+  display: flex;
+  flex-direction: column;
 }
 
 .infIzq {
@@ -100,8 +105,21 @@ a {
     margin-left: 200px;
 }
 
-.infIzq a{
-    margin-right: 45px;
+.derecha{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arribaDer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.abajoDer img {
+  width: 200px;
+  margin-left: 290px;
 }
 
 .iconosRS {
