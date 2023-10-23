@@ -37,9 +37,17 @@ const Home = () => {
       <Section>
         <h1>Juegos destacados</h1>
         <Container>
-
-          <CardsDestacadas/>
-          
+          {cardDestacadaData &&
+            cardDestacadaData.map((card, index) => (
+              <CardDestacada
+                key={index}
+                url="http://google.com"
+                backgroundImage={card.bg}
+                gameLogo={card.logo}
+                className={index === 0}
+                showText={false}
+              />
+            ))}
         </Container>
         <Boton
           esPrimario={false}
