@@ -1,0 +1,28 @@
+.TextInfo {
+  h3 {
+    width: 800px;
+    top: 48px;
+    font-size: 40px;
+    text-align: left;
+  }
+
+  h4 {
+    font-weight: normal;
+    width: 800px;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  p {
+    font-size: 18px;
+    width: 800px;
+    text-align: left;
+  }
+
+  a,
+  li {
+    font-size: 18px;
+    color: rgb(190, 7, 7);
+    cursor: pointer;
+  }
+}
