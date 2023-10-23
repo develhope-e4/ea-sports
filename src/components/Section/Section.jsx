@@ -12,7 +12,7 @@ const Section = ({ children, imageUrl, backgroundColor }) => {
       className={className}
       style={{
         backgroundImage: `url(${imageUrl})`,
-        backgroundColor: `${backgroundColor}`,
+        backgroundColor: `var(${backgroundColor})`,
       }}
     >
       {children}
