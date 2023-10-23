@@ -1,15 +1,15 @@
 import Boton from "../Boton/Boton";
-import "./LoopVideo.scss";
+import classes from "./LoopVideo.module.scss";
 
 const LoopVideo = ({videoSrc , imagenSrc}) => {
   return (
-    <div className="video-container">
-      <div className="overlay" />
+    <div className={classes.videoContainer}>
+      <div className={classes.overlay} />
       <video src="./immortals.mp4" autoPlay loop muted playsInline />
       <img
         src="./Immorlas-Logo.svg"
         alt="Imagen SVG"
-        className="immortalsLogo"
+        className={classes.immortalsLogo}
       />
       <div className="compraAhora">
         <Boton

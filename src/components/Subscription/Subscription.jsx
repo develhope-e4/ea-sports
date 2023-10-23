@@ -1,6 +1,6 @@
 import Boton from "../Boton/Boton";
 import IconoEaPlay from "../../assets/iconos/IconoEaPlay";
-import "./Subscription.scss";
+import classes from "./Subscription.module.scss";
 import Container from "../Container/Container";
 import Section from "../Section/Section";
 import bgImage from "../../assets/Imagenes/Subscription/hero-medium-console-medio.jpg";
@@ -10,9 +10,9 @@ const Subscription = () => {
     <>
       <Section imageUrl={bgImage}>
         <Container>
-          <div className="text-container">
+          <div className={classes.textContainer}>
             <IconoEaPlay />
-            <h6 className="texto">
+            <h6 className={classes.texto}>
               No te limites a jugar. Saca más partido a tus juegos. Desbloquea
               recompensas exclusivas, contenido para los miembros y una
               biblioteca de los mejores títulos.

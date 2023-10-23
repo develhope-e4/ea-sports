@@ -1,5 +1,5 @@
 
-import "./Section.scss";
+import classes from "./Section.module.scss";
 import classNames from "classnames";
 
 const Section = ({ children, imageUrl, backgroundColor }) => {

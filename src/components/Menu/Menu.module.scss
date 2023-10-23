@@ -32,7 +32,7 @@
 
 }
 
-.close-menu {
+.closeMenu {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -48,7 +48,7 @@
   }
 }
 
-.menu-link {
+.menuLink {
   color: rgb(166, 165, 165);
   text-decoration: none;
   font-family: var(--font-family-ea);
@@ -79,13 +79,13 @@
   grid-gap: 25px;
 }
 
-.first-image {
+.firstImage {
   grid-column: span 2;
   width: 345px;
   height: 345px;
 }
 
-.other-images {
+.otherImages {
   width: 160px;
   height: 160px;
 }
@@ -159,7 +159,7 @@ img.logoCardDestacada.other-images {
   display: none;
 }
 
-.menu-overlay {
+.menuOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -172,7 +172,7 @@ img.logoCardDestacada.other-images {
   display: none;
 }
 
-.menu-overlay-visible {
+.menuOverlayVisible {
   display: block;
 
   background-color: rgba(0, 0, 0, 0.5);

@@ -1,5 +1,5 @@
  
-import "./Tabs.scss";
+import classes from "./Tabs.module.scss";
 import cardData from "../../data/CardData.mock";
 const Tabs = ({ tabNames, handleTabClick, activeTab }) => {
   return (

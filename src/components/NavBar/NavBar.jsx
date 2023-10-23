@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./NavBar.scss";
+import classes from "./NavBar.module.scss";
 import Icono from "../Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
@@ -37,7 +37,7 @@ const NavBar = () => {
         handleMenuClose={handleMenuClose}
         handleMenuItemClick={handleMenuItemClick}
       />
-      <div className="nav">
+      <div className={classes.nav}>
         <Icono
           onClick={handleMenuToggle}
           esRedSocial={false}
@@ -46,11 +46,11 @@ const NavBar = () => {
         <img
           src="/NavBar/ea-electronicsarts.svg"
           alt="Mi SVG"
-          className="easvg"
+          className={classes.easvg}
           onClick={handleMenuClose}
         />
 
-        <div className="DropDownSectionDemo">
+        <div className={classes.DropDownSectionDemo}>
           <Dropdown
             data={ExplorarJuegosDropDown}
             title={ExplorarJuegosDropDown[0].tittle}
