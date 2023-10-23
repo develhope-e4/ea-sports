@@ -1,6 +1,9 @@
 .textContainer {
     width: 30%;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
 }
 
 .texto {

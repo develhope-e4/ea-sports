@@ -10,13 +10,15 @@ import Icono from "../Icono/Icono";
 import { itemsIdioma, itemsRegion } from "./FooterData";
 import eaPurple from "../../assets/Footer/eaPurple.png";
 import TRUSTe from "../../assets/Footer/TRUSTe.svg";
+import Container from "../Container/Container";
+import Section from "../Section/Section";
 
 const Footer = () => {
   return (
-    <div className={classes.footer}>
-      <div className={classes.fondoGris}>
-        <div className={classes.footerGris}>
-          <div className={classes.linkTextoFooterGris}>
+    <div className="footer">
+      <Section backgroundColor={"--color-octave"}>
+        <Container paddingMD={true}>
+          <div className="linkTextoFooterGris">
             <a href="https://www.ea.com/es-es/careers">Empleo</a>
             <a href="https://www.ea.com/es-es/executives">Ejecutivos</a>
             <a href="https://www.ea.com/es-es/news/sharing-our-2021-impact-report">
@@ -63,10 +65,11 @@ const Footer = () => {
               />
             </div>
           </div>
-        </div>
-      </div>
-      <div className="fondoBlanco">
-        <div className="footerBlanco">
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
           <div className="izquierda">
             <img className="latIzq" src={eaPurple} />
           </div>
@@ -118,8 +121,8 @@ const Footer = () => {
               <img src={TRUSTe} alt="Truste Logo" />
             </div>
           </div>
-        </div>
-      </div>
+        </Container>
+      </Section>
     </div>
   );
 };

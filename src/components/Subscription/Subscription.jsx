@@ -9,8 +9,8 @@ const Subscription = () => {
   return (
     <>
       <Section imageUrl={bgImage}>
-        <Container>
-          <div className={classes.textContainer}>
+        <Container paddingLG={true}>
+          <div className="text-container">
             <IconoEaPlay />
             <h6 className={classes.texto}>
               No te limites a jugar. Saca más partido a tus juegos. Desbloquea
@@ -26,7 +26,7 @@ const Subscription = () => {
           </div>
         </Container>
       </Section>
-      <Section backgroundColor={"#6fb0d6"}>
+      <Section backgroundColor={"--color-sin-variable"}>
         <Container>
           <h2>Herramientas parentales y de juego: el control en tus manos</h2>
           <div className="SubscriptionSection-MoreInfo-contenido-boton">
