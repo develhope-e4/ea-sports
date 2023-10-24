@@ -13,14 +13,18 @@
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
 }
-
-.grid-container2 {
-  display: grid;
+.containerGrid-2-3 {
   width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
 
-.grid-item:nth-child(n + 7) {
-  grid-column: span 2;
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-container3 {
+    display: grid;
+    margin-left: 100px;
+    margin-right: 100px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

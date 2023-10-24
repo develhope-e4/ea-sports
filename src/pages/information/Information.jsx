@@ -42,14 +42,25 @@ const Information = () => {
             h4Text={<strong>Elige la guía de tu(s) plataforma(s) aquí:</strong>}
           />
         </div>
-        <div className="grid-container2">
-          {MarkBasicData.map((elemento, index) => (
-            <IcoBasic
-              key={index}
-              imagenSrc={elemento.imagenSrc}
-              texto={elemento.texto}
-            />
-          ))}
+        <div className="containerGrid-2-3">
+          <div className="grid-container2">
+            {MarkBasicData.slice(0, 6).map((elemento, index) => (
+              <IcoBasic
+                key={index}
+                imagenSrc={elemento.imagenSrc}
+                texto={elemento.texto}
+              />
+            ))}
+          </div>
+          <div className="grid-container3">
+          {MarkBasicData.slice(6, 8).map((elemento, index) => (
+              <IcoBasic
+                key={index}
+                imagenSrc={elemento.imagenSrc}
+                texto={elemento.texto}
+              />
+            ))}
+          </div>
         </div>
       </Container>
     </div>
