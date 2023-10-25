@@ -9,11 +9,20 @@ import "./Boton.scss";
 *
 @returns Botón dorado si es secundario y botón blanco con borde negro si es primario
 */
-const Boton = ({ texto, esPrimario, isLight, onClick }) => {
+const Boton = ({ texto, esPrimario, isLight, onClick, url }) => {
   const className = esPrimario ? "primary" : isLight ? "secundario-light" : "secundario-dark";
 
+  const handleButtonClick = () => {
+    if (url) {
+      window.location.href = url;
+    }
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <button className={className} onClick={onClick}>
+    <button className={className} onClick={handleButtonClick}>
       {texto}
     </button>
   );

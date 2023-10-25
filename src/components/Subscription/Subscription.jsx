@@ -35,6 +35,7 @@ const Subscription = () => {
               isLight={false}
               onClick={() => console.log("click en el boton negro")}
               texto={"Más información"}
+              url="http://localhost:5173/info"
             />
           </div>
         </Container>
