@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
@@ -11,6 +12,22 @@ import Footer from "../../components/Footer/Footer";
 import NavbarSims4 from "../../components/NavBarSims4/NavBarSims4";
 
 const Sims4 = () => {
+  const [activeTab, setActiveTab] = useState("NoticiasEA");
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const tabNames = {
+    NoticiasEA: "Noticias De EA",
+    EASPORTSFC: "EA SPORTS FC",
+    StarWars: "Star Wars",
+    ApexLegends: "Apex Legends",
+    LosSims4: "Los Sims 4",
+    F1: "F1",
+    Battlefield: "Battlefield",
+  };
+
   return (
     <BasePage>
       <NavbarSims4 />
@@ -43,15 +60,15 @@ const Sims4 = () => {
               activeTab={activeTab}
             />
             <div className="card-container">
-              {cardHorTextDerData[activeTab] ? (
-                cardHorTextDerData[activeTab].map((card, index) => (
+              {cardHorTextDerData ? (
+                cardHorTextDerData.map((cardHorTextDerData, index) => (
                   <CardHorTextDer
-                    key={`${index}-${card.titulo}`}
-                    modo={card.modo}
-                    queEs={card.queEs}
-                    titulo={card.titulo}
-                    descripcion={card.descripcion}
-                    imagenSrc={card.imagenSRC}
+                    key={`${index}-${cardHorTextDerData.titulo}`}
+                    modo={cardHorTextDerData.modo}
+                    queEs={cardHorTextDerData.queEs}
+                    titulo={cardHorTextDerData.titulo}
+                    descripcion={cardHorTextDerData.descripcion}
+                    imagenSrc={cardHorTextDerData.imagenSRC}
                   />
                 ))
               ) : (
