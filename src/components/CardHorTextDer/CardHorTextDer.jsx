@@ -1,21 +1,23 @@
-import "./CardHorTextDer.scss";
+import React from 'react';
+import './CardHorTextDer.scss';
 
-const CardHorTextDer = ({ titulo, descripcion, boton, imagenSrc }) => {
+const CardHorTextDer = ({ modo, queEs, titulo, descripcion, imagenSrc }) => {
   return (
     <div className="cardHorTextDer">
+      <div className="imagenCard">
+        <img src={imagenSrc} alt="Imagen" />
+      </div>
       <div className="contenidoCardHorTextDer">
-        <div className="textoCard">
-        <p>{modo}</p>
-          <p>{queEs}</p>
-          <h2>{titulo}</h2>
-          <p>{descripcion}</p>
-          <button>{boton}</button>
-        </div>
-        <div className="imagenCard">
-          <img src={imagenSrc} alt="Imagen de la tarjeta" />
+        <div className="infoCard">
+          <p className="modo">{modo}</p>
+          <p className="queEs">{queEs}</p>
+          <h2 className="titulo">{titulo}</h2>
+          <p className="texto">{descripcion}</p>
         </div>
       </div>
+      
     </div>
   );
 };
+
 export default CardHorTextDer;
