@@ -8,10 +8,12 @@ import { cardHorTextDerData } from "../../data/CardHorTextDerData.mock";
 import { cardHorTextIzqData } from "../../data/CardHorTextIzqData.mock";
 import Boton from "../../components/Boton/Boton";
 import Footer from "../../components/Footer/Footer";
+import NavbarSims4 from "../../components/NavBarSims4/NavBarSims4";
 
 const Sims4 = () => {
   return (
     <BasePage>
+      <NavbarSims4 />
       <Section>
         <Container>
           {cardHorTextIzqData.map((cardHorTextIzqData) => (
