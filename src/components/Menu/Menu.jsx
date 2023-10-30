@@ -1,12 +1,18 @@
- 
 import { menuCardDestacadaData } from "../../data/MenuCardDestacada.mock";
 import { MdClose } from "react-icons/md";
 import CardDestacada from "../CardDestacada/CardDestacada";
 import classes from "./Menu.module.scss";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind(classes);
 const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
+  const classNames = cx({
+    menu: true,
+    open: menuOpen,
+  });
   return (
     <>
-      <nav className={classes.menu + menuOpen ? open : ""}>
+      <nav className={classNames}>
         <div className="menu-header">
           <div className={classes.closeMenu} onClick={handleMenuClose}>
             <MdClose />
@@ -26,14 +32,18 @@ const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
                 url="http://google.com"
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
-                className={index === 0 ? classes.firstImage : classes.otherImages}
+                className={
+                  index === 0 ? classes.firstImage : classes.otherImages
+                }
                 showText={false}
               />
             ))}
         </div>
       </nav>
       <div
-        className={classes.menuOverlay + menuOpen ? classes.menuOverlayVisible : ""}
+        className={
+          classes.menuOverlay + menuOpen ? classes.menuOverlayVisible : ""
+        }
         onClick={handleMenuClose}
       />
     </>
