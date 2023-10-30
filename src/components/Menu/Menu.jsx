@@ -10,6 +10,11 @@ const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
     menu: true,
     open: menuOpen,
   });
+
+  const overlay = cx({
+    menuOverlay: true,
+    menuOverlayVisible: menuOpen,
+  });
   return (
     <>
       <nav className={classNames}>
@@ -40,12 +45,7 @@ const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
             ))}
         </div>
       </nav>
-      <div
-        className={
-          classes.menuOverlay + menuOpen ? classes.menuOverlayVisible : ""
-        }
-        onClick={handleMenuClose}
-      />
+      <div className={overlay} onClick={handleMenuClose} />
     </>
   );
 };

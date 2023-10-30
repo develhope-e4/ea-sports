@@ -1,9 +1,8 @@
- 
-import "./DropDownMenu.scss";
+import classes from "./DropDownMenu.module.scss";
 const DropDownMenu = ({ data, data2 }) => {
   return (
-    <div className="DropDownPadre">
-      <div className="DropDownMenu">
+    <div className={classes.DropDownPadre}>
+      <div className={classes.DropDownMenu}>
         <ul>
           {data2 && <h3>Explorar juegos</h3>}
           {data.map((data, index) => (

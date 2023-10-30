@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Dropdown.scss";
+import classes from "./Dropdown.module.scss";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
 import { GoChevronDown } from "react-icons/go";
 
@@ -16,11 +16,11 @@ function DropDown({ title, data, data2 }) {
 
   return (
     <div
-      className="dropdown"
+      className={classes.dropdown}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button className="DropDownButton">{title}</button>
+      <button className={classes.DropDownButton}>{title}</button>
       {isDropdownVisible && <DropDownMenu data={data} data2={data2} />}
       <GoChevronDown />
     </div>
