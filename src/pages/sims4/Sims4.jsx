@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
-import BasePage from "../../components/BasePage/BasePage";
+import BasePageSims4 from "../../components/BasePageSims4/BasePageSims4";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
-import Tabs from "../../components/Tabs/Tabs";
 import CardHorTextDer from "../../components/CardHorTextDer/CardHorTextDer";
 import CardHorTextIzq from "../../components/CardHorTextIzq/CardHorTextIzq";
 import { cardHorTextDerData } from "../../data/CardHorTextDerData.mock";
@@ -12,24 +10,8 @@ import Footer from "../../components/Footer/Footer";
 import NavbarSims4 from "../../components/NavBarSims4/NavBarSims4";
 
 const Sims4 = () => {
-  const [activeTab, setActiveTab] = useState("NoticiasEA");
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
-  const tabNames = {
-    NoticiasEA: "Noticias De EA",
-    EASPORTSFC: "EA SPORTS FC",
-    StarWars: "Star Wars",
-    ApexLegends: "Apex Legends",
-    LosSims4: "Los Sims 4",
-    F1: "F1",
-    Battlefield: "Battlefield",
-  };
-
   return (
-    <BasePage>
+    <BasePageSims4>
       <NavbarSims4 />
       <Section>
         <Container>
@@ -53,29 +35,20 @@ const Sims4 = () => {
       </Section>
       <Section>
         <Container>
-          <div className="tabs-cards">
-            <Tabs
-              tabNames={tabNames}
-              handleTabClick={handleTabClick}
-              activeTab={activeTab}
-            />
-            <div className="card-container">
-              {cardHorTextDerData ? (
-                cardHorTextDerData.map((cardHorTextDerData, index) => (
-                  <CardHorTextDer
-                    key={`${index}-${cardHorTextDerData.titulo}`}
-                    modo={cardHorTextDerData.modo}
-                    queEs={cardHorTextDerData.queEs}
-                    titulo={cardHorTextDerData.titulo}
-                    descripcion={cardHorTextDerData.descripcion}
-                    imagenSrc={cardHorTextDerData.imagenSRC}
-                  />
-                ))
-              ) : (
-                <p>No hay datos disponibles para esta pestaña.</p>
-              )}
-            </div>
-          </div>
+            {cardHorTextDerData ? (
+              cardHorTextDerData.map((cardHorTextDerData, index) => (
+                <CardHorTextDer
+                  key={`${index}-${cardHorTextDerData.titulo}`}
+                  modo={cardHorTextDerData.modo}
+                  queEs={cardHorTextDerData.queEs}
+                  titulo={cardHorTextDerData.titulo}
+                  descripcion={cardHorTextDerData.descripcion}
+                  imagenSrc={cardHorTextDerData.imagenSRC}
+                />
+              ))
+            ) : (
+              <p>No hay datos disponibles para esta pestaña.</p>
+            )}
         </Container>
         <Boton
           esPrimario={false}
@@ -84,8 +57,8 @@ const Sims4 = () => {
           texto={"Leer mas"}
         />
       </Section>
-      <Footer />
-    </BasePage>
+      <Footer/>
+    </BasePageSims4>
   );
 };
 

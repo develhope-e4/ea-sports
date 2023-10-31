@@ -1,14 +1,28 @@
 .cardHorTextDer{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    gap: 30px;
 }
 
 .contenidoCardHorTextDer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 35%;
 }
 
-.textocard{
-    display: flex;
-    flex-direction: column;
+.imgCardHorTextDer{
+    width: 100px;
+    height: auto;
+}
+
+.modo{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px;
+    
 }

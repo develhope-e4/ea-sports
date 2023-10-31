@@ -1,3 +1,5 @@
+import izq1 from "../assets/CardHorTextDer/izq1.png";
+
 export const cardHorTextDerData = [
   {
     modo: "CARRERA Y ESTILO DE VIDA",
