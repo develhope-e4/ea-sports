@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LoopVideo from "../../components/LoopVideo/LoopVideo";
+import VideoComponent from "../../components/VideoComponent/VideoComponent";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Boton from "../../components/Boton/Boton";
@@ -26,8 +26,25 @@ const LatestGame = () => {
 
   return (
     <BasePage>
-      <div className="container">
-        <LoopVideo />
+      <div className="VideoContainer">
+        <VideoComponent
+          videoSrc="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-7x2-xl.mp4"
+          webmSrcSmallest="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-16x9-sm-xs.webm"
+          mp4SrcSmallest="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-16x9-sm-xs.mp4"
+          webmSrcSmall="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-16x9-sm-xs.webm"
+          mp4SrcSmall="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-16x9-sm-xs.mp4"
+          webmSrcMedium="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-2x1-md.webm"
+          mp4SrcMedium="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-2x1-md.mp4"
+          webmSr="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-5x2-lg.webm"
+          mp4Src="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-5x2-lg.mp4"
+          webmSrcLargest="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-7x2-xl.webm"
+          mp4SrcLargest="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-7x2-xl.mp4"
+          autoplay={true}
+          loop={true}
+          muted={true}
+          PauseIcon={PauseIcon} 
+          PlayIcon={PlayIcon} 
+        />
       </div>
       <Section>
         <h1>Juegos destacados</h1>
@@ -35,7 +52,7 @@ const LatestGame = () => {
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
               <CardDestacada
-                url="http://google.com"
+                url="http://google.com"ve
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
                 showText={true}
@@ -50,13 +67,8 @@ const LatestGame = () => {
         />
       </Section>
       <Section>
-        <Container>
-        
-        </Container>
-      
+        <Container></Container>
       </Section>
-    
-      
     </BasePage>
   );
 };
