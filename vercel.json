@@ -1,25 +1,25 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "dist",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/dev",
-        "dest": "./dist/index.html"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "./dist/index.html"
-      },
-      {
-        "rewrites":  [
-          {"source": "/(.*)", "destination": "/"}
-        ]
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/dev",
+      "dest": "./dist/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "./dist/index.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
