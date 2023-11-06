@@ -23,7 +23,7 @@ const Sims4 = () => {
               queEs={cardHorTextIzqData.queEs}
               titulo={cardHorTextIzqData.titulo}
               descripcion={cardHorTextIzqData.descripcion}
-              imagenSrc={cardHorTextIzqData.imagenSRC}
+              imagenSRC={cardHorTextIzqData.imagenSRC}
               conBorde={cardHorTextIzqData.conBorde}
             />
           ))}
@@ -39,7 +39,7 @@ const Sims4 = () => {
                 queEs={cardHorTextDerData.queEs}
                 titulo={cardHorTextDerData.titulo}
                 descripcion={cardHorTextDerData.descripcion}
-                imagenSrc={cardHorTextDerData.imagenSRC}
+                imagenSRC={cardHorTextDerData.imagenSRC}
               />
             ))
           ) : (

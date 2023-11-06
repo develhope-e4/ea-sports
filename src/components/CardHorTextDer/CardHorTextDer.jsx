@@ -12,7 +12,7 @@ const CardHorTextDer = ({ modo, queEs, titulo, descripcion, imagenSRC, conBorde 
   return (
     <div className="cardHorTextDer">
       <div >
-        <img src={imagenSRC} alt="Imagen" className="imgcardHorTextDer"/>
+        <img src={imagenSRC} alt="Imagen" className="imgCardHorTextDer"/>
       </div>
       <div className="contenidoCardHorTextDer" >
         <p className="modo" style={{ border: conBorde ? "1px solid black" : "none" }}>{modo}</p>

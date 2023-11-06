@@ -22,8 +22,8 @@ const CardHorTextIzq = ({ modo, queEs, titulo, descripcion, imagenSRC, conBorde}
           texto={textoBoton}
         />
       </div>
-      <div className="imgcardHorTextIzq">
-        <img src={imagenSRC} alt="Imagen" />
+      <div >
+        <img src={imagenSRC} alt="Imagen"  className="imgCardHorTextIzq" />
       </div>
     </div>
   );
