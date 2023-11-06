@@ -10,6 +10,7 @@ import Subscription from "../../components/Subscription/Subscription";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
+import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -36,17 +37,11 @@ const Home = () => {
       <Section>
         <h1>Juegos destacados</h1>
         <Container>
-          {cardDestacadaData &&
-            cardDestacadaData.map((card, index) => (
-              <CardDestacada
-                key={index}
-                url="http://google.com"
-                backgroundImage={card.bg}
-                gameLogo={card.logo}
-                className={index === 0}
-                showText={false}
-              />
-            ))}
+
+
+          <CardsDestacadas/>
+          
+
         </Container>
         <Boton
           esPrimario={false}

@@ -17,6 +17,7 @@
     "vite-plugin-svgr": "^4.1.0",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://nicolaealexandru.com/",
   "scripts": {
     "start": "vite",
     "build": "vite build",
