@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { BsPlayBtn } from 'react-icons/bs';
-import { MdPausePresentation } from 'react-icons/md'
-import './VideoComponent.scss';
+import { MdPausePresentation } from 'react-icons/md';
+import './VideoComponent.module.scss';
+
 const VideoComponent = ({
   webmSrcSmallest,
   mp4SrcSmallest,
@@ -17,6 +18,8 @@ const VideoComponent = ({
   loop,
   muted,
   videoSrc,
+  PauseIcon, 
+  PlayIcon, 
 }) => {
   const [isPlaying, setIsPlaying] = useState(autoplay);
 
@@ -26,7 +29,7 @@ const VideoComponent = ({
 
   return (
     <div className="video-container">
-      <div className="overlay" />
+      <div className="overlayd" />
       <ea-elements-loader elements="ea-html5-video">
       </ea-elements-loader>
       <ea-html5-video slot="html5-video"
@@ -46,18 +49,18 @@ const VideoComponent = ({
         unresolved
       ></ea-html5-video>
       <video src={videoSrc} autoPlay={isPlaying} loop={loop} muted={muted} playsInline />
-      <div className="controls">
+      <div className="controlsd">
         {isPlaying ? (
           <button className="play-pause-button" onClick={togglePlay}>
-            <MdPausePresentation /> 
+            {PauseIcon ? <PauseIcon /> : <MdPausePresentation />} 
           </button>
         ) : (
           <button className="play-pause-button" onClick={togglePlay}>
-            <BsPlayBtn /> 
+            {PlayIcon ? <PlayIcon /> : <BsPlayBtn />}
           </button>
         )}
         <img
-          src="/public/VideoComponentImg/ea-hero-md-bg-mashup-trailer-pegi-16-7x2-xl.png.adapt.crop5x2.1455w.png"
+          src="/VideoComponentImg/ea-hero-md-bg-mashup-trailer-pegi-16-7x2-xl.png.adapt.crop5x2.1455w.png"
           alt="Imagen de fondo"
           className="background-image"
         />

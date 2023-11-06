@@ -1,11 +1,14 @@
 import { useState } from "react";
 import VideoComponent from "../../components/VideoComponent/VideoComponent";
+import { MdPausePresentation } from 'react-icons/md';
+import { BsPlayBtn } from 'react-icons/bs';
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Boton from "../../components/Boton/Boton";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
+import '../../components/VideoComponent/VideoComponent.module.scss';
 
 const LatestGame = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -42,17 +45,19 @@ const LatestGame = () => {
           autoplay={true}
           loop={true}
           muted={true}
-          PauseIcon={PauseIcon} 
-          PlayIcon={PlayIcon} 
+          PauseIcon={MdPausePresentation}
+          PlayIcon={BsPlayBtn}
         />
       </div>
       <Section>
         <h1>Juegos destacados</h1>
         <Container>
           {cardDestacadaData &&
-            cardDestacadaData.map((card) => (
+            cardDestacadaData.map((card, index) => (
               <CardDestacada
-                url="http://google.com"ve
+              key={index}
+                url="http://google.com"
+                ve
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
                 showText={true}
