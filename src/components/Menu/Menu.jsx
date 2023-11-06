@@ -15,10 +15,11 @@ const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
     menuOverlay: true,
     menuOverlayVisible: menuOpen,
   });
+
   return (
     <>
       <nav className={classNames}>
-        <div className="menu-header">
+        <div>
           <div className={classes.closeMenu} onClick={handleMenuClose}>
             <MdClose />
             <p onClick={handleMenuItemClick}>

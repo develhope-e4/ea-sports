@@ -73,7 +73,7 @@
   height: auto;
 }
 
-.section-menu {
+.sectionMenu {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 25px;
@@ -90,35 +90,35 @@
   height: 160px;
 }
 
-.backgroundImage.first-image {
+.backgroundImage.firstImage {
   width: 396px;
   height: 345px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.backgroundImage.other-images {
+.backgroundImage.otherImages {
   width: 160px;
   height: 160px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-img.logoCardDestacada.first-image {
+img.logoCardDestacada.firstImage {
   width: 160px;
   height: 160px;
   transform: scale(0.8);
   transition: transform 0.8s ease;
 }
 
-img.logoCardDestacada.other-images {
+img.logoCardDestacada.otherImages {
   width: 100px;
   height: 100px;
   transform: scale(0.8);
   transition: transform 0.7s ease;
 }
 
-.cardDestacada.first-image {
+.cardDestacada.firstImage {
   background: var(--color-background-card-destacada);
   width: 396px;
   height: 345px;
@@ -132,7 +132,7 @@ img.logoCardDestacada.other-images {
   background-size: cover;
 }
 
-.cardDestacada.other-images {
+.cardDestacada.otherImages {
   background: var(--color-background-card-destacada);
   width: 160px;
   height: 160px;
@@ -147,15 +147,15 @@ img.logoCardDestacada.other-images {
   background-size: cover;
 }
 
-.cardDestacada.first-images:hover {
+.cardDestacada.firstImages:hover {
   background: none;
 }
 
-.cardDestacada.other-images:hover {
+.cardDestacada.otherImages:hover {
   background: none;
 }
 
-.textCardDestacada .backgroundImage.first-image {
+.textCardDestacada .backgroundImage.firstImage {
   display: none;
 }
 

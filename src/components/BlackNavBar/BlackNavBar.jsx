@@ -23,10 +23,12 @@ const BlackNavBar = () => {
     }
   }, [showSvgControll]);
 
-  const svgControll = cx({
-    svgcontroll2: true,
-    show: svgControllClass
-  })
+  /* const svg = cx({
+    svg: true,
+    svg1: show,
+    svg2: svg,
+    svg3: svg,
+  }) */
 
   return (
     <div className={classes.blackNavbar}>
@@ -84,7 +86,7 @@ const BlackNavBar = () => {
         </svg>
       </div>
       {showSvgControll && (
-        <div className={classes.show}>
+        <div className={`svgcontroll2 ${svgControllClass}`}>
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconsignin.svg"
             text={"Iniciar sesión"}
