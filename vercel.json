@@ -9,11 +9,11 @@
   "routes": [
     {
       "src": "/dev",
-      "dest": "./dist/dev/index.html"
+      "dest": "./dist/index.html"
     },
     {
       "src": "/games",
-      "dest": "./dist/games/index.html"
+      "dest": "./dist/index.html"
     },
     {
       "src": "/(.*)",
