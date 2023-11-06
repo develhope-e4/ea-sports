@@ -10,6 +10,8 @@ import Subscription from "../../components/Subscription/Subscription";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
+import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -30,6 +32,7 @@ const Home = () => {
 
   return (
     <BasePage>
+      <NavBar />
       <div className="container">
         <LoopVideo />
       </div>
@@ -88,6 +91,7 @@ const Home = () => {
         />
       </Section>
       <Subscription />
+      <Footer/>
     </BasePage>
   );
 };
