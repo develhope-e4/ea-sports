@@ -14,22 +14,38 @@ const Sims4 = () => {
       <Section>
         <Message />
         <Container>
-          {cardHorizontalData.map((card) => (
-            <CardHorizontal
-              key={card.titulo}
-              modo={card.modo}
-              queEs={card.queEs}
-              titulo={card.titulo}
-              isReverse={card.isReverse}
-              descripcion={card.descripcion}
-              imagenSRC={card.imagenSRC}
-              conBorde={card.conBorde || false}
-              textoBoton={card.textoBoton}
+          {cardHorTextIzqData.map((cardHorTextIzqData) => (
+            <CardHorTextIzq
+              key={cardHorTextIzqData.titulo}
+              modo={cardHorTextIzqData.modo}
+              queEs={cardHorTextIzqData.queEs}
+              titulo={cardHorTextIzqData.titulo}
+              descripcion={cardHorTextIzqData.descripcion}
+              imagenSrc={cardHorTextIzqData.imagenSRC}
+              conBorde={ cardHorTextIzqData.conBorde }
+              textoBoton={cardHorTextIzqData.textoBoton}
             />
           ))}
         </Container>
       </Section>
-      <FooterSims4 />
+      <Section>
+        <Container>
+          {cardHorTextDerData ? (
+            cardHorTextDerData.map((cardHorTextDerData, index) => (
+              <CardHorTextDer
+                key={`${index}-${cardHorTextDerData.titulo}`}
+                modo={cardHorTextDerData.modo}
+                queEs={cardHorTextDerData.queEs}
+                titulo={cardHorTextDerData.titulo}
+                descripcion={cardHorTextDerData.descripcion}
+                imagenSrc={cardHorTextDerData.imagenSRC}
+              />
+            ))
+          ) : (
+            <p>No hay datos disponibles para esta pestaña.</p>
+          )}
+        </Container>
+      </Section>
     </BasePageSims4>
   );
 };
