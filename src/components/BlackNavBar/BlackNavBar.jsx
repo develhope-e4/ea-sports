@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import classes from  "./BlackNavBar.module.scss";
 import SvgText from "../SvgText/SvgText";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind(classes);
 
 const BlackNavBar = () => {
   const [showSvgControll, setShowSvgControll] = useState(false);
@@ -19,6 +22,11 @@ const BlackNavBar = () => {
       document.body.classList.remove("overflow-hidden");
     }
   }, [showSvgControll]);
+
+  const svgControll = cx({
+    svgcontroll2: true,
+    show: svgControllClass
+  })
 
   return (
     <div className={classes.blackNavbar}>
@@ -76,7 +84,7 @@ const BlackNavBar = () => {
         </svg>
       </div>
       {showSvgControll && (
-        <div className={classes.svgcontroll2 + {svgControllClass}}>
+        <div className={classes.show}>
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconsignin.svg"
             text={"Iniciar sesión"}

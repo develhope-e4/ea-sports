@@ -1,9 +1,11 @@
 
 import classes from "./Container.module.scss";
-import classNames from "classnames";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind(classes);
 const Container = ({ children, isCentered }) => {
-  const className = classNames({
-    "base-container": true,
+  const className = cx({
+    baseContainer: true,
     centered: isCentered,
     start: !isCentered,
   });

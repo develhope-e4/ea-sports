@@ -56,13 +56,13 @@ const Home = () => {
       <Section>
         <h1>Últimas actualizaciones</h1>
         <Container>
-          <div className="tabs-cards">
+          <div className="tabsCards">
             <Tabs
               tabNames={tabNames}
               handleTabClick={handleTabClick}
               activeTab={activeTab}
             />
-            <div className="card-container">
+            <div className="cardContainer">
               {cardData[activeTab] ? (
                 cardData[activeTab].map((card, index) => (
                   <Cards

@@ -5,16 +5,17 @@ const CardDestacada = ({ backgroundImage, url, gameLogo, className, showText }) 
     backgroundImage: `url(${backgroundImage})`,
   };
 
+  
   return (
-    <a href={url} className={classes.linkCardDestacada + {className}}>
-      <div className={classes.backgroundImage + {className}} style={cardStyle}>
-        <div className={classes.cardDestacada + {className}}>
+    <a href={url} className={classes.linkCardDestacada}>
+      <div className={classes.backgroundImage} style={cardStyle}>
+        <div className={classes.cardDestacada}>
           <img
             src={gameLogo}
             alt="Imagen de la tarjeta"
-            className={classes.logoCardDestacada + {className}}
+            className={classes.logoCardDestacada}
           />
-          {showText && <p className={classes.textCardDestacada +{className}}>Sitio oficial</p>}
+          {showText && <p className={classes.textCardDestacada}>Sitio oficial</p>}
         </div>
       </div>
     </a>

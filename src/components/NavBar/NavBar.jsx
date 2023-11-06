@@ -22,7 +22,7 @@ const NavBar = () => {
   };
   const handleMenuClose = () => {
     setMenuOpen(false);
-    document.body.classList.remove("menu-open");
+    document.body.classList.remove(menuOpen);
   };
 
   const handleMenuItemClick = () => {
