@@ -4,10 +4,9 @@ export const cardHorTextDerData = [
     queEs: "Pack de Accesorios",
     titulo: "Los Sims™ 4 Chef de Casa Pack de Accesorios",
     descripcion: "Vive tus sueños culinarios.",
-    imagenSRC: "../assets/CardHorTextDer/izq1.png",
-    textoBoton: "Ver más",
+    imagenSRC: "",
     conBorde: true,
-
+    textoBoton: "Ver Pack de Accesorios",
   },
   {
     queEs: "Artículo de noticias",
@@ -16,7 +15,7 @@ export const cardHorTextDerData = [
       "Disfruta de la actividad y el ajetreo de Los Sims 4 con un pack de accesorios suculento y un pack de expansión de lo más vecinal.",
     imagenSRC: "../assets/CardHorTextDer/izq3.png",
     conBorde: false,
-
+    textoBoton: "Leer más",
   },
   {
     modo: "MODA Y ESTILO DE VIDA",
@@ -25,6 +24,6 @@ export const cardHorTextDerData = [
     descripcion: "El alma de las fiestas en la piscina.",
     imagenSRC: "../assets/CardHorTextDer/izq3.png",
     conBorde: true,
-
+    textoBoton: "Ver Pack de Expansión",
   },
 ];
