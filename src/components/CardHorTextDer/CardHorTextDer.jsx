@@ -3,7 +3,12 @@ import { cardHorTextDerData } from "../../data/CardHorTextDerData.mock";
 import Boton from "../Boton/Boton";
 
 
-const CardHorTextDer = ({ modo, queEs, titulo, descripcion, imagenSRC, conBorde, textoBoton }) => {
+const CardHorTextDer = ({ modo, queEs, titulo, descripcion, imagenSRC, conBorde }) => {
+  const textoBoton = [
+    "Ver Pack de Accesorios",
+    "Leer más",
+    "Ver Pack de Expansión"
+  ]
   return (
     <div className="cardHorTextDer">
       <div >
