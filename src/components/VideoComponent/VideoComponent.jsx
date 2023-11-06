@@ -18,8 +18,8 @@ const VideoComponent = ({
   loop,
   muted,
   videoSrc,
-  PauseIcon, 
-  PlayIcon, 
+  PauseIcon,
+  PlayIcon,
 }) => {
   const [isPlaying, setIsPlaying] = useState(autoplay);
 
@@ -52,7 +52,7 @@ const VideoComponent = ({
       <div className="controlsd">
         {isPlaying ? (
           <button className="play-pause-button" onClick={togglePlay}>
-            {PauseIcon ? <PauseIcon /> : <MdPausePresentation />} 
+            {PauseIcon ? <PauseIcon /> : <MdPausePresentation />}
           </button>
         ) : (
           <button className="play-pause-button" onClick={togglePlay}>
