@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "./NavBar.module.scss";
 import Icono from "../Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
-
 import BlackNavBar from "../BlackNavBar/BlackNavBar";
 import Dropdown from "../Dropdown/Dropdown";
 import Menu from "../Menu/Menu";
