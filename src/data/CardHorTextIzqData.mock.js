@@ -5,6 +5,7 @@ export const cardHorTextIzqData = [
       "Los Sims 4 es el juego de simulación social definitivo: crea personajes únicos, construye casas de ensueño y deja que se desata el caos. Oh, ¿y ya dijimos que es totalmente gratis?",
     imagenSRC: "../assets/CardHorTextIzq/der1.png",
     conBorde: false,
+    textoBoton: "Juega Gratis*",
   },
   {
     modo: "FAMILIA Y AMISTADES",
@@ -13,10 +14,12 @@ export const cardHorTextIzqData = [
     descripcion: "Trabajo duro, espacio abierto y caballos.",
     imagenSRC: "../assets/CardHorTextIzq/der2.png",
     conBorde: true,
+    textoBoton: "Ver Pack de Expansión",
   },
   {
     titulo: "FAMILIA",
     imagenSRC: "../assets/CardHorTextIzq/der3.png",
     conBorde: false,
+    textoBoton: "Leer más", //
   },
 ];
