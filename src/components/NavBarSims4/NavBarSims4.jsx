@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const NavbarSims4 = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);

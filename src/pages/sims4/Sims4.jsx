@@ -12,21 +12,7 @@ import Footer from "../../components/Footer/Footer";
 import NavbarSims4 from "../../components/NavBarSims4/NavBarSims4";
 
 const Sims4 = () => {
-  const [activeTab, setActiveTab] = useState("NoticiasEA");
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
-  const tabNames = {
-    NoticiasEA: "Noticias De EA",
-    EASPORTSFC: "EA SPORTS FC",
-    StarWars: "Star Wars",
-    ApexLegends: "Apex Legends",
-    LosSims4: "Los Sims 4",
-    F1: "F1",
-    Battlefield: "Battlefield",
-  };
 
   return (
     <BasePage>
@@ -40,7 +26,9 @@ const Sims4 = () => {
               queEs={cardHorTextIzqData.queEs}
               titulo={cardHorTextIzqData.titulo}
               descripcion={cardHorTextIzqData.descripcion}
-              imagenSrc={cardHorTextIzqData.imagenSRC}
+              imagenSRC={cardHorTextIzqData.imagenSRC}
+              conBorde={cardHorTextDerData.conBorde}
+
             />
           ))}
         </Container>
@@ -68,7 +56,7 @@ const Sims4 = () => {
                     queEs={cardHorTextDerData.queEs}
                     titulo={cardHorTextDerData.titulo}
                     descripcion={cardHorTextDerData.descripcion}
-                    imagenSrc={cardHorTextDerData.imagenSRC}
+                    imagenSRC={cardHorTextDerData.imagenSRC}
                   />
                 ))
               ) : (

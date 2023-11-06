@@ -1,4 +1,3 @@
-import React from 'react';
 import './CardHorTextIzq.scss';
 
 const CardHorTextIzq = ({ modo, queEs, titulo, descripcion, imagenSrc }) => {

@@ -1,7 +1,6 @@
-import React from 'react';
 import './CardHorTextDer.scss';
 
-const CardHorTextDer = ({ modo, queEs, titulo, descripcion, imagenSrc }) => {
+const CardHorTextDer = ({ modo, queEs, titulo, descripcion, imagenSrc, conBorde }) => {
   return (
     <div className="cardHorTextDer">
       <div className="imagenCard">
@@ -13,6 +12,7 @@ const CardHorTextDer = ({ modo, queEs, titulo, descripcion, imagenSrc }) => {
           <p className="queEs">{queEs}</p>
           <h2 className="titulo">{titulo}</h2>
           <p className="texto">{descripcion}</p>
+
         </div>
       </div>
       
