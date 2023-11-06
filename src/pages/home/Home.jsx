@@ -38,8 +38,10 @@ const Home = () => {
         <h1>Juegos destacados</h1>
         <Container>
 
+
           <CardsDestacadas/>
           
+
         </Container>
         <Boton
           esPrimario={false}
