@@ -5,6 +5,7 @@ export const cardHorTextDerData = [
     titulo: "Los Sims™ 4 Chef de Casa Pack de Accesorios",
     descripcion: "Vive tus sueños culinarios.",
     imagenSRC: "../assets/CardHorTextDer/izq1.png",
+    textoBoton: "Ver más",
     conBorde: true,
 
   },

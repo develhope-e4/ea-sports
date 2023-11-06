@@ -1,0 +1,29 @@
+.cardHorTextIzq{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    gap: 30px;
+}
+
+
+.contenidoCardHorTextIzq{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+
+.imgCardHorTextIzq{
+    width: 100px;
+    height: auto;
+}
+
+
+.modo{
+    display: inline-block;
+    border-radius: 4px;
+    padding: 2px;
+}

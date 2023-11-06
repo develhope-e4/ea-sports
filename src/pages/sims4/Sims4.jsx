@@ -40,7 +40,6 @@ const Sims4 = () => {
                 titulo={cardHorTextDerData.titulo}
                 descripcion={cardHorTextDerData.descripcion}
                 imagenSrc={cardHorTextDerData.imagenSRC}
-                conBorde={cardHorTextDerData.conBorde}
               />
             ))
           ) : (
