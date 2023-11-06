@@ -9,17 +9,15 @@
   "routes": [
     {
       "src": "/dev",
-      "dest": "./dist/index.html"
+      "dest": "./dist/dev/index.html"
+    },
+    {
+      "src": "/games",
+      "dest": "./dist/games/index.html"
     },
     {
       "src": "/(.*)",
       "dest": "./dist/index.html"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
     }
   ]
 }
