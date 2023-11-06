@@ -1,9 +1,29 @@
 .navBarSims4Dos {
   display: flex;
   flex-direction: row;
+
   width: 100%;
+  height: 60px;
+
+  align-items: center;
+  justify-content: center;
 }
 
 ul li {
   list-style: none;
 }
+
+.dropdowns {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.logoSims4{
+    width: 100px;
+    height: auto;
+}
+
+
+
+

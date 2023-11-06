@@ -4,14 +4,14 @@ import "./CardHorTextIzq.scss";
 
 const CardHorTextIzq = ({ modo, queEs, titulo, descripcion, imagenSRC, conBorde}) => {
   const textoBoton = [
-    "Ver Pack de Accesorios",
-    "Leer más",
-    "Ver Pack de Expansión"
+    "Juega Gratis*",
+    "Ver Pack de Expansión",
+    "Leer más"
   ]  
   return (
     <div className="cardHorTextIzq">
       <div className="contenidoCardHorTextIzq" >
-          <p className="modo">{modo}</p>
+          <p className="modo">{modo}{conBorde}</p>
           <p className="queEs">{queEs}</p>
           <h2 className="titulo">{titulo}</h2>
           <p className="texto">{descripcion}</p>
