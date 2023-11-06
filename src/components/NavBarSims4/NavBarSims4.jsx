@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./NavBarSims4.scss";
 
 const NavbarSims4 = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);
@@ -17,7 +18,7 @@ const NavbarSims4 = () => {
   };
 
   return (
-    <div className="navbarSims4">
+    <div className="navBarSims4">
       <div className="logoSims4">Electronic Arts</div>
       <div className="dropdownAyuda">
         <button onClick={toggleDropdown1}>Ayuda</button>
