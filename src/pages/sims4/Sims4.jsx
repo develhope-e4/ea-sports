@@ -5,7 +5,7 @@ import CardHorTextDer from "../../components/CardHorTextDer/CardHorTextDer";
 import CardHorTextIzq from "../../components/CardHorTextIzq/CardHorTextIzq";
 import { cardHorTextDerData } from "../../data/CardHorTextDerData.mock";
 import { cardHorTextIzqData } from "../../data/CardHorTextIzqData.mock";
-import Footer from "../../components/Footer/Footer";
+import FooterSims4 from "../../components/FooterSims4/FooterSims4";
 import NavbarSims4 from "../../components/NavBarSims4/NavBarSims4";
 import NavbarSims4Dos from "../../components/NavBarSims4Dos/NavBarSims4Dos";
 
@@ -47,7 +47,7 @@ const Sims4 = () => {
           )}
         </Container>
       </Section>
-      <Footer />
+      <FooterSims4 />
     </BasePageSims4>
   );
 };

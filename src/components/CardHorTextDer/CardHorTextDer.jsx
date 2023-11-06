@@ -1,5 +1,4 @@
 import "./CardHorTextDer.scss";
-import { cardHorTextDerData } from "../../data/CardHorTextDerData.mock";
 import Boton from "../Boton/Boton";
 
 

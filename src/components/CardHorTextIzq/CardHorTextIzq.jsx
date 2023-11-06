@@ -11,7 +11,7 @@ const CardHorTextIzq = ({ modo, queEs, titulo, descripcion, imagenSRC, conBorde}
   return (
     <div className="cardHorTextIzq">
       <div className="contenidoCardHorTextIzq" >
-          <p className="modo" style={{ border: conBorde ? "1px solid black" : "none" }}>{modo}</p>
+          <p className="modo">{modo}</p>
           <p className="queEs">{queEs}</p>
           <h2 className="titulo">{titulo}</h2>
           <p className="texto">{descripcion}</p>
