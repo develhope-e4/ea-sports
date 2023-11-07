@@ -7,6 +7,7 @@ import { cardHorTextDerData } from "../../data/CardHorTextDerData.mock";
 import { cardHorTextIzqData } from "../../data/CardHorTextIzqData.mock";
 import NavBarSims4 from "../../components/NavBarSims4/NavBarSims4";
 import NavBarSims4Dos from "../../components/NavBarSims4Dos/NavBarSims4Dos";
+import FooterSims4 from "../../components/FooterSims4/FooterSims4";
 
 const Sims4 = () => {
   return (
@@ -23,7 +24,7 @@ const Sims4 = () => {
               titulo={cardHorTextIzqData.titulo}
               descripcion={cardHorTextIzqData.descripcion}
               imagenSRC={cardHorTextIzqData.imagenSRC}
-              conBorde={cardHorTextIzqData.conBorde}
+              conBorde={cardHorTextIzqData.conBorde || false} 
             />
           ))}
         </Container>
@@ -39,7 +40,7 @@ const Sims4 = () => {
                 titulo={cardHorTextDerData.titulo}
                 descripcion={cardHorTextDerData.descripcion}
                 imagenSRC={cardHorTextDerData.imagenSRC}
-                conBorde={cardHorTextIzqData.conBorde}
+                conBorde={cardHorTextDerData.conBorde || false} 
               />
             ))
           ) : (
@@ -47,6 +48,7 @@ const Sims4 = () => {
           )}
         </Container>
       </Section>
+      <FooterSims4 />
     </BasePageSims4>
   );
 };
