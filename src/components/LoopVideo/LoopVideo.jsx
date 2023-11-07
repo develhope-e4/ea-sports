@@ -1,22 +1,26 @@
-import Boton from "../Boton/Boton";
-import "./LoopVideo.scss";
+import Boton from '../Boton/Boton'; 
+import "./LoopVideo.scss"
 
-const LoopVideo = ({videoSrc , imagenSrc}) => {
+const LoopVideo = ({ videoSrc, imagenSrc, buttonText, onButtonClick, isPrimary, isLight, customClass, customImageClass }) => {
+  const buttonClass = isPrimary ? "primary-button" : "secondary-button";
+  const overlayClass = isLight ? "light-overlay" : "dark-overlay";
+
   return (
     <div className="video-container">
-      <div className="overlay" />
-      <video src="./immortals.mp4" autoPlay loop muted playsInline />
+      <div className={`overlay ${overlayClass}`} />
+      <video src={videoSrc} autoPlay loop muted playsInline />
       <img
-        src="./Immorlas-Logo.svg"
+        src={imagenSrc}
         alt="Imagen SVG"
-        className="immortalsLogo"
+        className={`immortalsLogo ${customImageClass}`} 
       />
       <div className="compraAhora">
         <Boton
-          esPrimario={true}
-          isLight={false}
-          onClick={() => console.log("click en el boton dorado")}
-          texto={"Comprar ahora"}
+          esPrimario={isPrimary}
+          isLight={isLight}
+          onClick={onButtonClick}
+          texto={buttonText}
+          className={`${buttonClass} ${customClass}`} 
         />
       </div>
     </div>
