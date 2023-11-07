@@ -6,18 +6,18 @@
     cursor: pointer;
 
 
-   
-    
-   
-  
+
+
+
+
     button {
       all: unset;
       color: black;
     }
-  
 
-  
-  
+
+
+
     .open {
       position: fixed;
       top: 0;
@@ -29,31 +29,31 @@
       flex-direction: column;
       align-items: center;
     z-index: 2;
-  
+
       a {
         all: unset;
         &.active {
-          text-decoration: underline; 
+          text-decoration: underline;
       }
     }
-  
+
     .menuHamburguer, .menuHamburguerMenu {
       width: 100%;
-      
+
       margin-top: 10%;
       color: black;
 
     }
-  
+
     .menuHamburguerMenu {
       display: flex;
       flex-direction: column;
-      
+
       font-size: 40px;
       height: 300px;
 
 
-      
+
 
 
       .separator{
@@ -62,17 +62,17 @@
         background-color: black;
         align-self: center;
       }
-      
-      
-      
+
+
+
 
       .dropdown{
         font-size: var(--font-size-xl);
       }
-      
+
     }
   }
-  
+
 
 }
 

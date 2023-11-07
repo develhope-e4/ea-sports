@@ -13,7 +13,6 @@ import { MasExperiencias } from "../../data/MasExperiencias.mock";
 import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
 import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
 import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
-
 import HamburgerMenu from "../HamburguerMenu/HamburgerMenu";
 
 const NavBar = () => {
@@ -32,6 +31,7 @@ const NavBar = () => {
   return (
     <div className={styles.navbarContainer}>
       <BlackNavBar />
+
       <Menu
         menuOpen={menuOpen}
         handleMenuClose={handleMenuClose}

@@ -15,7 +15,7 @@ const DropDownMenu = ({ data, data2, className }) => {
   };
 
 
-  
+
   let containerClassName = "";
   if (className === 'first') {
     containerClassName += ` ${styles.first} first`;
@@ -31,9 +31,9 @@ const DropDownMenu = ({ data, data2, className }) => {
           {data2 && className === "second" && (
             <div className= {styles.dropDownMenuButtonHamburguer}>
               <div className={styles.dropDownMenuButtonHamburguerAction}>
-                 
-               
-        
+
+
+
               <button onClick={handleClick}>
                 Explorar juegos
               </button> <FiX /> </div>
