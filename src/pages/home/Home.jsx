@@ -16,6 +16,9 @@ const Home = () => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+  const handleButtonClick = () => {
+    console.log("Click en el botón dorado");
+  };
 
   const tabNames = {
     NoticiasEA: "Noticias De EA",
@@ -30,14 +33,21 @@ const Home = () => {
   return (
     <BasePage>
       <div className="container">
-        <LoopVideo />
+        <LoopVideo
+          videoSrc="./immortals.mp4"
+          imagenSrc="./Immorlas-Logo.svg"
+          buttonText="Comprar ahora"
+          onButtonClick={handleButtonClick}
+          isPrimary={true}
+          isLight={false}
+          customClass=""
+          customImageClass=""
+        />
       </div>
       <Section>
         <h1>Juegos destacados</h1>
         <Container>
-
-          <CardsDestacadas/>
-
+          <CardsDestacadas />
         </Container>
         <Boton
           esPrimario={false}
