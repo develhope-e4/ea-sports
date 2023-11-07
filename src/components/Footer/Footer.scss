@@ -1,8 +1,42 @@
 /* Estilos para el primer grid (footerGris y footerBlanco) */
 .footer {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    // overflow: hidden;
+}
+
+.fondoGris{
+    width: 100%;
+    background-color: var(--color-octave);
+}
+
+.footerGris {
+    background-color: var(--color-octave);
+    width: 90%;
+    height: 220px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.fondoBlanco{
+    width: 100%;
+    background-color: var(--color-quinary);
+}
+
+.footerBlanco {
+    background-color: var(--color-quinary);
+    height: 350px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 8% 54% 38%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas:
+        "primero segundo tercero"
+        ". cuarto quinto";
 }
 
 .linkTextoFooterGris {
