@@ -20,3 +20,20 @@
   width: 200px;
   height: 31px;
 }
+
+
+.DropDownSectionDemo {
+  height: 100%;
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+
+@media screen and (max-width: 1050px) {
+  .DropDownSectionDemo{
+    display: none;
+  }
+
+
+}
+

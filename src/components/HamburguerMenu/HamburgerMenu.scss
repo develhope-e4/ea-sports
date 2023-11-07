@@ -1,0 +1,83 @@
+.HamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+   
+  
+    button {
+      all: unset;
+      color: black;
+    }
+  
+    .menuicon {
+      font-size: 60px;
+      display: flex;
+    }
+  
+    .open {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 330px;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    z-index: 2;
+  
+      a {
+        all: unset;
+        &.active {
+          text-decoration: underline; 
+      }
+    }
+  
+    .menuHamburguer, .menuHamburguerMenu {
+      width: 100%;
+      
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: black;
+
+    }
+  
+    .menuHamburguerMenu {
+      
+      font-size: 40px;
+      gap: 20px;
+      height: 300px;
+      
+
+      .dropdown{
+        font-size: var(--font-size-xl);
+      }
+      
+    }
+  }
+  
+
+}
+
+
+.menuHamburguerAction{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+
+  img{
+    padding-left: 10px;
+  padding-right: 10px;
+  }
+
+  button{
+    padding-left: 10px;
+  padding-right: 10px;
+  }
+}
+
