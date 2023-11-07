@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./NavBarSims4.scss";
+import styles from "./NavBarSims4.module.scss";
 
 const NavbarSims4 = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);
@@ -18,13 +18,13 @@ const NavbarSims4 = () => {
   };
 
   return (
-    <div className="navBarSims4">
-      <div className="logoSims4">Electronic Arts</div>
-      <div className="dropdowns">
-        <div className="dropdownAyuda">
+    <div className={styles.navBarSims4}>
+      <div className={styles.empresa}>Electronic Arts</div>
+      <div className={styles.dropdowns}>
+        <div className={styles.dropdownAyuda}>
           <button onClick={toggleDropdown1}>Ayuda</button>
           {showDropdown1 && (
-            <ul className="dropdown-options">
+            <ul className={styles.dropdownOptions}>
               <li onClick={() => navigateToPage("https://help.ea.com/")}>
                 Ayuda de EA
               </li>
@@ -37,12 +37,12 @@ const NavbarSims4 = () => {
             </ul>
           )}
         </div>
-        <div className="dropdownPerfil">
+        <div className={styles.dropdownPerfil}>
           <button onClick={toggleDropdown2}>
             Cuenta
           </button>
           {showDropdown2 && (
-            <ul className="dropdown-options">
+            <ul className={styles.dropdownOptions}>
               <li
                 onClick={() =>
                   navigateToPage(

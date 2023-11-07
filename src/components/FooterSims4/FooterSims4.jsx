@@ -1,4 +1,4 @@
-import "./FooterSims4.scss";
+import styles from "./FooterSims4.module.scss";
 
 import Container from "../Container/Container";
 import Section from "../Section/Section";
@@ -17,15 +17,17 @@ import TRUSTe from "../../assets/Footer/TRUSTe.svg";
 import logoSims4 from "../../../public/FooterSims4/logoSims4.png";
 import logoMaxis from "../../../public/FooterSims4/logoMaxis.png";
 import logoElectronicsArts from "../../../public/FooterSims4/logoElectronicsArts.png";
-
+import logoPegi from "../../../public/FooterSims4/logoPegi.png";
+import logoSexo from "../../../public/FooterSims4/logoSexo.png";
+import logoViolencia from "../../../public/FooterSims4/logoViolencia.png";
 
 function FooterSims4() {
   return (
-    <div className="footer-sims4">
-      <Section className="claro">
-        <Container className="contenidoClaro">
-          <div className="contenidoClaro1">
-            <div className="iconosRS">
+    <div className={styles.footerSims4}>
+      <Section className={styles.claro}>
+        <Container className={styles.contenido}>
+          <div className={styles.subContenido1}>
+            <div className={styles.iconosRS}>
               <Icono
                 href="https://www.facebook.com/ea.es/"
                 icono={<TfiFacebook />}
@@ -43,7 +45,7 @@ function FooterSims4() {
                 icono={<ImYoutube />}
               />
             </div>
-            <div className="dropdownsFooter">
+            <div className={styles.dropdowns}>
               <FooterDropdown
                 dropdownTitle="Región (precios)"
                 items={itemsRegion}
@@ -52,28 +54,44 @@ function FooterSims4() {
             </div>
             <VolverArribaBoton />
           </div>
-          <div className="contenidoClaro2">
-            <img 
-            className="logoElectronicsArts"
-            src={logoElectronicsArts}
-            alt="Logo ElectronicsArts"
-            onClick={() => window.open("https://www.truste.com")}
+          <div className={styles.subContenido2}>
+            <div className={styles.logosFooter}>
+            <img
+              className={styles.logoElectronicsArts}
+              src={logoElectronicsArts}
+              alt="Logo ElectronicsArts"
             />
             <img
-            className="logoMaxis"
-            src={logoMaxis}
-            alt="Logo Maxis"
-            onClick={() => window.open("https://www.truste.com")}
+              className={styles.logoMaxis}
+              src={logoMaxis}
+              alt="Logo Maxis"
             />
             <img
-            className="logoSims4"
-            src={logoSims4}
-            alt="Logo Sims4"
-            onClick={() => window.open("https://www.truste.com")}
+              className={styles.logoSims4}
+              src={logoSims4}
+              alt="Logo Sims4"
             />
+            </div>
+            <div clasname={styles.advertencias}>
+                <img
+                className={styles.logoPegi}
+                src={logoPegi}
+                alt="Logo Sims4"
+                />
+                <img
+                className={styles.logoSexo}
+                src={logoSexo}
+                alt="Logo Sims4"
+                />
+                <img
+                className={styles.logoViolencia}
+                src={logoViolencia}
+                alt="Logo Sims4"
+                />
+            </div>
           </div>
-          <div className="contenidoClaro3"></div>
-          <div className="contenidoClaro4"></div>
+          <div className={styles.subContenido3}></div>
+          <div className={styles.subContenido4}></div>
         </Container>
       </Section>
       <Section className="oscuro">
