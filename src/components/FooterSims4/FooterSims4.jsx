@@ -76,17 +76,17 @@ function FooterSims4() {
                 <img
                 className={styles.logoPegi}
                 src={logoPegi}
-                alt="Logo Sims4"
+                alt="Logo Pegi"
                 />
                 <img
                 className={styles.logoSexo}
                 src={logoSexo}
-                alt="Logo Sims4"
+                alt="Contenido no permitido para menores de 18 años"
                 />
                 <img
                 className={styles.logoViolencia}
                 src={logoViolencia}
-                alt="Logo Sims4"
+                alt="Contenido violento"
                 />
             </div>
           </div>
@@ -94,8 +94,8 @@ function FooterSims4() {
           <div className={styles.subContenido4}></div>
         </Container>
       </Section>
-      <Section className="oscuro">
-        <Container className="contenidoOscuro">
+      <Section className={styles.oscuro}>
+        <Container className={styles.contenidoOscuro}>
           <p>&copy; 2023 Electronic Arts Inc.</p>
           <img src={TRUSTe} alt="Truste Logo" />
         </Container>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logoSims4 from "../../../public/NavBarSims4/logoSims4.png";
-import styles from "../NavBarSims4Dos/NavBarSims4Dos.module.scss";
+import styles from "./NavBarSims4Dos.module.scss";
 
 const NavBarSims4Dos = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);
@@ -19,17 +19,14 @@ const NavBarSims4Dos = () => {
     setShowDropdown3(!showDropdown3);
   };
 
-  const navigateToPage = (url) => {
-    window.location.href = url;
-  };
 
   return (
     <div className={styles.navBarSims4Dos}>
-      <img src={logoSims4} className="logoSims4" alt="Sims 4 Logo" />
-      <div className="dropdownTienda">
+      <img src={logoSims4} className={styles.logoSims4} alt="Sims 4 Logo" />
+      <div className={styles.dropdownTienda}>
         <button onClick={toggleDropdown1}>Tienda</button>
         {showDropdown1 && (
-          <ul className="dropdown-options">
+          <ul className={styles.dropdownOptions}>
             <li>Descubra</li>
             <li>Explorar todos</li>
             <li>Packs de expansión</li>
@@ -40,20 +37,20 @@ const NavBarSims4Dos = () => {
           </ul>
         )}
       </div>
-      <div className="dropdownAyuda">
+      <div className={styles.dropdownAyuda}>
         <button onClick={toggleDropdown2}>Ayuda</button>
         {showDropdown2 && (
-          <ul className="dropdown-options">
+          <ul className={styles.dropdownOptions}>
             <li>Trucos</li>
             <li>Preguntas Frecuentes</li>
             <li>Trucos y consejos</li>
           </ul>
         )}
       </div>
-      <div className="dropdownJugarGratis">
+      <div className={styles.dropdownJugarGratis}>
         <button onClick={toggleDropdown3}>Jugar Gratis*</button>
         {showDropdown3 && (
-          <ul className="dropdown-options">
+          <ul className={styles.dropdownOptions}>
             <li>EA app para Windows</li>
             <li>Origin para Mac</li>
             <li>PlayStation</li>

@@ -1,16 +1,13 @@
-import "./Boton.scss";
+import styles from "./Boton.module.scss";
+
 /**
- *
- 
-@param {string} texto - Texto que va a llevar el boton
-@param {Boolean} esPrimario - Boolean para indicar si el boton es primario o secundario
-@param {Boolean} isLight - Boolean para indicar si el boton es Dark o Light
-@param {Callback} onClick - Callback que se ejecuta cada vez que el usuario hace click en el boton
-*
-@returns Botón dorado si es secundario y botón blanco con borde negro si es primario
-*/
-const Boton = ({ texto, esPrimario, isLight, onClick }) => {
-  const className = esPrimario ? "primary" : isLight ? "secundario-light" : "secundario-dark";
+ * @param {string} texto - Texto que va a llevar el botón.
+ * @param {boolean} esPrimario - Booleano para indicar si el botón es primario o secundario.
+ * @param {function} onClick - Función que se ejecuta cuando el usuario hace clic en el botón.
+ * @returns Botón con estilos primarios o secundarios.
+ */
+const Boton = ({ texto, esPrimario, onClick }) => {
+  const className = esPrimario ? styles.primario : styles.secundario;
 
   return (
     <button className={className} onClick={onClick}>
