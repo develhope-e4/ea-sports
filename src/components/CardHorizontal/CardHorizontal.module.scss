@@ -1,4 +1,4 @@
-.cardHorTextIzq{
+.container{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -8,15 +8,19 @@
     gap: 30px;
 }
 
+.isReverse{
+    flex-direction: row-reverse;
+}
 
-.contenidoCardHorTextIzq{
+
+.contenido{
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
 
-.imgCardHorTextIzq{
+.image{
     width: 600px;
     height: auto;
 }
