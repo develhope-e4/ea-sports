@@ -54,19 +54,19 @@ function FooterSims4() {
           </div>
           <div className="contenidoClaro2">
             <img 
-            className="logosFooterSims4"
+            className="logoElectronicsArts"
             src={logoElectronicsArts}
             alt="Logo ElectronicsArts"
             onClick={() => window.open("https://www.truste.com")}
             />
             <img
-            className="logosFooterSims4"
+            className="logoMaxis"
             src={logoMaxis}
             alt="Logo Maxis"
             onClick={() => window.open("https://www.truste.com")}
             />
             <img
-            className="logosFooterSims4"
+            className="logoSims4"
             src={logoSims4}
             alt="Logo Sims4"
             onClick={() => window.open("https://www.truste.com")}
