@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logoSims4 from "../../../public/NavBarSims4/logoSims4.png";
-import "../NavBarSims4Dos/NavBarSims4Dos.scss";
+import styles from "../NavBarSims4Dos/NavBarSims4Dos.module.scss";
 
 const NavBarSims4Dos = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);
@@ -24,7 +24,7 @@ const NavBarSims4Dos = () => {
   };
 
   return (
-    <div className="navBarSims4Dos">
+    <div className={styles.navBarSims4Dos}>
       <img src={logoSims4} className="logoSims4" alt="Sims 4 Logo" />
       <div className="dropdownTienda">
         <button onClick={toggleDropdown1}>Tienda</button>
