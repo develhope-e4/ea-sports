@@ -242,3 +242,17 @@ img.logoCardDestacada.otherImages {
 
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+
+@media screen and (max-width: 1050px) {
+ 
+
+  .menu{
+    display: none;
+  }
+
+
+  .otro{
+    display: none;
+  }
+}

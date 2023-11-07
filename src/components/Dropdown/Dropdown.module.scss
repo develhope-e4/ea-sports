@@ -1,51 +1,86 @@
-.DropDownButton {
+.DropDownContenetor {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  width: 100%;
+  
+  
+  .first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 
-  color: black;
-  border: none;
+    position: relative;
 
+    &:hover {
+      svg {
+        transform: rotateX(180deg);
+        fill: var(--color-prymary);
+        transition: 0.5s ease-in-out;
+      }
 
-  background-color: var(--color-quaternary);
-
-  cursor: pointer;
-
-
-  font-family: var(--font-family-ea);
-  font-size: var(--font-size-l);
-
-  &:hover {
-
-    svg {
-      transform: rotateX(180deg);
-      fill: var(--color-prymary);
-      transition: 0.5s ease-in-out;
+      .DropDownButton {
+        color: var(--color-prymary);
+        transition: 0.5s ease-in-out;
+      }
     }
 
     .DropDownButton {
-      color: var(--color-prymary);
-      transition: 0.5s ease-in-out;
+      color: black;
+      border: none;
 
+      background-color: var(--color-quaternary);
+
+      cursor: pointer;
+
+      font-family: var(--font-family-ea);
+      font-size: var(--font-size-l);
     }
   }
+  .second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    align-self: center;
+    justify-content: space-between ;
+    
+
+    &:hover {
+      svg {
+        fill: var(--color-prymary);
+        transition: 0.5s ease-in-out;
+      }
+
+      .DropDownButton {
+        color: var(--color-prymary);
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+
+.DropDownContenetorSvg{
+  align-self: flex-start;
 }
 
-.dropdown {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .DropDownButton {
+    font-size: var(--font-size-xl);
+    color: black;
+    display: flex;
+    flex-direction: row;
+  }
+  .DropDownMenu {
+    color: gray;
+    display: flex;
+    flex-direction: column;
+  }
 
-  position: relative;
-
-  &:hover {
-    svg {
-      transform: rotateX(180deg);
-      fill: var(--color-prymary);
-      transition: 0.5s ease-in-out;
-    }
-
-    .DropDownButton {
-      color: var(--color-prymary);
-      transition: 0.5s ease-in-out;
-
-    }
+  .separator{
+    align-self: center;
+    height: 1px;
+    width: 90%;
+    background-color: aquamarine;
   }
 }

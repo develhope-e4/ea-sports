@@ -1,9 +1,9 @@
-.DropDownPadre {
-  margin-left: -30px;
+.DropDownMenu {
   display: flex;
-  position: absolute;
-  top: 60px;
-  z-index: 1;
+
+
+
+
 
   transition: var(--ea-transition-duration);
 
@@ -12,10 +12,12 @@
 
   font-family: var(--font-family-ea);
 
-  .DropDownMenu {
+  .first {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    position: absolute;
+
 
     margin: 5px;
     background: white;
@@ -41,29 +43,52 @@
       padding: 0px;
       text-align: start;
       margin-top: 0px;
+      list-style: none;
+    }
+    li {
+      padding: var(--spacing-s);
+      ;
+      transition: var(--ea-transition-duration);
+
+    }
+
+
+    a {
+      text-decoration: none;
+      color: var(--color-sextary);
+
+
+      &:hover {
+        color: red;
+      }
     }
   }
 
-  ul {
-    list-style: none;
+
+
+  .second{
+      display: flex;
+      flex-direction: column;
+      font-size: var(--font-size-l);
+      width: 100%;
+
+      ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+
+
+        .separator{
+          align-self: center;
+          height: 1px;
+          width: 90%;
+          background-color: aquamarine;
+        }
+
+
+      }
   }
-
-  li {
-    padding: var(--spacing-s);
-    ;
-    transition: var(--ea-transition-duration);
-
   }
-
-
-  a {
-    text-decoration: none;
-    color: var(--color-sextary);
-
-
-    &:hover {
-      color: red;
-    }
-  }
-}
 

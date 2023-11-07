@@ -26,3 +26,13 @@
   display: flex;
   gap: var(--spacing-sm);
 }
+
+
+@media screen and (max-width: 1050px) {
+  .DropDownSectionDemo{
+    display: none;
+  }
+
+
+}
+
