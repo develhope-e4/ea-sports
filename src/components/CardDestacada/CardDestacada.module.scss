@@ -182,7 +182,7 @@ img.logoCardDestacada.otherImages {
 }
 
 
-@include respond-to('large')  {
+@media screen and (max-width: 1050px) {
 
 
   .menu{

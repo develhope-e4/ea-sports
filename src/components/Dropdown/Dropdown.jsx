@@ -3,9 +3,6 @@ import styles from "./Dropdown.module.scss";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
 import { GoChevronDown } from "react-icons/go";
 
-
-
-
 function DropDown({ title, data, data2, className }) {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -21,35 +18,29 @@ function DropDown({ title, data, data2, className }) {
     setDropdownVisible(!isDropdownVisible);
   };
 
-
-
-
-  
-
-  const containerClassNames = `${styles.container} ${styles[className]}`;
-
-  const buttonClassNames = `${styles.DropDownButton} ${className === "first" ? styles.firstButton : ""}`;
-
   return (
-    <div
-       className={`${containerClassNames} ${className === "first" ? "DropDownContentorFirst" : ""}`}
-  
-      onMouseEnter={className === "first" ? handleMouseEnter : undefined}
-      onMouseLeave={className === "first" ? handleMouseLeave : undefined}
-     
-    >
-      <div className={`${styles[className]}`}
-       onClick={handleClick}
+    <div className="DropDownContenetor">
+
+      <div
+        className={className}
+        onMouseEnter={className === "first" ? handleMouseEnter : undefined}
+        onMouseLeave={className === "first" ? handleMouseLeave : undefined}
+        onClick={className === "second" ? handleClick : undefined}
       >
-        <button className={buttonClassNames}>{title}</button>
-        <div className={styles.DropDownContenetorSvg}>
+        <div>
+          <button className="DropDownButton">{title}</button>
+
+        </div>
+        <div className="DropDownContenetorSvg">
           <GoChevronDown />
         </div>
       </div>
-
       {isDropdownVisible && (
-        <DropDownMenu data={data} data2={data2} className={className} />
-      )}
+            <DropDownMenu data={data} data2={data2} className={className} />
+          )}
+
+
+      {className === "second" && <div className="separator"></div>}
     </div>
   );
 }

@@ -1,14 +1,15 @@
 import { useState } from "react";
-import styles from "./HamburgerMenu.module.scss";
+import "./HamburgerMenu.scss"; // Estiliza este archivo según tus necesidades
 import { FiMenu, FiXCircle } from "react-icons/fi";
+import DropDown from "../Dropdown/Dropdown";
 
+import Dropdown from "../Dropdown/Dropdown";
 import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
 import { PlataformasDropDown } from "../../data/PlataformasDropDown.mock";
 import { MasExperiencias } from "../../data/MasExperiencias.mock";
 import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
 import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
 import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
-import DropDown from "../Dropdown/Dropdown";
 
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,64 +18,65 @@ const HamburgerMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-
   return (
-    <div className={styles.menuContainer}>
-      <button onClick={toggleMenu} className={styles.menuButton}>
+    <div className="HamburgerMenu">
+      <button onClick={toggleMenu}>
         <div className="menuicon">
           <FiMenu />
         </div>
       </button>
       {menuOpen && (
-        <div className={styles.menuOpenMenu}>
-          <div className={styles.menuHamburguerAction}>
-            <img
-              src="/NavBar/ea-electronicsarts.svg"
-              alt="Mi SVG"
-              className={styles.easvg}
-              onClick={console.log("")}
-            />
-
-            <button onClick={toggleMenu}>
-              <FiXCircle />
-            </button>
-          </div>
+        <div className={`HamburgerLinks ${menuOpen ? "open" : ""}`}>
+          <div className="menuHamburguer">
+            <div className="menuHamburguerAction">
 
 
-            <div className={styles.menuContent}>
+              <img
+                src="/NavBar/ea-electronicsarts.svg"
+                alt="Mi SVG"
+                className="easvg"
+                onClick={""}
+              />
+
+              <button onClick={toggleMenu}>
+                <FiXCircle />
+              </button>
+            </div>
+            <div className="menuHamburguerMenu">
               <DropDown
                 data={ExplorarJuegosDropDown}
                 title={ExplorarJuegosDropDown[0].tittle}
                 data2={PlataformasDropDown}
-                className="second"
+                className={'second'}
               />
-              <div className={styles.separator}></div>
+
               <DropDown
                 data={MasExperiencias}
-                title="Más Experiencias"
-                className="second"
+                title={MasExperiencias[0].tittle}
+                className={'second'}
               />
-              <div className={styles.separator}></div>
-              <DropDown
+
+              <Dropdown
                 data={AcercaDeDropDown}
-                title="Acerca De"
-                className="second"
+                title={AcercaDeDropDown[0].tittle}
+                className={'second'}
               />
-              <div className={styles.separator}></div>
-              <DropDown
+
+              <Dropdown
                 data={CompromisosDropDown}
-                title="Compromisos"
-                className="second"
+                title={CompromisosDropDown[0].tittle}
+                className={'second'}
               />
-              <div className={styles.separator}></div>
-              <DropDown
+
+              <Dropdown
+                doble={false}
                 data={RecursosDropDown}
-                title="Recursos"
-                className="second"
+                title={RecursosDropDown[0].tittle}
+                className={'second'}
               />
-              <div className={styles.separator}></div>
             </div>
           </div>
+        </div>
       )}
     </div>
   );

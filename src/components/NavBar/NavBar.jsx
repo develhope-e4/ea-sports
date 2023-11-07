@@ -13,9 +13,8 @@ import { MasExperiencias } from "../../data/MasExperiencias.mock";
 import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
 import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
 import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
+import Menu from "../Menu/Menu";
 import HamburgerMenu from "../HamburguerMenu/HamburgerMenu";
-
-
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,14 +32,12 @@ const NavBar = () => {
   return (
     <div className={styles.navbarContainer}>
       <BlackNavBar />
-
       <Menu
         menuOpen={menuOpen}
         handleMenuClose={handleMenuClose}
       />
-
-      <div className={styles.nav}>
-        <HamburgerMenu />
+      <div className="nav">
+      <HamburgerMenu/>
         <Icono
           onClick={handleMenuToggle}
           esRedSocial={false}
@@ -58,35 +55,31 @@ const NavBar = () => {
             data={ExplorarJuegosDropDown}
             title={ExplorarJuegosDropDown[0].tittle}
             data2={PlataformasDropDown}
-            className={"first"}
+            className={'first'}
           />
 
-          <Dropdown
-            data={MasExperiencias}
-            title={MasExperiencias[0].tittle}
-            className={"first"}
-          />
+          <Dropdown data={MasExperiencias} title={MasExperiencias[0].tittle}  className={'first'}/>
 
           <Dropdown
             data={AcercaDeDropDown}
             title={AcercaDeDropDown[0].tittle}
-            className={"first"}
+            className={'first'}
           />
 
           <Dropdown
             data={CompromisosDropDown}
             title={CompromisosDropDown[0].tittle}
-            className={"first"}
+            className={'first'}
           />
 
           <Dropdown
             doble={false}
             data={RecursosDropDown}
             title={RecursosDropDown[0].tittle}
-            className={"first"}
+            className={'first'}
           />
 
-          
+
         </div>
       </div>
     </div>
