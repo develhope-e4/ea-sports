@@ -1,8 +1,7 @@
 import classes from "./CardDestacada.module.scss";
 import classNames from "classnames/bind";
 
-const cx = classNames.bind(classes);
-const CardDestacada = ({ backgroundImage, url, gameLogo, firstImg, otherimg, showText }) => {
+const CardDestacada = ({ backgroundImage, url, gameLogo, className, showText, text }) => {
   const cardStyle = {
     backgroundImage: `url(${backgroundImage})`,
   };
@@ -46,7 +45,7 @@ const CardDestacada = ({ backgroundImage, url, gameLogo, firstImg, otherimg, sho
             alt="Imagen de la tarjeta"
             className={logo}
           />
-          {showText && <p className={text}>Sitio oficial</p>}
+          {showText && <p className={`textCardDestacada ${className}`}>{text}</p>}
         </div>
       </div>
     </a>
