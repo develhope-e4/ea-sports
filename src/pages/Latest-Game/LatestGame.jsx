@@ -1,43 +1,35 @@
-import { useState } from "react";
-import VideoComponent from "../../components/VideoComponent/VideoComponent";
-import { MdPausePresentation } from "react-icons/md";
-import { BsPlayBtn } from "react-icons/bs";
+import LoopVideo from "../../components/LoopVideo/LoopVideo";
+import { useRef, useState } from "react";
 import Boton from "../../components/Boton/Boton";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
-import "../../components/VideoComponent/VideoComponent.module.scss";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
 
 const LatestGame = () => {
-  const [activeTab, setActiveTab] = useState("NoticiasEA");
+  const [isVideoPlaying, setVideoPlaying] = useState(true);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
-  const tabNames = {
-    NoticiasEA: "Noticias De EA",
-    EASPORTSFC: "EA SPORTS FC",
-    StarWars: "Star Wars",
-    ApexLegends: "Apex Legends",
-    LosSims4: "Los Sims 4",
-    F1: "F1",
-    Battlefield: "Battlefield",
+  const handleVideoButtonClick = () => {
+    setVideoPlaying(!isVideoPlaying);
   };
 
   return (
     <BasePage>
-      <Section>
-        <Container>
+      <LoopVideo
+        videoSrc="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-7x2-xl.mp4"
+        imagenSrc="../../../public/VideoComponentImg/ea-hero-md-bg-mashup-trailer-pegi-16-7x2-xl.png.adapt.crop5x2.1455w.png"
+        buttonText="Comprar ahora"
+        onButtonClick={handleVideoButtonClick}
+        isPrimary={true}
+        isLight={true}
+        customClass=""
+        customImageClass="img-videogames"
+        isVideoPlaying={isVideoPlaying}
+        showButtons={true}
+        showBuyButton={false}
+      />
 
-          
-        </Container>
-      </Section>
-        
-      
       <Section>
-        <h1>Juegos destacados</h1>
         <Container>
           <CardsDestacadas />
         </Container>
@@ -49,9 +41,7 @@ const LatestGame = () => {
         />
       </Section>
       <Section>
-        <Container>
-
-        </Container>
+        <Container></Container>
       </Section>
     </BasePage>
   );

@@ -35,8 +35,6 @@ const Home = () => {
 
   return (
     <BasePage>
-      <NavBar />
-      <div className="container">
         <LoopVideo
           videoSrc="./immortals.mp4"
           imagenSrc="./Immorlas-Logo.svg"
@@ -46,8 +44,8 @@ const Home = () => {
           isLight={false}
           customClass=""
           customImageClass=""
+          showBuyButton={true}
         />
-      </div>
       <Section>
         <h1>Juegos destacados</h1>
         <Container>
