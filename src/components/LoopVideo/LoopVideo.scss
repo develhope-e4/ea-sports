@@ -30,7 +30,7 @@
   }
 
   
-  .img-videogames{
+  .immortalsLogo.img-videogames{
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
@@ -58,7 +58,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2; 
+    z-index: 4; 
+    user-select: none;
   }
   
   .video-buttons svg {
