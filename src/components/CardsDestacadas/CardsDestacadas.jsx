@@ -20,6 +20,7 @@ return (
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
                 showText={true}
+                text="Sitio Oficial"
               />
             ))}
        
