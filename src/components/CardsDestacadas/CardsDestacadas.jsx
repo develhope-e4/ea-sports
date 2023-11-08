@@ -13,8 +13,9 @@ return (
 <div className="CardsDestacadas">
 
           {cardDestacadaData &&
-            cardDestacadaData.map((card) => (
+            cardDestacadaData.map((card, index) => (
               <CardDestacada
+              key={index}
                 url="http://google.com"
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
