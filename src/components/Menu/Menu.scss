@@ -29,7 +29,7 @@
 
 .menu.open {
   left: 0;
-  z-index: 10;
+  z-index: 4;
 
 
   width: 400px;
@@ -184,7 +184,7 @@ img.logoCardDestacada.other-images {
 
 
 @include respond-to('large')  {
- 
+
 
   .menu{
     display: none;

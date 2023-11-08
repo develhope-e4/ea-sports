@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     width: 98.9vw;
-   
+
     margin: 0 auto;
   }
 
@@ -29,13 +29,13 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  
-  .img-videogames{
+
+  .immortalsLogo.img-videogames{
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 3; 
+    z-index: 3;
     position: absolute;
     width: 84em;
     top: 48.9%;
@@ -58,7 +58,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 4;
+    user-select: none;
   }
 
   .video-buttons svg {
