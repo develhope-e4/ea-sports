@@ -4,7 +4,9 @@ import Boton from "../../components/Boton/Boton";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
-import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
+import CardDestacada from "../../components/CardDestacada/CardDestacada";
+import "../../components/CardDestacada/CardDestacada.scss";
+import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 
 const LatestGame = () => {
   const [isVideoPlaying, setVideoPlaying] = useState(true);
@@ -31,7 +33,18 @@ const LatestGame = () => {
 
       <Section>
         <Container>
-          <CardsDestacadas />
+          <div className="CardsDestacadas">
+            {cardDestacadaData &&
+              cardDestacadaData.map((card, index) => (
+                <CardDestacada
+                  key={index}
+                  url="http://google.com"
+                  backgroundImage={card.bg}
+                  gameLogo={card.logo}
+                  showText={true}
+                />
+              ))}
+          </div>
         </Container>
         <Boton
           esPrimario={false}

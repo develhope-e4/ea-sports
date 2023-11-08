@@ -1,6 +1,6 @@
 import "./CardDestacada.scss";
 
-const CardDestacada = ({ backgroundImage, url, gameLogo, className, showText }) => {
+const CardDestacada = ({ backgroundImage, url, gameLogo, className, showText, text }) => {
   const cardStyle = {
     backgroundImage: `url(${backgroundImage})`,
   };
@@ -14,7 +14,7 @@ const CardDestacada = ({ backgroundImage, url, gameLogo, className, showText }) 
             alt="Imagen de la tarjeta"
             className={`logoCardDestacada ${className}`}
           />
-          {showText && <p className={`textCardDestacada ${className}`}>Sitio oficial</p>}
+          {showText && <p className={`textCardDestacada ${className}`}>{text}</p>}
         </div>
       </div>
     </a>
