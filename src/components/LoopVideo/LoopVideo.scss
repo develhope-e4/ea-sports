@@ -1,7 +1,8 @@
 .video-container {
+    display: flex;
     position: relative;
-    width: 99vw;
-    height: 100vh;
+    width: 98.9vw;
+   
     margin: 0 auto;
   }
   
@@ -28,12 +29,17 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .immortalsLogo.img-videogames{
-    width: 100%;
-    position: absolute;
-    top: 42.2%;
-    left: 50%;
+  
+  .img-videogames{
     transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; 
+    position: absolute;
+    width: 84em;
+    top: 48.9%;
+    left: 50.2%;
   }
   .light-overlay {
     position: absolute;

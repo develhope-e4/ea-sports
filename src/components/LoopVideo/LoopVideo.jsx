@@ -45,9 +45,16 @@ const LoopVideo = ({
             <MdPausePresentation onClick={handleVideoButtonClick} />
           ) : (
             <BsPlayBtn onClick={handleVideoButtonClick} />
-          )}
+            )}
         </div>
       )}
+     
+      <img
+      src={imagenSrc}
+      alt="Imagen SVG"
+      className={`immortalsLogo ${customImageClass}`}
+    />
+    
       <video
         ref={videoRef}
         src={videoSrc}
@@ -55,11 +62,6 @@ const LoopVideo = ({
         loop
         muted
         playsInline
-      />
-      <img
-        src={imagenSrc}
-        alt="Imagen SVG"
-        className={`immortalsLogo ${customImageClass}`}
       />
       <div className="compraAhora">
         {showBuyButton && (
