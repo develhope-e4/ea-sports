@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import "./VolverArribaBoton.scss";
+import styles from "./VolverArribaBoton.module.scss";
 
 function VolverArribaBoton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +28,7 @@ function VolverArribaBoton() {
   return (
     <div>
       {isVisible && (
-        <button className="volverArribaBoton" onClick={scrollToTop}>
+        <button className={styles.volverArribaBoton} onClick={scrollToTop}>
           Volver arriba
         </button>
       )}

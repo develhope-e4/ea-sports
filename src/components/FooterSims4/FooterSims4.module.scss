@@ -1,11 +1,116 @@
-.logoElectronicsArts{
-    width: 200px;
+.footerSims4 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.logoMaxis{
+Section .claro {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+}
+
+.subContenido1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.iconosRS {
+  display: flex;
+  flex-direction: row;
+
+  gap: 20px;
+}
+
+.iconoRS {
+  border-radius: 10px;
+  border: 2px solid rgb(225, 225, 225);
+
+  background-color: transparent;
+}
+
+.dropdowns {
+  display: flex;
+  flex-direction: row;
+}
+
+.subContenido2 {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 40%;
+
+}
+
+.subContenido3 {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+}
+
+.logoElectronicsArts {
+  width: 200px;
+}
+
+.logoMaxis {
+  width: 50px;
+}
+
+.logoSims4 {
+  width: 120px;
+}
+
+.logoAdvertencias{
     width: 50px;
+    height: auto;
 }
 
-.logoSims4{
-    width: 120px;
+.linkTextoFooter {
+  cursor: pointer;
+  transition: text-decoration 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.oscuro {
+  display: flex;
+  flex-direction: column;
+}
+
+.subContenido5 {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+}
+
+.subContenido6 {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+}
+
+.subContenido7 {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
 }

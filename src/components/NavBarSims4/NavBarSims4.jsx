@@ -21,38 +21,26 @@ const NavbarSims4 = () => {
     <div className={styles.navBarSims4}>
       <div className={styles.empresa}>Electronic Arts</div>
       <div className={styles.dropdowns}>
-        <div className={styles.dropdownAyuda}>
-          <button onClick={toggleDropdown1}>Ayuda</button>
+        <div className={styles.dropdown}>
+          <button onClick={toggleDropdown1} className={styles.textoBoton}>
+            Ayuda
+          </button>
           {showDropdown1 && (
             <ul className={styles.dropdownOptions}>
-              <li onClick={() => navigateToPage("https://help.ea.com/")}>
-                Ayuda de EA
-              </li>
-              <li onClick={() => navigateToPage("https://answers.ea.com/")}>
-                Preguntas Frecuentes
-              </li>
-              <li onClick={() => navigateToPage("https://answers.ea.com/")}>
-                Foros de EA
-              </li>
+              <li>Ayuda de EA</li>
+              <li>Preguntas Frecuentes</li>
+              <li>Foros de EA</li>
             </ul>
           )}
         </div>
-        <div className={styles.dropdownPerfil}>
-          <button onClick={toggleDropdown2}>
+        <div className={styles.dropdown}>
+          <button onClick={toggleDropdown2} className={styles.textoBoton}>
             Cuenta
           </button>
           {showDropdown2 && (
             <ul className={styles.dropdownOptions}>
-              <li
-                onClick={() =>
-                  navigateToPage(
-                    "https://myaccount.ea.com/cp-ui/aboutme/index?gameId=ebisu"
-                  )
-                }
-              >
-                Ajustes de la cuenta
-              </li>
-              <li>Cierra sesión</li>
+              <li>Crear una cuenta</li>
+              <li>Iniciar sesión</li>
             </ul>
           )}
         </div>

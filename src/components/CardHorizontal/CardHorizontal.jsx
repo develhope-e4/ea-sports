@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import Boton from "../Boton/Boton";
 import styles from "./CardHorizontal.module.scss";
-import { cardHorizontalData } from "../../data/cardHorizontalData";
+import { cardHorizontalData } from "../../data/cardHorizontalData.mock";
 
 const cx = classNames.bind(styles);
 const CardHorizontal = ({
