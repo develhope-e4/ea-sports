@@ -12,6 +12,7 @@ import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacada
 import classes from "../../components/Tabs/Tabs.module.scss";
 import styles from "../../components/Cards/Cards.module.scss";
 
+
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
