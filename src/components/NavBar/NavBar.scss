@@ -29,7 +29,14 @@
   height: 100%;
   display: flex;
   gap: var(--spacing-sm);
+  align-items: center;
 }
+
+.HamburgerMenu{
+  display: none;
+}
+
+
 
 
 @media screen and (max-width: 1050px) {
@@ -37,6 +44,10 @@
     display: none;
   }
 
+  .HamburgerMenu{
+    display: flex;
+  }
+  
 
 }
 

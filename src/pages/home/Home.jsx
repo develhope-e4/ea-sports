@@ -10,6 +10,7 @@ import Boton from "../../components/Boton/Boton";
 import Subscription from "../../components/Subscription/Subscription";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
 
+
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -46,7 +47,10 @@ const Home = () => {
       <Section>
         <h1>Juegos destacados</h1>
         <Container>
-          <CardsDestacadas />
+
+          <CardsDestacadas/>
+
+
         </Container>
         <Boton
           esPrimario={false}

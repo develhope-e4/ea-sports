@@ -29,8 +29,6 @@ const HamburgerMenu = () => {
         <div className={`HamburgerLinks ${menuOpen ? "open" : ""}`}>
           <div className="menuHamburguer">
             <div className="menuHamburguerAction">
-
-
               <img
                 src="/NavBar/ea-electronicsarts.svg"
                 alt="Mi SVG"
@@ -47,33 +45,40 @@ const HamburgerMenu = () => {
                 data={ExplorarJuegosDropDown}
                 title={ExplorarJuegosDropDown[0].tittle}
                 data2={PlataformasDropDown}
-                className={'second'}
+                className={"second"}
               />
+
+              <div className="separator"></div>
 
               <DropDown
                 data={MasExperiencias}
                 title={MasExperiencias[0].tittle}
-                className={'second'}
+                className={"second"}
               />
+
+              <div className="separator"></div>
 
               <Dropdown
                 data={AcercaDeDropDown}
                 title={AcercaDeDropDown[0].tittle}
-                className={'second'}
+                className={"second"}
               />
+              <div className="separator"></div>
 
               <Dropdown
                 data={CompromisosDropDown}
                 title={CompromisosDropDown[0].tittle}
-                className={'second'}
+                className={"second"}
               />
+              <div className="separator"></div>
 
               <Dropdown
                 doble={false}
                 data={RecursosDropDown}
                 title={RecursosDropDown[0].tittle}
-                className={'second'}
+                className={"second"}
               />
+              <div className="separator"></div>
             </div>
           </div>
         </div>
