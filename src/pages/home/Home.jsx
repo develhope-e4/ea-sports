@@ -1,13 +1,13 @@
+import { useState } from "react";
+import BasePage from "../../components/BasePage/BasePage";
+import Container from "../../components/Container/Container";
+import Section from "../../components/Section/Section";
 import LoopVideo from "../../components/LoopVideo/LoopVideo";
+import Cards from "../../components/Cards/Cards";
 import Tabs from "../../components/Tabs/Tabs";
 import cardData from "../../data/CardData.mock";
-import { useState } from "react";
-import Cards from "../../components/Cards/Cards";
 import Boton from "../../components/Boton/Boton";
 import Subscription from "../../components/Subscription/Subscription";
-import BasePage from "../../components/BasePage/BasePage";
-import Section from "../../components/Section/Section";
-import Container from "../../components/Container/Container";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";

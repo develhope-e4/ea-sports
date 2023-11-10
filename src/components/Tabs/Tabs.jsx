@@ -10,7 +10,7 @@ const Tabs = ({ tabNames, handleTabClick, activeTab }) => {
           className={`tab ${activeTab === tab ? "active" : ""}`}
           onClick={() => handleTabClick(tab)}
         >
-          {tabNames[tab]} {/* Utilizamos el nombre personalizado aquí */}
+          {tabNames[tab]} 
         </div>
       ))}
     </div>
