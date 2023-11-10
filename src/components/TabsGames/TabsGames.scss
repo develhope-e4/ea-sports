@@ -1,0 +1,42 @@
+div.tabs-games {
+  display: flex;
+  background-color: rgb(225, 229, 115);
+  overflow-x: auto;
+  width: fit-content;
+  margin-bottom: var(--spacing-md);
+}
+
+div.tabs-games__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid #dedede;
+}
+
+.tabs-games__list div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-left: 1px outset #dededec4;
+  border-right: 1px inset #dededec4;
+  padding: 10px 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: var(--font-family-ea);
+  font-size: var(--font-size-l);
+  color: var(--color-sextary);
+  &:hover {
+    background-color: #dedede;
+  }
+}
+
+.tabs-games__item--active {
+  border-bottom: 2px solid red;
+  background-color: #dedede;
+  color: var(--color-sextary);
+}
+.tab:last-child {
+  margin-right: 0;
+}
