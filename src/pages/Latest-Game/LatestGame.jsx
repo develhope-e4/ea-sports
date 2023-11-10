@@ -1,5 +1,5 @@
 import LoopVideo from "../../components/LoopVideo/LoopVideo";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Boton from "../../components/Boton/Boton";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
@@ -7,14 +7,23 @@ import Container from "../../components/Container/Container";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import "../../components/CardDestacada/CardDestacada.scss";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
+import TabsGames from "../../components/TabsGames/TabsGames";
+import tabGamesData from "../../data/TabGamesData.mock";
+import "../../components/TabsGames/TabsGames.scss";
 
 const LatestGame = () => {
+
   const [isVideoPlaying, setVideoPlaying] = useState(true);
 
   const handleVideoButtonClick = () => {
     setVideoPlaying(!isVideoPlaying);
   };
 
+  const [activeTab, setActiveTab] = useState("Novedades");
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
   return (
     <BasePage>
       <LoopVideo
@@ -30,7 +39,12 @@ const LatestGame = () => {
         showButtons={true}
         showBuyButton={false}
       />
-
+      <Section>
+        <TabsGames
+         tabs={tabGamesData} 
+        onTabChange={handleTabChange}
+        activeTab={activeTab} />
+      </Section>
       <Section>
         <Container>
           <div className="CardsDestacadas">
