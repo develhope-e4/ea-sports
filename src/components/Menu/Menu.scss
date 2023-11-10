@@ -1,3 +1,7 @@
+@import '../../styles/mixins';
+
+
+
 .menu {
   position: fixed;
   top: 10;
@@ -179,7 +183,7 @@ img.logoCardDestacada.other-images {
 }
 
 
-@media screen and (max-width: 1050px) {
+@include respond-to('large')  {
  
 
   .menu{
