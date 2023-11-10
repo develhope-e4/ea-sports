@@ -12,6 +12,7 @@ import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
 
+
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -37,7 +38,6 @@ const Home = () => {
       <Section>
         <h1>Juegos destacados</h1>
         <Container>
-
 
           <CardsDestacadas/>
           
