@@ -1,3 +1,7 @@
+@import '../../styles/mixins';
+
+
+
 .menu {
   position: fixed;
   top: 10;
@@ -25,7 +29,7 @@
 
 .menu.open {
   left: 0;
-  z-index: 2;
+  z-index: 10;
 
 
   width: 400px;
@@ -176,4 +180,18 @@ img.logoCardDestacada.other-images {
   display: block;
 
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@include respond-to('large')  {
+ 
+
+  .menu{
+    display: none;
+  }
+
+
+  .otro{
+    display: none;
+  }
 }

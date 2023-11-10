@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 .navbar {
   display: flex;
   color: white;
@@ -20,3 +22,31 @@
   width: 200px;
   height: 31px;
 }
+
+
+.DropDownSectionDemo {
+  height: 100%;
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.HamburgerMenu{
+  display: none;
+}
+
+
+
+
+@include respond-to('large') {
+  .DropDownSectionDemo{
+    display: none;
+  }
+
+  .HamburgerMenu{
+    display: flex;
+  }
+  
+
+}
+
