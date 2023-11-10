@@ -1,17 +1,24 @@
+
+
 .DropDownContenetor {
   display: flex;
   flex-direction: column;
-  z-index: 2;
+
   width: 100%;
-  
+  justify-content: center;
+
+ 
   
   .first {
     display: flex;
     align-items: center;
     justify-content: center;
     
+    
+    
+    
 
-    position: relative;
+  
 
     &:hover {
       svg {
@@ -29,8 +36,10 @@
     .DropDownButton {
       color: black;
       border: none;
+      white-space: nowrap;
 
       background-color: var(--color-quaternary);
+      z-index: 2;
 
       cursor: pointer;
 
@@ -38,13 +47,20 @@
       font-size: var(--font-size-l);
     }
   }
+
+
+  
   .second {
+    
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 90%;
     align-self: center;
     justify-content: space-between ;
+
+
+    
     
 
     &:hover {
@@ -58,6 +74,33 @@
         transition: 0.5s ease-in-out;
       }
     }
+
+    
+  .DropDownButton {
+    font-size: var(--font-size-xl);
+    color: black;
+    display: flex;
+    flex-direction: row;
+   
+  }
+  .DropDownMenu {
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    align-self: center;
+    justify-content: space-between ;
+
+
+    &:hover {
+      color: red;
+    }
+  }
+
+
+}
+
   }
 
 
@@ -65,22 +108,20 @@
   align-self: flex-start;
 }
 
-  .DropDownButton {
-    font-size: var(--font-size-xl);
-    color: black;
-    display: flex;
-    flex-direction: row;
-  }
-  .DropDownMenu {
-    color: gray;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .separator{
-    align-self: center;
-    height: 1px;
-    width: 90%;
-    background-color: aquamarine;
-  }
+
+
+.DropDownContenetorFirst{
+  height: 100%;
+  width: 100%;
+}
+
+/* Aplica estilos solo al primer .DropDownMenuMenu dentro del primer .DropDownMenu.second dentro de .DropDownContenetor.second que está dentro de .menuHamburguerMenu */
+.menuHamburguerMenu .DropDownContenetor .second:first-of-type .DropDownMenu .second .DropDownMenuMenu:first-of-type {
+  display: none
+}
+
+
+.menuHamburguerAction{
+  font-size: var(--font-size-xl);
 }

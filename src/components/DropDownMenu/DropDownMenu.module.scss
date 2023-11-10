@@ -1,28 +1,18 @@
 .DropDownMenu {
   display: flex;
-
-
-
-
-
   transition: var(--ea-transition-duration);
-
   border-radius: var(--border-radius-sm);
-
-
   font-family: var(--font-family-ea);
+  z-index: 2;
 
   .first {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     position: absolute;
-
-
     margin: 5px;
     background: white;
     border-radius: var(--border-radius-sm);
-
     white-space: nowrap;
 
     h3 {
@@ -30,7 +20,6 @@
       margin-bottom: var(--spacing-xxs);
       padding-bottom: var(--spacing-xs);
       padding-left: var(--spacing-xs);
-
       text-decoration: underline;
       text-decoration-color: rgb(164, 164, 164);
       text-underline-offset: 10px;
@@ -45,50 +34,85 @@
       margin-top: 0px;
       list-style: none;
     }
+
     li {
       padding: var(--spacing-s);
-      ;
       transition: var(--ea-transition-duration);
-
     }
-
 
     a {
       text-decoration: none;
       color: var(--color-sextary);
 
-
       &:hover {
         color: red;
       }
     }
+
+
   }
 
+  .second {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-l);
+    width: 100%;
+    height: 100%;
 
-
-  .second{
+    ul {
+      list-style: none;
       display: flex;
       flex-direction: column;
-      font-size: var(--font-size-l);
-      width: 100%;
+      width: 90%;
+      padding: 0px;
+      margin: 10px;
+      height: 100%;
 
-      ul{
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 0px;
+      button {
+        width: 90%;
+        align-self: center;
+        font-size: var(--font-size-xxl);
+        color: gray;
+        height: 100%;
 
-
-        .separator{
-          align-self: center;
-          height: 1px;
-          width: 90%;
-          background-color: aquamarine;
+        &:hover{
+          color: red;
         }
-
-
       }
-  }
-  }
 
+      li {
+        margin: 10px;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+
+    }
+
+    .separator {
+      align-self: center;
+      height: 1px;
+      width: 90%;
+     background-color: black;
+
+    }
+
+
+  }
+}
+
+
+.dropDownMenuButtonHamburguer{
+
+  &:hover{
+   color: red;
+
+
+
+   svg{
+     transform: rotate(90deg);
+   }
+  }
+ }

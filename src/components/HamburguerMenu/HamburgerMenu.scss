@@ -4,6 +4,10 @@
     align-items: center;
     padding: 10px;
     cursor: pointer;
+
+
+   
+    
    
   
     button {
@@ -12,9 +16,11 @@
     }
   
     .menuicon {
-      font-size: 60px;
+      font-size: var(--font-size-xxl);
       display: flex;
     }
+
+  
   
     .open {
       position: fixed;
@@ -38,19 +44,30 @@
     .menuHamburguer, .menuHamburguerMenu {
       width: 100%;
       
-      margin-top: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin-top: 10%;
       color: black;
 
     }
   
     .menuHamburguerMenu {
+      display: flex;
+      flex-direction: column;
       
       font-size: 40px;
-      gap: 20px;
       height: 300px;
+
+
+      
+
+
+      .separator{
+        width: 90%;
+        height: 1px;
+        background-color: black;
+        align-self: center;
+      }
+      
+      
       
 
       .dropdown{
@@ -67,8 +84,13 @@
 .menuHamburguerAction{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  
+  background-color: rgb(221, 221, 221);
+  height:50px;
+  svg{
+    fill: none;
+  }
 
   img{
     padding-left: 10px;
@@ -80,4 +102,11 @@
   padding-right: 10px;
   }
 }
+
+
+div.HamburgerMenu > div > div > div.menuHamburguerMenu > div:nth-child(1) > div.DropDownMenu > div > ul:nth-child(1) > .DropDownMenuMenu{
+  display: none;
+}
+
+
 
