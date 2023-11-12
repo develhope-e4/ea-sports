@@ -16,6 +16,18 @@
 .compraAhora {
   position: absolute;
   left: 50%;
-  transform:translateX(-50%);
-  bottom: 25%;
+  transform: translateX(-50%);
+  bottom: 20%;
+  gap: var(--spacing-md);
+}
+
+.navbar-container {
+  height: 100px;
+}
+
+.h1 {
+  font-family: var(--font-family-ea);
+  font-size: var(--font-size-xl);
+  color: var(--color-sextary);
+  margin-bottom: -25px;
 }

@@ -102,7 +102,7 @@
 }
 
 .backgroundImage.other-images {
-  width: 160px;
+  width: 182px;
   height: 160px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,7 +138,7 @@ img.logoCardDestacada.other-images {
 
 .cardDestacada.other-images {
   background: var(--color-background-card-destacada);
-  width: 160px;
+  width: 182px;
   height: 160px;
   display: flex;
   flex-direction: column;
@@ -147,7 +147,6 @@ img.logoCardDestacada.other-images {
   justify-content: center;
 
   background-repeat: no-repeat;
-  /* Evita que la imagen de fondo se repita */
   background-size: cover;
 }
 

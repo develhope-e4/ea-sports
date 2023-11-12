@@ -5,11 +5,11 @@ import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
-import "../../components/CardDestacada/CardDestacada.scss";
-import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import TabsGames from "../../components/TabsGames/TabsGames";
 import tabGamesData from "../../data/TabGamesData.mock";
 import "../../components/TabsGames/TabsGames.scss";
+import { cardGamesData } from "../../data/CardGamesData.mock";
+import "../../components/CardDestacada/CardGames.scss";
 
 const LatestGame = () => {
 
@@ -46,15 +46,17 @@ const LatestGame = () => {
         activeTab={activeTab} />
       </Section>
       <Section>
+        <h1>Novedades</h1>
         <Container>
           <div className="CardsDestacadas">
-            {cardDestacadaData &&
-              cardDestacadaData.map((card, index) => (
+            {cardGamesData &&
+              cardGamesData.map((card, index) => (
                 <CardDestacada
                   key={index}
                   url="http://google.com"
                   backgroundImage={card.bg}
                   gameLogo={card.logo}
+                  className="bgGames"
                   showText={true}
                 />
               ))}
