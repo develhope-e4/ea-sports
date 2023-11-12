@@ -25,8 +25,8 @@
   align-content: center;
   justify-content: center;
   transition: var(--ea-transition-duration);
-  
-  
+
+
 }
 
 .cardDestacada:hover {
@@ -59,3 +59,184 @@ img.logoCardDestacada {
   display: block;
 }
 
+/* CLASSES DEL MENU */
+
+.menu {
+  position: fixed;
+  top: 10;
+  left: -100%;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  padding: 40px;
+
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+  transition: left 0.3s ease;
+
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+}
+
+.menu.open {
+  left: 0;
+  z-index: 2;
+
+
+  width: 400px;
+
+}
+
+.closeMenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0px 0px 30px 0px;
+
+  &:hover {
+    svg {
+      color: var(--color-secundary);
+      cursor: pointer;
+    }
+  }
+}
+
+.menuLink {
+  color: rgb(166, 165, 165);
+  text-decoration: none;
+  font-family: var(--font-family-ea);
+  font-weight: bold;
+  font-size: var(--font-size-l);
+
+  &:hover {
+    color: var(--color-secundary);
+    cursor: pointer;
+  }
+}
+
+
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.menu-image {
+  width: 100px;
+  height: auto;
+}
+
+.sectionMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.firstImage {
+  grid-column: span 2;
+  width: 345px;
+  height: 345px;
+}
+
+.otherImages {
+  width: 160px;
+  height: 160px;
+}
+
+.backgroundImage.firstImage {
+  width: 396px;
+  height: 345px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroundImage.otherImages {
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img.logoCardDestacada.firstImage {
+  width: 160px;
+  height: 160px;
+  transform: scale(0.8);
+  transition: transform 0.8s ease;
+}
+
+img.logoCardDestacada.otherImages {
+  width: 100px;
+  height: 100px;
+  transform: scale(0.8);
+  transition: transform 0.7s ease;
+}
+
+.cardDestacada.firstImage {
+  background: var(--color-background-card-destacada);
+  width: 396px;
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardDestacada.otherImages {
+  background: var(--color-background-card-destacada);
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+  /* Evita que la imagen de fondo se repita */
+  background-size: cover;
+}
+
+.cardDestacada.firstImages:hover {
+  background: none;
+}
+
+.cardDestacada.otherImages:hover {
+  background: none;
+}
+
+.textCardDestacada .backgroundImage.firstImage {
+  display: none;
+}
+
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+
+  display: none;
+}
+
+.menuOverlayVisible {
+  display: block;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}

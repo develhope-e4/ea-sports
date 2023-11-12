@@ -39,7 +39,7 @@ const Home = () => {
         <Container>
 
           <CardsDestacadas/>
-          
+
         </Container>
         <Boton
           esPrimario={false}

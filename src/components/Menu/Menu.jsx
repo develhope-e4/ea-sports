@@ -1,7 +1,7 @@
 import { menuCardDestacadaData } from "../../data/MenuCardDestacada.mock";
 import { MdClose } from "react-icons/md";
 import CardDestacada from "../CardDestacada/CardDestacada";
-import classes from "./Menu.module.scss";
+import classes from "../CardDestacada/CardDestacada.module.scss";
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(classes);
@@ -15,6 +15,7 @@ const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
     menuOverlay: true,
     menuOverlayVisible: menuOpen,
   });
+
 
   return (
     <>
@@ -38,8 +39,11 @@ const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
                 url="http://google.com"
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
-                className={
-                  index === 0 ? classes.firstImage : classes.otherImages
+                firstImg={
+                  index === 0 ? true : false
+                }
+                otherimg={
+                  index === 0  ? false : true
                 }
                 showText={false}
               />
