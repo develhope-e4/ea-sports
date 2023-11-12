@@ -1,5 +1,5 @@
 import "./CardDestacada.scss";
-
+import "./CardGames.scss"
 const CardDestacada = ({ backgroundImage, url, gameLogo, className, showText, text }) => {
   const cardStyle = {
     backgroundImage: `url(${backgroundImage})`,
