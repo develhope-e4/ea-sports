@@ -1,6 +1,13 @@
 import "./CardDestacada.scss";
-import "./CardGames.scss"
-const CardDestacada = ({ backgroundImage, url, gameLogo, className, showText, text }) => {
+import "./CardGames.scss";
+const CardDestacada = ({
+  backgroundImage,
+  url,
+  gameLogo,
+  className,
+  showText,
+  showTexts,
+}) => {
   const cardStyle = {
     backgroundImage: `url(${backgroundImage})`,
   };
@@ -14,7 +21,17 @@ const CardDestacada = ({ backgroundImage, url, gameLogo, className, showText, te
             alt="Imagen de la tarjeta"
             className={`logoCardDestacada ${className}`}
           />
-          {showText && <p className={`textCardDestacada ${className}`}>{text}</p>}
+         {showText && (
+            <p className={`textCardDestacada ${className}`}>
+              <a href={showText.link}>{showText.text}</a>
+            </p>
+          )}
+          {showTexts &&
+            showTexts.map((textItem, index) => (
+              <p key={index} className={`textCardDestacada ${className}`}>
+                <a className="linksbg" href={textItem.link}>{textItem.text}</a>
+              </p>
+            ))}
         </div>
       </div>
     </a>

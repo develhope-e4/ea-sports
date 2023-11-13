@@ -19,8 +19,8 @@ return (
                 url="http://google.com"
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
-                showText={true}
-                text="Sitio Oficial"
+                showText={{text:"Sitio Oficial", link:"google.com"}}
+                
               />
             ))}
 
