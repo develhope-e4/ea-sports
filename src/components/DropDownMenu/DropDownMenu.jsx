@@ -1,54 +1,53 @@
 import { useState } from "react";
-import "./DropDownMenu.scss";
+import styles from "./DropDownMenu.module.scss";
 import { FiX } from "react-icons/fi";
+
 const DropDownMenu = ({ data, data2, className }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-
-  const handleClick = () => {
-    setDropdownVisible(!isDropdownVisible);
-  };
-
   const [isDropdownVisibleSecond, setDropdownVisibleSecond] = useState(false);
 
-  const handleClickSecond = () => {
+  const toggleFirstDropdown = () => setDropdownVisible(!isDropdownVisible);
+  const toggleSecondDropdown = () =>
     setDropdownVisibleSecond(!isDropdownVisibleSecond);
-  };
 
   return (
-    <div className="DropDownMenu">
-      <div className={className}>
+    <div className={styles.DropDownMenu}>
+      <div className={`${styles[className]}`}>
         <ul>
           {data2 && className === "first" && <h3>Explorar juegos</h3>}
           {data2 && className === "second" && (
-            <div className="dropDownMenuButtonHamburguer">
-              {" "}
-              <button onClick={handleClick}>
-                Explorar juegos{" "}
-              </button> <FiX />{" "}
+            <div className={styles.dropDownMenuButtonHamburguer}>
+              <div className={styles.dropDownMenuButtonHamburguerAction}>
+                <button onClick={toggleFirstDropdown}>Explorar juegos</button>
+                <FiX />
+              </div>
+              <div className={styles.separatorsecond}></div>
             </div>
           )}
 
           {(className === "first") | (className === "second") && (
-            <div className="DropDownMenuMenu">
+            <div className={styles.DropDownMenuItems}>
               {data.map((data, index) => (
                 <div>
                   <li key={index}>
                     <a href={data.url}>{data.text}</a>
                   </li>
-                  <div className="separator"></div>
+
+                  <div className={styles.separator}></div>
                 </div>
               ))}
             </div>
           )}
 
           {className === "second" && data2 && isDropdownVisible === true && (
-            <div>
-              {data.map((data, index) => (
+            <div className={styles.SecondDropdownItems}>
+              {data2.map((data, index) => (
                 <div>
                   <li key={index}>
                     <a href={data.url}>{data.text}</a>
                   </li>
-                  <div className="separator"></div>
+
+                  <div className={styles.separator}></div>
                 </div>
               ))}
             </div>
@@ -69,10 +68,12 @@ const DropDownMenu = ({ data, data2, className }) => {
         {data2 && className === "second" && (
           <ul>
             {data2 && className === "second" && (
-              <div className="dropDownMenuButtonHamburguer">
-                {" "}
-                <button onClick={handleClickSecond}> Plataformas</button>{" "}
-                <FiX />
+              <div className={styles.dropDownMenuButtonHamburguer}>
+                <div className={styles.dropDownMenuButtonHamburguerAction}>
+                  <button onClick={toggleSecondDropdown}> Plataformas</button>
+                  <FiX />
+                </div>
+                <div className={styles.separatorsecond}></div>
               </div>
             )}
 
@@ -83,15 +84,16 @@ const DropDownMenu = ({ data, data2, className }) => {
                     <li key={index}>
                       <a href={data.url}>{data.text}</a>
                     </li>
-                    <div className="separator"></div>
+                    <div className={styles.separator}></div>
                   </div>
                 ))}
               </div>
             )}
           </ul>
         )}
-      </div>
-    </div>
+      </div>{" "}
+      {/* div principal*/}
+    </div> /* div principal*/
   );
 };
 

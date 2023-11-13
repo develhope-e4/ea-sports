@@ -1,27 +1,26 @@
-
-
-.DropDownContenetor {
+// Dropdown.module.scss
+.container {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   justify-content: center;
 
- 
+  .first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
-  .first {
+  &.first {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
-    
-    
 
+  
   
 
     &:hover {
-      svg {
+      .DropDownContenetorSvg svg {
         transform: rotateX(180deg);
         fill: var(--color-prymary);
         transition: 0.5s ease-in-out;
@@ -32,39 +31,15 @@
         transition: 0.5s ease-in-out;
       }
     }
-
-    .DropDownButton {
-      color: black;
-      border: none;
-      white-space: nowrap;
-
-      background-color: var(--color-quaternary);
-      z-index: 2;
-
-      cursor: pointer;
-
-      font-family: var(--font-family-ea);
-      font-size: var(--font-size-l);
-    }
   }
 
-
-  
-  .second {
-    
+  .second{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    align-self: center;
-    justify-content: space-between ;
-
-
-    
-    
+    justify-content: space-between;
+    margin: 10px;
 
     &:hover {
-      svg {
+      .DropDownContenetorSvg svg {
         fill: var(--color-prymary);
         transition: 0.5s ease-in-out;
       }
@@ -74,54 +49,43 @@
         transition: 0.5s ease-in-out;
       }
     }
-
-    
-  .DropDownButton {
-    font-size: var(--font-size-xl);
-    color: black;
-    display: flex;
-    flex-direction: row;
-   
-  }
-  .DropDownMenu {
-    color: gray;
+  .second {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 90%;
     align-self: center;
-    justify-content: space-between ;
+    justify-content: space-between;
 
+  
+  }}
 
-    &:hover {
-      color: red;
-    }
+  .DropDownButton {
+    border: none;
+    white-space: nowrap;
+    background-color: var(--color-quaternary);
+    z-index: 2;
+    cursor: pointer;
+    font-family: var(--font-family-ea);
+    font-size: var(--font-size-l);
+    display: flex;
   }
 
-
-}
-
+  .DropDownContenetorSvg {
+    align-self: center;
   }
-
-
-.DropDownContenetorSvg{
-  align-self: flex-start;
 }
 
-
-
-
-.DropDownContenetorFirst{
+.DropDownContenetorFirst {
   height: 100%;
   width: 100%;
 }
 
 /* Aplica estilos solo al primer .DropDownMenuMenu dentro del primer .DropDownMenu.second dentro de .DropDownContenetor.second que está dentro de .menuHamburguerMenu */
 .menuHamburguerMenu .DropDownContenetor .second:first-of-type .DropDownMenu .second .DropDownMenuMenu:first-of-type {
-  display: none
+  display: none;
 }
 
-
-.menuHamburguerAction{
+.menuHamburguerAction {
   font-size: var(--font-size-xl);
 }

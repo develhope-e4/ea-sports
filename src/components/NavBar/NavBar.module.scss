@@ -1,51 +1,57 @@
 @import '../../styles/mixins';
 
-.navbar {
+
+
+.navbarContainer {
   display: flex;
-  color: white;
+  flex-direction: column;
   width: 100%;
   background-color: white;
-}
 
 
-.nav {
-  display: flex;
-  color: white;
-  cursor: pointer;
-  align-items: center;
-  height: 60px;
-  padding-left: 0px;
-}
 
-.easvg {
-  padding: 0px 50px;
-  width: 200px;
-  height: 31px;
-}
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 0px;
+    color: black;
 
-.DropDownSectionDemo {
-  height: 100%;
-  display: flex;
-  gap: var(--spacing-sm);
-  align-items: center;
-}
+    .easvg {
+      padding: 0 50px;
+      width: 200px;
+      height: 31px;
+    }
 
-.HamburgerMenu{
-  display: none;
+    .dropDownSection {
+      height: 100%;
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+    }
+
+
+
+  }
+ 
 }
 
 
 
 
 @include respond-to('large') {
-  .DropDownSectionDemo{
-    display: none;
+
+  .nav{
+    justify-content: left
+  }
+  .dropDownSection{
+    display: none!important;
   }
 
-  .HamburgerMenu{
-    display: flex;
-  }
+
+
+ 
+
   
-
 }
 
