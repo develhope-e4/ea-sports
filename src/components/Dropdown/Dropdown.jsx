@@ -28,7 +28,7 @@ function DropDown({ title, data, data2, className }) {
     >
       <div
         className={className}
-        onClick={className === "second" ? handleClick : undefined}
+        onClick={className === classes.second ? handleClick : undefined}
       >
         <div>
           <button className="DropDownButton">{title}</button>

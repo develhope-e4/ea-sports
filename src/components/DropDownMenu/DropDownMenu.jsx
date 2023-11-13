@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./DropDownMenu.scss";
+import classes from "./DropDownMenu.module.scss";
 import { FiX } from "react-icons/fi";
 const DropDownMenu = ({ data, data2, className }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -15,12 +15,12 @@ const DropDownMenu = ({ data, data2, className }) => {
   };
 
   return (
-    <div className="DropDownMenu">
+    <div className={classes.DropDownMenu}>
       <div className={className}>
         <ul>
-          {data2 && className === "first" && <h3>Explorar juegos</h3>}
-          {data2 && className === "second" && (
-            <div className="dropDownMenuButtonHamburguer">
+          {data2 && className === classes.first && <h3>Explorar juegos</h3>}
+          {data2 && className === classes.second && (
+            <div className={classes.dropDownMenuButtonHamburguer}>
               {" "}
               <button onClick={handleClick}>
                 Explorar juegos{" "}
@@ -28,34 +28,34 @@ const DropDownMenu = ({ data, data2, className }) => {
             </div>
           )}
 
-          {(className === "first") | (className === "second") && (
-            <div className="DropDownMenuMenu">
+          {(className === classes.first) | (className === classes.second) && (
+            <div className={classes.DropDownMenuMenu}>
               {data.map((data, index) => (
                 <div>
                   <li key={index}>
                     <a href={data.url}>{data.text}</a>
                   </li>
-                  <div className="separator"></div>
+                  <div className={classes.separator}></div>
                 </div>
               ))}
             </div>
           )}
 
-          {className === "second" && data2 && isDropdownVisible === true && (
+          {className === classes.second && data2 && isDropdownVisible === true && (
             <div>
               {data.map((data, index) => (
                 <div>
                   <li key={index}>
                     <a href={data.url}>{data.text}</a>
                   </li>
-                  <div className="separator"></div>
+                  <div className={classes.separator}></div>
                 </div>
               ))}
             </div>
           )}
         </ul>
 
-        {data2 && className === "first" && (
+        {data2 && className === classes.first && (
           <ul>
             <h3>Plataformas</h3>
             {data2.map((data, index) => (
@@ -66,9 +66,9 @@ const DropDownMenu = ({ data, data2, className }) => {
           </ul>
         )}
 
-        {data2 && className === "second" && (
+        {data2 && className === classes.second && (
           <ul>
-            {data2 && className === "second" && (
+            {data2 && className === classes.second && (
               <div className="dropDownMenuButtonHamburguer">
                 {" "}
                 <button onClick={handleClickSecond}> Plataformas</button>{" "}
@@ -76,14 +76,14 @@ const DropDownMenu = ({ data, data2, className }) => {
               </div>
             )}
 
-            {className === "second" && isDropdownVisibleSecond === true && (
+            {className === classes.second && isDropdownVisibleSecond === true && (
               <div>
                 {data2.map((data, index) => (
                   <div>
                     <li key={index}>
                       <a href={data.url}>{data.text}</a>
                     </li>
-                    <div className="separator"></div>
+                    <div className={classes.separator}></div>
                   </div>
                 ))}
               </div>
