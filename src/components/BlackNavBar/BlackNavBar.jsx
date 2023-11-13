@@ -15,7 +15,11 @@ const BlackNavBar = () => {
   const handleCloseClick = () => {
     setShowSvgControll(false);
   };
-  const svgControllClass = showSvgControll ? "visible" : "hidden";
+  const svgControllClass = cx({
+    svgcontroll2: true,
+    visible: showSvgControll,
+    hidden: !showSvgControll
+  })
   useEffect(() => {
     if (showSvgControll) {
       document.body.classList.add("overflow-hidden");
