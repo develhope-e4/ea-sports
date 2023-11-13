@@ -13,10 +13,10 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route exact path="/dev" element={ <Development /> } />
-        <Route exact path="/ea-originals" element={ <Originals /> } />
+        <Route exact path="/dev" element={<Development />} />
       </Routes>
       <Footer />
+      <Route exact path="/ea-originals" element={ <Originals /> } />
     </BrowserRouter>
   );
 }

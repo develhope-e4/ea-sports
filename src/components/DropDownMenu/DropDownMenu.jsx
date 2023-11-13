@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./DropDownMenu.scss";
 import { FiX } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 const DropDownMenu = ({ data, data2, className }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -33,7 +34,7 @@ const DropDownMenu = ({ data, data2, className }) => {
               {data.map((data, index) => (
                 <div>
                   <li key={index}>
-                    <a href={data.url}>{data.text}</a>
+                    <NavLink to={data.url}>{data.text}</NavLink>
                   </li>
                   <div className="separator"></div>
                 </div>

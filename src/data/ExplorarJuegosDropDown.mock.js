@@ -20,7 +20,7 @@ export const ExplorarJuegosDropDown = [
   },
   {
     text: "EA ORIGINALS",
-    url: "https://www.as.com/",
+    url: "/ea-originals",
   },
   {
     text: "Biblioteca de juegos",
