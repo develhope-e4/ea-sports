@@ -13,7 +13,7 @@ import Container from "../../components/Container/Container";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
 
 
-const Home = () => {
+const Originals = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
   const handleTabClick = (tab) => {
