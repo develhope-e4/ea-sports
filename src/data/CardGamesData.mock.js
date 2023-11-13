@@ -1,10 +1,10 @@
 export const cardGamesData = [
   {
-    bg: "/EaCardsGames/1.jpg",
+    bg: "/EaCardsGames/1.jpeg",
     logo: "/EaCardsGames/lg1.svg",
   },
   {
-    bg: "/EaCardsGames/2.jpeg",
+    bg: "/EaCardsGames/2.jpg",
     logo: "/EaCardsGames/lg2.svg",
   },
   {

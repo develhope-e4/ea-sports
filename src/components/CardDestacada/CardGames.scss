@@ -7,8 +7,7 @@
 }
 
 .cardDestacada.bgGames {
-    
-    background: var( --color-background-card-destacada);
+    background: var(--color-background-card-destacada);
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,12 +16,13 @@
     align-content: center;
     justify-content: center;
     transition: var(--ea-transition-duration);
-    
+    transition: color 0.3s ease;
 }
-.cardDestacada.bgGames:hover{
+
+.cardDestacada.bgGames:hover {
     background: linear-gradient(
         to right,
-        rgba(53, 53, 129, 0.133), rgba(104, 104, 185, 0.458)
+        #10123fc0, #10123fc5
     );
 }
 
@@ -31,5 +31,37 @@ img.logoCardDestacada.bgGames {
     height: 50px;
     transform: translateY(0px);
     transition: var(--ea-transition-duration);
-  
-  }
+}
+
+.cardDestacada.bgGames:hover .logoCardDestacada.bgGames {
+    transform: translate3d(0, -0px, 0);
+    transition-duration: 0.5s;
+    transition-timing-function: ease; 
+}
+
+
+.cardDestacada.bgGames:hover .textCardDestacada.bgGames .linksbg {
+    display: flex;
+    transform: translate3d(0, -10px, 0);
+    transition-duration: 0.5s;
+}
+
+p.textCardDestacada.bgGames {
+    font-size: medium;
+    font-style: var(--font-style-ea);
+}
+
+.textCardDestacada.bgGames {
+    border-bottom: 3px solid white;
+    transition-duration: 0.5s; 
+}
+
+.textCardDestacada .linksbg {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.textCardDestacada .linksbg:hover {
+    transform: translateY(-5px);
+    color: red; 
+}

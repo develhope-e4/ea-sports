@@ -21,9 +21,10 @@ const LatestGame = () => {
 
   const [activeTab, setActiveTab] = useState("Novedades");
 
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-  };
+const handleTabChange = () => {
+setActiveTab(!activeTab);
+};  
+
   return (
     <BasePage>
       <LoopVideo
@@ -57,7 +58,11 @@ const LatestGame = () => {
                   backgroundImage={card.bg}
                   gameLogo={card.logo}
                   className="bgGames"
-                  showText={true}
+                  showTexts={[
+                    { text: "Sitio Oficial", link: "/ruta-del-primer-texto" },
+                    { text: "Ayuda", link: "/ruta-del-segundo-texto" },
+                    {text: "Foros", link: "/asd"}
+                  ]}
                 />
               ))}
           </div>
