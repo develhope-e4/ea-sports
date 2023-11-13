@@ -32,7 +32,7 @@ const HamburgerMenu = () => {
               src="/NavBar/ea-electronicsarts.svg"
               alt="Mi SVG"
               className="easvg"
-              onClick={""}
+              onClick={console.log("")}
             />
 
             <button onClick={toggleMenu}>
