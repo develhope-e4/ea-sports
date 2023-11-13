@@ -27,10 +27,6 @@ const BlackNavBar = () => {
       document.body.classList.remove("overflow-hidden");
     }
   }, [showSvgControll]);
-  /* const svgControllClass = cx({
-    visible: showSvgControll,
-    hidden: !showSvgControll
-  }) */
 
   return (
     <div className={classes.blackNavbar}>
