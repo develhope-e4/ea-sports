@@ -1,4 +1,5 @@
 import "./Icono.scss";
+import classNames from "classnames";
 
 /**
  *
@@ -8,8 +9,8 @@ import "./Icono.scss";
  * @returns Estructura HTML
  */
 
-const Icono = ({ esRedSocial, icono, onClick }) => {
-  const className = esRedSocial ? "redSocial" : "otro";
+const Icono = ({ esRedSocial, icono, onClick, givenClassName }) => {
+  const className = classNames(esRedSocial ? "redSocial" : "otro",givenClassName);
 
   return (
     <div onClick={onClick} className={className}>

@@ -32,22 +32,22 @@ function FooterSims4() {
                 <Icono
                   href="https://www.facebook.com/ea.es/"
                   icono={<TfiFacebook />}
-                  className={styles.iconoRS}
+                  givenClassName={"iconoRS"}
                 />
                 <Icono
                   href="https://twitter.com/EA_Espana"
                   icono={<GrTwitter />}
-                  className={styles.iconoRS}
+                  givenClassName={"iconoRS"}
                 />
                 <Icono
                   href="https://www.instagram.com/ea/"
                   icono={<BsInstagram />}
-                  className={styles.iconoRS}
+                  givenClassName={"iconoRS"}
                 />
                 <Icono
                   href="https://www.youtube.com/EAvideos"
                   icono={<ImYoutube />}
-                  className={styles.iconoRS}
+                  givenClassName={"iconoRS"}
                 />
               </div>
               <div className={styles.dropdowns}>
