@@ -4,39 +4,50 @@
   width: 100%;
 }
 
-Section .claro {
-  display: flex;
-  flex-direction: column;
+.fondoClaro {
+  width: 100%;
+  height: fit-content;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: #eaeff4;
+}
+
+.fondoOscuro {
+  width: 100%;
+  height: fit-content;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: #192537;
 }
 
 .contenido {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .subContenido1 {
   display: flex;
   flex-direction: row;
   width: 100%;
+  gap: 45%;
 }
 
 .iconosRS {
   display: flex;
   flex-direction: row;
 
-  gap: 20px;
-}
-
-.iconoRS {
-  border-radius: 10px;
-  border: 2px solid rgb(225, 225, 225);
-
-  background-color: transparent;
+  gap: 20%;
 }
 
 .dropdowns {
   display: flex;
   flex-direction: row;
+  gap: 2%;
 }
 
 .subContenido2 {
@@ -45,11 +56,9 @@ Section .claro {
 
   width: 100%;
 
-  justify-content: center;
   align-items: center;
 
-  gap: 40%;
-
+  gap: 50%;
 }
 
 .subContenido3 {
@@ -58,6 +67,7 @@ Section .claro {
 
   width: 100%;
 
+  gap: 2%;
 }
 
 .logoElectronicsArts {
@@ -66,15 +76,18 @@ Section .claro {
 
 .logoMaxis {
   width: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .logoSims4 {
   width: 120px;
 }
 
-.logoAdvertencias{
-    width: 50px;
-    height: auto;
+.logoAdvertencias {
+  width: 50px;
+  height: auto;
+  margin-left: 10px;
 }
 
 .linkTextoFooter {
@@ -86,17 +99,15 @@ Section .claro {
   }
 }
 
-.oscuro {
-  display: flex;
-  flex-direction: column;
-}
-
 .subContenido5 {
   display: flex;
   flex-direction: row;
 
-  width: 100%;
+  width: 90%;
 
+  gap: 2%;
+
+  color: white;
 }
 
 .subContenido6 {
@@ -105,6 +116,7 @@ Section .claro {
 
   width: 100%;
 
+  color: white;
 }
 
 .subContenido7 {
@@ -113,4 +125,13 @@ Section .claro {
 
   width: 100%;
 
+  gap: 70%;
+
+  color: white;
+}
+
+.barraVertical {
+  height: 100%;
+  width: 2px;
+  background-color: #000;
 }

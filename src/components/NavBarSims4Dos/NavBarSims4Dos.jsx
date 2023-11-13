@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logoSims4Color from "../../../public/NavBarSims4Dos/logoSims4Color.png";
 import styles from "./NavBarSims4Dos.module.scss";
 
@@ -6,6 +6,7 @@ const NavBarSims4Dos = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);
   const [showDropdown2, setShowDropdown2] = useState(false);
   const [showDropdown3, setShowDropdown3] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   const toggleDropdown1 = () => {
     setShowDropdown1(!showDropdown1);
@@ -19,8 +20,26 @@ const NavBarSims4Dos = () => {
     setShowDropdown3(!showDropdown3);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const threshold = 45;
+
+      setIsSticky(scrollPosition > threshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
-    <div className={styles.navBarSims4Dos}>
+    <div
+      className={`${styles.navBarSims4Dos} ${isSticky ? styles.sticky : ""}`}
+    >
       <img
         src={logoSims4Color}
         className={styles.logoSims4}

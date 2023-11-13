@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import Boton from "../Boton/Boton";
+import BotonSims4 from "../BotonSims4/BotonSims4";
 import styles from "./CardHorizontal.module.scss";
 import { cardHorizontalData } from "../../data/cardHorizontalData.mock";
 
@@ -31,9 +31,8 @@ const CardHorizontal = ({
         <h2 className={styles.titulo}>{titulo}</h2>
         <p className={styles.descripcion}>{descripcion}</p>
         </div>
-        <Boton
+        <BotonSims4
           esPrimario={cardHorizontalData.esPrimario}
-          isLight={cardHorizontalData.isLight}
           onClick={() => URL.revoke()}
           texto={textoBoton}
         />

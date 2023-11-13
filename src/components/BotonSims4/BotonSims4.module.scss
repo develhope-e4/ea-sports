@@ -1,0 +1,32 @@
+.primario,
+.secundario {
+  font-size: 17px;
+  line-height: 20px;
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  width: fit-content;
+  padding: 14px;
+
+
+  &:disabled {
+    background-color: gray;
+    color: gray;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.primario {
+  color: white;
+  background-color: black;
+}
+
+.secundario {
+  color: black;
+  background-color: white;
+}
