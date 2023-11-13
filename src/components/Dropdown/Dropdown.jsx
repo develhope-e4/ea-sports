@@ -24,6 +24,16 @@ function DropDown({ title, data, data2, className }) {
 
 
 
+
+  
+
+  const containerClassNames = `${styles.container} ${styles[className]}`;
+
+  const buttonClassNames = `${styles.DropDownButton} ${className === "first" ? styles.firstButton : ""}`;
+
+
+
+
   
 
   const containerClassNames = `${styles.container} ${styles[className]}`;

@@ -54,7 +54,7 @@ const DropDownMenu = ({ data, data2, className }) => {
           )}
         </ul>
 
-        {data2 && className === "first" && (
+        {data2 && className === classes.first && (
           <ul>
             <h3>Plataformas</h3>
             {data2.map((data, index) => (
@@ -65,7 +65,7 @@ const DropDownMenu = ({ data, data2, className }) => {
           </ul>
         )}
 
-        {data2 && className === "second" && (
+        {data2 && className === classes.second && (
           <ul>
             {data2 && className === "second" && (
               <div className={styles.dropDownMenuButtonHamburguer}>
@@ -77,7 +77,7 @@ const DropDownMenu = ({ data, data2, className }) => {
               </div>
             )}
 
-            {className === "second" && isDropdownVisibleSecond === true && (
+            {className === classes.second && isDropdownVisibleSecond === true && (
               <div>
                 {data2.map((data, index) => (
                   <div>

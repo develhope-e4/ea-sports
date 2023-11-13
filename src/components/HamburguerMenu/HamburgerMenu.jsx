@@ -17,6 +17,7 @@ const HamburgerMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+
   return (
     <div className={styles.menuContainer}>
       <button onClick={toggleMenu} className={styles.menuButton}>
