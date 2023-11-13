@@ -14,7 +14,6 @@ return (
                 backgroundImage={card.bg}
                 gameLogo={card.logo}
                 showText={{text:"Sitio Oficial", link:"google.com"}}
-
               />
             ))}
 
