@@ -31,7 +31,7 @@ const HamburgerMenu = () => {
             <img
               src="/NavBar/ea-electronicsarts.svg"
               alt="Mi SVG"
-              className="easvg"
+              className={styles.easvg}
               onClick={console.log("")}
             />
 
@@ -40,13 +40,13 @@ const HamburgerMenu = () => {
             </button>
           </div>
 
-          
+
             <div className={styles.menuContent}>
               <DropDown
                 data={ExplorarJuegosDropDown}
                 title={ExplorarJuegosDropDown[0].tittle}
                 data2={PlataformasDropDown}
-                className={"second"}
+                className="second"
               />
               <div className={styles.separator}></div>
               <DropDown
