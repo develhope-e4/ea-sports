@@ -1,10 +1,10 @@
-import "./BgVideo.module.scss";
+import classes from "./BgVideo.module.scss";
 import videoFile from "../../assets/Originals Page/orignalsPageVideoXL.mp4";
 
 const BgVideo = ({
   videoSrc = videoFile,
   alt,
-  className = "originalsVideoContainer",
+  className = classes.originalsVideoContainer,
 }) => {
   return (
     <div className={className}>

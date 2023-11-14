@@ -1,6 +1,4 @@
 import LoopVideo from "../../components/LoopVideo/LoopVideo";
-import CardDestacada from "../../components/CardDestacada/CardDestacada";
-import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Tabs from "../../components/Tabs/Tabs";
 import cardData from "../../data/CardData.mock";
 import { useState } from "react";
