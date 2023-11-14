@@ -64,6 +64,7 @@ function FooterSims4() {
                 </div>
               </div>
             </div>
+            <div className={styles.barraHorizontal}></div>
             <div className={styles.subContenido2}>
               <div className={styles.logosFooter}>
                 <img
@@ -100,6 +101,7 @@ function FooterSims4() {
                 />
               </div>
             </div>
+            <div className={styles.barraHorizontal}></div>
             <div className={styles.subContenido3}>
               <p className={styles.linkTextoFooter}>Inicio</p>
               <div className={styles.barraVertical}></div>
@@ -113,6 +115,7 @@ function FooterSims4() {
               <div className={styles.barraVertical}></div>
               <p className={styles.linkTextoFooter}>Biblioteca de juegos</p>
             </div>
+            <div className={styles.barraHorizontal}></div>
             <div className={styles.subContenido4}>
               *El contenido adicional requiere una compra independiente y todas
               las actualizaciones del juego básico. Es posible que se necesite

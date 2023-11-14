@@ -15,10 +15,11 @@ const Message = () => {
           <div className={styles.colorAzul}></div>
           ¡Ya puedes reservar Los Sims™ 4 Se Alquila Pack de Expansión!
           <div className={styles.flecha}>{">"}</div>
+          <div className={styles.barraMensaje}></div>
+          <button className={styles.cerrar} onClick={cerrarMensaje}>
+            X
+          </button>
         </div>
-        <button className={styles.cerrar} onClick={cerrarMensaje}>
-          X
-        </button>
       </div>
     )
   );

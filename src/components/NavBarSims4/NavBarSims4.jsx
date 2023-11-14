@@ -45,6 +45,7 @@ const NavbarSims4 = () => {
 
 
   return (
+    <div className={`${styles.navBarWrapper}`}>
     <div className={`${styles.navBarSims4} ${isSticky ? styles.sticky : ""}`}>
       <div className={styles.empresa}>Electronic Arts</div>
       <div className={styles.dropdowns}>
@@ -126,6 +127,7 @@ const NavbarSims4 = () => {
         </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

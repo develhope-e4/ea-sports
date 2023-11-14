@@ -6,14 +6,12 @@
   left: 50%;
   transform: translateX(-50%);
 
-  height: 45px;
-
+  height: 70px;
 }
 
 .colorAzul {
-  width: 10px;
-  height: 45px;
-  margin-left: 0px;
+  width: 15px;
+  height: 70px;
 
   background-color: blue;
 }
@@ -23,10 +21,10 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-color: #fff4f5;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  
+  background-color: #ffffff;
+  border: 1px solid rgb(168, 168, 168);
+  border-radius: 7px;
+
   gap: 30px;
 
   cursor: pointer;
@@ -37,23 +35,29 @@
   }
 }
 
+.barraMensaje{
+  height: 30px;
+  width: 0.3px;
+
+  background-color: rgb(168, 168, 168);
+}
+
 .flecha {
   font-weight: 900;
   size-adjust: 10px;
 }
 
 .cerrar {
-  margin-left: 10px;
   cursor: pointer;
-
   border: none;
-  background-color: transparent ;
-
+  background-color: transparent;
   font-size: medium;
-
-  text-decoration: none;
 
   &:hover {
     background-color: rgb(226, 226, 226);
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
   }
 }
