@@ -9,7 +9,7 @@ import TabsGames from "../../components/TabsGames/TabsGames";
 import tabGamesData from "../../data/TabGamesData.mock";
 import "../../components/TabsGames/TabsGames.scss";
 import { cardGamesData } from "../../data/CardGamesData.mock";
-import "../../components/CardDestacada/CardGames.scss";
+import "../../components/CardDestacada/CardGames.modules.scss";
 
 const LatestGame = () => {
 
