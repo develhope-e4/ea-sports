@@ -2,7 +2,7 @@ export const ExplorarJuegosDropDown = [
   {
     tittle:"Juegos",
     text: "Ultimos juegos",
-    url: "https://www.google.com/",
+    url: "/games",
   },
 
   {
