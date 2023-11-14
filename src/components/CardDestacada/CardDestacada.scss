@@ -2,7 +2,7 @@
   color: var(--text-color);
   text-decoration: none;
   font-size: var(--font-size-xl);
-  font-style: var(--font-style-ea);
+ 
   margin-right: 0px;
   width: 355px;
   height: 355px;
@@ -29,6 +29,7 @@
   
 }
 
+
 .cardDestacada:hover {
   background: linear-gradient(
     to right,
@@ -47,15 +48,31 @@ img.logoCardDestacada {
 }
 
 .cardDestacada:hover .logoCardDestacada {
-  transform: translateY(-20px);
+  transform: translate3d(0,-40px,0);
 }
 
 .textCardDestacada {
   display: none;
+  
   transition: var(--ea-transition-duration);
 }
 
 .cardDestacada:hover .textCardDestacada {
   display: block;
+  
 }
 
+.CardsDestacadas{
+
+  margin: auto;
+padding: var(--padding-vert-container) 0;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+
+
+}
+.textCardDestacada a{
+  color: white;
+}

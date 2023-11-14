@@ -1,0 +1,30 @@
+.primary {
+    padding: var(--spacing-sm);
+
+    font-size: 16px;
+
+    border: solid 2px #161616;
+    border-radius: var(--border-radius-sm);
+
+    background-color: transparent;
+
+    &:hover {
+        padding: 25px;
+    }
+}
+
+.secundary {
+    padding: var(--spacing-sm);
+
+    font-size: 16px;
+
+    border: none;
+    border-radius: var(--border-radius-sm);
+
+    background-color: #a38d5e;
+    color: #3d372a;
+
+    &:hover {
+        padding: 25px;
+    }
+}

@@ -7,12 +7,10 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
-
 }
 
 .container {
   position: relative;
-
   display: inline-block;
 }
 
@@ -20,7 +18,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 25%;
+  bottom: 20%;
   gap: var(--spacing-md);
 }
 
@@ -28,9 +26,9 @@
   height: 100px;
 }
 
-.h1 {
+h1 {
   font-family: var(--font-family-ea);
-  font-size: var(--font-size-xl);
+  font-size: var(--h3-tittle-font-size-xxl);
   color: var(--color-sextary);
   margin-bottom: -25px;
 }

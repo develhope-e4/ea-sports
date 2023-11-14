@@ -40,87 +40,95 @@
 }
 
 .linkTextoFooterGris {
-    width: 100%;
-    margin-top: 45px;
-    height: 20px;
-    font-size: var(--font-size-m);
-    font-style: var(--font-style-ea);
+  font-size: var(--font-size-m);
+  font-style: var(--font-style-ea);
+
+  display: flex;
+  gap: var(--spacing-md);
+  align-self: center;
 }
 
 a {
-    text-decoration: none;
-    margin-right: 50px;
-    font-style: var(--font-family-ea);
-    color: var(--color-sextary);
+  text-decoration: none;
+  font-style: var(--font-family-ea);
+  color: var(--color-sextary);
 }
 
-.comunicarInquietudes{
-    margin-right: none;
+.comunicarInquietudes {
+  margin-right: none;
 }
 
 .linkTextoNegritaFooter {
-    font-weight: var(--font-weith-l);
-    font-size: var(--font-size-l);
-    margin-top: 45px;
-    text-decoration: none;
-    grid-column: 2 / 2;
+  display: flex;
+  flex-direction: column;
+  font-weight: var(--font-weith-l);
+  font-size: var(--font-size-l);
 }
 
 .linkTextoNegritaFooterTexto {
-    margin-right: -20px;
+  width: 100%;
+  text-align: end;
+  font-size: var(--font-size-s);
+  font-family: var(--font-family-ea);
+}
+
+.izquierda {
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
 }
 
 .latIzq {
-    height: 65px;
-    width: auto;
-    margin-left: 25px;
-    margin-top: 25px;
-    grid-area: primero;
+  height: 65px;
+  width: auto;
 }
 
-.supIzq {
-    margin-top: 25px;
-    grid-area: segundo;
-    font-size: var(--font-size-l);
-    font-style: var(--font-style-ea);
-    text-align: left;
-    line-height: 3;
+.centro {
+  display: flex;
+  flex-direction: column;
 }
 
-.infIzq {
-    height: 100px;
-    grid-area: cuarto;
-    text-align: left;
-    line-height: 2;
+.arribaCentro {
+  font-size: var(--font-size-l);
+  font-style: var(--font-style-ea);
+  line-height: 3;
 }
 
-.supDer {
-    display: flex;
-    height: 85px;
-    width: 100%;
-    grid-area: tercero;
-    margin-top: 25px;
-    margin-left: -90px;
+.arribaCentro a {
+  margin-right: 40px;
 }
 
-.infDer {
-    height: 50px;
-    width: 25%;
-    margin: 10px;
-    grid-area: quinto;
-    margin-top: 90px;
-    margin-left: 140px;
+.abajoCentro {
+  text-align: left;
+  line-height: 2;
 }
 
-.infIzq a{
-    margin-right: 45px;
+.abajoCentro a {
+  margin-right: 25px;
+}
+
+.derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arribaDer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.abajoDer img {
+  width: 200px;
+  margin-left: 290px;
 }
 
 .iconosRS {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    margin-top: 15px;
-    margin-right: 130px;
-    margin-left: -30px;
+  display: flex;
+  margin-top: 15px;
+}
+
+.iconosRS svg {
+  margin-right: 10px;
 }
