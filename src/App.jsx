@@ -10,13 +10,11 @@ import Originals from "./pages/originals/Originals";
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route exact path="/dev" element={<Development />} />
+        <Route exact path="/ea-originals" element={<Originals />} />
       </Routes>
-      <Footer />
-      <Route exact path="/ea-originals" element={ <Originals /> } />
     </BrowserRouter>
   );
 }

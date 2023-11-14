@@ -11,6 +11,8 @@ import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
+import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 
 
 const Home = () => {
@@ -32,6 +34,7 @@ const Home = () => {
 
   return (
     <BasePage>
+      <NavBar />
       <div className="container">
         <LoopVideo />
       </div>
@@ -40,7 +43,7 @@ const Home = () => {
         <Container>
 
           <CardsDestacadas/>
-          
+
 
         </Container>
         <Boton
@@ -89,6 +92,7 @@ const Home = () => {
         <Container>Segunda</Container>
       </Section>
       <Subscription />
+      <Footer/>
     </BasePage>
   );
 };

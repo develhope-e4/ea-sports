@@ -14,6 +14,7 @@ import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Subscription from "../../components/Subscription/Subscription";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import HamburgerMenu from "../../components/HamburguerMenu/HamburgerMenu";
+import NavBar from "../../components/NavBar/NavBar";
 
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -34,6 +35,7 @@ const Development = () => {
 
   return (
     <div className="App">
+      <NavBar />
       <div className="flex-col-center">
         <HamburgerMenu/>
         <div className="section">
@@ -109,6 +111,7 @@ const Development = () => {
           <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
