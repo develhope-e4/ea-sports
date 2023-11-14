@@ -1,4 +1,3 @@
- 
 import { menuCardDestacadaData } from "../../data/MenuCardDestacada.mock";
 import { MdClose } from "react-icons/md";
 import CardDestacada from "../CardDestacada/CardDestacada";

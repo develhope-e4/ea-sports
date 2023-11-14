@@ -13,6 +13,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Subscription from "../../components/Subscription/Subscription";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import HamburgerMenu from "../../components/HamburguerMenu/HamburgerMenu";
 
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -34,6 +35,7 @@ const Development = () => {
   return (
     <div className="App">
       <div className="flex-col-center">
+        <HamburgerMenu/>
         <div className="section">
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
