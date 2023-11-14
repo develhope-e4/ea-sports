@@ -3,7 +3,7 @@ import "./Dropdown.scss";
 import DropDownMenu from "../DropDownMenu/DropDownMenu";
 import { GoChevronDown } from "react-icons/go";
 
-function DropDown({ title, data, data2 }) {
+function DropDown({ title, data, data2, className }) {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const handleMouseEnter = () => {
@@ -14,15 +14,33 @@ function DropDown({ title, data, data2 }) {
     setDropdownVisible(false);
   };
 
+  const handleClick = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+
   return (
     <div
-      className="dropdown"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className={`DropDownContenetor ${
+        className === "first" && "DropDownContenetorFirst"
+      }`}
+      onMouseEnter={className === "first" ? handleMouseEnter : undefined}
+      onMouseLeave={className === "first" ? handleMouseLeave : undefined}
     >
-      <button className="DropDownButton">{title}</button>
-      {isDropdownVisible && <DropDownMenu data={data} data2={data2} />}
-      <GoChevronDown />
+      <div
+        className={className}
+        onClick={className === "second" ? handleClick : undefined}
+      >
+        <div>
+          <button className="DropDownButton">{title}</button>
+        </div>
+        <div className="DropDownContenetorSvg">
+          <GoChevronDown />
+        </div>
+      </div>
+
+      {isDropdownVisible && (
+        <DropDownMenu data={data} data2={data2} className={className} />
+      )}
     </div>
   );
 }

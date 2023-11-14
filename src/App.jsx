@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import Information from "./pages/information/Information";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import LatestGame from "./pages/Latest-Game/LatestGame";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route exact path="/dev" element={<Development />} />
         <Route exact path="/info" element={<Information />} />
+        <Route exact path="/games" element={<LatestGame />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,21 +1,24 @@
+import { useState } from "react";
+import BasePage from "../../components/BasePage/BasePage";
+import Container from "../../components/Container/Container";
+import Section from "../../components/Section/Section";
 import LoopVideo from "../../components/LoopVideo/LoopVideo";
-import CardDestacada from "../../components/CardDestacada/CardDestacada";
-import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
+import Cards from "../../components/Cards/Cards";
 import Tabs from "../../components/Tabs/Tabs";
 import cardData from "../../data/CardData.mock";
-import { useState } from "react";
-import Cards from "../../components/Cards/Cards";
 import Boton from "../../components/Boton/Boton";
 import Subscription from "../../components/Subscription/Subscription";
-import BasePage from "../../components/BasePage/BasePage";
-import Section from "../../components/Section/Section";
-import Container from "../../components/Container/Container";
+import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
+
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+  };
+  const handleButtonClick = () => {
+    console.log("Click en el botón dorado");
   };
 
   const tabNames = {
@@ -30,21 +33,25 @@ const Home = () => {
 
   return (
     <BasePage>
-      <div className="container">
-        <LoopVideo />
-      </div>
+        <LoopVideo
+          videoSrc="./immortals.mp4"
+          imagenSrc="./Immorlas-Logo.svg"
+          buttonText="Comprar ahora"
+          onButtonClick={handleButtonClick}
+          isPrimary={true}
+          isLight={false}
+          customClass=""
+          customImageClass=""
+          showBuyButton={true}
+        />
       <Section>
         <h1>Juegos destacados</h1>
         <Container>
-          {cardDestacadaData &&
-            cardDestacadaData.map((card) => (
-              <CardDestacada
-                url="http://google.com"
-                backgroundImage={card.bg}
-                gameLogo={card.logo}
-                showText={true}
-              />
-            ))}
+
+          <CardsDestacadas />
+
+
+
         </Container>
         <Boton
           esPrimario={false}
@@ -86,10 +93,6 @@ const Home = () => {
           onClick={() => console.log("click en el boton negro")}
           texto={"Leer mas"}
         />
-      </Section>
-      <Section>
-        <Container>primer parte</Container>
-        <Container>Segunda</Container>
       </Section>
       <Subscription />
     </BasePage>
