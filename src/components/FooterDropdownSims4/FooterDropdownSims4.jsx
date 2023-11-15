@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import styles from"./FooterDropdownSims4.module.scss";
+import styles from "./FooterDropdownSims4.module.scss";
 import Icono from "../Icono/Icono";
-import { HiOutlineChevronUp, HiOutlineChevronDown } from "react-icons/hi";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const FooterDropdown = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(items[0] || null); 
+  const [selectedItem, setSelectedItem] = useState(items[0] || null);
 
   const clickHandler = () => {
     setIsOpen(!isOpen);
@@ -39,12 +39,15 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
 
   useEffect(() => {
     if (isOpen) {
-      dropdownListRef.current.querySelector("a").focus();
+      const firstAnchor = dropdownListRef.current.querySelector("button");
+      if (firstAnchor) {
+        firstAnchor.focus();
+      }
       document.addEventListener("mousedown", clickOutsideHandler);
     } else {
-      document.removeEventListener("mousedown", clickOutsideHandler); // Remueve el evento cuando se cierra el dropdown
+      document.removeEventListener("mousedown", clickOutsideHandler);
     }
-  }, [isOpen]);
+  }, [isOpen]);  
 
   console.log(items);
   return (
@@ -64,9 +67,9 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
         )}
         <div className={styles.flechaFooter}>
           {isOpen ? (
-            <Icono icono={<HiOutlineChevronUp />} />
+            <Icono icono={<IoIosArrowUp />} />
           ) : (
-            <Icono icono={<HiOutlineChevronDown />} />
+            <Icono icono={<IoIosArrowDown />} />
           )}
         </div>
       </button>
@@ -77,8 +80,12 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
         {items.map((item, index) => {
           return (
             <li className={styles.item_list} key={index}>
-              {item.flag && <img src={item.flag} className={styles.flag} />}
-              <a onClick={() => handleItemClick(item)}>{item.anchor}</a>
+              <button
+                onClick={() => handleItemClick(item)}
+                className={styles.link_button}
+              >
+                {item.anchor}
+              </button>{" "}
             </li>
           );
         })}

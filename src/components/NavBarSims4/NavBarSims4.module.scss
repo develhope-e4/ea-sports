@@ -8,13 +8,15 @@
   justify-content: center;
   gap: 75%;
   z-index: 10;
+
+  margin-bottom: 50px;
 }
 
 .navBarWrapper {
   position: relative;
 }
 
-.empresa{
+.empresa {
   color: aliceblue;
 }
 
@@ -25,10 +27,67 @@ ul li {
 .dropdowns {
   display: flex;
   flex-direction: row;
+
   gap: 30px;
 }
 
-.textoBoton{
+.dropdownOptions {
+  background-color: #192537;
+
+  padding: 20px;
+
+  width: 200px;
+  height: fit-content;
+
+  position: absolute;
+  top: 40px;
+  right: 140px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  li {
+    color: aliceblue;
+    padding: 15px;
+
+    &:hover {
+      background-color: #283c52;
+      border: 1px solid white;
+      border-radius: 10px;
+    }
+  }
+}
+
+.dropdownOptionsBlanco {
+  background-color: #ffffff;
+
+  padding: 20px;
+
+  width: 200px;
+  height: fit-content;
+
+  position: absolute;
+  top: 50px;
+  right: 140px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  li {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+
+    &:hover {
+      background-color: #e4e4e4;
+      border: 0px solid rgb(0, 0, 0);
+      border-radius: 10px;
+    }
+  }
+}
+
+.textoBoton {
   background-color: transparent;
   border: none;
   color: azure;
@@ -37,19 +96,23 @@ ul li {
 .navBarSims4Dos {
   display: flex;
   flex-direction: row;
+
   position: fixed;
-  top: 45px; 
+  top: 45px;
   width: 100%;
   height: 60px;
   gap: 100px;
+
   border: 1px solid rgb(233, 233, 233);
   background-color: white;
   opacity: 90%;
+
   align-items: center;
   justify-content: center;
+
   font-size: medium;
+
   font-weight: 400;
-  z-index: 5;
 }
 
 .sticky {
@@ -57,7 +120,7 @@ ul li {
   top: 0;
   width: 100%;
   z-index: 1000;
-  opacity: 100%; 
+  opacity: 100%;
 }
 
 .estilosNavBarSims4Dos {
@@ -92,11 +155,11 @@ ul li {
 }
 
 .navBarSims4 .textoBoton {
-  color: azure; 
+  color: azure;
 }
 
 .navBarSims4Dos .textoBoton {
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
 }
 
 .textoBotonAzul {
@@ -108,4 +171,16 @@ ul li {
   border-radius: 8px;
   font-size: medium;
   font-weight: 400;
+}
+
+.flechaNavBarSims4Dos {
+  margin-left: 80px;
+  margin-top: -20px;
+}
+
+.flechaNavBarSims4DosJ{
+  margin-left: 130px;
+  margin-top: -20px;
+
+  color: #ffffff;
 }

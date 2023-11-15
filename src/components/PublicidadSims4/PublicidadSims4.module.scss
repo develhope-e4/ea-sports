@@ -1,19 +1,16 @@
 .mensajeContenedor {
   display: flex;
   flex-direction: row;
-  position: fixed;
-  top: 25%;
-  left: 50%;
+
+  position: relative;
+  top: 110px;
+  left: 80%;
+
   transform: translateX(-50%);
 
   height: 70px;
-}
 
-.colorAzul {
-  width: 15px;
-  height: 70px;
-
-  background-color: blue;
+  margin-bottom: 100px;
 }
 
 .mensaje {
@@ -22,8 +19,10 @@
   justify-content: center;
   padding: 10px;
   background-color: #ffffff;
+
   border: 1px solid rgb(168, 168, 168);
   border-radius: 7px;
+  border-left: 15px solid blue;
 
   gap: 30px;
 
@@ -52,6 +51,7 @@
   border: none;
   background-color: transparent;
   font-size: medium;
+  margin-right: 20px;
 
   &:hover {
     background-color: rgb(226, 226, 226);

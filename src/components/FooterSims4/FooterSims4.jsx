@@ -164,29 +164,40 @@ function FooterSims4() {
           <Container className={styles.contenido}>
             <div className={styles.subContenido5}>
               <p className={styles.linkTextoFooter}>Ayuda</p>
-              <div className={styles.barraVertical}></div>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>Información legal</p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>Acuerdo de usuario</p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>
-                política de privacidad y directiva de cookies
+                Política de privacidad y directiva de cookies
               </p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>Condiciones de venta</p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>
                 Sus preferencias de cookies
               </p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>Garantía de Gran Juego</p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>Información corporativa</p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>
                 Términos del Servivio de Youtube
               </p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>
                 Política de Privacidad de Google
               </p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>
                 Actualizaciones del servicio online
               </p>
+              <div className={styles.barraVerticalBlanca}></div>
               <p className={styles.linkTextoFooter}>Seguridad</p>
             </div>
+            <div className={styles.barraHorizontalBlanca}></div>
             <div className={styles.subContenido6}>
               <p>
                 Vendedor: EA Swiss Sàrl, Place du Molard 8, 1204, Ginebra, Suiza
@@ -199,6 +210,7 @@ function FooterSims4() {
                 Condiciones de venta para más detalles.
               </p>
             </div>
+            <div className={styles.barraHorizontalBlanca}></div>
             <div className={styles.subContenido7}>
               <p>&copy; 2023 Electronic Arts Inc.</p>
               <img src={TRUSTe} alt="Truste Logo" />
