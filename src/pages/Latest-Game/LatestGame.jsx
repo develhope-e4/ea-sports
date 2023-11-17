@@ -1,15 +1,15 @@
-import LoopVideo from "../../components/LoopVideo/LoopVideo";
 import { useState } from "react";
-import Boton from "../../components/Boton/Boton";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
+import LoopVideo from "../../components/LoopVideo/LoopVideo";
+import Boton from "../../components/Boton/Boton";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import TabsGames from "../../components/TabsGames/TabsGames";
 import tabGamesData from "../../data/TabGamesData.mock";
 import "../../components/TabsGames/TabsGames.scss";
-import { cardGamesData } from "../../data/CardGamesData.mock";
 import "../../components/CardDestacada/CardGames.modules.scss";
+import { cardGamesData } from "../../data/CardGamesData.mock";
 
 const LatestGame = () => {
 
