@@ -80,7 +80,7 @@ const BlackNavBar = () => {
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconsignin.svg"
             text={"Iniciar sesión"}
-            url="https://google.com"
+            url="/login"
           />
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconregister.svg"
