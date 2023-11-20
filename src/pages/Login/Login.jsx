@@ -1,7 +1,9 @@
-import SingInForm from "../../components/SingInForm/SingInForm";
+import SignInForm from "../../components/SignInForm/SignInForm";
 
 const Login = () => {
-  return <SingInForm />;
+  return (
+  <SignInForm />
+  );
 };
 
 export default Login;

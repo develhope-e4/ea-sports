@@ -1,0 +1,109 @@
+body {
+  font-family: var(--font-family-ea);
+}
+.full-page {
+  background-color: #1d2033;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p,
+  a,
+  h2 {
+    color: white;
+  }
+
+  button {
+    border-radius: 10px;
+    width: 420px;
+    height: 50px;
+    font-family: var(--font-family-ea);
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover{
+      transform: scale(0.95);
+      box-shadow: 0px 0px 15px 15px rgba(31, 85, 202, 0.139)
+    }
+  }
+}
+
+.form-input {
+  background: #141724;
+  color: white;
+}
+
+.form-sign {
+  display: flex;
+  flex-direction: column;
+  input {
+    border: 2px solid #62616c;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    padding: 0px 10px 0px 10px;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+
+    &:hover {
+      box-shadow: 0px 0px 15px 15px #00000024;
+      border: 2px solid #8d8d98;
+    }
+  }
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.button-signIn {
+  background: #1f55ca;
+  color: white;
+  border: 1px solid transparent;
+}
+.button-Crear {
+  background: #141724;
+  border: 2px solid #1f55ca;
+}
+
+.remember-check {
+  width: 423px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  color: white;
+  gap: 10px;
+}
+.label-remember {
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+
+.form-links {
+  display: flex;
+  width: 423px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0px 15px 0px;
+  a {
+    color: #5089F1;
+  }
+}
+input#remember-me{
+  width: 26px;
+  height: 26px;
+}
