@@ -5,7 +5,6 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(classes);
 
-
 const BlackNavBar = () => {
   const [showSvgControll, setShowSvgControll] = useState(false);
 
@@ -15,11 +14,7 @@ const BlackNavBar = () => {
   const handleCloseClick = () => {
     setShowSvgControll(false);
   };
-  const svgControllClass = cx({
-    svgcontroll2: true,
-    visible: showSvgControll,
-    hidden: !showSvgControll
-  })
+  const svgControllClass = showSvgControll ? "visible" : "hidden";
   useEffect(() => {
     if (showSvgControll) {
       document.body.classList.add("overflow-hidden");
@@ -27,6 +22,13 @@ const BlackNavBar = () => {
       document.body.classList.remove("overflow-hidden");
     }
   }, [showSvgControll]);
+
+  /* const svg = cx({
+    svg: true,
+    svg1: show,
+    svg2: svg,
+    svg3: svg,
+  }) */
 
   return (
     <div className={classes.blackNavbar}>
@@ -83,8 +85,8 @@ const BlackNavBar = () => {
           </g>
         </svg>
       </div>
-      { showSvgControll && (
-        <div className={ svgControllClass}>
+      {showSvgControll && (
+        <div className={`svgcontroll2 ${svgControllClass}`}>
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconsignin.svg"
             text={"Iniciar sesión"}
