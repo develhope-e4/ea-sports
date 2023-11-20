@@ -1,5 +1,9 @@
 
 import styles from "./CardGames.module.scss";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind(styles);
+
 const CardDestacada = ({
   backgroundImage,
   url,
@@ -7,6 +11,8 @@ const CardDestacada = ({
   className,
   showText,
   showTexts,
+  firstImg,
+  otherimg,
   games
 }) => {
   const cardStyle = {
