@@ -4,12 +4,15 @@
   margin-bottom: 60px;
 }
 
-.image-container {
+.imageContainer {
+  .cardImage {
+    width: 580px;
+  }
   width: 600px;
   height: 22rem;
 }
 
-.card-content {
+.cardContent {
   h4 {
     font-size: 24px;
     margin: 0;

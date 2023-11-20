@@ -6,14 +6,14 @@ const HorizontalCard = ({ imagenSrc, aText, pText, h4Text, isReverse }) => {
     
   return (
     <div className="HorizontalCard" style={{flexDirection:isReverse ? "row-reverse":"row"}}>
-      <div className="image-container">
+      <div className="imageContainer">
         <img
           src={imagenSrc}
           alt="Imagen de la tarjeta"
-          className="card-image"
+          className="cardImage"
         />
       </div>
-      <div className="card-content">
+      <div className="cardContent">
         {h4Text && <h4>{h4Text}</h4>}
         {aText && <a>{aText}</a>}
         {pText && <p>{pText}</p>}
