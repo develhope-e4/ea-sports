@@ -7,9 +7,9 @@ import Container from "../../components/Container/Container";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import TabsGames from "../../components/TabsGames/TabsGames";
 import tabGamesData from "../../data/TabGamesData.mock";
-import "../../components/TabsGames/TabsGames.scss";
+import classes from "../../components/TabsGames/TabsGames.module.scss";
 import { cardGamesData } from "../../data/CardGamesData.mock";
-import "../../components/CardDestacada/CardGames.modules.scss";
+import styles from "../../components/CardDestacada/CardGames.module.scss";
 
 const LatestGame = () => {
 
