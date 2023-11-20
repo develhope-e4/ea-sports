@@ -1,8 +1,9 @@
 
-import styles from "./CardGames.module.scss";
+/* import styles from "./CardGames.module.scss"; */
+import classes from "./CardDestacada.module.scss"
 import classNames from "classnames/bind";
 
-const cx = classNames.bind(styles);
+const cx = classNames.bind(classes);
 
 const CardDestacada = ({
   backgroundImage,
@@ -22,25 +23,29 @@ const CardDestacada = ({
   const link = cx({
     linkCardDestacada : true,
     firstImage: firstImg,
-    otherImages: otherimg
+    otherImages: otherimg,
+    bgGames: games
   })
 
   const background = cx({
     backgroundImage : true,
     firstImage: firstImg,
-    otherImages: otherimg
+    otherImages: otherimg,
+    bgGames: games
   })
 
   const card = cx({
     cardDestacada : true,
     firstImage: firstImg,
-    otherImages: otherimg
+    otherImages: otherimg,
+    bgGames: games
   })
 
   const logo = cx({
     logoCardDestacada: true,
     firstImage: firstImg,
-    otherImages: otherimg
+    otherImages: otherimg,
+    bgGames: games
   })
 
   const text = cx({
