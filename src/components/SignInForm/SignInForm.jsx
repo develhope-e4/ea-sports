@@ -1,38 +1,37 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./SignInForm.scss";
+import styles from "./SignInForm.module.scss";
 import SignInFormInput from "../SignInFormInput/SignInFormInput";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignInForm = () => {
   const [error, setError] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario o realizar acciones
     console.log("Email:", email);
     console.log("Password:", password);
   };
 
   useEffect(() => {
-    // Aquí puedes agregar lógica asíncrona si es necesario
-    // try {
-    //   // Operaciones asíncronas
-    // } catch (error) {
-    //   setError(error.message);
-    // }
-  }, []); // Dependencias vacías para que se ejecute solo una vez al montar el componente
+
+  }, []);
 
   if (error) {
     return <p>Error: {error}</p>;
   }
 
   return (
-    <div className="full-page">
-      <div className="signin">
-        <h2>Inicio Sesión en tu Cuenta EA</h2>
-        <form className="form-sign" onSubmit={handleFormSubmit}>
+    <div className={styles.fullPage}>
+      <div className={styles.imgEA}>
+        <img alt="Descripción de la imagen" src="Login-Img/EALogo-New.svg" ></img>
+      </div>
+      <div className={styles.signin}>
+        <h2>Inicia sesión en tu Cuenta EA</h2>
+        <form className={styles.formsign} onSubmit={handleFormSubmit}>
           <SignInFormInput
             label="TELÉFONO O CORREO ELECTRÓNICO"
             type="text"
@@ -41,27 +40,35 @@ const SignInForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <SignInFormInput
-            label="CONTRASEÑA"
-            type="password"
-            placeholder="Introduce tu contraseña"
-            id="passwordForm"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <div className={styles.passwordinputcontainer}>
+            <SignInFormInput
+              label="CONTRASEÑA"
+              type={showPassword ? "text" : "password"}
+              placeholder="Introduce tu contraseña"
+              id="passwordForm"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <div
+              className={styles.passwordtoggle}
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ?  <FaEyeSlash /> : <FaEye />}
+            </div>
+          </div>
         </form>
-        <div className="remember-check" >
+        <div className={styles.remembercheck} >
           <input type="checkbox" id="remember-me" />
-          <label className="label-remember" htmlFor="remember-me">Recordarme</label>
+          <label className={styles.labelremember} htmlFor="remember-me">Recordarme</label>
         </div>
-          <button className="button-signIn" type="submit">INICIAR SESIÓN</button>
-        <div className="form-links">
-         
+          <button className={styles.buttonsignIn} type="submit">INICIAR SESIÓN</button>
+        <div className={styles.formlinks}>
+          <p>
            
             <Link to="/reset-password">  {"¿Has olvidado la contraseña? "}</Link>
-        
+          </p>
           </div>
-          <button className="button-Crear" type="crearcuenta">
+          <button className={styles.buttonCrear} type="crearcuenta">
             <Link to="/create-account"> {" CREAR CUENTA "}</Link>
           </button>
        

@@ -1,7 +1,7 @@
 body {
   font-family: var(--font-family-ea);
 }
-.full-page {
+.fullPage {
   background-color: #1d2033;
   background-size: cover;
   width: 100%;
@@ -12,13 +12,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  letter-spacing: 1px;
   p,
   a,
   h2 {
     color: white;
+   
   }
-
   button {
     border-radius: 10px;
     width: 420px;
@@ -29,20 +29,22 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+  
     &:hover{
       transform: scale(0.95);
-      box-shadow: 0px 0px 15px 15px rgba(31, 85, 202, 0.139)
+      box-shadow: 0px 0px 15px 15px #1f55ca35;
     }
   }
 }
+
+    
 
 .form-input {
   background: #141724;
   color: white;
 }
 
-.form-sign {
+.formsign {
   display: flex;
   flex-direction: column;
   input {
@@ -57,6 +59,10 @@ body {
       box-shadow: 0px 0px 15px 15px #00000024;
       border: 2px solid #8d8d98;
     }
+    &:focus {
+      border: 1px solid white;
+      box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.5);
+    }
   }
 }
 
@@ -65,17 +71,17 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
 }
-.button-signIn {
+.buttonsignIn {
   background: #1f55ca;
   color: white;
   border: 1px solid transparent;
 }
-.button-Crear {
+.buttonCrear {
   background: #141724;
   border: 2px solid #1f55ca;
 }
 
-.remember-check {
+.remembercheck {
   width: 423px;
   height: 50px;
   display: flex;
@@ -85,8 +91,8 @@ body {
   align-items: center;
   color: white;
   gap: 10px;
-}
-.label-remember {
+} 
+.labelremember {
   display: flex;
   cursor: pointer;
   justify-content: flex-start;
@@ -103,7 +109,82 @@ body {
     color: #5089F1;
   }
 }
-input#remember-me{
-  width: 26px;
-  height: 26px;
+
+
+.imgEA{
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
 }
+
+.passwordtoggle{
+  display: flex;
+  justify-content: center;
+  svg{
+    fill: white;
+  }
+}
+
+
+
+
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 26px; 
+  height: 26px;
+  border: 2px solid #62616C;
+  border-radius: 4px; 
+  outline: none; 
+  transition: background-color 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  position: relative;
+
+}
+
+input[type="checkbox"]:checked {
+  background-color: blue;
+}
+
+input[type="checkbox"]:hover {
+  border: 2px solid #8D8D98; 
+}
+
+input[type="checkbox"]:checked:hover {
+  border: 2px solid #B0B0C0; 
+
+}
+
+
+input[type="checkbox"]::before {
+  content: ""; 
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px; 
+}
+
+
+input[type="checkbox"]::after {
+  content: "\2714";
+  color: white; 
+  font-size: 20px; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+input[type="checkbox"]:focus {
+  outline: none; 
+  border: 2px solid white;
+  box-shadow: 0px 0px 15px 2px rgba(133, 140, 155, 0.614);
+}
+
