@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Development from "./pages/development/Development";
 import Home from "./pages/home/Home";
 import LatestGame from "./pages/Latest-Game/LatestGame";
+import Originals from "./pages/originals/Originals"
 
 function App() {
   return (

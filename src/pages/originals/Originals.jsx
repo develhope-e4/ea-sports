@@ -11,7 +11,8 @@ const Originals = () => {
       <BlackNavBar />
       <BgVideo alt={"Video EA Originals"} />
       <Section backgroundColor={"#242424"}>
-        <OriginalsCards/>
+        <h1>Nuestros juegos</h1>
+        <OriginalsCards />
       </Section>
       <Footer />
     </BasePage>

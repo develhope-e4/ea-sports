@@ -35,6 +35,7 @@ const Home = () => {
 
   return (
     <BasePage>
+        <NavBar/>
         <LoopVideo
           videoSrc="./immortals.mp4"
           imagenSrc="./Immorlas-Logo.svg"

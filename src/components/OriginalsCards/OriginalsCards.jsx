@@ -5,13 +5,12 @@ export const OriginalsCards = () => {
   return (
     <div className="CardsDestacadas">
       {originalsCards &&
-        originalsCards.map((card, index) => (
+        originalsCards.map((originalsCard, index) => (
           <CardDestacada
             key={index}
             url="http://google.com"
-            backgroundImage={card.bg}
-            gameLogo={card.logo}
-            className={"optional"}
+            backgroundImage={originalsCard.bg}
+            gameLogo={originalsCard.logo}
             showText={false}
           />
         ))}
