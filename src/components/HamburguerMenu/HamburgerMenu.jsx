@@ -1,15 +1,14 @@
 import { useState } from "react";
-import "./HamburgerMenu.scss"; // Estiliza este archivo según tus necesidades
+import styles from "./HamburgerMenu.module.scss";
 import { FiMenu, FiXCircle } from "react-icons/fi";
-import DropDown from "../Dropdown/Dropdown";
 
-import Dropdown from "../Dropdown/Dropdown";
 import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
 import { PlataformasDropDown } from "../../data/PlataformasDropDown.mock";
 import { MasExperiencias } from "../../data/MasExperiencias.mock";
 import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
 import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
 import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
+import DropDown from "../Dropdown/Dropdown";
 
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,70 +17,64 @@ const HamburgerMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+
   return (
-    <div className="HamburgerMenu">
-      <button onClick={toggleMenu}>
+    <div className={styles.menuContainer}>
+      <button onClick={toggleMenu} className={styles.menuButton}>
         <div className="menuicon">
           <FiMenu />
         </div>
       </button>
       {menuOpen && (
-        <div className={`HamburgerLinks ${menuOpen ? "open" : ""}`}>
-          <div className="menuHamburguer">
-            <div className="menuHamburguerAction">
-              <img
-                src="/NavBar/ea-electronicsarts.svg"
-                alt="Mi SVG"
-                className="easvg"
-                onClick={""}
-              />
+        <div className={styles.menuOpenMenu}>
+          <div className={styles.menuHamburguerAction}>
+            <img
+              src="/NavBar/ea-electronicsarts.svg"
+              alt="Mi SVG"
+              className="easvg"
+              onClick={console.log("")}
+            />
 
-              <button onClick={toggleMenu}>
-                <FiXCircle />
-              </button>
-            </div>
-            <div className="menuHamburguerMenu">
+            <button onClick={toggleMenu}>
+              <FiXCircle />
+            </button>
+          </div>
+
+
+            <div className={styles.menuContent}>
               <DropDown
                 data={ExplorarJuegosDropDown}
                 title={ExplorarJuegosDropDown[0].tittle}
                 data2={PlataformasDropDown}
                 className={"second"}
               />
-
-              <div className="separator"></div>
-
+              <div className={styles.separator}></div>
               <DropDown
                 data={MasExperiencias}
-                title={MasExperiencias[0].tittle}
-                className={"second"}
+                title="Más Experiencias"
+                className="second"
               />
-
-              <div className="separator"></div>
-
-              <Dropdown
+              <div className={styles.separator}></div>
+              <DropDown
                 data={AcercaDeDropDown}
-                title={AcercaDeDropDown[0].tittle}
-                className={"second"}
+                title="Acerca De"
+                className="second"
               />
-              <div className="separator"></div>
-
-              <Dropdown
+              <div className={styles.separator}></div>
+              <DropDown
                 data={CompromisosDropDown}
-                title={CompromisosDropDown[0].tittle}
-                className={"second"}
+                title="Compromisos"
+                className="second"
               />
-              <div className="separator"></div>
-
-              <Dropdown
-                doble={false}
+              <div className={styles.separator}></div>
+              <DropDown
                 data={RecursosDropDown}
-                title={RecursosDropDown[0].tittle}
-                className={"second"}
+                title="Recursos"
+                className="second"
               />
-              <div className="separator"></div>
+              <div className={styles.separator}></div>
             </div>
           </div>
-        </div>
       )}
     </div>
   );
