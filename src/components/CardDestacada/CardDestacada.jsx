@@ -74,7 +74,7 @@ const CardDestacada = ({
             showTexts.map((textItem, index) => (
               <p key={index} className={text}>
                 <a
-                  className={index === 0 ? styles.linksbg : styles.as}
+                  className={index === 0 ? classes.linksbg : classes.as}
                   href={textItem.link}
                 >
                   {textItem.text}
