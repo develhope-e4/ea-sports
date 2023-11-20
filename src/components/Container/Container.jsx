@@ -1,4 +1,4 @@
-import "./Container.scss";
+import "./Container.module.scss";
 import classNames from "classnames";
 const Container = ({ children, isCentered, paddingLG, paddingMD }) => {
   const className = classNames({

@@ -13,7 +13,7 @@ import { MasExperiencias } from "../../data/MasExperiencias.mock";
 import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
 import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
 import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
-import Menu from "../Menu/Menu";
+
 import HamburgerMenu from "../HamburguerMenu/HamburgerMenu";
 
 const NavBar = () => {

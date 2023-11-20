@@ -1,4 +1,4 @@
-import "./CardDestacada.scss";
+
 import "./CardGames.modules.scss";
 const CardDestacada = ({
   backgroundImage,

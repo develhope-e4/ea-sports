@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./DropDownMenu.scss";
+import styles from "./DropDownMenu.module.scss";
 import { FiX } from "react-icons/fi";
 const DropDownMenu = ({ data, data2, className }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -91,19 +91,19 @@ const DropDownMenu = ({ data, data2, className }) => {
           </ul>
         )}
 
-        {data2 && className === classes.second && (
+        {data2 && className === styles.second && (
           <ul>
             {data2 && className === "second" && (
               <div className={styles.dropDownMenuButtonHamburguer}>
                 <div className={styles.dropDownMenuButtonHamburguerAction}>
-                  <button onClick={toggleSecondDropdown}> Plataformas</button>
+                  <button onClick={handleClickSecond}> Plataformas</button>
                   <FiX />
                 </div>
                 <div className={styles.separatorsecond}></div>
               </div>
             )}
 
-            {className === classes.second && isDropdownVisibleSecond === true && (
+            {className === styles.second && isDropdownVisibleSecond === true && (
               <div>
                 {data2.map((data, index) => (
                   <div>
