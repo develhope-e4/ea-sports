@@ -88,22 +88,25 @@
 }
 
 
-.DropDownSectionDemo {
-  height: 100%;
-  display: flex;
-  gap: var(--spacing-sm);
-  align-items: center;
-}
-
 .HamburgerMenu{
   display: none;
 }
 
 
+.dropDownSection{
+  display: flex;
+  width: 50%; 
+  justify-content: space-between;
+ 
+}
+
+
+
+
 
 
 @include respond-to('large') {
-  .DropDownSectionDemo{
+  .dropDownSection{
     display: none;
   }
 

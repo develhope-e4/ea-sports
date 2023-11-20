@@ -1,4 +1,6 @@
 @import '../../styles/mixins';
+@import '../../styles/variables.scss';
+
 
 .menuContainer {
    display: none;
@@ -6,18 +8,26 @@
 
 @include respond-to('large') {
 
+  
+
   .menuContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     cursor: pointer;
+
+    .menuicon {
+      font-size: var(--font-size-xxxxl);
+      display: flex;
+    }
+    
     
   
     .menuButton {
       all: unset;
       color: black;
-      font-size: var(--font-size-xxl);
+      font-size: var(--font-size-xl);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -76,6 +86,7 @@
   
     svg{
       fill: none;
+      color: black;
       font-size: var(--font-size-xl);
     }
   }

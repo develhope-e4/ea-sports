@@ -1,20 +1,25 @@
 // Dropdown.module.scss
-.container {
+.DropDownContenetor {
   display: flex;
   flex-direction: column;
   width: 100%;
+ 
   justify-content: center;
 
   .first{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    width: 100%;
+   
   }
   
   &.first {
     display: flex;
     align-items: center;
     justify-content: center;
+    ;
 
   
   
@@ -49,16 +54,7 @@
         transition: 0.5s ease-in-out;
       }
     }
-  .second {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    align-self: center;
-    justify-content: space-between;
-
-  
-  }}
+ }
 
   .DropDownButton {
     border: none;
@@ -84,8 +80,4 @@
 /* Aplica estilos solo al primer .DropDownMenuMenu dentro del primer .DropDownMenu.second dentro de .DropDownContenetor.second que está dentro de .menuHamburguerMenu */
 .menuHamburguerMenu .DropDownContenetor .second:first-of-type .DropDownMenu .second .DropDownMenuMenu:first-of-type {
   display: none;
-}
-
-.menuHamburguerAction {
-  font-size: var(--font-size-xl);
 }

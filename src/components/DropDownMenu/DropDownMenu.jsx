@@ -14,29 +14,41 @@ const DropDownMenu = ({ data, data2, className }) => {
     setDropdownVisibleSecond(!isDropdownVisibleSecond);
   };
 
+
+  
+  let containerClassName = "";
+  if (className === 'first') {
+    containerClassName += ` ${styles.first} first`;
+  } else if (className === 'second') {
+    containerClassName += ` ${styles.second} second`;
+  }
+
   return (
-    <div className="DropDownMenu">
-      <div className={className}>
+    <div className={styles.DropDownMenu} style={className === 'first' ? { height: '10px' } : {}}>
+      <div className={containerClassName}>
         <ul>
           {data2 && className === "first" && <h3>Explorar juegos</h3>}
           {data2 && className === "second" && (
-            <div className="dropDownMenuButtonHamburguer">
-              {" "}
+            <div className= {styles.dropDownMenuButtonHamburguer}>
+              <div className={styles.dropDownMenuButtonHamburguerAction}>
+                 
+               
+        
               <button onClick={handleClick}>
-                Explorar juegos{" "}
-              </button> <FiX />{" "}
+                Explorar juegos
+              </button> <FiX /> </div>
             </div>
           )}
 
           {(className === "first") | (className === "second") && (
-            <div className="DropDownMenuMenu">
+            <div className={styles.DropDownMenuMenu}>
               {data.map((data, index) => (
-                <div>
-                  <li key={index}>
+                <li>
+                  <div key={index}>
                     <a href={data.url}>{data.text}</a>
-                  </li>
-                  <div className="separator"></div>
-                </div>
+                  </div>
+                  <div className={styles.separator}></div>
+                </li>
               ))}
             </div>
           )}
@@ -44,12 +56,12 @@ const DropDownMenu = ({ data, data2, className }) => {
           {className === "second" && data2 && isDropdownVisible === true && (
             <div>
               {data.map((data, index) => (
-                <div>
-                  <li key={index}>
+                <li>
+                  <div key={index}>
                     <a href={data.url}>{data.text}</a>
-                  </li>
-                  <div className="separator"></div>
-                </div>
+                  </div>
+                  <div className={styles.separator}></div>
+                </li>
               ))}
             </div>
           )}
@@ -58,40 +70,18 @@ const DropDownMenu = ({ data, data2, className }) => {
         {data2 && className === "first" && (
           <ul>
             <h3>Plataformas</h3>
+            <div className={styles.DropDownMenuMenu}>
             {data2.map((data, index) => (
-              <li key={index}>
+              <li key={index} >
                 <a href={data.url}>{data.text}</a>
               </li>
             ))}
+            </div>
           </ul>
         )}
+
 
         {data2 && className === "second" && (
-          <ul>
-            {data2 && className === "second" && (
-              <div className="dropDownMenuButtonHamburguer">
-                {" "}
-                <button onClick={handleClickSecond}> Plataformas</button>{" "}
-                <FiX />
-              </div>
-            )}
-
-            {className === "second" && isDropdownVisibleSecond === true && (
-              <div>
-                {data2.map((data, index) => (
-                  <div>
-                    <li key={index}>
-                      <a href={data.url}>{data.text}</a>
-                    </li>
-                    <div className="separator"></div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </ul>
-        )}
-
-        {data2 && className === styles.second && (
           <ul>
             {data2 && className === "second" && (
               <div className={styles.dropDownMenuButtonHamburguer}>
@@ -99,19 +89,19 @@ const DropDownMenu = ({ data, data2, className }) => {
                   <button onClick={handleClickSecond}> Plataformas</button>
                   <FiX />
                 </div>
-                <div className={styles.separatorsecond}></div>
+
               </div>
             )}
 
-            {className === styles.second && isDropdownVisibleSecond === true && (
-              <div>
+            {className === "second" && isDropdownVisibleSecond === true && (
+              <div >
                 {data2.map((data, index) => (
-                  <div>
-                    <li key={index}>
+                  <li>
+                    <div key={index}>
                       <a href={data.url}>{data.text}</a>
-                    </li>
+                    </div>
                     <div className={styles.separator}></div>
-                  </div>
+                  </li>
                 ))}
               </div>
             )}

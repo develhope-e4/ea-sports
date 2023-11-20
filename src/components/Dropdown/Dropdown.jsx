@@ -18,22 +18,37 @@ function DropDown({ title, data, data2, className }) {
     setDropdownVisible(!isDropdownVisible);
   };
 
+
+  let containerClassName = `${styles.DropDownContenetor}`;
+  if (className === 'first') {
+    containerClassName += ` ${styles.first} `;
+  } else if (className === 'second') {
+    containerClassName += ` ${styles.second} `;
+  }
+
+
+  let firstOrSecondClassName = "";
+  if (className === 'first') {
+    firstOrSecondClassName += ` ${styles.first}`;
+  } else if (className === 'second') {
+    firstOrSecondClassName += ` ${styles.second}`;
+  }
+
   return (
     <div
-      className={`DropDownContenetor ${
-        className === "first" && "DropDownContenetorFirst"
-      }`}
-      onMouseEnter={className === "first" ? handleMouseEnter : undefined}
-      onMouseLeave={className === "first" ? handleMouseLeave : undefined}
+    className={containerClassName}
+    
+    onMouseEnter={className === 'first' ? handleMouseEnter : undefined}
+    onMouseLeave={className === 'first' ? handleMouseLeave : undefined}
     >
       <div
-        className={className}
-        onClick={className === "second" ? handleClick : undefined}
+        className={firstOrSecondClassName}
+        onClick={className === 'second' ? handleClick : undefined}
       >
         <div>
-          <button className="DropDownButton">{title}</button>
+          <button className={styles.DropDownButton}>{title}</button>
         </div>
-        <div className="DropDownContenetorSvg">
+        <div className= {styles.DropDownContenetorSvg}>
           <GoChevronDown />
         </div>
       </div>

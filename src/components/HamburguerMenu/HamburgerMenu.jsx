@@ -21,7 +21,7 @@ const HamburgerMenu = () => {
   return (
     <div className={styles.menuContainer}>
       <button onClick={toggleMenu} className={styles.menuButton}>
-        <div className="menuicon">
+        <div className={styles.menuicon}>
           <FiMenu />
         </div>
       </button>

@@ -4,6 +4,8 @@
   border-radius: var(--border-radius-sm);
   font-family: var(--font-family-ea);
   z-index: 2;
+ 
+
 
   
 
@@ -17,6 +19,31 @@
     background: white;
     border-radius: var(--border-radius-sm);
     white-space: nowrap;
+    
+  
+
+
+    
+
+    .DropDownMenuMenu{
+      display: flex;
+      flex-direction: column;
+  
+
+
+      
+
+      li{
+        margin: 10px;
+      }
+
+      ul {
+        li{
+          margin: 10px;
+        }
+      }
+
+    }
 
     h3 {
       color: black;
@@ -31,27 +58,30 @@
     ul {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      padding: 0px;
+
       text-align: start;
-      margin-top: 0px;
+
       list-style: none;
-    }
 
-    li {
-      padding: var(--spacing-s);
-      transition: var(--ea-transition-duration);
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--color-sextary);
-
-      &:hover {
-        color: red;
+      li {
+        padding: var(--spacing-s);
+        transition: var(--ea-transition-duration);
+  
+        a {
+          text-decoration: none;
+          color: var(--color-sextary);
+    
+          &:hover {
+            color: red;
+          }
+        }
       }
     }
-  }
+
+    
+    }
+
+ 
 
   .second {
     display: flex;
@@ -72,6 +102,8 @@
       }
     }
 
+    
+
     ul {
       list-style: none;
       display: flex;
@@ -79,6 +111,8 @@
       width: 100%;
       padding: 0px;
       height: 100%;
+     
+      
 
 
       &:nth-child(1) > div:nth-child(2) {
@@ -105,11 +139,16 @@
 
       li {
         margin: 10px;
+        a{
+          color: var(--text-color-boton);
+
+          &:hover {
+            color: red;
+          }
+        }
        
       
-        &:hover {
-          color: red;
-        }
+       
       }
 
       svg{

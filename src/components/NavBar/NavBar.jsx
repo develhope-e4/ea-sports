@@ -36,7 +36,7 @@ const NavBar = () => {
         menuOpen={menuOpen}
         handleMenuClose={handleMenuClose}
       />
-      <div className="nav">
+      <div className={styles.nav}>
         <HamburgerMenu />
         <Icono
           onClick={handleMenuToggle}
