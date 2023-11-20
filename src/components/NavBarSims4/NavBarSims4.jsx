@@ -12,23 +12,35 @@ const NavbarSims4 = () => {
   const [showDropdown5, setShowDropdown5] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
+  const closeAllDropdowns = () => {
+    setShowDropdown1(false);
+    setShowDropdown2(false);
+    setShowDropdown3(false);
+    setShowDropdown4(false);
+    setShowDropdown5(false);
+  };
   const toggleDropdown1 = () => {
+    closeAllDropdowns();
     setShowDropdown1(!showDropdown1);
   };
 
   const toggleDropdown2 = () => {
+    closeAllDropdowns();
     setShowDropdown2(!showDropdown2);
   };
 
   const toggleDropdown3 = () => {
+    closeAllDropdowns();
     setShowDropdown3(!showDropdown3);
   };
 
   const toggleDropdown4 = () => {
+    closeAllDropdowns();
     setShowDropdown4(!showDropdown4);
   };
 
   const toggleDropdown5 = () => {
+    closeAllDropdowns();
     setShowDropdown5(!showDropdown5);
   };
 
