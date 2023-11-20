@@ -1,5 +1,5 @@
 
-import "./CardGames.modules.scss";
+import styles from "./CardGames.module.scss";
 const CardDestacada = ({
   backgroundImage,
   url,
@@ -7,6 +7,7 @@ const CardDestacada = ({
   className,
   showText,
   showTexts,
+  games
 }) => {
   const cardStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -39,7 +40,8 @@ const CardDestacada = ({
   const text = cx({
     textCardDestacada: true,
     firstImage: firstImg,
-    otherImages: otherimg
+    otherImages: otherimg,
+    bgGames: games
   })
 
   return (
@@ -52,16 +54,16 @@ const CardDestacada = ({
             className={logo}
           />
           {showText && (
-            <p className={`textCardDestacada ${className}`}>
+            <p className={text}>
               <a href={showText.link}>{showText.text}</a>
             </p>
           )}
 
           {showTexts &&
             showTexts.map((textItem, index) => (
-              <p key={index} className={`textCardDestacada ${className}`}>
+              <p key={index} className={text}>
                 <a
-                  className={index === 0 ? "linksbg" : "as"}
+                  className={index === 0 ? styles.linksbg : styles.as}
                   href={textItem.link}
                 >
                   {textItem.text}

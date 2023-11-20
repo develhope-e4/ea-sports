@@ -23,7 +23,7 @@ const LatestGame = () => {
 
 const handleTabChange = () => {
 setActiveTab(!activeTab);
-};  
+};
 
   return (
     <BasePage>
@@ -42,7 +42,7 @@ setActiveTab(!activeTab);
       />
       <Section>
         <TabsGames
-         tabs={tabGamesData} 
+         tabs={tabGamesData}
         onTabChange={handleTabChange}
         activeTab={activeTab} />
       </Section>
@@ -57,7 +57,7 @@ setActiveTab(!activeTab);
                   url="http://google.com"
                   backgroundImage={card.bg}
                   gameLogo={card.logo}
-                  className="bgGames"
+                  games={true}
                   showTexts={[
                     { text: "Sitio Oficial", link: "/ruta-del-primer-texto" },
                     { text: "Ayuda", link: "/ruta-del-segundo-texto" },
