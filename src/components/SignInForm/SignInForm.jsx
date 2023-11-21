@@ -14,7 +14,12 @@ const SignInForm = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log("handleFormSubmit is running");
+
+    if (email.trim() === "") {
+      setErrorMessage("Dirección de correo electrónico no válida");
+      setEmailValid(false);
+      return;
+    }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isValidEmail = emailRegex.test(email);
@@ -32,9 +37,22 @@ const SignInForm = () => {
     console.log("Password:", password);
   };
   const handleEmailChange = (event) => {
-    console.log('Email changed:', event.target.value);
-    setErrorMessage("");
-    setEmail(event.target.value);
+    const inputEmail = event.target.value;
+    setEmail(inputEmail);
+  
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailRegex.test(inputEmail);
+  
+    if (inputEmail.trim() === "") {
+      setErrorMessage("");
+      setEmailValid(true);
+    } else if (!isValidEmail) {
+      setErrorMessage("Dirección de correo electrónico no válida");
+      setEmailValid(false);
+    } else {
+      setErrorMessage("");
+      setEmailValid(true);
+    }
   };
   const handlePasswordKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -65,15 +83,15 @@ const SignInForm = () => {
           </div>
           <form className={styles.formsign} onSubmit={handleFormSubmit}>
             <SignInFormInput
-              label="TELÉFONO O CORREO ELECTRÓNICO"
-              type="text"
-              placeholder="Escribe tu teléfono o correo electrónico"
-              id="emailForm"
-              value={email}
-              onChange={handleEmailChange}
-              isValid={emailValid}
+             label="TELÉFONO O CORREO ELECTRÓNICO"
+             type="text"
+             placeholder="Escribe tu teléfono o correo electrónico"
+             id="emailForm"
+             value={email}
+             onChange={handleEmailChange}
+             isValid={emailValid}
             />
-            {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+            {errorMessage && <p style={{ color: "rgb(198, 41, 41)" }}>{errorMessage}</p>}
             <div className={styles.formpassword}>
               <SignInFormInput
                 label="CONTRASEÑA"
@@ -101,7 +119,7 @@ const SignInForm = () => {
               Recordarme
             </label>
           </div>
-          <button className={styles.buttonsignIn} type="submit">
+          <button className={styles.buttonsignIn} type="submit" onClick={handleFormSubmit}>
             INICIAR SESIÓN
           </button>
           <div className={styles.formlinks}>
