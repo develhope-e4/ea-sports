@@ -63,7 +63,7 @@ const LoopVideo = ({
         muted
         playsInline
       />
-      <div className={classes.compraAhora}>
+      <div className={"compraAhora"}>
         {showBuyButton && (
           <Boton
             esPrimario={isPrimary}
