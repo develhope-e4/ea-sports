@@ -1,4 +1,68 @@
 @import '../../styles/mixins';
+/* clases originales de cardDestacada */
+
+.linkCardDestacada {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--font-size-xl);
+  font-style: var(--font-style-ea);
+  margin-right: 0px;
+  width: 355px;
+  height: 355px;
+  max-width: 355px;
+  max-height: 355px;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+}
+
+.cardDestacada {
+  background: var( --color-background-card-destacada);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  transition: var(--ea-transition-duration);
+
+
+}
+
+.cardDestacada:hover {
+  background: linear-gradient(
+    to right,
+    var(--color-gradient1),
+    var(--color-gradient2)
+  )
+  ;
+}
+
+img.logoCardDestacada {
+  width: 250px;
+  height: 50px;
+  transform: translateY(0px);
+  transition: var(--ea-transition-duration);
+
+}
+
+.cardDestacada:hover .logoCardDestacada {
+  transform: translateY(-20px);
+}
+
+.textCardDestacada {
+  display: none;
+  transition: var(--ea-transition-duration);
+}
+
+.cardDestacada:hover .textCardDestacada {
+  display: block;
+}
+
+
 
 
 
@@ -101,7 +165,7 @@
   background-size: cover;
 }
 
-.backgroundImage.other-images {
+.backgroundImage.otherImages {
   width: 182px;
   height: 160px;
   background-repeat: no-repeat;
