@@ -1,9 +1,26 @@
-const SignInFormInput = ({ label, type, placeholder, id }) => (
-  
-    <>
-      <p className="form-label">{label}</p>
-      <input className="form-input" type={type} placeholder={placeholder} id={id} />
-    </>
-  );
+import styles from "../SignInForm/SignInForm.module.scss";
+const SignInFormInput = ({
+  label,
+  type,
+  placeholder,
+  id,
+  value,
+  onChange,
+  isValid,
+  onKeyDown,
+}) => (
+  <div>
+    <p className={styles.formlabel}>{label}</p>
+    <input
+      className={`${styles.forminput} ${!isValid ? styles.invalid : ""}`}
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      id={id}
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+    />
+  </div>
+);
 
-  export default SignInFormInput; 
+export default SignInFormInput;
