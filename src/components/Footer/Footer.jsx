@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
           <div className={classes.linkTextoNegritaFooter}>
             <a
-              className="linkTextoNegritaFooterTexto"
+              className={classes.linkTextoNegritaFooterTexto}
               href="https://www.ea.com/es-es/about/reporting-concerns"
             >
               Únete a la conversación
@@ -59,7 +59,7 @@ const Footer = () => {
                 icono={<BsInstagram />}
               />
               <Icono
-                className="iconosRedesSocialesNM"
+                className={classes.iconosRedesSocialesNM}
                 href="https://www.twitch.tv/ea"
                 icono={<IoLogoTwitch />}
               />
@@ -117,7 +117,7 @@ const Footer = () => {
               />
               <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
             </div>
-            <div className={classes.infDer}>
+            <div className={classes.abajoDer}>
               <img src={TRUSTe} alt="Truste Logo" />
             </div>
           </div>
