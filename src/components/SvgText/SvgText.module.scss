@@ -5,6 +5,8 @@
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   margin: 20px;
+  color: white;
+  text-decoration: none;
 
   &:hover {
     transform: translateY(
@@ -22,7 +24,7 @@
   }
 }
 
-a {
+.imageWithText.link {
   color: white;
   text-decoration: none;
 }
