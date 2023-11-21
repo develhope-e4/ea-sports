@@ -4,7 +4,7 @@ const cx = classNames.bind(classes);
 
 const Container = ({ children, isCentered, paddingLG, paddingMD }) => {
   const className = cx({
-    "base-container": true,
+    baseContainer: true,
     centered: isCentered,
     start: !isCentered,
     paddingLG: paddingLG,
