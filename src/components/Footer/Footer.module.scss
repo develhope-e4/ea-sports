@@ -3,6 +3,11 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  a {
+    text-decoration: none;
+    font-style: var(--font-family-ea);
+    color: var(--color-sextary);
+  }
 }
 
 .linkTextoFooterGris {
@@ -14,11 +19,7 @@
   align-self: center;
 }
 
-a {
-  text-decoration: none;
-  font-style: var(--font-family-ea);
-  color: var(--color-sextary);
-}
+
 
 .comunicarInquietudes {
   margin-right: none;
