@@ -10,7 +10,7 @@ const Subscription = () => {
     <>
       <Section imageUrl={bgImage}>
         <Container paddingLG={true}>
-          <div className="text-container">
+          <div className={classes.textContainer}>
             <IconoEaPlay />
             <h6 className={classes.texto}>
               No te limites a jugar. Saca más partido a tus juegos. Desbloquea
