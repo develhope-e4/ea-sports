@@ -15,10 +15,10 @@ import Section from "../Section/Section";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className={classes.footer}>
       <Section backgroundColor={"--color-octave"}>
         <Container paddingMD={true}>
-          <div className="linkTextoFooterGris">
+          <div className={classes.linkTextoFooterGris}>
             <a href="https://www.ea.com/es-es/careers">Empleo</a>
             <a href="https://www.ea.com/es-es/executives">Ejecutivos</a>
             <a href="https://www.ea.com/es-es/news/sharing-our-2021-impact-report">
@@ -70,11 +70,11 @@ const Footer = () => {
 
       <Section>
         <Container>
-          <div className="izquierda">
-            <img className="latIzq" src={eaPurple} />
+          <div className={classes.izquierda}>
+            <img className={classes.latIzq} src={eaPurple} />
           </div>
-          <div className="centro">
-            <div className="arribaCentro">
+          <div className={classes.centro}>
+            <div className={classes.arribaCentro}>
               <a href="https://www.ea.com/es-es/games/library">
                 Biblioteca de juegos
               </a>
@@ -86,7 +86,7 @@ const Footer = () => {
               <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
               <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
             </div>
-            <div className="abajoCentro">
+            <div className={classes.abajoCentro}>
               <a href="http://www.ea.com/es-es/legal">
                 Información legal y privacidad
               </a>
@@ -109,15 +109,15 @@ const Footer = () => {
               <p>© 2023 Electronic Arts Inc.</p>
             </div>
           </div>
-          <div className="derecha">
-            <div className="arribaDer">
+          <div className={classes.derecha}>
+            <div className={classes.arribaDer}>
               <FooterDropdown
                 dropdownTitle="Región (precios)"
                 items={itemsRegion}
               />
               <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
             </div>
-            <div className="abajoDer">
+            <div className={classes.infDer}>
               <img src={TRUSTe} alt="Truste Logo" />
             </div>
           </div>
