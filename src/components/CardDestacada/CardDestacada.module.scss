@@ -56,6 +56,11 @@ img.logoCardDestacada {
 .textCardDestacada {
   display: none;
   transition: var(--ea-transition-duration);
+
+  a{
+    color: white;
+  text-decoration: none;
+  }
 }
 
 .cardDestacada:hover .textCardDestacada {
