@@ -3,14 +3,10 @@
   flex-direction: row;
 
   position: relative;
-  top: 110px;
-  left: 80%;
 
-  transform: translateX(-50%);
+  margin: auto;
 
-  height: 70px;
 
-  margin-bottom: 100px;
 }
 
 .mensaje {
@@ -34,7 +30,7 @@
   }
 }
 
-.barraMensaje{
+.barraMensaje {
   height: 30px;
   width: 0.3px;
 

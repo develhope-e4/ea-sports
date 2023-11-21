@@ -1,4 +1,4 @@
-import styles from "./publicidadSims4.module.scss";
+import styles from "./PublicidadSims4.module.scss";
 import { useState } from "react";
 
 const Message = () => {

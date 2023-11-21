@@ -11,8 +11,8 @@ const Sims4 = () => {
   return (
     <BasePageSims4>
       <NavBarSims4 />
-      <Message />
       <Section>
+        <Message />
         <Container>
           {cardHorizontalData.map((card) => (
             <CardHorizontal
