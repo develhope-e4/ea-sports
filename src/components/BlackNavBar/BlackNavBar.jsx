@@ -86,7 +86,7 @@ const BlackNavBar = () => {
         </svg>
       </div>
       {showSvgControll && (
-        <div className={`svgcontroll2 ${svgControllClass}`}>
+        <div className={`${classes.svgcontroll2} ${svgControllClass}`}>
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconsignin.svg"
             text={"Iniciar sesión"}
