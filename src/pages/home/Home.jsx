@@ -9,6 +9,8 @@ import cardData from "../../data/CardData.mock";
 import Boton from "../../components/Boton/Boton";
 import Subscription from "../../components/Subscription/Subscription";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
+import classes from "../../components/Tabs/Tabs.module.scss"
+import styles from "../../components/Cards/Cards.module.scss"
 
 
 const Home = () => {
@@ -62,13 +64,13 @@ const Home = () => {
       <Section>
         <h1>Últimas actualizaciones</h1>
         <Container>
-          <div className="tabsCards">
+          <div className={classes.tabsCards}>
             <Tabs
               tabNames={tabNames}
               handleTabClick={handleTabClick}
               activeTab={activeTab}
             />
-            <div className="cardContainer">
+            <div className={styles.cardContainer}>
               {cardData[activeTab] ? (
                 cardData[activeTab].map((card, index) => (
                   <Cards
