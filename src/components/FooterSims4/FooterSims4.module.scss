@@ -104,13 +104,18 @@
   display: flex;
   flex-direction: row;
 
-  width: 90%;
+  align-items: center;
 
+  flex-wrap: wrap;
   gap: 1%;
 
   color: white;
 
-  padding: 10px;
+  padding: 5px;
+
+  .linkTextoFooter{
+    font-size: 13px;
+  }
 }
 
 .subContenido6 {
@@ -121,7 +126,7 @@
 
   color: white;
 
-  padding: 10px;
+  padding: 5px;
 }
 
 .subContenido7 {
@@ -134,7 +139,7 @@
 
   color: white;
 
-  padding: 10px;
+  padding: 5px;
 }
 
 .barraVertical {
@@ -153,14 +158,14 @@
   background-color: #9f9f9f;
 }
 
-.barraVerticalBlanca{
-  height: 30px;
+.barraVerticalBlanca {
+  height: 25px;
   width: 1px;
 
   background-color: #9f9f9f;
 }
 
-.barraHorizontalBlanca{
+.barraHorizontalBlanca {
   width: 100%;
   height: 1px;
 
