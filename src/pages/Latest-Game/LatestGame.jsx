@@ -5,11 +5,13 @@ import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
+import clase from "../../components/CardsDestacadas/CardsDestacadas.module.scss"
 import TabsGames from "../../components/TabsGames/TabsGames";
 import tabGamesData from "../../data/TabGamesData.mock";
-import classes from "../../components/TabsGames/TabsGames.module.scss";
+import "../../components/TabsGames/TabsGames.module.scss";
 import { cardGamesData } from "../../data/CardGamesData.mock";
-import styles from "../../components/CardDestacada/CardGames.module.scss";
+
+
 
 const LatestGame = () => {
 
@@ -35,7 +37,7 @@ setActiveTab(!activeTab);
         isPrimary={true}
         isLight={true}
         customClass=""
-        customImageClass="img-videogames"
+        customImageClass="imgVideogames"
         isVideoPlaying={isVideoPlaying}
         showButtons={true}
         showBuyButton={false}
@@ -49,7 +51,7 @@ setActiveTab(!activeTab);
       <Section>
         <h1>Novedades</h1>
         <Container>
-          <div className="CardsDestacadas">
+          <div className={clase.CardsDestacadas}>
             {cardGamesData &&
               cardGamesData.map((card, index) => (
                 <CardDestacada
