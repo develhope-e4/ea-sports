@@ -29,7 +29,7 @@ const Subscription = () => {
       <Section backgroundColor={"--color-sin-variable"} margen={false}>
         <Container>
           <h2>Herramientas parentales y de juego: el control en tus manos</h2>
-          <div className="SubscriptionSection-MoreInfo-contenido-boton">
+          <div className={classes.SubscriptionSectionMoreInfoContenidoBoton}>
             <Boton
               esPrimario={false}
               isLight={false}
