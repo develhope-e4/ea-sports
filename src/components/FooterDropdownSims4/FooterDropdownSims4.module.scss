@@ -4,10 +4,8 @@
 }
 
 .dropdown_activator {
-  display: grid;
-  grid-template-rows: 1fr;
-
-  text-align: left;
+  display: flex;
+  flex-direction: column;
 
   background-color: inherit;
 
@@ -15,14 +13,22 @@
   border-radius: 10px;
 
   height: 50px;
-  
+
   color: gray;
 
-  align-items: center;
-  
+  align-items: left;
+  justify-content: center;
+
   font-weight: var(--font-weith-xs);
   font-size: small;
   cursor: pointer;
+}
+
+.item_list {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  height: fit-content;
 }
 
 .selected_item {
@@ -34,8 +40,3 @@
   margin-left: 130px;
   margin-top: -30px;
 }
-
-
-
-
-

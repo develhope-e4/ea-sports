@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: row;
 
+  z-index: -10;
+
   position: relative;
 
   margin-top: 60px;
@@ -46,6 +48,7 @@
   background-color: transparent;
   font-size: medium;
   margin-right: 20px;
+  text-decoration: none;
 
   &:hover {
     background-color: rgb(226, 226, 226);

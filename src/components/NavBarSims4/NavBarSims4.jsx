@@ -10,6 +10,8 @@ const NavbarSims4 = () => {
   const [showDropdown3, setShowDropdown3] = useState(false);
   const [showDropdown4, setShowDropdown4] = useState(false);
   const [showDropdown5, setShowDropdown5] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
 
   const closeAllDropdowns = () => {
     setShowDropdown1(false);
@@ -46,6 +48,7 @@ const NavbarSims4 = () => {
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const threshold = 45;
+    setIsScrolled(scrollPosition > threshold);
   };
 
   useEffect(() => {
@@ -57,7 +60,7 @@ const NavbarSims4 = () => {
 
   return (
     <>
-      <div className={`${styles.navBarSims4}`}>
+      <div className={`${styles.navBarSims4} ${isScrolled ? styles.scrolled : ""}`}>
         <div className={styles.empresa}>Electronic Arts</div>
         <div className={styles.dropdowns}>
           <div className={styles.dropdown}>
