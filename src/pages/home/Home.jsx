@@ -9,9 +9,8 @@ import cardData from "../../data/CardData.mock";
 import Boton from "../../components/Boton/Boton";
 import Subscription from "../../components/Subscription/Subscription";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
-import classes from "../../components/Tabs/Tabs.module.scss"
-import styles from "../../components/Cards/Cards.module.scss"
-
+import classes from "../../components/Tabs/Tabs.module.scss";
+import styles from "../../components/Cards/Cards.module.scss";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -35,24 +34,21 @@ const Home = () => {
 
   return (
     <BasePage>
-        <LoopVideo
-          videoSrc="./immortals.mp4"
-          imagenSrc="./Immorlas-Logo.svg"
-          buttonText="Comprar ahora"
-          onButtonClick={handleButtonClick}
-          isPrimary={true}
-          isLight={false}
-          customClass=""
-          customImageClass=""
-          showBuyButton={true}
-        />
+      <LoopVideo
+        videoSrc="./immortals.mp4"
+        imagenSrc="./Immorlas-Logo.svg"
+        buttonText="Comprar ahora"
+        onButtonClick={handleButtonClick}
+        isPrimary={true}
+        isLight={false}
+        customClass=""
+        customImageClass=""
+        showBuyButton={true}
+      />
       <Section>
         <h1 className="h1">Juegos destacados</h1>
         <Container>
-
-          <CardsDestacadas/>
-
-
+          <CardsDestacadas />
         </Container>
         <Boton
           esPrimario={false}
