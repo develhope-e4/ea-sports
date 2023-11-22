@@ -7,6 +7,12 @@ import { MarkBasicData } from "../../data/MarkBasicComponent";
 import Container from "../../components/Container/Container";
 import HorizontalCard from "../../components/HorizontalCard/HorizontalCard";
 import { HorizontalCardData } from "../../data/HorizontalCardData";
+import VerticalCard from "../../components/VerticalCard/VerticalCard";
+import { VerticalCardData } from "../../data/VerticalCardData";
+import Cards from "../../components/Cards/Cards";
+import { CardInfoData } from "../../data/CardInfoData";
+import Boton from "../../components/Boton/Boton";
+import Section from "../../components/Section/Section";
 
 const Information = () => {
   return (
@@ -97,23 +103,57 @@ const Information = () => {
         <div>
           <TextInfo h3Text="Juegos de Electronic Arts y clasificaciones" />
         </div>
+        <div className="grid-container-3-1fr" style={{ gap: "20px"}}>
+          {VerticalCardData.map((elemento, index) => (
+            <VerticalCard
+              key={index}
+              imagenSrc={elemento.imagenSrc}
+              h4Text={elemento.h4Text}
+              pText={elemento.pText}
+              aText={elemento.aText}
+              isReverse={elemento.isReverse}
+            />
+          ))}
+        </div>
         <div>
           <TextInfo h3Text="Protégete en la red" />
         </div>
         <div>
-        {HorizontalCardData.map((elemento, index) => (
-              <HorizontalCard
-                key={index}
-                imagenSrc={elemento.imagenSrc}
-                h4Text={elemento.h4Text}
-                pText={elemento.pText}
-                isReverse={elemento.isReverse}
-              />
-            ))}
+          {HorizontalCardData.map((elemento, index) => (
+            <HorizontalCard
+              key={index}
+              imagenSrc={elemento.imagenSrc}
+              h4Text={elemento.h4Text}
+              pText={elemento.pText}
+              isReverse={elemento.isReverse}
+            />
+          ))}
         </div>
         <div>
           <TextInfo h3Text="Tenemos un compromiso con el juego positivo" />
         </div>
+        <Section>
+        <div style={{ display: "flex", gap: "30px" }}>
+          {CardInfoData.map((elemento, index) => (
+            <Cards
+              key={index}
+              imagenSrc={elemento.imagenSrc}
+              nombre={elemento.nombre}
+              fecha={elemento.fecha}
+              titulo={elemento.titulo}
+              texto={elemento.texto}
+            />
+          ))}
+        </div>
+        <div>
+          <Boton
+            esPrimario={false}
+            isLight={false}
+            onClick={() => console.log("click en el boton negro")}
+            texto={"Seguir leyendo"}
+          />
+        </div>
+        </Section>
       </Container>
     </div>
   );

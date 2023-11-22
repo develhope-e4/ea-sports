@@ -13,6 +13,12 @@
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.grid-container-3-1fr {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+}
 .containerGrid-2-3 {
   width: 100%;
 
