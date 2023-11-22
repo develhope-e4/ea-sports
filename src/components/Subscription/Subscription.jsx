@@ -26,8 +26,8 @@ const Subscription = () => {
           </div>
         </Container>
       </Section>
-      <Section backgroundColor={"--color-sin-variable"} margen={false}>
-        <Container>
+      <Section backgroundColor={"--color-sin-variable"} margen={false} >
+        <Container subscription={true}>
           <h2>Herramientas parentales y de juego: el control en tus manos</h2>
           <div className={classes.SubscriptionSectionMoreInfoContenidoBoton}>
             <Boton

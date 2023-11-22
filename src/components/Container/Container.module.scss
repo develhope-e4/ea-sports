@@ -5,7 +5,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
   max-width: 1224px;
   width: 100%;
 }
@@ -30,4 +29,9 @@
 
 .paddingMD {
   padding: var(--spacing-md);
+}
+
+.subscriptionAlignItems{
+  display: flex;
+  align-items: baseline;
 }
