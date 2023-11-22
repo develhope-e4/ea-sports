@@ -5,7 +5,7 @@ import Section from "../Section/Section";
 
 import VolverArribaBoton from "../VolverArribaBoton/VolverArribaBoton";
 import FooterDropdownSims4 from "../FooterDropdownSims4/FooterDropdownSims4";
-import { itemsIdioma, itemsRegion } from "../Footer/FooterData";
+import { itemsIdioma, itemsRegion } from "./FooterDataSims4";
 
 import Icono from "../Icono/Icono";
 import { TfiFacebook } from "react-icons/tfi";

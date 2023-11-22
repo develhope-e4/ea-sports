@@ -3,7 +3,7 @@ import styles from "./FooterDropdownSims4.module.scss";
 import Icono from "../Icono/Icono";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-const FooterDropdown = ({ items = [], dropdownTitle }) => {
+const FooterDropdownSims4 = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -94,4 +94,4 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
   );
 };
 
-export default FooterDropdown;
+export default FooterDropdownSims4;

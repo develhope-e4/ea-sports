@@ -41,7 +41,7 @@ ul li {
   top: 40px;
   left: auto;
   right: auto;
-  z-index: 100;
+  z-index: 1000;
 
   margin-left: -170px;
   border-radius: 10px;
@@ -68,7 +68,7 @@ ul li {
   top: 60px;
   left: auto;
   right: auto;
-  z-index: 100;
+  z-index: 1000;
 
   margin-left: -120px;
 
@@ -184,8 +184,30 @@ ul li {
   margin-top: -20px;
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.hide {
+  display: none;
+  padding-bottom: 100px;
+}
+
 .flechaNavBarSims4DosJ {
   margin-left: 130px;
   margin-top: -20px;
-  color: #ffffff;
+  color: #ffffff; 
+
+  svg {
+    fill: #ffffff; 
+  }
 }
+
+.placeholder {
+  height: 60px; 
+}
+

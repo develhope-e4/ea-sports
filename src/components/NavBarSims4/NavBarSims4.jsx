@@ -50,7 +50,7 @@ const NavbarSims4 = () => {
     const threshold = 45;
     setIsScrolled(scrollPosition > threshold);
   };
-
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -60,7 +60,7 @@ const NavbarSims4 = () => {
 
   return (
     <>
-      <div className={`${styles.navBarSims4} ${isScrolled ? styles.scrolled : ""}`}>
+    <div className={`${styles.navBarSims4} ${isScrolled ? styles.hide : ""}`}>
         <div className={styles.empresa}>Electronic Arts</div>
         <div className={styles.dropdowns}>
           <div className={styles.dropdown}>
@@ -88,7 +88,7 @@ const NavbarSims4 = () => {
           </div>
         </div>
       </div>
-      <div className={`${styles.navBarSims4Dos}`}>
+      <div className={`${styles.navBarSims4Dos} ${isScrolled ? styles.fixed : ""}`}>
         <img
           src={logoSims4Color}
           className={styles.logoSims4}
@@ -167,6 +167,7 @@ const NavbarSims4 = () => {
           </div>
         </div>
       </div>
+      <div className={styles.placeholder}></div>
     </>
   );
 };

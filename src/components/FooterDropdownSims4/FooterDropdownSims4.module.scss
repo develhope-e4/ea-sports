@@ -6,29 +6,17 @@
 .dropdown_activator {
   display: flex;
   flex-direction: column;
-
+  text-align: left;
   background-color: inherit;
-
-  border: 2px rgb(198, 198, 198) solid;
+  border: 2px solid rgb(198, 198, 198);
   border-radius: 10px;
-
   height: 50px;
-
   color: gray;
-
   align-items: left;
   justify-content: center;
-
   font-weight: var(--font-weith-xs);
   font-size: small;
   cursor: pointer;
-}
-
-.item_list {
-  display: flex;
-  flex-direction: column;
-  width: 20px;
-  height: fit-content;
 }
 
 .selected_item {
@@ -39,4 +27,35 @@
 .flechaFooter {
   margin-left: 130px;
   margin-top: -30px;
+}
+
+.dropdown_item_list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &.active {
+    border: 3px solid rgb(179, 7, 7);
+  }
+
+  .item_list {
+    margin: 0;
+    padding: 0;
+
+    .link_button {
+      color: brown;
+      background-color: transparent;
+      border: none;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px 0;
+      text-align: left;
+
+      &:hover {
+        border: 1px solid red;
+      }
+    }
+  }
 }
