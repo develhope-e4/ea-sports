@@ -12,6 +12,10 @@ div.tabsGames__list {
   justify-content: space-around;
   background-color: rgb(255, 255, 255);
   border-bottom: 2px solid #dedede;
+  a{
+    color: var(--color-sextary);
+  text-decoration: none;
+  }
 }
 
 .tabsGames__list div {
@@ -32,7 +36,7 @@ div.tabsGames__list {
   }
 }
 
-.tabs-games__itemActive {
+.tabsGames__itemActive {
   border-bottom: 2px solid red;
   background-color: #dedede;
   color: var(--color-sextary);
