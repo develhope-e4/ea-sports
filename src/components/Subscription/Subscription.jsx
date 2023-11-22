@@ -8,7 +8,7 @@ import bgImage from "../../assets/Imagenes/Subscription/hero-medium-console-medi
 const Subscription = () => {
   return (
     <>
-      <Section imageUrl={bgImage}>
+      <Section imageUrl={bgImage} margen={false}>
         <Container paddingLG={true}>
           <div className={classes.textContainer}>
             <IconoEaPlay />
@@ -26,7 +26,7 @@ const Subscription = () => {
           </div>
         </Container>
       </Section>
-      <Section backgroundColor={"--color-sin-variable"}>
+      <Section backgroundColor={"--color-sin-variable"} margen={false}>
         <Container>
           <h2>Herramientas parentales y de juego: el control en tus manos</h2>
           <div className="SubscriptionSection-MoreInfo-contenido-boton">

@@ -47,7 +47,7 @@ const Home = () => {
           showBuyButton={true}
         />
       <Section>
-        <h1>Juegos destacados</h1>
+        <h1 className="h1">Juegos destacados</h1>
         <Container>
 
           <CardsDestacadas/>

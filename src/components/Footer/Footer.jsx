@@ -16,7 +16,7 @@ import Section from "../Section/Section";
 const Footer = () => {
   return (
     <div className={classes.footer}>
-      <Section backgroundColor={"--color-octave"}>
+      <Section backgroundColor={"--color-octave"} margen={false}>
         <Container paddingMD={true}>
           <div className={classes.linkTextoFooterGris}>
             <a href="https://www.ea.com/es-es/careers">Empleo</a>
@@ -68,7 +68,7 @@ const Footer = () => {
         </Container>
       </Section>
 
-      <Section>
+      <Section >
         <Container>
           <div className={classes.izquierda}>
             <img className={classes.latIzq} src={eaPurple} />
