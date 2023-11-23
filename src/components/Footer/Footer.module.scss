@@ -111,9 +111,18 @@
 
 @include respond-to('large') {
 
+  .linkTextoFooterGris{
+    padding: 5%;
+  }
+
 
 .linkTextoNegritaFooterTexto{
   display: none;
+
+}
+
+.derecha{
+  width: 100%;
 }
 
 

@@ -48,6 +48,8 @@
 @include respond-to('large') {
 .baseContainer{
   padding: 0px;
+  margin: 0px;
+  align-self: flex-start;
   
 }
     

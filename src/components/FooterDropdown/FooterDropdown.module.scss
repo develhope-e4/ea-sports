@@ -40,12 +40,14 @@
   bottom: 65px;
   right: 0px;
   position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 3px solid rgb(198, 198, 198);
 }
 
 .dropdown_item_list.active {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 3px solid rgb(198, 198, 198);
+ 
 }
 
 .item_list {
@@ -87,7 +89,7 @@
 
 
 
-@include respond-to('small') {
+@include respond-to('large') {
 
   
   
@@ -100,10 +102,12 @@
 }
 
 
-.dropdown_item_list{
-  grid-template-columns: unset;
-}
 
+.dropdown_item_list{
+  grid-template-columns: repeat(2, 1fr);
+
+  
+}
   }
   
   

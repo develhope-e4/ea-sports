@@ -1,9 +1,12 @@
+@import '../../styles/mixins';
+
 .textContainer {
     width: 30%;
     text-align: left;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+
 }
 
 .texto {
@@ -18,4 +21,51 @@
 
 .SubscriptionSectionMoreInfoContenidoBoton{
     margin:var(--spacing-sm) auto var(--spacing-sm);
+
+    margin-left: 50px;
+}
+
+
+@include respond-to('large') {
+
+
+    .textContainer{
+      width: 100%;
+      padding: 5%;
+
+     
+      
+    }
+
+ 
+
+
+    
+
+}
+
+
+
+@include respond-to('medium') {
+
+    .SubscriptionSectionMoreInfoContenidoBoton{
+
+
+        align-self: center;
+        margin: auto;
+        margin-bottom: 2%;
+    }
+
+
+    .tittle{
+        margin: auto;
+
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    
+
+
+
 }

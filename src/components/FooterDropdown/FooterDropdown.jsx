@@ -7,7 +7,7 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(items[0] || null); 
+  const [selectedItem, setSelectedItem] = useState(items[0] || null);
 
   const clickHandler = () => {
     setIsOpen(!isOpen);
@@ -46,7 +46,6 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
     }
   }, [isOpen]);
 
-  
   return (
     <div className={classes.dropdown_wrapper} onKeyUp={keyHandler}>
       <button
@@ -70,19 +69,18 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
           )}
         </div>
       </button>
-      <ul
-        ref={dropdownListRef}
-        className={`${classes.dropdown_item_list} ${isOpen ? classes.active : ""} `}
-      >
-        {items.map((item, index) => {
-          return (
-            <li className={classes.item_list} key={index}>
-              {item.flag && <img src={item.flag} className={classes.flag} />}
-              <a onClick={() => handleItemClick(item)}>{item.anchor}</a>
-            </li>
-          );
-        })}
-      </ul>
+      {isOpen && (
+        <ul ref={dropdownListRef} className={`${classes.dropdown_item_list}`}>
+          {items.map((item, index) => {
+            return (
+              <li className={classes.item_list} key={index}>
+                {item.flag && <img src={item.flag} className={classes.flag} />}
+                <a onClick={() => handleItemClick(item)}>{item.anchor}</a>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 };

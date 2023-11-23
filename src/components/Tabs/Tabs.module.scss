@@ -38,6 +38,7 @@
 @include respond-to('small') {
   .tabs{
     flex-direction: column;
+    width: 100%;
   }
       
     }

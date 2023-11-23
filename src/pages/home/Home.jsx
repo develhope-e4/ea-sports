@@ -13,6 +13,15 @@ import classes from "../../components/Tabs/Tabs.module.scss";
 import styles from "../../components/Cards/Cards.module.scss";
 
 
+const estilo = {
+  marginLeft: '50%',
+  marginRight: '50%',
+  whiteSpace: 'nowrap',
+  
+
+};
+
+
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
@@ -47,7 +56,9 @@ const Home = () => {
         showBuyButton={true}
       />
       <Section>
-        <h1 className="h1">Juegos destacados</h1>
+        <h1 className="h1"  
+        style={estilo}
+        >Juegos destacados</h1>
         <Container>
           <CardsDestacadas />
         </Container>
@@ -59,7 +70,9 @@ const Home = () => {
         />
       </Section>
       <Section>
-        <h1>Últimas actualizaciones</h1>
+        <h1
+        style={estilo}
+        >Últimas actualizaciones</h1>
         <Container>
           <div className={classes.tabsCards}>
             <Tabs
