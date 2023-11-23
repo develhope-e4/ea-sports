@@ -1,8 +1,8 @@
-import "./TextInfo.scss"
+import classes from "./TextInfo.module.scss";
 
 function TextInfo({ h3Text, pText, h4Text , ulLiAText , ulLiAText2 }) {
   return (
-    <div className="TextInfo">
+    <div className={classes.TextInfo}>
       {h3Text && <h3>{h3Text}</h3>}
       {pText && <p>{pText}</p>}
       {h4Text && <h4>{h4Text}</h4>}

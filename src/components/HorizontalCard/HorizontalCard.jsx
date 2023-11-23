@@ -1,19 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import "./HorizontalCard.scss";
+import classes from "./HorizontalCard.module.scss";
 
 const HorizontalCard = ({ imagenSrc, aText, pText, h4Text, isReverse }) => {
 
     
   return (
-    <div className="HorizontalCard" style={{flexDirection:isReverse ? "row-reverse":"row"}}>
-      <div className="imageContainer">
+    <div className={classes.HorizontalCard} style={{flexDirection:isReverse ? "row-reverse":"row"}}>
+      <div className={classes.imageContainer}>
         <img
           src={imagenSrc}
           alt="Imagen de la tarjeta"
-          className="cardImage"
+          className={classes.cardImage}
         />
       </div>
-      <div className="cardContent">
+      <div className={classes.cardContent}>
         {h4Text && <h4>{h4Text}</h4>}
         {aText && <a>{aText}</a>}
         {pText && <p>{pText}</p>}
