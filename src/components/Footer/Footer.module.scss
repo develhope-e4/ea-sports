@@ -1,4 +1,6 @@
-/* Estilos para el primer grid (footerGris y footerBlanco) */
+@import '../../styles/mixins';
+
+
 .footer {
   display: flex;
   width: 100%;
@@ -99,3 +101,59 @@
 .iconosRS svg {
   margin-right: 10px;
 }
+
+
+
+
+
+
+
+
+@include respond-to('large') {
+
+
+.linkTextoNegritaFooterTexto{
+  display: none;
+}
+
+
+
+}
+
+
+
+@include respond-to('small') {
+
+  
+  
+  .linkTextoFooterGris{
+    flex-direction: column;
+  }
+
+  .arribaCentro{
+    flex-direction: column;
+    display: flex;
+    max-width: 400px;
+  }
+
+  .abajoCentro, .arribaCentro {
+    text-align: left;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    align-items: flex-start;
+  }
+
+  .abajoDer{
+    img{
+    margin: 0px;
+  }}
+
+  .arribaDer{
+    flex-direction: column;
+    
+  }
+  }
+  
+  

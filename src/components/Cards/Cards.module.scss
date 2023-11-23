@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 .tabsCards {
   display: flex;
   flex-direction: column;
@@ -108,3 +110,18 @@
   width: 297.55px;
   height: fit-content;
 }
+
+
+
+@include respond-to('small') {
+
+
+  .cardContainer{
+    justify-content: flex-start;
+    .card{
+      flex-grow: 0;
+    }
+  
+  }
+      
+    }
