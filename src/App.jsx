@@ -5,6 +5,7 @@ import Development from "./pages/development/Development";
 import Home from "./pages/home/Home";
 import LatestGame from "./pages/Latest-Game/LatestGame";
 import Login from "./pages/Login/Login";
+import CreateAccountForm from "./components/CreateAccountForm/CreateAccountForm";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
             <>
               <NavBar />
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route exact path="/dev" element={<Development />} />
+                <Route index element={<Home />} />
+                <Route path="/dev" element={<Development />} />
                 <Route exact path="/games" element={<LatestGame />} />
               </Routes>
               <Footer />
@@ -26,6 +27,7 @@ function App() {
         />
 
         <Route path="/login" element={<Login />} />
+        <Route path="/create-account" element={<CreateAccountForm />} />
       </Routes>
     </BrowserRouter>
   );

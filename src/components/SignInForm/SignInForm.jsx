@@ -1,48 +1,61 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./SignInForm.module.scss";
 import SignInFormInput from "../SignInFormInput/SignInFormInput";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignInForm = () => {
-  const [error, setError] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [emailValid, setEmailValid] = useState(true);
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    if (email.trim() === "") {
-      setErrorMessage("Dirección de correo electrónico no válida");
+    if (email.trim() === "" || password.trim() === "") {
+      setErrorMessage("Completa todos los campos");
       setEmailValid(false);
       return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const isValidEmail = emailRegex.test(email);
+    // Realiza la solicitud al backend para iniciar sesión
+    try {
+      console.log("Email:", email);
+      console.log("Contraseña:", password);
+      const response = await axios.post(
+        "http://localhost/backend/auth/login.php",
+        {
+          email,
+          password,
+        }
+      );
 
-    if (!isValidEmail) {
-      setErrorMessage("Dirección de correo electrónico no válida");
-      setEmailValid(false);
-      return;
+      const data = response.data;
+
+      if (data.success) {
+        console.log("Inicio de sesión exitoso");
+        // Puedes redirigir al usuario a otra página o realizar otras acciones después del inicio de sesión exitoso.
+      } else {
+        console.error("Error en el inicio de sesión:", data.error);
+        setErrorMessage("Credenciales inválidas");
+        // Manejar el error, por ejemplo, mostrar un mensaje al usuario.
+      }
+    } catch (error) {
+      console.error("Error en la solicitud HTTP:", error);
+      // Manejar errores de red u otros problemas.
     }
-
-    setErrorMessage("");
-    setEmailValid(true);
-
-    console.log("Email:", email);
-    console.log("Password:", password);
   };
+
   const handleEmailChange = (event) => {
     const inputEmail = event.target.value;
     setEmail(inputEmail);
-  
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isValidEmail = emailRegex.test(inputEmail);
-  
+
     if (inputEmail.trim() === "") {
       setErrorMessage("");
       setEmailValid(true);
@@ -54,18 +67,13 @@ const SignInForm = () => {
       setEmailValid(true);
     }
   };
+
   const handlePasswordKeyDown = (event) => {
     if (event.key === "Enter") {
       console.log("Enter key pressed in password field");
       handleFormSubmit(event);
     }
   };
-
-  useEffect(() => {}, []);
-
-  if (error) {
-    return <p>Error: {error}</p>;
-  }
 
   return (
     <div className={styles.fullPage}>
@@ -83,15 +91,17 @@ const SignInForm = () => {
           </div>
           <form className={styles.formsign} onSubmit={handleFormSubmit}>
             <SignInFormInput
-             label="TELÉFONO O CORREO ELECTRÓNICO"
-             type="text"
-             placeholder="Escribe tu teléfono o correo electrónico"
-             id="emailForm"
-             value={email}
-             onChange={handleEmailChange}
-             isValid={emailValid}
+              label="TELÉFONO O CORREO ELECTRÓNICO"
+              type="text"
+              placeholder="Escribe tu teléfono o correo electrónico"
+              id="emailForm"
+              value={email}
+              onChange={handleEmailChange}
+              isValid={emailValid}
             />
-            {errorMessage && <p style={{ color: "rgb(198, 41, 41)" }}>{errorMessage}</p>}
+            {errorMessage && (
+              <p style={{ color: "rgb(198, 41, 41)" }}>{errorMessage}</p>
+            )}
             <div className={styles.formpassword}>
               <SignInFormInput
                 label="CONTRASEÑA"
@@ -119,7 +129,11 @@ const SignInForm = () => {
               Recordarme
             </label>
           </div>
-          <button className={styles.buttonsignIn} type="submit" onClick={handleFormSubmit}>
+          <button
+            className={styles.buttonsignIn}
+            type="submit"
+            onClick={handleFormSubmit}
+          >
             INICIAR SESIÓN
           </button>
           <div className={styles.formlinks}>
