@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./FooterDropdownSims4.module.scss";
 import Icono from "../Icono/Icono";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import classNames from "classnames";
 
 const FooterDropdownSims4 = ({ items = [], dropdownTitle }) => {
   const activatorRef = useRef(null);
@@ -32,11 +33,6 @@ const FooterDropdownSims4 = ({ items = [], dropdownTitle }) => {
     }
   };
 
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
-    setIsOpen(false);
-  };
-
   useEffect(() => {
     if (isOpen) {
       const firstAnchor = dropdownListRef.current.querySelector("button");
@@ -47,9 +43,16 @@ const FooterDropdownSims4 = ({ items = [], dropdownTitle }) => {
     } else {
       document.removeEventListener("mousedown", clickOutsideHandler);
     }
-  }, [isOpen]);  
+  }, [isOpen]);
 
   console.log(items);
+
+  const ITEMS_TO_DISPLAY = 8;
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    setIsOpen(false);
+  };
+
   return (
     <div className={styles.dropdown_wrapper} onKeyUp={keyHandler}>
       <button
@@ -75,20 +78,26 @@ const FooterDropdownSims4 = ({ items = [], dropdownTitle }) => {
       </button>
       <ul
         ref={dropdownListRef}
-        className={`${"dropdown_item_list"} ${isOpen ? "active" : ""} `}
+        className={classNames(
+          styles.dropdown_item_list,
+          isOpen && styles.active
+        )}
       >
-        {items.map((item, index) => {
-          return (
-            <li className={styles.item_list} key={index}>
-              <button
-                onClick={() => handleItemClick(item)}
-                className={styles.link_button}
-              >
-                {item.anchor}
-              </button>{" "}
-            </li>
-          );
-        })}
+        {isOpen && (
+          <li className={styles.item_list}>
+            <div className={styles.vertical_navigation}>
+              {items.map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleItemClick(item)}
+                  className={styles.link_button}
+                >
+                  {item.anchor}
+                </button>
+              ))}
+            </div>
+          </li>
+        )}
       </ul>
     </div>
   );
