@@ -17,7 +17,7 @@ const estilo = {
   marginLeft: '50%',
   marginRight: '50%',
   whiteSpace: 'nowrap',
-  
+
 
 };
 
@@ -56,7 +56,7 @@ const Home = () => {
         showBuyButton={true}
       />
       <Section>
-        <h1 className="h1"  
+        <h1 className="h1"
         style={estilo}
         >Juegos destacados</h1>
         <Container>
