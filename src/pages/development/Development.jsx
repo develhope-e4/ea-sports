@@ -57,7 +57,7 @@ const Development = () => {
               handleTabClick={handleTabClick}
               activeTab={activeTab}
             />
-            <div className="card-container">
+            <div className="cardContainer">
               {cardData[activeTab] ? (
                 cardData[activeTab].map((card, index) => (
                   <Cards

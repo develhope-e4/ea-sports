@@ -9,6 +9,17 @@ import cardData from "../../data/CardData.mock";
 import Boton from "../../components/Boton/Boton";
 import Subscription from "../../components/Subscription/Subscription";
 import { CardsDestacadas } from "../../components/CardsDestacadas/CardsDestacadas";
+import classes from "../../components/Tabs/Tabs.module.scss";
+import styles from "../../components/Cards/Cards.module.scss";
+
+
+const estilo = {
+  marginLeft: '50%',
+  marginRight: '50%',
+  whiteSpace: 'nowrap',
+
+
+};
 
 
 const Home = () => {
@@ -33,25 +44,23 @@ const Home = () => {
 
   return (
     <BasePage>
-        <LoopVideo
-          videoSrc="./immortals.mp4"
-          imagenSrc="./Immorlas-Logo.svg"
-          buttonText="Comprar ahora"
-          onButtonClick={handleButtonClick}
-          isPrimary={true}
-          isLight={false}
-          customClass=""
-          customImageClass=""
-          showBuyButton={true}
-        />
+      <LoopVideo
+        videoSrc="./immortals.mp4"
+        imagenSrc="./Immorlas-Logo.svg"
+        buttonText="Comprar ahora"
+        onButtonClick={handleButtonClick}
+        isPrimary={true}
+        isLight={false}
+        customClass=""
+        customImageClass=""
+        showBuyButton={true}
+      />
       <Section>
-        <h1>Juegos destacados</h1>
+        <h1 className="h1"
+        style={estilo}
+        >Juegos destacados</h1>
         <Container>
-
           <CardsDestacadas />
-
-
-
         </Container>
         <Boton
           esPrimario={false}
@@ -61,15 +70,17 @@ const Home = () => {
         />
       </Section>
       <Section>
-        <h1>Últimas actualizaciones</h1>
+        <h1
+        style={estilo}
+        >Últimas actualizaciones</h1>
         <Container>
-          <div className="tabs-cards">
+          <div className={classes.tabsCards}>
             <Tabs
               tabNames={tabNames}
               handleTabClick={handleTabClick}
               activeTab={activeTab}
             />
-            <div className="card-container">
+            <div className={styles.cardContainer}>
               {cardData[activeTab] ? (
                 cardData[activeTab].map((card, index) => (
                   <Cards

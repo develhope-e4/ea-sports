@@ -1,14 +1,18 @@
-.base-container {
+@import '../../styles/mixins';
+
+.baseContainer {
 
   margin: auto;
   padding: var(--padding-vert-container) 0;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 
+  flex-wrap: wrap;
   max-width: 1224px;
-  width: 100%;
+  
 }
+
+
 
 .centered {
   align-items: center;
@@ -31,3 +35,22 @@
 .paddingMD {
   padding: var(--spacing-md);
 }
+
+.subscriptionAlignItems{
+  display: flex;
+  align-items: baseline;
+}
+
+
+
+
+
+@include respond-to('large') {
+.baseContainer{
+  padding: 0px;
+  margin: 0px;
+  align-self: flex-start;
+  
+}
+    
+  }

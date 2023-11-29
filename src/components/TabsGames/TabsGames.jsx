@@ -1,12 +1,12 @@
-import "./TabsGames.scss"
+import classes from "./TabsGames.module.scss"
 const TabsGames = ({ tabs, onTabChange, activeTab }) => {
   return (
-    <div className="tabs-games">
-      <div className="tabs-games__list">
+    <div className={classes.tabsGames}>
+      <div className={classes.tabsGames__list}>
         {tabs.map((tab, index) => (
-          <div 
+          <div
             key={index}
-            className={tab.url === activeTab ? "tabs-games__item--active" : ""}
+            className={tab.url === activeTab ? classes.tabsGames__itemActive : null}
             onClick={() => onTabChange(tab.url)}
           >
             <a href={tab.url}>{tab.text}</a>
