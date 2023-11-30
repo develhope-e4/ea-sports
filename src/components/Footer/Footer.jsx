@@ -13,25 +13,52 @@ import TRUSTe from "../../assets/Footer/TRUSTe.svg";
 import Container from "../Container/Container";
 import Section from "../Section/Section";
 
+import { useLanguage } from '../../components/LanguageContext/LanguageContext';
+
+
+import enUK from '../../data/Translate/en.mock';
+import it from '../../data/Translate/it.mock';
+import es from '../../data/Translate/es.mock';
+
+
+
 const Footer = () => {
+
+  const { language } = useLanguage(); 
+
+
+  let translations;
+  switch (language) {
+    case "United Kingdoms":
+      translations = enUK;
+      break;
+    case "Italia":
+      translations = it;
+      break;
+    case "España":
+    default:
+      translations = es;
+  }
+
+  
   return (
     <div className={classes.footer}>
       <Section backgroundColor={"--color-octave"} margen={false}>
         <Container paddingMD={true}>
           <div className={classes.linkTextoFooterGris}>
-            <a href="https://www.ea.com/es-es/careers">Empleo</a>
-            <a href="https://www.ea.com/es-es/executives">Ejecutivos</a>
+            <a href="https://www.ea.com/es-es/careers">{translations.empleo}</a>
+            <a href="https://www.ea.com/es-es/executives">{translations.ejecutivos}</a>
             <a href="https://www.ea.com/es-es/news/sharing-our-2021-impact-report">
-              Informe de impacto
+             {translations.informe}
             </a>
             <a href="https://www.ea.com/es-es/commitments">
-              Nuestros compromisos
+              {translations.compromisosF}
             </a>
             <a
               className={classes.comunicarInquietudes}
               href="https://www.ea.com/es-es/about/reporting-concerns"
             >
-              Comunicar inquietudes
+              {translations.comunicar}
             </a>
           </div>
           <div className={classes.linkTextoNegritaFooter}>
@@ -39,7 +66,7 @@ const Footer = () => {
               className={classes.linkTextoNegritaFooterTexto}
               href="https://www.ea.com/es-es/about/reporting-concerns"
             >
-              Únete a la conversación
+             {translations.unete}
             </a>
             <div className={classes.iconosRS}>
               <Icono
@@ -76,46 +103,45 @@ const Footer = () => {
           <div className={classes.centro}>
             <div className={classes.arribaCentro}>
               <a href="https://www.ea.com/es-es/games/library">
-                Biblioteca de juegos
+                {translations.bibliotecaJuegos}
               </a>
-              <a href="https://www.ea.com/es-es/subscribe">Suscribirse</a>
-              <a href="https://www.ea.com/es-es/redeem">Canjear Código</a>
+              <a href="https://www.ea.com/es-es/subscribe">{translations.suscribirse}</a>
+              <a href="https://www.ea.com/es-es/redeem">{translations.canjearCodigo}</a>
               <br />
-              <a href="https://www.ea.com/es-es/ea-app">EA app</a>
-              <a href="https://www.ea.com/es-es/ea-app">Acerca de</a>
-              <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
-              <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
+              <a href="https://www.ea.com/es-es/ea-app">{translations.eaApp}</a>
+              <a href="https://www.ea.com/es-es/ea-app">{translations.acercaDeF}</a>
+              <a href="https://www.ea.com/es-es/ea-app">{translations.accesibilidad}</a>
+              <a href="https://www.ea.com/es-es/ea-app">{translations.ayuda}</a>
             </div>
             <div className={classes.abajoCentro}>
               <a href="http://www.ea.com/es-es/legal">
-                Información legal y privacidad
+                {translations.informacionLegal}
               </a>
               <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-                Acuerdo de usuario
+                {translations.acuerdoUsuario}
               </a>
               <br />
               <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-                Política de privacidad y directiva de cookies (tus derechos de
-                privacidad)
+                {translations.politicaPrivacidad}
               </a>
               <br />
               <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-                Actualizaciones del servicio online
+                {translations.actualizacionesServicio}
               </a>
               <a href="https://tos.ea.com/legalapp/WEBTERMS/US/es/PC/">
-                Seguridad
+                {translations.seguridad}
               </a>
-              <a href="https://www.ea.com/es-es">Sus preferencias de cookies</a>
+              <a href="https://www.ea.com/es-es">{translations.preferenciasCookies}</a>
               <p>© 2023 Electronic Arts Inc.</p>
             </div>
           </div>
           <div className={classes.derecha}>
             <div className={classes.arribaDer}>
               <FooterDropdown
-                dropdownTitle="Región (precios)"
+                dropdownTitle={translations.region}
                 items={itemsRegion}
               />
-              <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
+              <FooterDropdown dropdownTitle={translations.idioma} items={itemsIdioma} />
             </div>
             <div className={classes.abajoDer}>
               <img src={TRUSTe} alt="Truste Logo" />

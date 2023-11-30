@@ -6,10 +6,12 @@ import Home from "./pages/home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import LatestGame from "./pages/Latest-Game/LatestGame";
+import { LanguageProvider } from "./components/LanguageContext/LanguageContext";
 
 function App() {
   return (
     <BrowserRouter>
+    <LanguageProvider> 
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +19,8 @@ function App() {
         <Route exact path="/games" element={<LatestGame />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </LanguageProvider>
+  </BrowserRouter>
   );
 }
 
