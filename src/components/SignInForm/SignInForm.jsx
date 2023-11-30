@@ -1,11 +1,13 @@
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from "./SignInForm.module.scss";
 import SignInFormInput from "../SignInFormInput/SignInFormInput";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignInForm = () => {
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,6 +38,7 @@ const SignInForm = () => {
 
       if (data.success) {
         console.log("Inicio de sesión exitoso");
+        navigate("/", { state: { username: data.username } });
       } else {
         console.error("Error en el inicio de sesión:", data.error);
         setErrorMessage("Credenciales inválidas");
