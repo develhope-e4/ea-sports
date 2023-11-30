@@ -1,4 +1,6 @@
-div.tabs-games {
+@import '../../styles/mixins';
+
+div.tabsGames {
   display: flex;
   background-color: rgb(225, 229, 115);
   overflow-x: auto;
@@ -6,15 +8,21 @@ div.tabs-games {
   margin-bottom: var(--spacing-md);
 }
 
-div.tabs-games__list {
+div.tabsGames__list {
   display: flex;
   flex-direction: row;
+
   justify-content: space-around;
   background-color: rgb(255, 255, 255);
   border-bottom: 2px solid #dedede;
+  a{
+    color: var(--color-sextary);
+  text-decoration: none;
+  }
+
 }
 
-.tabs-games__list div {
+.tabsGames__list div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +40,7 @@ div.tabs-games__list {
   }
 }
 
-.tabs-games__item--active {
+.tabsGames__itemActive {
   border-bottom: 2px solid red;
   background-color: #dedede;
   color: var(--color-sextary);
@@ -40,3 +48,24 @@ div.tabs-games__list {
 .tab:last-child {
   margin-right: 0;
 }
+
+
+
+
+@include respond-to('medium') {
+
+  div.tabsGames {
+    margin-top: var(--spacing-m);
+   
+    margin-bottom: 0px;
+  }
+
+  div.tabsGames__list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+ 
+    }
+    

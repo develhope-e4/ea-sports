@@ -1,85 +1,87 @@
 import { useState } from "react";
-import "./HamburgerMenu.scss"; // Estiliza este archivo según tus necesidades
+import styles from "./HamburgerMenu.module.scss";
 import { FiMenu, FiXCircle } from "react-icons/fi";
-import DropDown from "../Dropdown/Dropdown";
-
+import { useLanguage } from '../../components/LanguageContext/LanguageContext';
+import enUK from '../../data/Translate/en.mock';
+import it from '../../data/Translate/it.mock';
+import es from '../../data/Translate/es.mock';
 import Dropdown from "../Dropdown/Dropdown";
-import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
-import { PlataformasDropDown } from "../../data/PlataformasDropDown.mock";
-import { MasExperiencias } from "../../data/MasExperiencias.mock";
-import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
-import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
-import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
 
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language } = useLanguage();
+
+  let translations;
+  switch (language) {
+    case "United Kingdoms":
+      translations = enUK;
+      break;
+    case "Italia":
+      translations = it;
+      break;
+    case "España":
+    default:
+      translations = es;
+  }
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <div className="HamburgerMenu">
-      <button onClick={toggleMenu}>
-        <div className="menuicon">
+    <div className={styles.menuContainer}>
+      <button onClick={toggleMenu} className={styles.menuButton}>
+        <div className={styles.menuicon}>
           <FiMenu />
         </div>
       </button>
       {menuOpen && (
-        <div className={`HamburgerLinks ${menuOpen ? "open" : ""}`}>
-          <div className="menuHamburguer">
-            <div className="menuHamburguerAction">
-              <img
-                src="/NavBar/ea-electronicsarts.svg"
-                alt="Mi SVG"
-                className="easvg"
-                onClick={""}
-              />
+        <div className={styles.menuOpenMenu}>
+          <div className={styles.menuHamburguerAction}>
+            <img
+              src="/NavBar/ea-electronicsarts.svg"
+              alt="Mi SVG"
+              className="easvg"
+              onClick={console.log("")}
+            />
 
-              <button onClick={toggleMenu}>
-                <FiXCircle />
-              </button>
-            </div>
-            <div className="menuHamburguerMenu">
-              <DropDown
-                data={ExplorarJuegosDropDown}
-                title={ExplorarJuegosDropDown[0].tittle}
-                data2={PlataformasDropDown}
-                className={"second"}
-              />
+            <button onClick={toggleMenu}>
+              <FiXCircle />
+            </button>
+          </div>
 
-              <div className="separator"></div>
-
-              <DropDown
-                data={MasExperiencias}
-                title={MasExperiencias[0].tittle}
-                className={"second"}
-              />
-
-              <div className="separator"></div>
-
-              <Dropdown
-                data={AcercaDeDropDown}
-                title={AcercaDeDropDown[0].tittle}
-                className={"second"}
-              />
-              <div className="separator"></div>
-
-              <Dropdown
-                data={CompromisosDropDown}
-                title={CompromisosDropDown[0].tittle}
-                className={"second"}
-              />
-              <div className="separator"></div>
-
-              <Dropdown
-                doble={false}
-                data={RecursosDropDown}
-                title={RecursosDropDown[0].tittle}
-                className={"second"}
-              />
-              <div className="separator"></div>
-            </div>
+          <div className={styles.menuContent}>
+            <Dropdown
+              data={translations.explorarJuegos}
+              title={translations.explorarJuegosTitle}
+              data2={translations.plataformas}
+              className={"second"}
+            />
+            <div className={styles.separator}></div>
+            <Dropdown
+              data={translations.masExperiencias}
+              title={translations.masExperienciasTitle}
+              className="second"
+            />
+            <div className={styles.separator}></div>
+            <Dropdown
+              data={translations.acercaDe}
+              title={translations.acercaDeTitle}
+              className="second"
+            />
+            <div className={styles.separator}></div>
+            <Dropdown
+              data={translations.compromisos}
+              title={translations.compromisosTitle}
+              className="second"
+            />
+            <div className={styles.separator}></div>
+            <Dropdown
+              data={translations.recursos}
+              title={translations.recursosTitle}
+              className="second"
+            />
+            <div className={styles.separator}></div>
           </div>
         </div>
       )}

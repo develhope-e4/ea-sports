@@ -38,8 +38,7 @@
   }
 }
 
-.secundario-light {
-  cursor: pointer;
+.secundarioLight {
   padding: var(--spacing-sm-boton);
 
   color: var(--text-color);
@@ -77,8 +76,7 @@
     transform: scale(1.05);
   }
 }
-.secundario-dark{
-  cursor: pointer;
+.secundarioDark{
   padding: var(--spacing-sm-boton);
 
   color: var(--text-color-boton);
@@ -115,5 +113,4 @@
   &:hover {
     transform: scale(1.05);
   }
-
 }

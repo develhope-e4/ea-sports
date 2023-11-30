@@ -2,7 +2,7 @@ import Boton from "../Boton/Boton";
 import { useRef, useState } from "react";
 import { MdPausePresentation } from "react-icons/md";
 import { BsPlayBtn } from "react-icons/bs";
-import "./LoopVideo.scss";
+import classes from "./LoopVideo.module.scss";
 
 const LoopVideo = ({
   videoSrc,
@@ -33,14 +33,14 @@ const LoopVideo = ({
       }
     }
   };
-  const buttonClass = isPrimary ? "primary-button" : "secondary-button";
-  const overlayClass = isLight ? "light-overlay" : "dark-overlay";
+  const buttonClass = isPrimary ? classes.primaryButton : classes.secondaryButton;
+  const overlayClass = isLight ? classes.lightOverlay : classes.darkOverlay;
 
   return (
-    <div className="video-container">
-      <div className={`overlay ${overlayClass}`} />
+    <div className={classes.videoContainer}>
+      <div className={`${classes.overlay} ${overlayClass}`} />
       {showButtons && (
-        <div className="video-buttons">
+        <div className={classes.videoButtons}>
           {isPlaying ? (
             <MdPausePresentation onClick={handleVideoButtonClick} />
           ) : (
@@ -48,13 +48,13 @@ const LoopVideo = ({
             )}
         </div>
       )}
-     
+
       <img
       src={imagenSrc}
       alt="Imagen SVG"
-      className={`immortalsLogo ${customImageClass}`}
+      className={`${classes.immortalsLogo} ${customImageClass}`}
     />
-    
+
       <video
         ref={videoRef}
         src={videoSrc}
@@ -63,7 +63,7 @@ const LoopVideo = ({
         muted
         playsInline
       />
-      <div className="compraAhora">
+      <div className={"compraAhora"}>
         {showBuyButton && (
           <Boton
             esPrimario={isPrimary}

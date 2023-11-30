@@ -1,0 +1,82 @@
+@import '../../styles/mixins';
+
+.textContainer {
+    width: 30%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+
+}
+
+.texto {
+    width: 100%;
+    color: var(--color-quinary);
+    font-size: var(--font-size-l);
+    font-family: var(--font-family-primary-ea);
+    font-weight: var(--font-weith-s);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.SubscriptionSectionMoreInfoContenidoBoton{
+    margin:var(--spacing-sm) auto var(--spacing-sm);
+
+    margin-left: 50px;
+}
+
+
+@include respond-to('large') {
+
+
+    .textContainer{
+      width: 100%;
+      padding: 5%;
+
+     
+      
+    }
+
+ 
+
+
+    
+
+}
+
+
+
+@include respond-to('medium') {
+
+    .SubscriptionSectionMoreInfoContenidoBoton{
+
+
+        align-self: center;
+        margin: auto;
+        margin-bottom: 2%;
+    }
+
+
+    .tittle{
+        margin: auto;
+
+        margin-bottom: 5%;
+        margin-top: 5%;
+      
+    }
+
+    
+
+
+
+}
+
+
+@include respond-to('small') {
+  
+        .tittle{
+    margin-left: 5%;
+   
+    }
+
+}

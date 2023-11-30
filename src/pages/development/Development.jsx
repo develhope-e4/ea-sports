@@ -6,7 +6,7 @@ import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import Cards from "../../components/Cards/Cards";
 import Footer from "../../components/Footer/Footer";
 import Tabs from "../../components/Tabs/Tabs";
-import cardData from "../../data/CardData.mock";
+import cardData from "../../data/CardDataEs.mock";
 import Icono from "../../components/Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -57,7 +57,7 @@ const Development = () => {
               handleTabClick={handleTabClick}
               activeTab={activeTab}
             />
-            <div className="card-container">
+            <div className="cardContainer">
               {cardData[activeTab] ? (
                 cardData[activeTab].map((card, index) => (
                   <Cards

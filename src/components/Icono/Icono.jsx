@@ -1,4 +1,4 @@
-import "./Icono.scss";
+import classes from"./Icono.module.scss";
 
 /**
  *
@@ -9,7 +9,7 @@ import "./Icono.scss";
  */
 
 const Icono = ({ esRedSocial, icono, onClick }) => {
-  const className = esRedSocial ? "redSocial" : "otro";
+  const className = esRedSocial ? classes.redSocial : classes.otro;
 
   return (
     <div onClick={onClick} className={className}>

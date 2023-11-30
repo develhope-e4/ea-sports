@@ -150,124 +150,20 @@ export const itemsRegion = [
   },
 ];
 export const itemsIdioma = [
+  
   {
     slug: "/link1/",
-    flag: banderaEstadosUnidos,
-    anchor: "United States",
-  },
-  {
-    slug: "/link2/",
-    flag: banderaReinoUnido,
-    anchor: "United kimdoms",
-  },
-  {
-    slug: "/link3/",
-    flag: banderaAustralia,
-    anchor: "Australia",
-  },
-  {
-    slug: "/link4/",
-    flag: banderaFrancia,
-    anchor: "France",
-  },
-  {
-    slug: "/link5/",
-    flag: banderaAlemania,
-    anchor: "Deutschland",
-  },
-  {
-    slug: "/link6/",
-    flag: banderaItalia,
-    anchor: "Italia",
-  },
-  {
-    slug: "/link7/",
-    flag: banderaJapon,
-    anchor: "日本",
-  },
-  {
-    slug: "/link8/",
-    flag: banderaPolonia,
-    anchor: "Poslka",
-  },
-  {
-    slug: "/link9/",
-    flag: banderaBrasil,
-    anchor: "Brasil",
-  },
-  {
-    slug: "/link10/",
-    flag: banderaRusia,
-    anchor: "Россия",
-  },
-  {
-    slug: "/link11/",
     flag: banderaEspaña,
     anchor: "España",
   },
   {
-    slug: "/link12/",
-    flag: banderaChekia,
-    anchor: "Česká republika",
+    slug: "/link2/",
+    flag: banderaItalia,
+    anchor: "Italia",
   },
   {
-    slug: "/link13/",
-    flag: banderaCanada,
-    anchor: "Canada (En)",
-  },
-  {
-    slug: "/link14/",
-    flag: banderaCanada,
-    anchor: "Canada (Fr)",
-  },
-  {
-    slug: "/link15/",
-    flag: banderaDinamarca,
-    anchor: "Danmark",
-  },
-  {
-    slug: "/link16/",
-    flag: banderaFinlandia,
-    anchor: "Suomi",
-  },
-  {
-    slug: "/link17/",
-    flag: banderaMexico,
-    anchor: "México",
-  },
-  {
-    slug: "/link18/",
-    flag: banderaNederland,
-    anchor: "Nederland",
-  },
-  {
-    slug: "/link19/",
-    flag: banderaNorge,
-    anchor: "Norge",
-  },
-  {
-    slug: "/link20/",
-    flag: banderaSeverige,
-    anchor: "Sverige",
-  },
-  {
-    slug: "/link21/",
-    flag: banderaChina,
-    anchor: "中国",
-  },
-  {
-    slug: "/link22/",
-    flag: banderaCorea,
-    anchor: "대한민국",
-  },
-  {
-    slug: "/link23/",
-    flag: banderaChina,
-    anchor: "繁體中文",
-  },
-  {
-    slug: "/link24/",
-    flag: banderaTurkia,
-    anchor: "Türkiye",
+    slug: "/link3/",
+    flag: banderaReinoUnido,
+    anchor: "United Kingdoms",
   },
 ];

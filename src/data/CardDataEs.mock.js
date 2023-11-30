@@ -1,4 +1,4 @@
-const cardData = {
+const cardDataEs = {
   NoticiasEA: [
     {
       imagenSrc: "Cards-section/NOTICIASEA/Card-ea-positive.png",
@@ -352,4 +352,4 @@ const cardData = {
   ],
 };
 
-export default cardData;
+export default cardDataEs;
