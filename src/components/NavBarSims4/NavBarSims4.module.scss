@@ -189,7 +189,7 @@ ul li {
   z-index: 1000;
 }
 
-$hideHeight: 100;
+$hideHeight: 104;
 
 .hide {
   visibility: hidden;
@@ -208,6 +208,6 @@ $hideHeight: 100;
 }
 
 .placeholder {
-  height: 60px; 
+  height: 0px; 
 }
 
