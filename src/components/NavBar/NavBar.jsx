@@ -5,18 +5,29 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import BlackNavBar from "../BlackNavBar/BlackNavBar";
 import Dropdown from "../Dropdown/Dropdown";
 import Menu from "../Menu/Menu";
-
-
-import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
-import { PlataformasDropDown } from "../../data/PlataformasDropDown.mock";
-import { MasExperiencias } from "../../data/MasExperiencias.mock";
-import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
-import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
-import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
 import HamburgerMenu from "../HamburguerMenu/HamburgerMenu";
+import { useLanguage } from '../../components/LanguageContext/LanguageContext';
+import enUK from '../../data/Translate/en.mock';
+import it from '../../data/Translate/it.mock';
+import es from '../../data/Translate/es.mock';
+
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language } = useLanguage();
+
+  let translations;
+  switch (language) {
+    case "United Kingdoms":
+      translations = enUK;
+      break;
+    case "Italia":
+      translations = it;
+      break;
+    case "España":
+    default:
+      translations = es;
+  }
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
@@ -51,39 +62,37 @@ const NavBar = () => {
         />
 
         <div className={styles.dropDownSection}>
-            <Dropdown
-            data={ExplorarJuegosDropDown}
-            title={ExplorarJuegosDropDown[0].tittle}
-            data2={PlataformasDropDown}
+          <Dropdown
+            data={translations.explorarJuegos}
+            title={translations.explorarJuegosTitle} // Traducción para el título
+            data2={translations.plataformas}
             className={"first"}
           />
 
           <Dropdown
-            data={MasExperiencias}
-            title={MasExperiencias[0].tittle}
+            data={translations.masExperiencias}
+            title={translations.masExperienciasTitle} // Traducción para el título
             className={"first"}
           />
 
           <Dropdown
-            data={AcercaDeDropDown}
-            title={AcercaDeDropDown[0].tittle}
+            data={translations.acercaDe}
+            title={translations.acercaDeTitle} // Traducción para el título
             className={"first"}
           />
 
           <Dropdown
-            data={CompromisosDropDown}
-            title={CompromisosDropDown[0].tittle}
+            data={translations.compromisos}
+            title={translations.compromisosTitle} // Traducción para el título
             className={"first"}
           />
 
           <Dropdown
             doble={false}
-            data={RecursosDropDown}
-            title={RecursosDropDown[0].tittle}
+            data={translations.recursos}
+            title={translations.recursosTitle} // Traducción para el título
             className={"first"}
           />
-
-
         </div>
       </div>
     </div>

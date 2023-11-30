@@ -1,22 +1,32 @@
 import { useState } from "react";
 import styles from "./HamburgerMenu.module.scss";
 import { FiMenu, FiXCircle } from "react-icons/fi";
-
-import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
-import { PlataformasDropDown } from "../../data/PlataformasDropDown.mock";
-import { MasExperiencias } from "../../data/MasExperiencias.mock";
-import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
-import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
-import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
-import DropDown from "../Dropdown/Dropdown";
+import { useLanguage } from '../../components/LanguageContext/LanguageContext';
+import enUK from '../../data/Translate/en.mock';
+import it from '../../data/Translate/it.mock';
+import es from '../../data/Translate/es.mock';
+import Dropdown from "../Dropdown/Dropdown";
 
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language } = useLanguage();
+
+  let translations;
+  switch (language) {
+    case "United Kingdoms":
+      translations = enUK;
+      break;
+    case "Italia":
+      translations = it;
+      break;
+    case "España":
+    default:
+      translations = es;
+  }
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
 
   return (
     <div className={styles.menuContainer}>
@@ -40,41 +50,40 @@ const HamburgerMenu = () => {
             </button>
           </div>
 
-
-            <div className={styles.menuContent}>
-              <DropDown
-                data={ExplorarJuegosDropDown}
-                title={ExplorarJuegosDropDown[0].tittle}
-                data2={PlataformasDropDown}
-                className={"second"}
-              />
-              <div className={styles.separator}></div>
-              <DropDown
-                data={MasExperiencias}
-                title="Más Experiencias"
-                className="second"
-              />
-              <div className={styles.separator}></div>
-              <DropDown
-                data={AcercaDeDropDown}
-                title="Acerca De"
-                className="second"
-              />
-              <div className={styles.separator}></div>
-              <DropDown
-                data={CompromisosDropDown}
-                title="Compromisos"
-                className="second"
-              />
-              <div className={styles.separator}></div>
-              <DropDown
-                data={RecursosDropDown}
-                title="Recursos"
-                className="second"
-              />
-              <div className={styles.separator}></div>
-            </div>
+          <div className={styles.menuContent}>
+            <Dropdown
+              data={translations.explorarJuegos}
+              title={translations.explorarJuegosTitle}
+              data2={translations.plataformas}
+              className={"second"}
+            />
+            <div className={styles.separator}></div>
+            <Dropdown
+              data={translations.masExperiencias}
+              title={translations.masExperienciasTitle}
+              className="second"
+            />
+            <div className={styles.separator}></div>
+            <Dropdown
+              data={translations.acercaDe}
+              title={translations.acercaDeTitle}
+              className="second"
+            />
+            <div className={styles.separator}></div>
+            <Dropdown
+              data={translations.compromisos}
+              title={translations.compromisosTitle}
+              className="second"
+            />
+            <div className={styles.separator}></div>
+            <Dropdown
+              data={translations.recursos}
+              title={translations.recursosTitle}
+              className="second"
+            />
+            <div className={styles.separator}></div>
           </div>
+        </div>
       )}
     </div>
   );

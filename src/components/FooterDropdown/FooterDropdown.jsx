@@ -2,8 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import classes from "./FooterDropdown.module.scss";
 import Icono from "../Icono/Icono";
 import { HiOutlineChevronUp, HiOutlineChevronDown } from "react-icons/hi";
+import { useLanguage } from '../LanguageContext/LanguageContext'; 
 
 const FooterDropdown = ({ items = [], dropdownTitle }) => {
+  const { changeLanguage } = useLanguage(); 
   const activatorRef = useRef(null);
   const dropdownListRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -20,20 +22,14 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
   };
 
   const clickOutsideHandler = (event) => {
-    if (dropdownListRef.current) {
-      if (
-        dropdownListRef.current.contains(event.target) ||
-        activatorRef.current.contains(event.target)
-      ) {
-        return;
-      }
-
+    if (dropdownListRef.current && !dropdownListRef.current.contains(event.target) && !activatorRef.current.contains(event.target)) {
       setIsOpen(false);
     }
   };
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
+    changeLanguage(item.anchor); 
     setIsOpen(false);
   };
 
@@ -42,7 +38,7 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
       dropdownListRef.current.querySelector("a").focus();
       document.addEventListener("mousedown", clickOutsideHandler);
     } else {
-      document.removeEventListener("mousedown", clickOutsideHandler); // Remueve el evento cuando se cierra el dropdown
+      document.removeEventListener("mousedown", clickOutsideHandler);
     }
   }, [isOpen]);
 
@@ -56,29 +52,19 @@ const FooterDropdown = ({ items = [], dropdownTitle }) => {
         ref={activatorRef}
       >
         {dropdownTitle}
-        {selectedItem && (
-          <>
-            <div className={classes.selected_item}>{selectedItem.anchor}</div>
-          </>
-        )}
+        {selectedItem && <div className={classes.selected_item}>{selectedItem.anchor}</div>}
         <div className={classes.flechaFooter}>
-          {isOpen ? (
-            <Icono icono={<HiOutlineChevronUp />} />
-          ) : (
-            <Icono icono={<HiOutlineChevronDown />} />
-          )}
+          {isOpen ? <Icono icono={<HiOutlineChevronUp />} /> : <Icono icono={<HiOutlineChevronDown />} />}
         </div>
       </button>
       {isOpen && (
-        <ul ref={dropdownListRef} className={`${classes.dropdown_item_list}`}>
-          {items.map((item, index) => {
-            return (
-              <li className={classes.item_list} key={index}>
-                {item.flag && <img src={item.flag} className={classes.flag} />}
-                <a onClick={() => handleItemClick(item)}>{item.anchor}</a>
-              </li>
-            );
-          })}
+        <ul ref={dropdownListRef} className={classes.dropdown_item_list}>
+          {items.map((item, index) => (
+            <li className={classes.item_list} key={index} onClick={() => handleItemClick(item)}>
+              {item.flag && <img src={item.flag} alt="" className={classes.flag} />}
+              <a href="#">{item.anchor}</a>
+            </li>
+          ))}
         </ul>
       )}
     </div>

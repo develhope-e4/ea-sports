@@ -4,6 +4,13 @@ import CardDestacada from "../CardDestacada/CardDestacada";
 import classes from "../CardDestacada/CardDestacada.module.scss";
 import classNames from "classnames/bind";
 
+import { useLanguage } from '../../components/LanguageContext/LanguageContext';
+
+
+import enUK from '../../data/Translate/en.mock';
+import it from '../../data/Translate/it.mock';
+import es from '../../data/Translate/es.mock';
+
 const cx = classNames.bind(classes);
 const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
   const classNames = cx({
@@ -17,6 +24,23 @@ const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
   });
 
 
+  const { language } = useLanguage(); 
+
+
+  let translations;
+  switch (language) {
+    case "United Kingdoms":
+      translations = enUK;
+      break;
+    case "Italia":
+      translations = it;
+      break;
+    case "España":
+    default:
+      translations = es;
+  }
+
+
   return (
     <>
       <nav className={classNames}>
@@ -25,7 +49,7 @@ const Menu = ({ menuOpen, handleMenuClose, handleMenuItemClick }) => {
             <MdClose />
             <p onClick={handleMenuItemClick}>
               <a href="google.com" className={classes.menuLink}>
-                Todos los juegos
+                {translations.todosLosJuegos}
               </a>
             </p>
           </div>

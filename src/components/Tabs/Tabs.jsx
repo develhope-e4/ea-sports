@@ -1,6 +1,6 @@
 
 import classes from "./Tabs.module.scss";
-import cardData from "../../data/CardData.mock";
+import cardData from "../../data/CardDataEs.mock";
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(classes);
