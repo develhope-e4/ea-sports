@@ -1,0 +1,32 @@
+.TextInfo {
+  h3 {
+    width: 800px;
+    margin: 0px 0px 16px;
+    font-size: 48px;
+    text-align: left;
+  }
+
+  h4 {
+    font-weight: normal;
+    width: 800px;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  p {
+    font-size: 18px;
+    width: 800px;
+    text-align: left;
+  }
+
+  h3, h4 , p , a{
+    font-family: var(--font-family-primary-ea);
+  }
+
+  a,
+  li {
+    font-size: 18px;
+    color: rgb(190, 7, 7);
+    cursor: pointer;
+  }
+}
