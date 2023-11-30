@@ -6,13 +6,14 @@ import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import Cards from "../../components/Cards/Cards";
 import Footer from "../../components/Footer/Footer";
 import Tabs from "../../components/Tabs/Tabs";
-import cardData from "../../data/CardData.mock";
+import cardData from "../../data/CardDataEs.mock";
 import Icono from "../../components/Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 import { cardDestacadaData } from "../../data/CardDestacadasData.mock";
 import Subscription from "../../components/Subscription/Subscription";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import HamburgerMenu from "../../components/HamburguerMenu/HamburgerMenu";
 
 const Development = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -34,6 +35,7 @@ const Development = () => {
   return (
     <div className="App">
       <div className="flex-col-center">
+        <HamburgerMenu/>
         <div className="section">
           {cardDestacadaData &&
             cardDestacadaData.map((card) => (
@@ -55,7 +57,7 @@ const Development = () => {
               handleTabClick={handleTabClick}
               activeTab={activeTab}
             />
-            <div className="card-container">
+            <div className="cardContainer">
               {cardData[activeTab] ? (
                 cardData[activeTab].map((card, index) => (
                   <Cards

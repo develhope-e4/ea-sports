@@ -1,0 +1,101 @@
+@import '../../styles/mixins';
+@import '../../styles/variables.scss';
+
+
+.menuContainer {
+   display: none;
+}
+
+@include respond-to('large') {
+
+  
+
+  .menuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+
+    .menuicon {
+      font-size: var(--font-size-xxxxl);
+      display: flex;
+    }
+    
+    
+  
+    .menuButton {
+      all: unset;
+      color: black;
+      font-size: var(--font-size-xl);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .menuOpenMenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 330px;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+  
+      .Dropdown {
+        width: 100%;
+        margin-bottom: var(--spacing-m);
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .separator{
+    width: 90%;
+    height: 1px;
+    background-color: black;
+    align-self: center;
+  }
+  
+  
+  .menuHamburguerAction{
+  
+    z-index: 2;
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgb(236, 236, 236);
+    height: 50px;
+  
+    button {
+      background: none;
+      color: inherit; 
+      border: none; 
+      padding: 0; 
+      font: inherit; 
+      cursor: pointer; 
+      outline: inherit; 
+  }
+  
+    svg{
+      fill: none;
+      color: black;
+      font-size: var(--font-size-xl);
+    }
+  }
+  
+  .menuContent{ 
+    margin-top: 5%;
+    width: 90%;
+  }
+
+
+
+}

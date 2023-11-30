@@ -1,0 +1,168 @@
+@import '../../styles/mixins';
+
+
+.footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    font-style: var(--font-family-ea);
+    color: var(--color-sextary);
+  }
+}
+
+.linkTextoFooterGris {
+  font-size: var(--font-size-m);
+  font-style: var(--font-style-ea);
+
+  display: flex;
+  gap: var(--spacing-md);
+  align-self: center;
+}
+
+
+
+.comunicarInquietudes {
+  margin-right: none;
+}
+
+.linkTextoNegritaFooter {
+  display: flex;
+  flex-direction: column;
+  font-weight: var(--font-weith-l);
+  font-size: var(--font-size-l);
+}
+
+.linkTextoNegritaFooterTexto {
+  width: 100%;
+  text-align: end;
+  font-size: var(--font-size-s);
+  font-family: var(--font-family-ea);
+}
+
+.izquierda {
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+}
+
+.latIzq {
+  height: 65px;
+  width: auto;
+}
+
+.centro {
+  display: flex;
+  flex-direction: column;
+}
+
+.arribaCentro {
+  font-size: var(--font-size-l);
+  font-style: var(--font-style-ea);
+  line-height: 3;
+}
+
+.arribaCentro a {
+  margin-right: 40px;
+}
+
+.abajoCentro {
+  text-align: left;
+  line-height: 2;
+}
+
+.abajoCentro a {
+  margin-right: 25px;
+}
+
+.derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arribaDer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.abajoDer img {
+  width: 200px;
+  margin-left: 290px;
+}
+
+.iconosRS {
+  display: flex;
+  margin-top: 15px;
+}
+
+.iconosRS svg {
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+@include respond-to('large') {
+
+  .linkTextoFooterGris{
+    padding: 5%;
+  }
+
+
+.linkTextoNegritaFooterTexto{
+  display: none;
+
+}
+
+.derecha{
+  width: 100%;
+}
+
+
+
+}
+
+
+
+@include respond-to('small') {
+
+  
+  
+  .linkTextoFooterGris{
+    flex-direction: column;
+  }
+
+  .arribaCentro{
+    flex-direction: column;
+    display: flex;
+    max-width: 400px;
+  }
+
+  .abajoCentro, .arribaCentro {
+    text-align: left;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    align-items: flex-start;
+  }
+
+  .abajoDer{
+    img{
+    margin: 0px;
+  }}
+
+  .arribaDer{
+    flex-direction: column;
+    
+  }
+  }
+  
+  

@@ -1,3 +1,119 @@
+.primary {
+  padding: var(--spacing-sm-boton);
+
+  color: var(--text-color-boton);
+  background-color: var(--color-botondorado);
+
+  border-radius: var(--border-radius-xs);
+  border: none;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--ea-boton-expansion) ease-in-out;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: none;
+    transition: bottom var(--ea-boton-expansion), left var(--ea-boton-expansion),
+      right var(--ea-boton-expansion), top var(--ea-boton-expansion);
+    pointer-events: none;
+  }
+
+  &:disabled {
+    background-color: var(--color-primario-disabled);
+    color: gray;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.secundarioLight {
+  padding: var(--spacing-sm-boton);
+
+  color: var(--text-color);
+  background-color: var(--color-botonsecundariodark);
+
+  border-radius: var(--border-radius-xs);
+  border: 2px solid rgb(255, 255, 255);
+
+  font-size: 16px;
+  line-height: 20px;
+
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--ea-boton-expansion) ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 1px solid black;
+    transition: bottom var(--ea-boton-expansion), left var(--ea-boton-expansion),
+      right var(--ea-boton-expansion), top var(--ea-boton-expansion);
+    pointer-events: none;
+  }
+
+  &:disabled {
+    background-color: var(--color-primario-disabled);
+    color: gray;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.secundarioDark{
+  padding: var(--spacing-sm-boton);
+
+  color: var(--text-color-boton);
+  background-color: var(--color-botonsecundariolight);
+
+  border-radius: var(--border-radius-xs);
+  border: 2px solid black;
+
+  font-size: 16px;
+  line-height: 20px;
+  
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--ea-boton-expansion) ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 1px solid black;
+    transition: bottom var(--ea-boton-expansion), left var(--ea-boton-expansion),
+      right var(--ea-boton-expansion), top var(--ea-boton-expansion);
+    pointer-events: none;
+  }
+
+  &:disabled {
+    background-color: var(--color-primario-disabled);
+    color: gray;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 .primario,
 .secundario {
   font-size: 17px;

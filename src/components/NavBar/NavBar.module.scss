@@ -1,0 +1,116 @@
+ @import '../../styles/mixins';
+
+
+
+.navbarContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+
+
+
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 0px;
+    color: black;
+
+    .easvg {
+      padding: 0 50px;
+      width: 200px;
+      height: 31px;
+    }
+
+    .dropDownSection {
+      height: 100%;
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+    }
+
+
+
+  }
+
+}
+
+
+
+
+@include respond-to('large') {
+
+  .nav{
+    justify-content: left
+  }
+  .dropDownSection{
+    display: none!important;
+  }
+
+
+
+
+
+
+}
+
+
+;
+
+.navbar {
+  display: flex;
+  color: white;
+  width: 100%;
+  background-color: white;
+}
+.navbar-completa{
+  background-color: white;
+  position: fixed;
+}
+
+.nav {
+  display: flex;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  height: 60px;
+  padding-left: 0px;
+}
+
+.easvg {
+  padding: 0px 50px;
+  width: 200px;
+  height: 31px;
+}
+
+
+.HamburgerMenu{
+  display: none;
+}
+
+
+.dropDownSection{
+  display: flex;
+  width: 50%; 
+  justify-content: space-between;
+ 
+}
+
+
+
+
+
+
+@include respond-to('large') {
+  .dropDownSection{
+    display: none;
+  }
+
+  .HamburgerMenu{
+    display: flex;
+  }
+
+
+}
+

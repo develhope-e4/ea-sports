@@ -1,23 +1,23 @@
  
-import "./Cards.scss";
+import classes from "./Cards.module.scss";
 
 const Cards = ({ imagenSrc, nombre, fecha, titulo, texto }) => {
   return (
-    <div className="card">
-      <div className="image-container">
+    <div className={classes.card}>
+      <div className={classes.imageContainer}>
         <img
           src={imagenSrc}
           alt="Imagen de la tarjeta"
-          className="card-image"
+          className={classes.cardImage}
         />
       </div>
-      <div className="card-content">
-        <div className="card-header">
-          <h2 className="card-title">{nombre}</h2>
-          <p className="card-date">{fecha}</p>
+      <div className={classes.cardContent}>
+        <div className={classes.cardHeader}>
+          <h2 className={classes.cardTitle}>{nombre}</h2>
+          <p className={classes.cardDate}>{fecha}</p>
         </div>
-        <h3 className="card-subtitle">{titulo}</h3>
-        <p className="card-text">{texto}</p>
+        <h3 className={classes.cardSubtitle}>{titulo}</h3>
+        <p className={classes.cardText}>{texto}</p>
       </div>
     </div>
   );

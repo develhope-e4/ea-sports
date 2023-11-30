@@ -1,0 +1,36 @@
+.bodyCont {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.Space {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-container-3-1fr {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+}
+.containerGrid-2-3 {
+  width: 100%;
+
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-container3 {
+    display: grid;
+    margin-left: 100px;
+    margin-right: 100px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

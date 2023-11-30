@@ -1,0 +1,56 @@
+@import '../../styles/mixins';
+
+.baseContainer {
+
+  margin: auto;
+  padding: var(--padding-vert-container) 0;
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  max-width: 1224px;
+  
+}
+
+
+
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.start {
+  align-items: start;
+}
+
+.withImage {
+  background-size: 100%;
+
+}
+
+.paddingLG {
+  padding: var(--spacing-lg);
+}
+
+.paddingMD {
+  padding: var(--spacing-md);
+}
+
+.subscriptionAlignItems{
+  display: flex;
+  align-items: baseline;
+}
+
+
+
+
+
+@include respond-to('large') {
+.baseContainer{
+  padding: 0px;
+  margin: 0px;
+  align-self: flex-start;
+  
+}
+    
+  }

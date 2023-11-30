@@ -1,0 +1,83 @@
+// Dropdown.module.scss
+.DropDownContenetor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ 
+  justify-content: center;
+
+  .first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+   
+  }
+  
+  &.first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+
+  
+  
+
+    &:hover {
+      .DropDownContenetorSvg svg {
+        transform: rotateX(180deg);
+        fill: var(--color-prymary);
+        transition: 0.5s ease-in-out;
+      }
+
+      .DropDownButton {
+        color: var(--color-prymary);
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  .second{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+
+    &:hover {
+      .DropDownContenetorSvg svg {
+        fill: var(--color-prymary);
+        transition: 0.5s ease-in-out;
+      }
+
+      .DropDownButton {
+        color: var(--color-prymary);
+        transition: 0.5s ease-in-out;
+      }
+    }
+ }
+
+  .DropDownButton {
+    border: none;
+    white-space: nowrap;
+    background-color: var(--color-quaternary);
+    z-index: 2;
+    cursor: pointer;
+    font-family: var(--font-family-ea);
+    font-size: var(--font-size-l);
+    display: flex;
+  }
+
+  .DropDownContenetorSvg {
+    align-self: center;
+  }
+}
+
+.DropDownContenetorFirst {
+  height: 100%;
+  width: 100%;
+}
+
+/* Aplica estilos solo al primer .DropDownMenuMenu dentro del primer .DropDownMenu.second dentro de .DropDownContenetor.second que está dentro de .menuHamburguerMenu */
+.menuHamburguerMenu .DropDownContenetor .second:first-of-type .DropDownMenu .second .DropDownMenuMenu:first-of-type {
+  display: none;
+}
