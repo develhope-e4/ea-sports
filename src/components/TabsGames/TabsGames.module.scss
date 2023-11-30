@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 div.tabsGames {
   display: flex;
   background-color: rgb(225, 229, 115);
@@ -9,6 +11,7 @@ div.tabsGames {
 div.tabsGames__list {
   display: flex;
   flex-direction: row;
+
   justify-content: space-around;
   background-color: rgb(255, 255, 255);
   border-bottom: 2px solid #dedede;
@@ -16,6 +19,7 @@ div.tabsGames__list {
     color: var(--color-sextary);
   text-decoration: none;
   }
+
 }
 
 .tabsGames__list div {
@@ -44,3 +48,24 @@ div.tabsGames__list {
 .tab:last-child {
   margin-right: 0;
 }
+
+
+
+
+@include respond-to('medium') {
+
+  div.tabsGames {
+    margin-top: var(--spacing-m);
+   
+    margin-bottom: 0px;
+  }
+
+  div.tabsGames__list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+ 
+    }
+    
