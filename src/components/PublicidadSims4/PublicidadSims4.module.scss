@@ -1,8 +1,8 @@
 .mensajeContenedor {
   display: flex;
   flex-direction: row;
-
-  position: block;
+  justify-content: center;
+  height: 70px;
 }
 
 .mensaje {
@@ -11,31 +11,38 @@
   justify-content: center;
   padding: 10px;
   background-color: #ffffff;
-
-  border: 1px solid rgb(168, 168, 168);
+  border: 1px solid #b8b8b8; 
   border-radius: 7px;
   border-left: 15px solid blue;
-
   gap: 30px;
-
   cursor: pointer;
-  transition: text-decoration 0.3s;
 
-  &:hover {
+  a:hover {
     text-decoration: underline;
+  }
+
+  a {
+    color: #222222; 
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  svg {
+    margin-left: 5px;
+    &:hover {
+      background-color: #e1e1e1;
+      padding: 7px;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
   }
 }
 
 .barraMensaje {
   height: 30px;
   width: 0.3px;
-
-  background-color: rgb(168, 168, 168);
-}
-
-.flecha {
-  font-weight: 900;
-  size-adjust: 10px;
+  background-color: #b8b8b8; /* Using the direct value instead of a variable */
 }
 
 .cerrar {
@@ -44,13 +51,10 @@
   background-color: transparent;
   font-size: medium;
   margin-right: 20px;
-  text-decoration: none;
 
   &:hover {
-    background-color: rgb(226, 226, 226);
-    height: 30px;
-    width: 30px;
+    background-color: #e1e1e1;
+    padding: 7px 10px;
     border-radius: 5px;
-    margin-top: 5px;
   }
 }

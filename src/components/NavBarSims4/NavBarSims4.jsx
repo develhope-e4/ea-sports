@@ -4,6 +4,8 @@ import IconoSims4 from "../IconoSims4/IconoSims4";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import styles from "./NavBarSims4.module.scss";
 
+export const hideHeight = 0;
+
 const NavbarSims4 = () => {
   const [showDropdown1, setShowDropdown1] = useState(false);
   const [showDropdown2, setShowDropdown2] = useState(false);
@@ -12,7 +14,6 @@ const NavbarSims4 = () => {
   const [showDropdown5, setShowDropdown5] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-
   const closeAllDropdowns = () => {
     setShowDropdown1(false);
     setShowDropdown2(false);
@@ -20,6 +21,7 @@ const NavbarSims4 = () => {
     setShowDropdown4(false);
     setShowDropdown5(false);
   };
+
   const toggleDropdown1 = () => {
     closeAllDropdowns();
     setShowDropdown1(!showDropdown1);
@@ -50,7 +52,7 @@ const NavbarSims4 = () => {
     const threshold = 45;
     setIsScrolled(scrollPosition > threshold);
   };
-  
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -60,7 +62,7 @@ const NavbarSims4 = () => {
 
   return (
     <>
-    <div className={`${styles.navBarSims4} ${isScrolled ? styles.hide : ""}`}>
+      <div className={`${styles.navBarSims4} ${isScrolled ? styles.hide : ""}`}>
         <div className={styles.empresa}>Electronic Arts</div>
         <div className={styles.dropdowns}>
           <div className={styles.dropdown}>
@@ -173,3 +175,4 @@ const NavbarSims4 = () => {
 };
 
 export default NavbarSims4;
+

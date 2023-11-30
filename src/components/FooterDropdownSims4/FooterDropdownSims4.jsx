@@ -47,7 +47,6 @@ const FooterDropdownSims4 = ({ items = [], dropdownTitle }) => {
 
   console.log(items);
 
-  const ITEMS_TO_DISPLAY = 8;
   const handleItemClick = (item) => {
     setSelectedItem(item);
     setIsOpen(false);
