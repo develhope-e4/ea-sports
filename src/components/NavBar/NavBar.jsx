@@ -1,16 +1,18 @@
 import { useState } from "react";
-import "./NavBar.scss";
+import styles from "./NavBar.module.scss";
 import Icono from "../Icono/Icono";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import BlackNavBar from "../BlackNavBar/BlackNavBar";
 import Dropdown from "../Dropdown/Dropdown";
+import Menu from "../Menu/Menu";
+
+
 import { ExplorarJuegosDropDown } from "../../data/ExplorarJuegosDropDown.mock";
 import { PlataformasDropDown } from "../../data/PlataformasDropDown.mock";
 import { MasExperiencias } from "../../data/MasExperiencias.mock";
 import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
 import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
 import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
-import Menu from "../Menu/Menu";
 import HamburgerMenu from "../HamburguerMenu/HamburgerMenu";
 
 const NavBar = () => {
@@ -18,27 +20,23 @@ const NavBar = () => {
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
-    document.body.classList.toggle(menuOpen);
-  };
-  const handleMenuClose = () => {
-    setMenuOpen(false);
-    document.body.classList.remove("menu-open");
+    document.body.classList.toggle('menu-open', menuOpen);
   };
 
-  const handleMenuItemClick = () => {
-    handleMenuClose();
+  const handleMenuClose = () => {
+    setMenuOpen(false);
+    document.body.classList.remove('menu-open');
   };
 
   return (
-    <div className="navbar-container">
+    <div className={styles.navbarContainer}>
       <BlackNavBar />
 
       <Menu
         menuOpen={menuOpen}
         handleMenuClose={handleMenuClose}
-        handleMenuItemClick={handleMenuItemClick}
       />
-      <div className="nav">
+      <div className={styles.nav}>
         <HamburgerMenu />
         <Icono
           onClick={handleMenuToggle}
@@ -47,13 +45,13 @@ const NavBar = () => {
         />
         <img
           src="/NavBar/ea-electronicsarts.svg"
-          alt="Mi SVG"
-          className="easvg"
+          alt="EA Logo"
+          className={styles.easvg}
           onClick={handleMenuClose}
         />
 
-        <div className="DropDownSectionDemo">
-          <Dropdown
+        <div className={styles.dropDownSection}>
+            <Dropdown
             data={ExplorarJuegosDropDown}
             title={ExplorarJuegosDropDown[0].tittle}
             data2={PlataformasDropDown}
@@ -84,6 +82,8 @@ const NavBar = () => {
             title={RecursosDropDown[0].tittle}
             className={"first"}
           />
+
+
         </div>
       </div>
     </div>

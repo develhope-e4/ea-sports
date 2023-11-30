@@ -5,11 +5,13 @@ import Container from "../../components/Container/Container";
 import LoopVideo from "../../components/LoopVideo/LoopVideo";
 import Boton from "../../components/Boton/Boton";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
+import clase from "../../components/CardsDestacadas/CardsDestacadas.module.scss"
 import TabsGames from "../../components/TabsGames/TabsGames";
 import tabGamesData from "../../data/TabGamesData.mock";
-import "../../components/TabsGames/TabsGames.scss";
-import "../../components/CardDestacada/CardGames.modules.scss";
+import "../../components/TabsGames/TabsGames.module.scss";
 import { cardGamesData } from "../../data/CardGamesData.mock";
+
+
 
 const LatestGame = () => {
 
@@ -23,7 +25,7 @@ const LatestGame = () => {
 
 const handleTabChange = () => {
 setActiveTab(!activeTab);
-};  
+};
 
   return (
     <BasePage>
@@ -35,21 +37,21 @@ setActiveTab(!activeTab);
         isPrimary={true}
         isLight={true}
         customClass=""
-        customImageClass="img-videogames"
+        customImageClass="imgVideogames"
         isVideoPlaying={isVideoPlaying}
         showButtons={true}
         showBuyButton={false}
       />
       <Section>
         <TabsGames
-         tabs={tabGamesData} 
+         tabs={tabGamesData}
         onTabChange={handleTabChange}
         activeTab={activeTab} />
       </Section>
       <Section>
         <h1>Novedades</h1>
         <Container>
-          <div className="CardsDestacadas">
+          <div className={clase.CardsDestacadas}>
             {cardGamesData &&
               cardGamesData.map((card, index) => (
                 <CardDestacada
@@ -57,7 +59,7 @@ setActiveTab(!activeTab);
                   url="http://google.com"
                   backgroundImage={card.bg}
                   gameLogo={card.logo}
-                  className="bgGames"
+                  games={true}
                   showTexts={[
                     { text: "Sitio Oficial", link: "/ruta-del-primer-texto" },
                     { text: "Ayuda", link: "/ruta-del-segundo-texto" },

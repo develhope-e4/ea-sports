@@ -1,4 +1,4 @@
-import "./Footer.scss";
+import classes from "./Footer.module.scss";
 import FooterDropdown from "../FooterDropdown/FooterDropdown.jsx";
 
 import { TfiFacebook } from "react-icons/tfi";
@@ -15,10 +15,10 @@ import Section from "../Section/Section";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <Section backgroundColor={"--color-octave"}>
+    <div className={classes.footer}>
+      <Section backgroundColor={"--color-octave"} margen={false}>
         <Container paddingMD={true}>
-          <div className="linkTextoFooterGris">
+          <div className={classes.linkTextoFooterGris}>
             <a href="https://www.ea.com/es-es/careers">Empleo</a>
             <a href="https://www.ea.com/es-es/executives">Ejecutivos</a>
             <a href="https://www.ea.com/es-es/news/sharing-our-2021-impact-report">
@@ -28,20 +28,20 @@ const Footer = () => {
               Nuestros compromisos
             </a>
             <a
-              className="comunicarInquietudes"
+              className={classes.comunicarInquietudes}
               href="https://www.ea.com/es-es/about/reporting-concerns"
             >
               Comunicar inquietudes
             </a>
           </div>
-          <div className="linkTextoNegritaFooter">
+          <div className={classes.linkTextoNegritaFooter}>
             <a
-              className="linkTextoNegritaFooterTexto"
+              className={classes.linkTextoNegritaFooterTexto}
               href="https://www.ea.com/es-es/about/reporting-concerns"
             >
               Únete a la conversación
             </a>
-            <div className="iconosRS">
+            <div className={classes.iconosRS}>
               <Icono
                 href="https://www.facebook.com/ea.es/"
                 icono={<TfiFacebook />}
@@ -59,7 +59,7 @@ const Footer = () => {
                 icono={<BsInstagram />}
               />
               <Icono
-                className="iconosRedesSocialesNM"
+                className={classes.iconosRedesSocialesNM}
                 href="https://www.twitch.tv/ea"
                 icono={<IoLogoTwitch />}
               />
@@ -68,13 +68,13 @@ const Footer = () => {
         </Container>
       </Section>
 
-      <Section>
+      <Section >
         <Container>
-          <div className="izquierda">
-            <img className="latIzq" src={eaPurple} />
+          <div className={classes.izquierda}>
+            <img className={classes.latIzq} src={eaPurple} />
           </div>
-          <div className="centro">
-            <div className="arribaCentro">
+          <div className={classes.centro}>
+            <div className={classes.arribaCentro}>
               <a href="https://www.ea.com/es-es/games/library">
                 Biblioteca de juegos
               </a>
@@ -86,7 +86,7 @@ const Footer = () => {
               <a href="https://www.ea.com/es-es/ea-app">Accesibilidad</a>
               <a href="https://www.ea.com/es-es/ea-app">Ayuda</a>
             </div>
-            <div className="abajoCentro">
+            <div className={classes.abajoCentro}>
               <a href="http://www.ea.com/es-es/legal">
                 Información legal y privacidad
               </a>
@@ -109,15 +109,15 @@ const Footer = () => {
               <p>© 2023 Electronic Arts Inc.</p>
             </div>
           </div>
-          <div className="derecha">
-            <div className="arribaDer">
+          <div className={classes.derecha}>
+            <div className={classes.arribaDer}>
               <FooterDropdown
                 dropdownTitle="Región (precios)"
                 items={itemsRegion}
               />
               <FooterDropdown dropdownTitle="Idioma" items={itemsIdioma} />
             </div>
-            <div className="abajoDer">
+            <div className={classes.abajoDer}>
               <img src={TRUSTe} alt="Truste Logo" />
             </div>
           </div>

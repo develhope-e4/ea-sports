@@ -1,4 +1,4 @@
-.black-navbar {
+.blackNavbar {
   background-color: #161616;
   display: flex;
   justify-content: flex-end;
@@ -8,7 +8,7 @@
   position: relative; 
   z-index: 5;
 
-  .svg-container {
+  .svgContainer {
     display: flex;
     align-items: center;
     width: initial;
@@ -48,25 +48,25 @@
     width: 100%;
     background-color: #161616;
     gap: 30px;
-    top: -100%; 
+    top: -100%;
 
-  animation: slideDown 0.5s ease forwards; 
+  animation: slideDown 0.5s ease forwards;
 }
 
 @keyframes slideDown {
   from {
-    top: -100%; 
+    top: -100%;
   }
   to {
-    top: 100%; 
+    top: 100%;
   }
 }
-.close-button {
+.closeButton {
   background-color: transparent;
   border: none;
   cursor: pointer;
   position: relative;
-  bottom: 40%; 
+  bottom: 40%;
   left: 37%;
   z-index: 1000;
 }

@@ -1,11 +1,14 @@
 
-import "./Section.scss";
-import classNames from "classnames";
+import classes from "./Section.module.scss";
+import classNames from "classnames/bind";
 
-const Section = ({ children, imageUrl, backgroundColor }) => {
-  const className = classNames({
+const cx = classNames.bind(classes);
+
+const Section = ({ children, imageUrl, backgroundColor , margen= true, }) => {
+  const className = cx({
     section: true,
     withImage: imageUrl && true,
+    conMargen: margen,
   });
   return (
     <div

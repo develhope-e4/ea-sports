@@ -1,0 +1,341 @@
+@import '../../styles/mixins';
+/* clases originales de cardDestacada */
+
+.linkCardDestacada {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--font-size-xl);
+  font-style: var(--font-style-ea);
+  margin-right: 0px;
+  width: 355px;
+  height: 355px;
+  max-width: 355px;
+  max-height: 355px;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+}
+
+.cardDestacada {
+  background: var( --color-background-card-destacada);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  transition: var(--ea-transition-duration);
+
+
+}
+
+.cardDestacada:hover {
+  background: linear-gradient(
+    to right,
+    var(--color-gradient1),
+    var(--color-gradient2)
+  )
+  ;
+}
+
+img.logoCardDestacada {
+  width: 250px;
+  height: 50px;
+  transform: translateY(0px);
+  transition: var(--ea-transition-duration);
+
+}
+
+.cardDestacada:hover .logoCardDestacada {
+  transform: translateY(-20px);
+}
+
+.textCardDestacada {
+  display: none;
+  transition: var(--ea-transition-duration);
+
+  a{
+    color: white;
+  text-decoration: none;
+  }
+}
+
+.cardDestacada:hover .textCardDestacada {
+  display: block;
+}
+
+
+
+
+
+.menu {
+  position: fixed;
+  top: 10;
+  left: -100%;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  padding: 40px;
+
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+  transition: left 0.3s ease;
+
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+}
+
+.menu.open {
+  left: 0;
+  z-index: 10;
+
+
+  width: 400px;
+
+}
+
+.closeMenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0px 0px 30px 0px;
+
+  &:hover {
+    svg {
+      color: var(--color-secundary);
+      cursor: pointer;
+    }
+  }
+}
+
+.menuLink {
+  color: rgb(166, 165, 165);
+  text-decoration: none;
+  font-family: var(--font-family-ea);
+  font-weight: bold;
+  font-size: var(--font-size-l);
+
+  &:hover {
+    color: var(--color-secundary);
+    cursor: pointer;
+  }
+}
+
+
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.menu-image {
+  width: 100px;
+  height: auto;
+}
+
+.sectionMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.firstImage {
+  grid-column: span 2;
+  width: 345px;
+  height: 345px;
+}
+
+.otherImages {
+  width: 160px;
+  height: 160px;
+}
+
+.backgroundImage.firstImage {
+  width: 396px;
+  height: 345px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backgroundImage.otherImages {
+  width: 182px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img.logoCardDestacada.firstImage {
+  width: 160px;
+  height: 160px;
+  transform: scale(0.8);
+  transition: transform 0.8s ease;
+}
+
+img.logoCardDestacada.otherImages {
+  width: 100px;
+  height: 100px;
+  transform: scale(0.8);
+  transition: transform 0.7s ease;
+}
+
+.cardDestacada.firstImage {
+  background: var(--color-background-card-destacada);
+  width: 396px;
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardDestacada.otherImages {
+  background: var(--color-background-card-destacada);
+  width: 182px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardDestacada.firstImages:hover {
+  background: none;
+}
+
+.cardDestacada.otherImages:hover {
+  background: none;
+}
+
+.textCardDestacada .backgroundImage.firstImage {
+  display: none;
+}
+
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+
+  display: none;
+}
+
+.menuOverlayVisible {
+  display: block;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+@include respond-to('large')  {
+
+
+  .menu{
+    display: none;
+  }
+
+
+  .otro{
+    display: none;
+  }
+}
+
+/* Classes de Games */
+.backgroundImage.bgGames {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.cardDestacada.bgGames {
+  background: var(--color-background-card-destacada);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cardDestacada.bgGames:hover {
+  background: linear-gradient(to right, #10123fc0, #10123fc5);
+}
+
+img.logoCardDestacada.bgGames {
+  width: 250px;
+  height: 50px;
+}
+
+.cardDestacada.bgGames:hover .logoCardDestacada.bgGames {
+  transform: translate3d(0, -10px, 0);
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+.textCardDestacada.bgGames {
+    position: relative;
+    font-size: medium;
+    font-style: var(--font-style-ea);
+    height: 25px;
+    width: 85px;
+    text-align: center;
+    overflow: hidden;
+
+  }
+
+  .textCardDestacada.bgGames::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transition: width 1s ease;
+  }
+  .textCardDestacada.bgGames:hover::after {
+    width: 0;
+
+  }
+
+  .linksbg,
+  .as  {
+    color: rgba(255, 255, 255, 0.731);
+    transform: translateY(0px);
+    display: inline-block;
+    transition: transform 0.5s ease, color 0.3s ease;
+  }
+
+  .linksbg:hover,
+  .as:hover {
+    color: white;
+    transform: translateY(0px);
+  }

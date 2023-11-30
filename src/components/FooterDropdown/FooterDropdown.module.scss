@@ -1,7 +1,10 @@
+@import '../../styles/mixins';
+
 .dropdown_wrapper {
   position: relative;
   width: 100%;
   margin-left: 50px;
+  left: -150px;
 }
 
 .dropdown_activator {
@@ -9,8 +12,7 @@
   grid-template-rows: repeat(4, 1fr);
   justify-content: left;
   background-color: inherit;
-  border: 2px rgb(198, 198, 198) solid;
-  border-radius: 3px;
+  border: 3px rgb(198, 198, 198) solid;
   height: 70px;
   color: gray;
   font-weight: var(--font-weith-s);
@@ -38,12 +40,14 @@
   bottom: 65px;
   right: 0px;
   position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 3px solid rgb(198, 198, 198);
 }
 
 .dropdown_item_list.active {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: 3px solid rgb(198, 198, 198);
+ 
 }
 
 .item_list {
@@ -81,3 +85,29 @@
 .flechaFooter {
   margin-left: 130px;
 }
+
+
+
+
+@include respond-to('large') {
+
+  
+  
+.dropdown_wrapper {
+  position: relative;
+  width: 100%;
+  margin-left: 0px;
+  left: 0px;
+
+}
+
+
+
+.dropdown_item_list{
+  grid-template-columns: repeat(2, 1fr);
+
+  
+}
+  }
+  
+  
