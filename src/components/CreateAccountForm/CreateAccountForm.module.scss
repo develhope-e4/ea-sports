@@ -1,0 +1,160 @@
+body {
+    font-family: var(--font-family-ea);
+    margin: 0;
+    padding: 0;
+  }
+  .fullPage {
+    background-color: #1d2033;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    background-color: #1d2033;
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    
+  }
+  
+  .signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    letter-spacing: 1px;
+    background-color: #1d2033;
+    font-family: var(--font-family-ea);
+    p,
+    a,
+    h2 {
+      color: white;
+      padding-top: 10px;
+     
+    }
+    button {
+      border-radius: 10px;
+      width: 100%;
+      height: 50px;
+      font-family: var(--font-family-ea);
+      letter-spacing: 2px;
+      font-weight: bolder;
+      padding-top: 10px;
+      
+      background: #1f55ca;
+      color: white;
+      border: 1px solid transparent;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+      &:hover{
+        transform: scale(0.95);
+        box-shadow: 0px 0px 15px 15px #1f55ca35;
+      }
+    }
+  }
+  
+      
+  
+  .forminput {
+    background: #141724;
+    color: white;
+  
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: var(--font-family-ea);
+  
+    border: 2px solid #62616c;
+    border-radius: 10px;
+    width: 94.5%;
+    height: 45px;
+    padding: 0px 10px 0px 10px;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    &:hover {
+      box-shadow: 0px 0px 15px 15px #00000024;
+      border: 2px solid #8d8d98;
+    }
+  
+    &:focus {
+      border: 1px solid white;
+      box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.5);
+    }
+  
+    &.invalid {
+      border: 2px solid rgb(198, 41, 41);
+      box-shadow: none;
+    }
+  }
+  
+  
+  .formsign {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .formlabel {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: var(--font-family-ea);
+  }
+
+  
+  
+  .formlinks {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px 15px 0px;
+    a {
+      color: #5089F1;
+    }
+  }
+  
+  
+  .imgEA{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+  }
+  
+  .passwordtoggle{
+    display: flex;
+    justify-content: center;
+    svg{
+      fill: white;
+    }
+  }
+  
+  .formpassword {
+    position: relative;
+  }
+  
+  .passwordtoggle {
+    position: absolute;
+    top: 74%;
+    right: 20px; 
+    transform: translateY(-50%);
+  }
+  
+  
+  .boton{
+    padding-top: 35px;
+  }
+  
+
+  

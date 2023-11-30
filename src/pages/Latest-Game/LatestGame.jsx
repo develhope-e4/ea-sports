@@ -1,9 +1,9 @@
-import LoopVideo from "../../components/LoopVideo/LoopVideo";
 import { useState } from "react";
-import Boton from "../../components/Boton/Boton";
 import BasePage from "../../components/BasePage/BasePage";
 import Section from "../../components/Section/Section";
 import Container from "../../components/Container/Container";
+import LoopVideo from "../../components/LoopVideo/LoopVideo";
+import Boton from "../../components/Boton/Boton";
 import CardDestacada from "../../components/CardDestacada/CardDestacada";
 import clase from "../../components/CardsDestacadas/CardsDestacadas.module.scss"
 import TabsGames from "../../components/TabsGames/TabsGames";

@@ -90,12 +90,12 @@ const BlackNavBar = () => {
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconsignin.svg"
             text={"Iniciar sesión"}
-            url="https://google.com"
+            url="/login"
           />
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconregister.svg"
             text={"Crear cuenta"}
-            url="https://google.com"
+            url="/create-account"
           />
           <button className={classes.closeButton} onClick={handleCloseClick}>
             <svg
