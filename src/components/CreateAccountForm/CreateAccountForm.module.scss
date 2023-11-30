@@ -39,6 +39,7 @@ body {
     a,
     h2 {
       color: white;
+      padding-top: 10px;
      
     }
     button {
@@ -48,7 +49,11 @@ body {
       font-family: var(--font-family-ea);
       letter-spacing: 2px;
       font-weight: bolder;
+      padding-top: 10px;
       
+      background: #1f55ca;
+      color: white;
+      border: 1px solid transparent;
       font-size: 16px;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -99,56 +104,14 @@ body {
     flex-direction: column;
     width: 100%;
   }
-  .separator {
-    width: 100%;
-    height: 1px;
-    background-color: #8d8d98;
-    margin: 20px 0;
-    position: relative; 
-  }
-  .separatorText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #1d2033; 
-    padding: 0 10px; 
-    color: #8d8d98; 
-  }
   .formlabel {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 2px;
     font-family: var(--font-family-ea);
   }
-  .buttonsignIn {
-    background: #1f55ca;
-    color: white;
-    border: 1px solid transparent;
-    padding-top: 10px;
-  }
-  .buttonCrear {
-    background: #141724;
-    border: 2px solid #1f55ca;
+
   
-  }
-  
-  .remembercheck {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    align-items: center;
-    color: white;
-    gap: 10px;
-  } 
-  .labelremember {
-    display: flex;
-    cursor: pointer;
-    justify-content: flex-start;
-  }
   
   .formlinks {
     display: flex;
@@ -188,69 +151,10 @@ body {
     transform: translateY(-50%);
   }
   
-  .iconContainer {
-    cursor: pointer;
+  
+  .boton{
+    padding-top: 35px;
   }
   
-  
-  
-  input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 26px; 
-    height: 26px;
-    border: 2px solid #62616C;
-    border-radius: 4px; 
-    outline: none; 
-    transition: background-color 0.3s ease, border 0.3s ease;
-    cursor: pointer;
-    position: relative;
-  
-  }
-  
-  input[type="checkbox"]:checked {
-    background-color: #2864d2;
-  }
-  
-  input[type="checkbox"]:hover {
-    border: 2px solid #8D8D98; 
-  }
-  
-  input[type="checkbox"]:checked:hover {
-    border: 2px solid #B0B0C0; 
-  
-  }
-  
-  
-  input[type="checkbox"]::before {
-    content: ""; 
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px; 
-  }
-  
-  
-  input[type="checkbox"]::after {
-    content: "\2714";
-    color: white; 
-    font-size: 20px; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0; 
-    transition: opacity 0.3s ease;
-  }
-  
-  input[type="checkbox"]:checked::after {
-    opacity: 1;
-  }
-  input[type="checkbox"]:focus {
-    outline: none; 
-    border: 2px solid white;
-    box-shadow: 0px 0px 15px 2px rgba(133, 140, 155, 0.614);
-  }
-  
+
   

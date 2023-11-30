@@ -21,7 +21,6 @@ const SignInForm = () => {
       return;
     }
 
-    // Realiza la solicitud al backend para iniciar sesión
     try {
       console.log("Email:", email);
       console.log("Contraseña:", password);
@@ -37,15 +36,12 @@ const SignInForm = () => {
 
       if (data.success) {
         console.log("Inicio de sesión exitoso");
-        // Puedes redirigir al usuario a otra página o realizar otras acciones después del inicio de sesión exitoso.
       } else {
         console.error("Error en el inicio de sesión:", data.error);
         setErrorMessage("Credenciales inválidas");
-        // Manejar el error, por ejemplo, mostrar un mensaje al usuario.
       }
     } catch (error) {
       console.error("Error en la solicitud HTTP:", error);
-      // Manejar errores de red u otros problemas.
     }
   };
 

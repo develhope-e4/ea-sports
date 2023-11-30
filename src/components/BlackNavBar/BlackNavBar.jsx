@@ -85,7 +85,7 @@ const BlackNavBar = () => {
           <SvgText
             svgSrc="/SvgTextIcons/eaglobalnav-iconregister.svg"
             text={"Crear cuenta"}
-            url="https://google.com"
+            url="/create-account"
           />
           <button className="close-button" onClick={handleCloseClick}>
             <svg

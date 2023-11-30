@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 import { useState, useRef } from "react";
 import SignInFormInput from "../SignInFormInput/SignInFormInput";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -6,10 +7,7 @@ import axios from 'axios';
 import styles from "./CreateAccountForm.module.scss";
 
 const CreateAccountForm = () => {
-  const refUser = useRef(null);
-  const refEmail = useRef(null);
-  const refPassword = useRef(null);
-
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -18,24 +16,25 @@ const CreateAccountForm = () => {
   const [emailValid, setEmailValid] = useState(true);
   const [emailRegex, setEmailRegex] = useState(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 
-  const validateEmail = (email) => {
-    if (email.trim() === "") {
+  const refUser = useRef(null);
+  const refEmail = useRef(null);
+  const refPassword = useRef(null);
+
+  const validateEmail = (inputEmail) => {
+    const isValidEmail = emailRegex.test(inputEmail);
+
+    if (inputEmail.trim() === "") {
       setErrorMessage("Dirección de correo electrónico no válida");
       setEmailValid(false);
-      return false;
-    }
-
-    const isValidEmail = emailRegex.test(email);
-
-    if (!isValidEmail) {
+    } else if (!isValidEmail) {
       setErrorMessage("Dirección de correo electrónico no válida");
       setEmailValid(false);
-      return false;
+    } else {
+      setErrorMessage("");
+      setEmailValid(true);
     }
 
-    setErrorMessage("");
-    setEmailValid(true);
-    return true;
+    return isValidEmail;
   };
 
   const handleFormSubmit = async (event) => {
@@ -51,60 +50,37 @@ const CreateAccountForm = () => {
         email,
         password,
       });
-      console.log('Response:', response);
-    
+
       const data = response.data;
 
       if (data.success) {
         console.log('Registro exitoso');
-        // Puedes redirigir al usuario a otra página o realizar otras acciones después del registro exitoso.
+        setRegistrationSuccess(true);
       } else {
         console.error('Error en el registro:', data.error);
-        // Manejar el error, por ejemplo, mostrar un mensaje al usuario.
+        setErrorMessage(data.error);
       }
     } catch (error) {
       console.error('Error en la solicitud HTTP:', error);
-      // Manejar errores de red u otros problemas.
-    }
-    
-
-  };
-
-  const handleUserChange = (event) => {
-    const inputUsername = event.target.value;
-    setUsername(inputUsername);
-  };
-
-  const handleEmailChange = (event) => {
-    const inputEmail = event.target.value;
-    setEmail(inputEmail);
-
-    const isValidEmail = emailRegex.test(inputEmail);
-
-    if (inputEmail.trim() === "") {
-      setErrorMessage("");
-      setEmailValid(true);
-    } else if (!isValidEmail) {
-      setErrorMessage("Dirección de correo electrónico no válida");
-      setEmailValid(false);
-    } else {
-      setErrorMessage("");
-      setEmailValid(true);
-    }
-  };
-
-  const handlePasswordKeyDown = (event) => {
-    if (event.key === "Enter") {
-      console.log("Enter key pressed in password field");
-      handleFormSubmit(event);
+      setErrorMessage("Error en la solicitud HTTP");
     }
   };
 
   return (
     <div className={styles.fullPage}>
       <div className={styles.container}>
+      <div className={styles.imgEA}>
+          <img
+            alt="Descripción de la imagen"
+            src="Login-Img/EALogo-New.svg"
+          ></img>
+        </div>
+        {registrationSuccess && <Navigate to="/login" />}
         <div className={styles.signup}>
           <h2>Crea tu Cuenta EA</h2>
+          {registrationSuccess && (
+            <p style={{ color: "green" }}>Registro exitoso. Redirigiendo a la página de inicio de sesión...</p>
+          )}
           <form className={styles.formsign} onSubmit={handleFormSubmit}>
             <SignInFormInput
               label="USERNAME"
@@ -112,7 +88,7 @@ const CreateAccountForm = () => {
               placeholder="Escribe tu username"
               id="usernameForm"
               value={username}
-              onChange={handleUserChange}
+              onChange={(e) => setUsername(e.target.value)}
               isValid="false"
               ref={refUser}
             />
@@ -122,7 +98,7 @@ const CreateAccountForm = () => {
               placeholder="Escribe tu teléfono o correo electrónico"
               id="emailForm"
               value={email}
-              onChange={handleEmailChange}
+              onChange={(e) => setEmail(e.target.value)}
               isValid={emailValid}
               ref={refEmail}
             />
@@ -138,7 +114,6 @@ const CreateAccountForm = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 isValid="false"
-                onKeyDown={handlePasswordKeyDown}
                 ref={refPassword}
               />
               <div
@@ -150,11 +125,12 @@ const CreateAccountForm = () => {
                 </div>
               </div>
             </div>
+            <div className={styles.boton}>
             <button className={styles.buttonsignIn} type="submit">
               REGISTRARSE
             </button>
+            </div>
           </form>
-          
           <Link to="/login">{"¿Ya tienes cuenta?"}</Link>
         </div>
       </div>
