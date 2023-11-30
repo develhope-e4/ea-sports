@@ -63,6 +63,8 @@
 
       list-style: none;
 
+      padding: 5px 20px 10px  20px ;
+
       li {
         padding: var(--spacing-s);
         transition: var(--ea-transition-duration);
@@ -141,6 +143,7 @@
         margin: 10px;
         a{
           color: var(--text-color-boton);
+          text-decoration: none;
 
           &:hover {
             color: red;
