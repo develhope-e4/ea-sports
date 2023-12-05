@@ -13,11 +13,14 @@ import Cards from "../../components/Cards/Cards";
 import { CardInfoData } from "../../data/CardInfoData";
 import Boton from "../../components/Boton/Boton";
 import Section from "../../components/Section/Section";
+import NavBar from "../../components/NavBar/NavBar";
 
 const Information = () => {
   return (
     <div>
+      <NavBar />
       <BannerParentingTools />
+      
       <Container>
         <div className="Space">
           <div>

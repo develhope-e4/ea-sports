@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 3% 8%;
+  gap: 30px;
+}
+
+.isReverse {
+  flex-direction: row-reverse;
+}
+
+.conBorde {
+  border: 1px solid rgb(161, 161, 161);
+  border-radius: 7px;
+
+  font-weight: 700;
+  font-size: small;
+  width: fit-content;
+  padding: 4px 6px;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.queEs {
+  font-weight: 400;
+  font-size: x-large;
+  margin: 0px;
+}
+
+.titulo {
+  font-weight: 700;
+  font-size: xx-large;
+  margin-bottom: 0px;
+}
+
+.descripcion {
+  color: rgb(124, 124, 124);
+  font-weight: 400;
+  font-size: x-large;
+  margin-top: 0px;
+}
+
+.image {
+  width: 600px;
+  height: auto;
+}
+
+.modo {
+  border-radius: 4px;
+  padding: 2px;
+}

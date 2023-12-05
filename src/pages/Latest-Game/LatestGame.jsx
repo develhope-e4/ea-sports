@@ -10,6 +10,7 @@ import TabsGames from "../../components/TabsGames/TabsGames";
 import tabGamesData from "../../data/TabGamesData.mock";
 import "../../components/TabsGames/TabsGames.module.scss";
 import { cardGamesData } from "../../data/CardGamesData.mock";
+import NavBar from "../../components/NavBar/NavBar";
 
 
 
@@ -29,6 +30,7 @@ setActiveTab(!activeTab);
 
   return (
     <BasePage>
+    <NavBar />
       <LoopVideo
         videoSrc="https://media.contentapi.ea.com/content/dam/eacom/videos/2023/10/ea-games-hero-md-fy24-sizzle-reel-7x2-xl.mp4"
         imagenSrc="../../../public/VideoComponentImg/ea-hero-md-bg-mashup-trailer-pegi-16-7x2-xl.png.adapt.crop5x2.1455w.png"

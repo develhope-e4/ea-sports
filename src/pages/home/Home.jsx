@@ -14,6 +14,8 @@ import { CardsDestacadas } from '../../components/CardsDestacadas/CardsDestacada
 import classes from '../../components/Tabs/Tabs.module.scss';
 import styles from '../../components/Cards/Cards.module.scss';
 import { useLanguage } from '../../components/LanguageContext/LanguageContext';
+import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 
 
 import enUK from '../../data/Translate/en.mock';
@@ -31,6 +33,7 @@ if (window.innerWidth < 500) {
   estilo.textAlign = 'center';
 
 }
+
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
@@ -68,6 +71,7 @@ const Home = () => {
 
   return (
     <BasePage>
+      <NavBar />
       <LoopVideo
         videoSrc="./immortals.mp4"
         imagenSrc="./Immorlas-Logo.svg"
@@ -126,6 +130,7 @@ const Home = () => {
         />
       </Section>
       <Subscription />
+      <Footer/>
     </BasePage>
   );
 };
