@@ -5,12 +5,18 @@
   height: 45px;
   background-color: #192537;
   align-items: center;
-  justify-content: center;
-  gap: 75%;
+  justify-content: space-between;
 }
 
-.empresa{
+.empresa {
+  margin-left: 20px;
   color: aliceblue;
+}
+
+.navBarWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 ul li {
@@ -23,8 +29,180 @@ ul li {
   gap: 30px;
 }
 
-.textoBoton{
+.dropdownOptions {
+  background-color: #192537;
+  padding: 20px;
+  width: 200px;
+  height: fit-content;
+  position: absolute;
+  top: 40px;
+  left: auto;
+  right: auto;
+  z-index: 1000;
+
+  margin-left: -170px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  li {
+    color: aliceblue;
+    padding: 15px;
+
+    &:hover {
+      background-color: #283c52;
+      border: 1px solid white;
+      border-radius: 10px;
+    }
+  }
+}
+
+.dropdownOptionsBlanco {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 200px;
+  height: fit-content;
+  position: absolute;
+  top: 60px;
+  left: auto;
+  right: auto;
+  z-index: 1000;
+
+  margin-left: -120px;
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  li {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+
+    &:hover {
+      background-color: #e4e4e4;
+      border: 0px solid rgb(0, 0, 0);
+      border-radius: 10px;
+    }
+  }
+}
+
+.textoBoton {
   background-color: transparent;
   border: none;
   color: azure;
+}
+
+.navBarSims4Dos {
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+
+  border: 1px solid rgb(233, 233, 233);
+  background-color: white;
+  opacity: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: medium;
+  font-weight: 400;
+
+  position: sticky;
+  top: 0px;
+}
+
+.estilosNavBarSims4Dos {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.estilosNavBarSims4DosDer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.logoSims4 {
+  margin-left: 20px;
+  width: 100px;
+  height: auto;
+}
+
+.textoBoton {
+  background-color: transparent;
+  border: none;
+  font-size: medium;
+  font-weight: 400;
+  padding: 5px 10px;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: rgb(92, 92, 92);
+    border: 2px solid #989898;
+    border-radius: 5px;
+  }
+}
+
+.navBarSims4 .textoBoton {
+  color: azure;
+  margin-right: 20px;
+  font-size: small;
+}
+
+.navBarSims4Dos .textoBoton {
+  color: rgb(0, 0, 0);
+  width: fit-content;
+  &:hover {
+    background-color: rgb(184, 184, 184);
+    border: 2px solid #d4d4d4;
+    border-radius: 5px;
+  }
+}
+
+.textoBotonAzul {
+  background-color: rgb(0, 0, 224);
+  color: azure;
+  width: 170px;
+  height: 50px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: medium;
+  font-weight: 400;
+  &:hover {
+    background-color: rgb(0, 0, 198);
+  }
+}
+
+.flechaNavBarSims4Dos {
+  margin-left: 80px;
+  margin-top: -20px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+$hideHeight: 104;
+
+.hide {
+  visibility: hidden;
+  height: #{$hideHeight}px;
+}
+
+
+.flechaNavBarSims4DosJ {
+  margin-left: 130px;
+  margin-top: -20px;
+  color: #ffffff; 
+
+  svg {
+    fill: #ffffff; 
+  }
 }
