@@ -21,6 +21,8 @@ const Boton = ({ texto, esPrimario, isLight, onClick, url }) => {
     }
   };
 
+  
+
   return (
     <button className={className} onClick={handleButtonClick}>
       {texto}
