@@ -4,14 +4,13 @@ import Container from "../../components/Container/Container";
 import CardHorizontal from "../../components/CardHorizontal/CardHorizontal";
 import { cardHorizontalData } from "../../data/cardHorizontalData.mock";
 import NavBarSims4 from "../../components/NavBarSims4/NavBarSims4";
-import NavBarSims4Dos from "../../components/NavBarSims4Dos/NavBarSims4Dos";
 import FooterSims4 from "../../components/FooterSims4/FooterSims4";
 
 const Sims4 = () => {
   return (
     <BasePageSims4>
       <NavBarSims4 />
-      <NavBarSims4Dos />
+   
       <Section>
         <Container>
           {cardHorizontalData.map((card) => (
