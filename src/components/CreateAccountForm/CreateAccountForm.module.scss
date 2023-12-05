@@ -39,7 +39,8 @@ body {
     a,
     h2 {
       color: white;
-      padding-top: 10px;
+      text-decoration: none;
+      
      
     }
     button {
@@ -49,7 +50,6 @@ body {
       font-family: var(--font-family-ea);
       letter-spacing: 2px;
       font-weight: bolder;
-      padding-top: 10px;
       
       background: #1f55ca;
       color: white;

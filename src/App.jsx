@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AuthProvider } from "./components/AuthContext";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import Development from "./pages/development/Development";
@@ -8,7 +9,10 @@ import Login from "./pages/Login/Login";
 import CreateAccountForm from "./components/CreateAccountForm/CreateAccountForm";
 
 function App() {
+
+ 
   return (
+    <AuthProvider>
     <BrowserRouter>
       <Routes>
         <Route
@@ -30,6 +34,7 @@ function App() {
         <Route path="/create-account" element={<CreateAccountForm />} />
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
   );
 }
 

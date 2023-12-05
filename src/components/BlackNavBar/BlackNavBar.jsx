@@ -5,7 +5,7 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(classes);
 
-const BlackNavBar = () => {
+const BlackNavBar = ({ isLoggedIn, username }) => {
   const [showSvgControll, setShowSvgControll] = useState(false);
 
   const handleSvg1Click = () => {
@@ -32,6 +32,9 @@ const BlackNavBar = () => {
 
   return (
     <div className={classes.blackNavbar}>
+      <div className={classes.texto}>
+      {isLoggedIn && <p>Bienvenido Usuario {username}</p>}
+        </div>
       <div className={classes.svgContainer}>
         <svg
           className={classes.svg1}

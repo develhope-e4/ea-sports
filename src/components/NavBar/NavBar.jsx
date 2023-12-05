@@ -14,10 +14,11 @@ import { AcercaDeDropDown } from "../../data/AcercaDeDropDown.mock";
 import { CompromisosDropDown } from "../../data/CompromisosDropDown.mock";
 import { RecursosDropDown } from "../../data/RecursosDropDown.mock";
 import HamburgerMenu from "../HamburguerMenu/HamburgerMenu";
+import { useAuth } from '../AuthContext';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const { isLoggedIn, username } = useAuth();
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
     document.body.classList.toggle('menu-open', menuOpen);
@@ -30,7 +31,7 @@ const NavBar = () => {
 
   return (
     <div className={styles.navbarContainer}>
-      <BlackNavBar />
+      <BlackNavBar isLoggedIn={isLoggedIn} username={username} />
 
       <Menu
         menuOpen={menuOpen}

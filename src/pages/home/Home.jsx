@@ -25,6 +25,9 @@ const estilo = {
 const Home = () => {
   const [activeTab, setActiveTab] = useState("NoticiasEA");
 
+  
+  
+ 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
