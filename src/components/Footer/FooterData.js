@@ -21,253 +21,172 @@ import banderaRusia from "../../assets/Footer/banderaRusia.png";
 import banderaSeverige from "../../assets/Footer/banderaSeverige.png";
 import banderaTurkia from "../../assets/Footer/banderaTurkia.png";
 export const itemsRegion = [
-  {
+{
     slug: "/link1/",
     anchor: "Austria",
+    flag: banderaAustralia,
   },
   {
     slug: "/link2/",
     anchor: "Bélgica",
+    flag: banderaBrasil,
   },
   {
     slug: "/link3/",
     anchor: "Bulgaria",
+    flag: banderaCanada,
   },
   {
     slug: "/link4/",
     anchor: "Croacia",
+    flag: banderaChekia,
   },
   {
     slug: "/link5/",
     anchor: "Chipre",
+    flag: banderaChina,
   },
   {
     slug: "/link6/",
     anchor: "República Checa",
+    flag: banderaCorea,
   },
   {
     slug: "/link7/",
     anchor: "Dinamarca",
+    flag: banderaDinamarca,
   },
   {
     slug: "/link8/",
     anchor: "Estonia",
+    flag: banderaEstadosUnidos,
   },
   {
     slug: "/link9/",
     anchor: "Finlandia",
-  },
-  {
-    slug: "/link10/",
-    anchor: "Finlandia",
+    flag: banderaFinlandia,
   },
   {
     slug: "/link11/",
     anchor: "Francia",
+    flag: banderaFrancia,
   },
   {
     slug: "/link12/",
     anchor: "Alemania",
+    flag: banderaAlemania,
   },
   {
     slug: "/link13/",
     anchor: "Grecia",
+    flag: banderaJapon,
   },
   {
     slug: "/link14/",
     anchor: "Hungría",
+    flag: banderaMexico,
   },
   {
     slug: "/link15/",
     anchor: "Letonia",
+    flag: banderaNederland,
   },
   {
     slug: "/link16/",
     anchor: "Islandia",
+    flag: banderaNorge,
   },
   {
     slug: "/link17/",
     anchor: "Irlanda",
+    flag: banderaRusia,
   },
   {
     slug: "/link18/",
     anchor: "Italia",
+    flag: banderaItalia,
   },
   {
     slug: "/link19/",
     anchor: "Liechtenstein",
+    flag: banderaSeverige,
   },
-
   {
     slug: "/link20/",
     anchor: "Lituania",
+    flag: banderaTurkia,
   },
   {
     slug: "/link21/",
     anchor: "Luxemburgo",
+    flag: banderaAlemania,
   },
-
   {
     slug: "/link22/",
     anchor: "Malta",
+    flag: banderaChekia,
   },
   {
     slug: "/link23/",
     anchor: "Países Bajos",
+    flag: banderaFrancia,
   },
   {
     slug: "/link24/",
     anchor: "Noruega",
+    flag: banderaDinamarca,
   },
-
   {
     slug: "/link25/",
     anchor: "Polonia",
+    flag: banderaPolonia,
   },
   {
     slug: "/link26/",
     anchor: "Rumanía",
+    flag: banderaMexico,
   },
   {
     slug: "/link27/",
     anchor: "Eslovaquia",
+    flag: banderaCorea,
   },
   {
     slug: "/link28/",
     anchor: "Eslovenia",
+    flag: banderaJapon,
   },
   {
     slug: "/link29/",
     anchor: "España",
+    flag: banderaEspaña,
   },
   {
     slug: "/link30/",
     anchor: "Suecia",
+    flag: banderaItalia,
   },
   {
     slug: "/link31/",
     anchor: "Suiza",
+    flag: banderaDinamarca,
   },
 ];
 export const itemsIdioma = [
+  
   {
     slug: "/link1/",
-    flag: banderaEstadosUnidos,
-    anchor: "United States",
-  },
-  {
-    slug: "/link2/",
-    flag: banderaReinoUnido,
-    anchor: "United kimdoms",
-  },
-  {
-    slug: "/link3/",
-    flag: banderaAustralia,
-    anchor: "Australia",
-  },
-  {
-    slug: "/link4/",
-    flag: banderaFrancia,
-    anchor: "France",
-  },
-  {
-    slug: "/link5/",
-    flag: banderaAlemania,
-    anchor: "Deutschland",
-  },
-  {
-    slug: "/link6/",
-    flag: banderaItalia,
-    anchor: "Italia",
-  },
-  {
-    slug: "/link7/",
-    flag: banderaJapon,
-    anchor: "日本",
-  },
-  {
-    slug: "/link8/",
-    flag: banderaPolonia,
-    anchor: "Poslka",
-  },
-  {
-    slug: "/link9/",
-    flag: banderaBrasil,
-    anchor: "Brasil",
-  },
-  {
-    slug: "/link10/",
-    flag: banderaRusia,
-    anchor: "Россия",
-  },
-  {
-    slug: "/link11/",
     flag: banderaEspaña,
     anchor: "España",
   },
   {
-    slug: "/link12/",
-    flag: banderaChekia,
-    anchor: "Česká republika",
+    slug: "/link2/",
+    flag: banderaItalia,
+    anchor: "Italia",
   },
   {
-    slug: "/link13/",
-    flag: banderaCanada,
-    anchor: "Canada (En)",
-  },
-  {
-    slug: "/link14/",
-    flag: banderaCanada,
-    anchor: "Canada (Fr)",
-  },
-  {
-    slug: "/link15/",
-    flag: banderaDinamarca,
-    anchor: "Danmark",
-  },
-  {
-    slug: "/link16/",
-    flag: banderaFinlandia,
-    anchor: "Suomi",
-  },
-  {
-    slug: "/link17/",
-    flag: banderaMexico,
-    anchor: "México",
-  },
-  {
-    slug: "/link18/",
-    flag: banderaNederland,
-    anchor: "Nederland",
-  },
-  {
-    slug: "/link19/",
-    flag: banderaNorge,
-    anchor: "Norge",
-  },
-  {
-    slug: "/link20/",
-    flag: banderaSeverige,
-    anchor: "Sverige",
-  },
-  {
-    slug: "/link21/",
-    flag: banderaChina,
-    anchor: "中国",
-  },
-  {
-    slug: "/link22/",
-    flag: banderaCorea,
-    anchor: "대한민국",
-  },
-  {
-    slug: "/link23/",
-    flag: banderaChina,
-    anchor: "繁體中文",
-  },
-  {
-    slug: "/link24/",
-    flag: banderaTurkia,
-    anchor: "Türkiye",
+    slug: "/link3/",
+    flag: banderaReinoUnido,
+    anchor: "United Kingdoms",
   },
 ];

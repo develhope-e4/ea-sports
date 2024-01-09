@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+h3,
+h4 {
+  font-family: var(--font-family-ea);
